@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "intent_name": "chao hoi",
+      "training_phrases": [
+        "xin chào",
+        "hi",
+        "chào bạn"
+      ],
+      "responses": [
+        "Xin chào bạn!",
+        "Rất vui được gặp bạn"
+      ]
+    }
+  ]
+}

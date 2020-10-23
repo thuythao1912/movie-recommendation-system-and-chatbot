@@ -1,0 +1,46 @@
+{
+  "entities": [
+    {
+      "key": "ten_phim",
+      "values": [
+        {
+          "org_val": "Maleficient",
+          "description": [
+            "Tiên hắc ám"
+          ]
+        },
+        {
+          "org_val": "Beauty and the Beast",
+          "description": [
+            "Người đẹp và quái vật"
+          ]
+        },
+        {
+          "org_val": "Ngôi nhà có ma",
+          "description": [
+            "nhà có ma"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ten_the_loai",
+      "values": [
+        {
+          "org_val": "hoạt hình",
+          "description": [
+            "anime",
+            "hoạt họa"
+          ]
+        },
+        {
+          "org_val": "kinh dị",
+          "description": [
+            "rùng rợn",
+            "có ma"
+          ]
+        }
+      ]
+    }
+  ]
+}
