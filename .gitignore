@@ -3,8 +3,8 @@
 
 # dependencies
 /.idea
-/client-side/node-module
-/server-side/node-module
+/client-side/node-modules
+/server-side/node-modules
 /pythonProject/.idea
 
 # testing
