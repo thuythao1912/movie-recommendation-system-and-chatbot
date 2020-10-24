@@ -5,7 +5,7 @@
 /.idea
 /client-side/node_modules
 /server-side/node_modules
-/pythonProject/.idea
+/python-side/.idea
 
 # testing
 /coverage

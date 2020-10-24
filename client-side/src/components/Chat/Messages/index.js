@@ -3,7 +3,7 @@ export default class Messages extends Component {
   render_message(message, index) {
     let { member, text, created_time } = message;
     let { currentMember } = this.props;
-    let messageFromMe = member.username === currentMember.username;
+    let messageFromMe = member.username !== "chatbot";
     let messageClass = messageFromMe
       ? "d-flex flex-row-reverse"
       : "d-flex flex-row message";
@@ -12,6 +12,11 @@ export default class Messages extends Component {
       : "message message-coming";
     return (
       <div className={messageClass} key={index}>
+        {messageFromMe ? (
+          ""
+        ) : (
+          <img src="/images/chatbot.svg" width="40px" className="mx-2" />
+        )}
         <div>
           <div className="created_time">{created_time}</div>
           <div className={`${messageContent} shadow-sm p-2 rounded`}>
@@ -21,12 +26,32 @@ export default class Messages extends Component {
       </div>
     );
   }
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  };
+
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
   render() {
     let { messages } = this.props;
     let { currentMember } = this.props;
     return (
-      <div className="message-list">
-        {messages.map((message, index) => this.render_message(message, index))}
+      <div>
+        <div className="message-list px-3">
+          {messages.map((message, index) =>
+            this.render_message(message, index)
+          )}
+          <div
+            ref={(el) => {
+              this.messagesEnd = el;
+            }}
+          />
+        </div>
       </div>
     );
   }

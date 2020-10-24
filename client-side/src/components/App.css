@@ -40,56 +40,44 @@
 /* ==============My CSS============== */
 .message-list {
   padding: 20px 0;
-  max-width: 900px;
   width: 100%;
   margin: 0 auto;
   list-style: none;
   padding-left: 0;
   flex-grow: 1;
   overflow: auto;
+  height: 500px;
 }
-form {
+.form {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto 40px;
 }
 
-input {
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid orangered;
+.input {
   flex-grow: 1;
-}
-
-button {
-  padding: 5px 10px;
-  font-size: 16px;
-  background-color: orangered;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  margin-left: 10px;
 }
 
 .message {
   list-style-type: none;
   margin: 0px;
+  max-width: 90%;
+  word-wrap: break-word;
+  min-width: 10%;
 }
 
 .message-coming {
-  background-color: #fb0369;
+  background-color: #dc3545;
   color: #fff;
 }
 .message-sending {
-  background-color: #eeeeee;
-  text-align: right;
-  display: inline-block;
+  background-color: #dadada;
   float: right;
 }
 .created_time {
   font-size: 0.8rem;
   padding: 7px;
+}
+.chat-header:hover {
+  cursor: pointer;
 }
