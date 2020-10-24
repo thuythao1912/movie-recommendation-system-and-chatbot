@@ -7,6 +7,7 @@ root = Path(os.path.abspath(__file__)).parents[1]
 
 from flask import Flask, jsonify, request
 from app.model.intent_recognizer import IntentRecognizer
+import datetime
 
 app = Flask(__name__)
 
@@ -22,7 +23,9 @@ def predict_run():
     input = message.get("input")
     ir = IntentRecognizer()
     output = ir.run(input)
+    output["input"] = input
     output["created_time"] = message.get("created_time")
+
     print(f"Q: {input}")
     print(f"A: {output}")
     print("------------------")

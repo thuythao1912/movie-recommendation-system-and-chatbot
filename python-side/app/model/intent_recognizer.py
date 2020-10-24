@@ -12,7 +12,7 @@ import random
 from joblib import load
 
 
-MIN_SCORE = 0.8
+MIN_SCORE = 0.7
 UNKNOWN_RESPONSE = "Xin lỗi, bạn có thể cung cấp thêm thông tin không?"
 
 
@@ -27,7 +27,6 @@ class IntentRecognizer:
         self.intents = intents
 
     def get_response(self, intent_name):
-        response = ""
         intent = next(item for item in self.intents if item["intent_name"] == intent_name)
         response = f'{random.choice(intent["responses"])}'
         return response

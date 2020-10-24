@@ -17,11 +17,14 @@
       "training_phrases": [
         "xin chào",
         "hi",
-        "chào bạn"
+        "chào bạn",
+        "hello",
+        "alo"
       ],
       "responses": [
         "Xin chào bạn!",
-        "Rất vui được gặp bạn"
+        "Rất vui được gặp bạn!",
+        "Chào bạn, bạn cần mình trợ giúp gì?"
       ]
     },
     {
@@ -33,17 +36,20 @@
       ],
       "responses": [
         "Tạm biệt bạn!",
-        "Bye bye"
+        "Bye bye",
+        "Hẹn gặp lại bạn nha!"
       ]
     },
     {
       "intent_name": "hoi tham suc khoe",
       "training_phrases": [
         "Bạn khỏe không",
-        "Bạn thế nào rồi"
+        "Bạn thế nào rồi",
+        "Bạn khỏe chứ",
+        "Dạo này bạn thế nào"
       ],
       "responses": [
-        "Tôi khỏe. Cảm ơn bạn"
+        "Mình khỏe. Cảm ơn bạn!"
       ]
     },
     {
@@ -51,10 +57,11 @@
       "training_phrases": [
         "bạn yêu tôi không",
         "Anh yêu em không",
-        "yêu không"
+        "yêu không",
+        "bạn có yêu tôi không"
       ],
       "responses": [
-        "Rất yêu", "Không yêu nha"
+        "Mình rất yêu bạn", "Không yêu đâu nha!"
       ]
     }
   ]

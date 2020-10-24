@@ -23,12 +23,12 @@ let run = (socket) => {
   //send data to client
   socket.emit("greeting", {
     text: `Xin chào, mình là chatbot. Mình có thể giúp gì cho bạn?`,
-    member: { username: "server", color: "blue" },
+    member: { username: "chatbot", color: "blue" },
+    send_time: new Date(),
   });
 
   //receive data from client
   socket.on("message", (data) => {
-    console.log(data);
     axios
       .post(SERVER_PYTHON, {
         input: data.text,
@@ -37,7 +37,8 @@ let run = (socket) => {
       .then((res) => {
         socket.emit("greeting", {
           text: res.data.response,
-          member: { username: "server", color: "blue" },
+          member: { username: "chatbot", color: "blue" },
+          send_time: new Date(),
         });
       });
   });
