@@ -6,12 +6,14 @@ sys.path.append(os.path.join('../..'))
 root = Path(os.path.abspath(__file__)).parents[2]
 
 import utils.utils as utils
-
+import utils.nlp_utils as nlp
+MIN_SCORE = 0.8
 
 class EntityRecognizer:
     def __init__(self):
         self.entity_list = []
         self.entity_vals = []
+        self.load_entity()
 
     def load_entity(self):
         entity_list = utils.load_json(os.path.join(root, "data", "entities.json"))["entities"]
@@ -37,17 +39,28 @@ class EntityRecognizer:
         # print(self.entity_list)
 
     def detect_entities(self, sentence):
-        self.load_entity()
+        # entities = []
+        # sen_result= {}
+        # for i in range(len(self.entity_vals)):
+        #     print(self.entity_vals[i], sentence)
+        #     result = nlp.approximate_search(self.entity_vals[i], sentence)
+        #     if result["score"] > MIN_SCORE:
+        #         sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
+        #         entities.append(self.entity_list[i])
+        #         sen_result ={"sen_result": sentence, "entitites": entities}
+        # print(sen_result)
+        # return sen_result
+
         entities = []
         for i in range(len(self.entity_vals)):
-            sentence = sentence.replace(self.entity_vals[i], self.entity_list[i]["key"])
-            entities.append(self.entity_list[i])
-
-        result ={"sen_result": sentence, "entitites": entities}
+            if self.entity_vals[i] in sentence:
+                sentence = sentence.replace(self.entity_vals[i], self.entity_list[i]["key"])
+                entities.append(self.entity_list[i])
+        result = {"sen_result": sentence, "entitites": entities}
         return result
 
 
 if __name__ == "__main__":
     er = EntityRecognizer()
-    r = er.detect_entities("ngôi nhà có ma người đẹp người đẹp và quái vật hoạt hình")
+    r = er.detect_entities("có ma")
     print(r)

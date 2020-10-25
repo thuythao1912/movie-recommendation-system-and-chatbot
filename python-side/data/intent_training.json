@@ -1,16 +1,32 @@
 {
   "intents": [
     {
-      "intent_name": "tra cuu thong tin phim",
+      "intent_name": "tra cuu thong tin ten_phim",
       "training_phrases": [
         "muốn tra cứu phim ten_phim",
         "muốn xem phim ten_phim",
         "muốn coi phim ten_phim",
-        "thông tin phim ten_phim"
+        "thông tin phim ten_phim",
+        "muốn coi phim",
+        "muốn xem phim"
       ],
       "responses": [
         "Bạn muốn tra cứu phim gì?"
-      ]
+      ],
+      "description": "tra cuu thong tin phim"
+    },
+    {
+      "intent_name": "tra cuu thong tin ten_the_loai",
+      "training_phrases": [
+        "muốn tra cứu phim ten_the_loai",
+        "muốn xem phim ten_the_loai",
+        "muốn coi phim ten_the_loai",
+        "thông tin phim ten_the_loai"
+      ],
+      "responses": [
+        "Bạn muốn tra cứu thể loại phim gì?"
+      ],
+      "description": "tra cuu thong tin the loai"
     },
     {
       "intent_name": "chao hoi",
@@ -25,7 +41,8 @@
         "Xin chào bạn!",
         "Rất vui được gặp bạn!",
         "Chào bạn, bạn cần mình trợ giúp gì?"
-      ]
+      ],
+      "description": "chao hoi"
     },
     {
       "intent_name": "tam biet",
@@ -38,7 +55,8 @@
         "Tạm biệt bạn!",
         "Bye bye",
         "Hẹn gặp lại bạn nha!"
-      ]
+      ],
+      "description": "tam biet"
     },
     {
       "intent_name": "hoi tham suc khoe",
@@ -50,7 +68,8 @@
       ],
       "responses": [
         "Mình khỏe. Cảm ơn bạn!"
-      ]
+      ],
+      "description": "hoi tham suc khoe"
     },
     {
       "intent_name": "ban yeu toi khong",
@@ -62,7 +81,8 @@
       ],
       "responses": [
         "Mình rất yêu bạn", "Không yêu đâu nha!"
-      ]
+      ],
+      "description": "ban yeu toi khong"
     }
   ]
 }

@@ -7,6 +7,7 @@ root = Path(os.path.abspath(__file__)).parents[1]
 
 import string
 from pyvi import ViTokenizer, ViPosTagger, ViUtils
+from fuzzysearch import find_near_matches
 
 
 def tokenize(doc):
@@ -23,8 +24,8 @@ def standardize(doc):
 
 def remove_punctuation(doc):
     for c in string.punctuation:
-        doc = doc.replace(c, " ")
-
+        if c != "_":
+            doc = doc.replace(c, " ")
     return doc
 
 
@@ -39,12 +40,16 @@ def preprocess_step_1(doc):
     return doc
 
 
-def preprocess_step_2(doc):
-    remove_stop_word(doc)
-    return doc
+def approximate_search(substring, string):
+    output = {"matched": "", "score": 0}
+    result = find_near_matches(substring, string, max_deletions=1, max_insertions=1, max_substitutions=0)
+    print(result)
+    if len(result) > 0:
+        output["matched"] = result[0].matched
+        output["score"] = 1 -(round(result[0].dist / len(substring), 2))
+    return output
+
+def remove_accents(doc):
+    return ViUtils.remove_accents(doc).decode('utf-8')
 
 
-def add_accent(doc):
-    print(ViUtils.add_accents(u'anh co yeu em khong'))
-
-add_accent("a")

@@ -77,9 +77,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="col-lg-3 col-md-5 border p-0 fixed-bottom offset-lg-8 offset-md-2 chat-header">
+      <div className="col-lg-3 col-md-5 border p-0 fixed-bottom offset-lg-8 offset-md-2">
         <div
-          className="bg-danger px-3 py-2 text-white font-weight-bold d-flex align-items-center"
+          className="bg-danger px-3 py-2 text-white font-weight-bold d-flex align-items-center chat-header"
           onClick={this.displayChatBox}
         >
           <span className="mr-auto">CHATBOT</span>
