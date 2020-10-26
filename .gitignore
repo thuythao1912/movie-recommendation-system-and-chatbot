@@ -6,7 +6,7 @@
 /client-side/node_modules
 /server-side/node_modules
 /python-side/.idea
-
+/python-side/utils/__pycache__
 # testing
 /coverage
 
