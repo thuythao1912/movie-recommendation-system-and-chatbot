@@ -1,0 +1,134 @@
+[
+  {
+    "feature": "muốn tra_cứu phim ten_phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "muốn xem phim ten_phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "muốn coi phim ten_phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "thông_tin phim ten_phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "muốn coi phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "muốn xem phim",
+    "target": "tra cuu thong tin ten_phim"
+  },
+  {
+    "feature": "muốn tra_cứu phim ten_the_loai",
+    "target": "tra cuu thong tin ten_the_loai"
+  },
+  {
+    "feature": "muốn xem phim ten_the_loai",
+    "target": "tra cuu thong tin ten_the_loai"
+  },
+  {
+    "feature": "muốn coi phim ten_the_loai",
+    "target": "tra cuu thong tin ten_the_loai"
+  },
+  {
+    "feature": "thông_tin phim ten_the_loai",
+    "target": "tra cuu thong tin ten_the_loai"
+  },
+  {
+    "feature": "xin chào",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "hi",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "chào bạn",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "hello",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "alo",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "bonjour",
+    "target": "chao hoi"
+  },
+  {
+    "feature": "tạm_biệt",
+    "target": "tam biet"
+  },
+  {
+    "feature": "bye",
+    "target": "tam biet"
+  },
+  {
+    "feature": "hẹn gặp",
+    "target": "tam biet"
+  },
+  {
+    "feature": "bạn khỏe không",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "bạn thế_nào",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "bạn khỏe",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "dạo bạn thế_nào",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "bạn có khỏe không",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "sức_khỏe bạn thế_nào",
+    "target": "hoi tham suc khoe"
+  },
+  {
+    "feature": "bạn yêu tôi không",
+    "target": "ban yeu toi khong"
+  },
+  {
+    "feature": "anh yêu em không",
+    "target": "ban yeu toi khong"
+  },
+  {
+    "feature": "yêu không",
+    "target": "ban yeu toi khong"
+  },
+  {
+    "feature": "bạn có yêu tôi không",
+    "target": "ban yeu toi khong"
+  },
+  {
+    "feature": "bạn",
+    "target": "chatbot ten gi"
+  },
+  {
+    "feature": "bạn ai",
+    "target": "chatbot ten gi"
+  },
+  {
+    "feature": "bạn",
+    "target": "chatbot ten gi"
+  },
+  {
+    "feature": "what your name",
+    "target": "chatbot ten gi"
+  }
+]

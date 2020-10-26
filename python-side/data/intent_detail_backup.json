@@ -1,0 +1,36 @@
+{
+  "intents": [
+    {
+      "intent_name": "tra cuu thong tin kinh di",
+      "training_phrases": [],
+      "responses": [
+        "res tra cuu thong tin kinh di"
+      ],
+      "description": "thông tin thể loại kinh dị"
+    },
+    {
+      "intent_name": "tra cuu thong tin hoat hinh",
+      "training_phrases": [],
+      "responses": [
+        "res tra cuu thong tin hoat hinh"
+      ],
+      "description": "thông tin thể loại hoạt hình"
+    },
+    {
+      "intent_name": "tra cuu thong tin maleficent",
+      "training_phrases": [],
+      "responses": [
+        "res tra cuu thong tin maleficent"
+      ],
+      "description": "thông tin thể phim Mintent_detail.jsonaleficent"
+    },
+    {
+      "intent_name": "tra cuu thong tin beauty and the beast",
+      "training_phrases": [],
+      "responses": [
+        "res tra cuu thong tin beauty and the beast"
+      ],
+      "description": "thông tin thể phim Beauty and the Beast"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ root = Path(os.path.abspath(__file__)).parents[2]
 
 import utils.utils as utils
 import utils.nlp_utils as nlp
-MIN_SCORE = 0.8
+ENTITY_THRESHOLD = 0.8
 
 class EntityRecognizer:
     def __init__(self):
@@ -39,28 +39,26 @@ class EntityRecognizer:
         # print(self.entity_list)
 
     def detect_entities(self, sentence):
-        # entities = []
-        # sen_result= {}
-        # for i in range(len(self.entity_vals)):
-        #     print(self.entity_vals[i], sentence)
-        #     result = nlp.approximate_search(self.entity_vals[i], sentence)
-        #     if result["score"] > MIN_SCORE:
-        #         sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
-        #         entities.append(self.entity_list[i])
-        #         sen_result ={"sen_result": sentence, "entitites": entities}
-        # print(sen_result)
-        # return sen_result
-
         entities = []
         for i in range(len(self.entity_vals)):
-            if self.entity_vals[i] in sentence:
-                sentence = sentence.replace(self.entity_vals[i], self.entity_list[i]["key"])
+            result = nlp.approximate_search(self.entity_vals[i], sentence)
+            if result["score"] > ENTITY_THRESHOLD:
+                sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
+                print(sentence)
                 entities.append(self.entity_list[i])
-        result = {"sen_result": sentence, "entitites": entities}
-        return result
+        sen_result ={"sen_result": sentence, "entitites": entities}
+        return sen_result
+
+        # entities = []
+        # for i in range(len(self.entity_vals)):
+        #     if self.entity_vals[i] in sentence:
+        #         sentence = sentence.replace(self.entity_vals[i], self.entity_list[i]["key"])
+        #         entities.append(self.entity_list[i])
+        # result = {"sen_result": sentence, "entitites": entities}
+        # return result
 
 
 if __name__ == "__main__":
     er = EntityRecognizer()
-    r = er.detect_entities("có ma")
+    r = er.detect_entities("tôi muốn xem phim kinh dị hoạt hình người đẹp và quái vật")
     print(r)

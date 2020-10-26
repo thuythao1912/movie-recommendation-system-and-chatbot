@@ -12,7 +12,8 @@ import pandas as pd
 from app.model.svm_model import SVMModel
 from joblib import dump
 
-class TextClassificationPredict(object):
+
+class Train:
     def __init__(self):
         pass
 
@@ -26,9 +27,13 @@ class TextClassificationPredict(object):
         train_data = []
         for data in train_data_source:
             for phrase in data["training_phrases"]:
-                train_data.append({"feature": f'{nlp.preprocess_step_1(phrase)}', "target": nlp.preprocess_step_1(data["intent_name"])})
+                train_data.append({"feature": f'{nlp.preprocess_step_2(nlp.preprocess_step_1(phrase))}',
+                                   "target": nlp.normalize(data["intent_name"])})
         print(train_data)
         df_train = pd.DataFrame(train_data)
+
+        # save train data to json
+        utils.save_json(train_data, os.path.join(root, "data", "data_train.json"))
 
         # init model naive bayes
         model = SVMModel()
@@ -37,7 +42,7 @@ class TextClassificationPredict(object):
         clf = model.clf.fit(df_train["feature"], df_train.target)
 
         # save model to file
-        dump(clf, 'model_predicted.joblib')
+        dump(clf, os.path.join(root, "app", "model", "trained","model_predicted.joblib"))
         print("===> Train model successfully")
 
     def predict(self):
@@ -53,7 +58,6 @@ class TextClassificationPredict(object):
         # # predict
         # clf = load('model_predicted.joblib')
         # predicted = clf.predict(df_test["feature"])
-
 
         # # Print predicted result
         # print(predicted)
@@ -71,6 +75,6 @@ class TextClassificationPredict(object):
 
 
 if __name__ == '__main__':
-    tcp = TextClassificationPredict()
-    tcp.run(os.path.join(root, "data", "intent_training.json"))
+    train = Train()
+    train.run(os.path.join(root, "data", "intent_training.json"))
     # tcp.predict()

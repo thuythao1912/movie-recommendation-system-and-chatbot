@@ -8,6 +8,7 @@ root = Path(os.path.abspath(__file__)).parents[1]
 import string
 from pyvi import ViTokenizer, ViPosTagger, ViUtils
 from fuzzysearch import find_near_matches
+import utils.utils as utils
 
 
 def tokenize(doc):
@@ -29,27 +30,47 @@ def remove_punctuation(doc):
     return doc
 
 
+def remove_duplicate_spaces(doc):
+    return " ".join(doc.split())
+
+
 def remove_stop_word(doc):
+    stop_words_list = utils.load_json(os.path.join(root, "data", "stop_words.json"))["stop_words"]
+    doc_list = doc.split()
+    for word in stop_words_list:
+        if word in doc_list:
+            doc_list[doc_list.index(word)] = doc_list[doc_list.index(word)].replace(word, " ")
+    doc = " ".join(doc_list)
+    doc = remove_duplicate_spaces(doc)
     return doc
 
 
 def preprocess_step_1(doc):
     doc = normalize(doc)
     doc = standardize(doc)
+    doc = tokenize(doc)
     doc = remove_punctuation(doc)
     return doc
 
+def preprocess_step_2(doc):
+    doc = remove_stop_word(doc)
+    return doc
 
 def approximate_search(substring, string):
     output = {"matched": "", "score": 0}
     result = find_near_matches(substring, string, max_deletions=1, max_insertions=1, max_substitutions=0)
-    print(result)
     if len(result) > 0:
-        output["matched"] = result[0].matched
-        output["score"] = 1 -(round(result[0].dist / len(substring), 2))
+        start = result[0].start
+        end = result[0].end
+        while string[start - 1] != " " and start > 0:
+            start = start - 1
+
+        while end < len(string) and string[end] != " ":
+            end = end + 1
+        output["matched"] = string[start: end + 1].strip()
+        output["score"] = 1 - (round(result[0].dist / len(substring), 3))
     return output
+
 
 def remove_accents(doc):
     return ViUtils.remove_accents(doc).decode('utf-8')
-
-

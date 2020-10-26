@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.append(os.path.join('../..'))
 root = Path(os.path.abspath(__file__)).parents[2]
 
-from app.model.intent_recognizer import IntentRecognizer
+import utils.utils as utils
+import utils.nlp_utils as nlp
 
-global intent_recognizer
-intent_recognizer = IntentRecognizer()
+print(nlp.preprocess_step_1("các cháu có đi đại học học bị gì không"))
