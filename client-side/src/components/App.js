@@ -1,13 +1,18 @@
 import React, { Component } from "react";
-import Chatbot from "./Chat";
-import Header from "./Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AdminPage from "./AdminPage";
+import HomePage from "./HomePage";
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Chatbot />
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/admin" component={AdminPage} />
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

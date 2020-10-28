@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Messages from "./Messages";
 import Input from "./Input";
-import "../App.css";
+import "../../App.css";
 import socketIOClient from "socket.io-client";
-import { ENDPOINT } from "../../utils/endpoint";
-import { formatDate } from "../../utils/helper";
+import { ENDPOINT } from "../../../utils/endpoint";
+import { formatDate } from "../../../utils/helper";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowMinimize } from "@fortawesome/free-solid-svg-icons";

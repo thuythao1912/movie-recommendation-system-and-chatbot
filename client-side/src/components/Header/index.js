@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 export default class Header extends Component {
   render() {
     return (
@@ -14,9 +15,9 @@ export default class Header extends Component {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <Link class="navbar-brand" to="/admin">
           <img src="/images/chatbot.svg" width="40" alt="" />
-        </a>
+        </Link>
       </nav>
     );
   }
