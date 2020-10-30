@@ -39,7 +39,7 @@ class RawDataProcessor:
                 movie_year = ""
 
             list_movies.append({"movieId": row["movieId"], "title": title[0], "year": movie_year,
-                                "genres": row["genres"]})
+                                "genres": row["genres"].replace("|", ", ")})
 
         for i in range(len(genres)):
             list_genres.append({"genreId": i + 1, "genreName": genres[i]})
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     rdp = RawDataProcessor()
 
     # Test split_raw_data
-    rdp.split_raw_data(["data", "raw_data"])
+    rdp.split_raw_data(["data", "raw_data"], 50)
 
     # Test create_json_from_excel for movies
     rdp.create_json_from_excel(["data", "raw_data"], "movies")

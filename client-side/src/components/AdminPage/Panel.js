@@ -10,9 +10,11 @@ export default class Panel extends Component {
         <Link to="/admin/train">
           <li className="list-group-item active">Huấn luyện</li>
         </Link>
-
+        <Link to="/admin/conversation">
+          <li className="list-group-item">Quản lý hội thoại</li>
+        </Link>
         <li className="list-group-item">
-          Dữ liệu
+          Quản lý dữ liệu
           <ul>
             <Link to="/admin/movies">
               <li>Phim</li>
