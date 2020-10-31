@@ -1,21 +1,52 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 const http = require("http");
 const socketIO = require("socket.io");
-const cors = require("cors");
+
 const axios = require("axios");
 
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const server = http.createServer(app);
 const io = socketIO.listen(server);
 
-const index = require("./routes/index");
-const { response } = require("express");
+const mongoose = require("mongoose");
+const db = require("./db");
 
+const index = require("./routes/index");
+
+//setup server
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.listen(PORT, () => {
+  console.log(`Server is running on port: ${PORT}`);
+});
+
 app.use(index);
 
+//import routes
+let movies_route = require("./routes/movies_route");
+
+//use route
+app.use("/movies", movies_route);
+
 const SERVER_PYTHON = "http://127.0.0.1:5000/predict";
+
+//connect mongodb
+mongoose.Promise = global.Promise;
+mongoose
+  .connect(db.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(
+    () => {
+      console.log(`Database is connected!`);
+    },
+    (err) => {
+      console.log(`Can not connect database! ${err}`);
+    }
+  );
 
 let run = (socket) => {
   //this will run when client successfully connected
@@ -45,7 +76,3 @@ let run = (socket) => {
 };
 
 io.on("connection", run);
-
-server.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});

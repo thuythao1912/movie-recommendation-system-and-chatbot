@@ -90,7 +90,7 @@
     {
       "intent_name": "chatbot ten gi",
       "training_phrases": [
-        "bạn tên gì", "bạn là ai", "tên bạn là gì", "what your name"
+        "bạn tên gì", "tên bạn là gì", "what your name"
       ],
       "responses": [
         "Mình tên là Nadine nha!", "Nadine là tên của mình đó!"

@@ -29,7 +29,8 @@ def save_json(data, json_path, prefix=None, orient="records"):
         with codecs.open(json_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
     else:
-        data.to_json(json_path, orient=orient)
+        df = pd.DataFrame(data)
+        df.to_json(json_path, orient=orient)
     print("===>Json successfully saved at {}".format(json_path))
 
 
@@ -42,3 +43,9 @@ def save_excel(dataframe, excel_path):
 
 def load_excel(excel_path, sheetname=None):
     return pd.read_excel(excel_path, sheetname)
+
+def duplicate_object(object, time):
+    arr = []
+    for i in range(time):
+        arr.append(object)
+    return arr
