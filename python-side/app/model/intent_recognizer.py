@@ -5,6 +5,11 @@ from pathlib import Path
 sys.path.append(os.path.join('../..'))
 root = Path(os.path.abspath(__file__)).parents[2]
 
+import configparser
+
+config = configparser.ConfigParser()
+config.read(os.path.join(root, 'config.ini'))
+
 import utils.utils as utils
 import utils.nlp_utils as nlp
 import pandas as pd
@@ -14,7 +19,9 @@ from joblib import load
 from app.model.entity_recognizer import EntityRecognizer
 from app.model.train import Train
 
-INTENT_THRESHOLD = 0.7
+
+INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
+
 UNKNOWN_RESPONSE = 'Xin lỗi, bạn có thể cung cấp thêm thông tin không?'
 MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mình sẽ cập nhật sớm nhất có thể!'
 ENTITIES = ["ten_the_loai", "ten_phim"]
@@ -30,7 +37,7 @@ class IntentRecognizer:
 
     def load_model(self):
         try:
-            self.clf = load(os.path.join(root, "app", "model", "trained","model_predicted.joblib"))
+            self.clf = load(os.path.join(root, "app", "model", "trained","model_predicted.pkl"))
         except:
             print("Load model fail => Train model")
             train = Train()
