@@ -23,6 +23,7 @@ function get_color() {
   let index = Math.floor(Math.random() * colors.length);
   return colors[index];
 }
+
 let socket = socketIOClient(ENDPOINT);
 export default class App extends Component {
   constructor(props) {

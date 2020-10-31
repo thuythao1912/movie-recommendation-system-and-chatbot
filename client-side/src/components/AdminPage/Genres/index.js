@@ -11,7 +11,7 @@ import {
 export default class Genres extends Component {
   render() {
     return (
-      <div className="bg-light">
+      <div className="">
         <h3 className="text-dark font-weight-bold">QUẢN LÝ DỮ LIỆU THỂ LOẠI</h3>
         <div className="row mt-4">
           <div className="col-lg-6">
@@ -23,7 +23,7 @@ export default class Genres extends Component {
                 <FontAwesomeIcon icon={faFileExcel} />
                 <span className="mx-2">Thêm từ excel</span>
               </div>
-              <div className="btn btn-block btn-outline-info">
+              <div className="btn btn-block btn-outline-info mt-3">
                 <FontAwesomeIcon icon={faGlobe} />
                 <span className="mx-2">Thêm từ web</span>
               </div>
@@ -33,7 +33,7 @@ export default class Genres extends Component {
                 <FontAwesomeIcon icon={faFileExcel} />
                 <span className="mx-2">Xuất file</span>
               </div>
-              <div className="btn btn-block btn-outline-danger">
+              <div className="btn btn-block btn-outline-danger mt-3">
                 <FontAwesomeIcon icon={faTrashAlt} />
                 <span className="mx-2">Xóa tất cả</span>
               </div>

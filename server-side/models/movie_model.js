@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const timeZone = require("mongoose-timezone");
 
-const movies_model = new Schema(
+const movie_model = new Schema(
   {
-    movie_id: { type: String },
-    movie_title: { type: String },
+    movie_id: { type: String, uniqueCaseInsensitive: true },
+    movie_title: { type: String, uniqueCaseInsensitive: true },
     movie_year: { type: String },
     movie_genres: { type: [String] },
     movie_actors: { type: String },
@@ -13,5 +13,5 @@ const movies_model = new Schema(
   },
   { timestamps: true }
 );
-movies_model.plugin(timeZone);
-module.exports = mongoose.model("movie", movies_model);
+movie_model.plugin(timeZone);
+module.exports = mongoose.model("movie", movie_model);

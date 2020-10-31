@@ -22,13 +22,18 @@ export default class Movies extends Component {
           </div>
           <div className="col-lg-6 row">
             <div className="col-lg-6">
-              <div className="btn btn-block btn-outline-info">
+              <div className="btn btn-block btn-info">
+                <Link
+                  to="/admin/add"
+                  className="text-decoration-none text-white"
+                >
+                  <FontAwesomeIcon icon={faGlobe} />
+                  <span className="mx-2">Thêm từ web</span>
+                </Link>
+              </div>
+              <div className="btn btn-block btn-outline-info mt-3">
                 <FontAwesomeIcon icon={faFileExcel} />
                 <span className="mx-2">Thêm từ excel</span>
-              </div>
-              <div className="btn btn-block btn-outline-info">
-                <FontAwesomeIcon icon={faGlobe} />
-                <span className="mx-2">Thêm từ web</span>
               </div>
             </div>
             <div className="col-lg-6">
@@ -36,7 +41,7 @@ export default class Movies extends Component {
                 <FontAwesomeIcon icon={faFileExcel} />
                 <span className="mx-2">Xuất file</span>
               </div>
-              <div className="btn btn-block btn-outline-danger">
+              <div className="btn btn-block btn-outline-danger mt-3">
                 <FontAwesomeIcon icon={faTrashAlt} />
                 <span className="mx-2">Xóa tất cả</span>
               </div>

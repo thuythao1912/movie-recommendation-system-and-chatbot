@@ -96,6 +96,7 @@ export default class MovieList extends Component {
                   striped
                   hover
                   condensed
+                  keyField="genre_id"
                 />
               </div>
             )}
