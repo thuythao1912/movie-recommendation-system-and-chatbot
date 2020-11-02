@@ -21,7 +21,37 @@ exports.get_greatest_id = async () => {
   return genre_id;
 };
 
-exports.add_list_movie = (data) => {
-  console.log(data);
-  return "ok";
+exports.add_list_movie = async (array_data) => {
+  count = 0;
+  for (let i = 0; i < array_data.length; i++) {
+    await movie_model.find(
+      { ["movie_title"]: array_data[i]["movie_title"] },
+      (err, result) => {
+        if (result.length == 0) {
+          movie_model.find(
+            {
+              ["movie_title"]: {
+                $regex: new RegExp(`^${array_data[i]["movie_title"]}$`, "i"),
+              },
+            },
+            (err, result) => {
+              if (result.length == 0) {
+                let item = new movie_model(array_data[i]);
+                item.save().then((item) => {
+                  console.log(item);
+                  count = count + 1;
+                });
+              }
+            }
+          );
+        }
+      }
+    );
+  }
+
+  // count > 0
+  //   ? (message = `Movies are added successfully`)
+  //   : (message = `No movie is added`);
+  // console.log(message);
+  // return message;
 };

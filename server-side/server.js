@@ -90,10 +90,12 @@ let run = (socket) => {
     socket.emit("get_greatest_movie_id", result);
   });
   //3. add_list_movie
-  socket.on("add_list_movie", async (data) => {
+  socket.on("add_list_movie", (data) => {
     console.log("add_list_movie");
-    result = await movie_controller.add_list_movie(data);
-    socket.emit("change_movie_list");
+    movie_controller.add_list_movie(data).then((res) => {
+      console.log("get_movie_list");
+      socket.emit("get_movie_list");
+    });
   });
 
   //===========MODULE : MOVIE_GENRE

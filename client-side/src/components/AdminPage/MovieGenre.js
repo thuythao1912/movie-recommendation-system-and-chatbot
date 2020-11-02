@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { init_request, receive_response } from "../../utils/socket_helper";
+import { socket } from "../../utils/socket";
 export default class MovieGenre extends Component {
   constructor(props) {
     super();
@@ -8,11 +8,14 @@ export default class MovieGenre extends Component {
   get_movie_genre_count = (data) => {
     this.setState(data);
   };
-  init_get_movie_genre_count = () => init_request("get_movie_genre_count");
-  
+  init_get_movie_genre_count = () => socket.emit("get_movie_genre_count");
+
   componentDidMount() {
     this.init_get_movie_genre_count();
-    receive_response("get_movie_genre_count", this.get_movie_genre_count);
+    socket.on("get_movie_genre_count", this.get_movie_genre_count);
+  }
+  componentWillUnmount() {
+    socket.off("get_movie_genre_count");
   }
   render() {
     return (

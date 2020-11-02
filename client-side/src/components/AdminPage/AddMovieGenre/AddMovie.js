@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { init_request, receive_response } from "../../../utils/socket_helper";
+import { socket } from "../../../utils/socket";
 export default class AddMovie extends Component {
   constructor(props) {
     super();
@@ -19,13 +19,31 @@ export default class AddMovie extends Component {
 
   componentDidMount() {
     //get genre list
-    init_request("get_genre_list");
-    receive_response("get_genre_list", this.get_genre_list);
+    socket.emit("get_genre_list");
+    socket.on("get_genre_list", this.get_genre_list);
 
     //get greatest movie id
-    init_request("get_greatest_movie_id");
-    receive_response("get_greatest_movie_id", this.get_greatest_movie_id);
+    socket.emit("get_greatest_movie_id");
+    socket.on("get_greatest_movie_id", this.get_greatest_movie_id);
   }
+  componentWillUnmount() {
+    socket.off("get_genre_list");
+    socket.off("get_greatest_movie_id");
+  }
+  send_data = () => {
+    let data = {
+      movie_genres: this.state.movie_genres,
+      movie_id: this.state.movie_id + 1,
+      movie_title: this.state.movie_title,
+      movie_year: this.state.movie_year,
+      movie_actors: this.state.movie_actors,
+      movie_producers: this.state.movie_producers,
+    };
+    socket.emit("add_list_movie", [data]);
+    socket.on("change_movie_list", (resullt) => {
+      console.log(resullt);
+    });
+  };
   select_genres = (e) => {
     let arr = [...this.state.movie_genres];
     if (!arr.includes(e.target.value) && e.target.value != -1) {
@@ -43,17 +61,7 @@ export default class AddMovie extends Component {
   handle_input = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  send_data = () => {
-    let data = {
-      movie_genres: this.state.movie_genres,
-      movie_id: this.state.movie_id,
-      movie_title: this.state.movie_title,
-      movie_year: this.state.movie_year,
-      movie_actors: this.state.movie_actors,
-      movie_producers: this.state.movie_producers,
-    };
-    init_request("add_list_movie", data);
-  };
+
   render() {
     let genre_list = this.state.genre_list;
     let elGenre = genre_list.map((item, index) => {
@@ -94,7 +102,7 @@ export default class AddMovie extends Component {
                 className="form-control"
                 required
                 onChange={this.handle_input}
-                name="movie_name"
+                name="movie_title"
               />
             </div>
           </div>

@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Messages from "./Messages";
 import Input from "./Input";
 import "../../App.css";
-import socketIOClient from "socket.io-client";
-import { ENDPOINT } from "../../../utils/endpoint";
+import { socket } from "../../../utils/socket";
 import { formatDate } from "../../../utils/helper";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,7 +23,7 @@ function get_color() {
   return colors[index];
 }
 
-let socket = socketIOClient(ENDPOINT);
+// let socket = socketIOClient(ENDPOINT);
 export default class App extends Component {
   constructor(props) {
     super();

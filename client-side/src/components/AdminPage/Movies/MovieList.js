@@ -12,7 +12,7 @@ import {
   faTrashAlt,
   faWindowClose,
 } from "@fortawesome/free-solid-svg-icons";
-import { init_request, receive_response } from "../../../utils/socket_helper";
+import { socket } from "../../../utils/socket";
 export default class MovieList extends Component {
   constructor(props) {
     super();
@@ -61,15 +61,22 @@ export default class MovieList extends Component {
     };
   }
   get_movie_list = (data) => {
+    alert("get_movie_list");
     this.setState({ data: data });
   };
-  init_get_movie_list = () => init_request("get_movie_list");
-
+  init_get_movie_list = () => {
+    socket.emit("get_movie_list");
+  };
   componentDidMount() {
     this.init_get_movie_list();
-    receive_response("get_movie_list", this.get_movie_list);
-    receive_response("change_movie_list", this.init_get_movie_list);
+    socket.on("get_movie_list", this.get_movie_list);
+    socket.on("change_movie_list", this.init_get_movie_list);
   }
+  // componentWillUnmount() {
+  //   socket.off("get_movie_list");
+  //   socket.off("change_movie_list");
+  // }
+
   formatMovieGenres = (cell, row, rowIndex, formatExtraData) => {
     return <span>{row.movie_genres.join(", ")}</span>;
   };
