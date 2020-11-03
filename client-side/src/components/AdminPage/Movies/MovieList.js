@@ -4,15 +4,9 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClosedCaptioning,
-  faEdit,
-  faInfoCircle,
-  faTextWidth,
-  faTrashAlt,
-  faWindowClose,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { socket } from "../../../utils/socket";
+import callApi from "../../../utils/apiCaller";
 export default class MovieList extends Component {
   constructor(props) {
     super();
@@ -60,29 +54,21 @@ export default class MovieList extends Component {
       ],
     };
   }
-  get_movie_list = (data) => {
-    alert("get_movie_list");
-    this.setState({ data: data });
-  };
-  init_get_movie_list = () => {
-    socket.emit("get_movie_list");
-  };
-  componentDidMount() {
-    this.init_get_movie_list();
-    socket.on("get_movie_list", this.get_movie_list);
-    socket.on("change_movie_list", this.init_get_movie_list);
+  get_movie_list() {
+    callApi("movies", "get").then((res) => {
+      this.setState({ data: res.data });
+    });
   }
-  // componentWillUnmount() {
-  //   socket.off("get_movie_list");
-  //   socket.off("change_movie_list");
-  // }
+  componentDidMount() {
+    this.get_movie_list();
+  }
 
   formatMovieGenres = (cell, row, rowIndex, formatExtraData) => {
-    return <span>{row.movie_genres.join(", ")}</span>;
+    return <span key={rowIndex}>{row.movie_genres.join(", ")}</span>;
   };
   Action(cell, row, rowIndex, formatExtraData) {
     return (
-      <div>
+      <div key={rowIndex}>
         <span>
           <FontAwesomeIcon icon={faEdit} className="text-info mr-3" />
           <FontAwesomeIcon icon={faTrashAlt} className="text-info mr-3" />
@@ -116,7 +102,7 @@ export default class MovieList extends Component {
                 <BootstrapTable
                   {...props.baseProps}
                   pagination={paginationFactory()}
-                  keyField="movie_id"
+                  keyField="id"
                 />
               </div>
             )}

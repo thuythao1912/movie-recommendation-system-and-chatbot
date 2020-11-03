@@ -8,6 +8,7 @@ root = Path(os.path.abspath(__file__)).parents[2]
 import utils.utils as utils
 import utils.nlp_utils as nlp
 ENTITY_THRESHOLD = 0.8
+import re
 
 class EntityRecognizer:
     def __init__(self):
@@ -46,16 +47,25 @@ class EntityRecognizer:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
                 print(sentence)
                 entities.append(self.entity_list[i])
-        sen_result ={"sen_result": sentence, "entitites": entities}
+         res = [sub['key'] for sub in entities]
+        entities_unique = list(set().union(res))
+        sign = []
+        for ent in entities_unique:
+            if res.count(ent) > 1:
+                sign.append({"entity": ent, "value": self.detect_sign(sentence, ent)})
+        sen_result = {"sen_result": sentence, "entitites": entities, "sign": sign}
         return sen_result
 
-        # entities = []
-        # for i in range(len(self.entity_vals)):
-        #     if self.entity_vals[i] in sentence:
-        #         sentence = sentence.replace(self.entity_vals[i], self.entity_list[i]["key"])
-        #         entities.append(self.entity_list[i])
-        # result = {"sen_result": sentence, "entitites": entities}
-        # return result
+    def detect_sign(self, sentence, entity):
+        start = (sentence.find(entity))
+        end = (sentence.rfind(entity))
+        count_and = 0
+        for i in SYNONYM_WORD[0]:
+            count_and += sentence.count(i, start, end + 1)
+        if count_and > 0:
+            return "and"
+        else:
+            return "or"
 
 
 if __name__ == "__main__":

@@ -1,22 +1,27 @@
 import React, { Component } from "react";
 import { socket } from "../../utils/socket";
+import callApi from "../../utils/apiCaller";
 export default class MovieGenre extends Component {
   constructor(props) {
     super();
     this.state = { count_movie: 0, count_genre: 0 };
   }
-  get_movie_genre_count = (data) => {
-    this.setState(data);
-  };
-  init_get_movie_genre_count = () => socket.emit("get_movie_genre_count");
+  async get_movie_genre_count() {
+    let count_movie = 0;
+    let count_genre = 0;
+    await callApi("movies/count", "get").then((res) => {
+      count_movie = res.data;
+    });
+    await callApi("genres/count", "get").then((res) => {
+      count_genre = res.data;
+    });
+    this.setState({ count_genre: count_genre, count_movie: count_movie });
+  }
 
   componentDidMount() {
-    this.init_get_movie_genre_count();
-    socket.on("get_movie_genre_count", this.get_movie_genre_count);
+    this.get_movie_genre_count();
   }
-  componentWillUnmount() {
-    socket.off("get_movie_genre_count");
-  }
+
   render() {
     return (
       <div className="d-flex justify-content-between pr-0">

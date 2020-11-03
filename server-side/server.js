@@ -76,46 +76,6 @@ let run = (socket) => {
         });
       });
   });
-  //===========MODULE : MOVIE
-  //1. get_list_movie
-  socket.on("get_movie_list", async () => {
-    console.log("get_movie_list");
-    result = await movie_controller.get_list_movie();
-    socket.emit("get_movie_list", result);
-  });
-  //2. get_greatest_movie_id
-  socket.on("get_greatest_movie_id", async () => {
-    console.log("get_greatest_movie_id");
-    result = await movie_controller.get_greatest_id();
-    socket.emit("get_greatest_movie_id", result);
-  });
-  //3. add_list_movie
-  socket.on("add_list_movie", (data) => {
-    console.log("add_list_movie");
-    movie_controller.add_list_movie(data).then((res) => {
-      console.log("get_movie_list");
-      socket.emit("get_movie_list");
-    });
-  });
-
-  //===========MODULE : MOVIE_GENRE
-  //1. get_list_movie_genre
-  socket.on("get_movie_genre_count", async () => {
-    let count_movie = await movie_controller.count_movie();
-    let count_genre = await genre_controller.count_genre();
-
-    socket.emit("get_movie_genre_count", {
-      count_movie: count_movie,
-      count_genre: count_genre,
-    });
-  });
-
-  //===========MODULE : GENRE
-  //1. get_list_genre
-  socket.on("get_genre_list", async () => {
-    result = await genre_controller.get_list_genre();
-    socket.emit("get_genre_list", result);
-  });
 };
 
 io.on("connection", run);

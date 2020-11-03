@@ -1,3 +1,4 @@
+const { count } = require("../models/movie_model");
 var movie_model = require("../models/movie_model");
 
 exports.get_list_movie = (req, res) => {
@@ -16,38 +17,55 @@ exports.get_list_movie = (req, res) => {
 };
 
 exports.add_list_movie = async (req, res) => {
-  list_movie = req.body.list_movie;
-  unique_key = req.body.unique_key;
-  count = 0;
-  for (let i = 0; i < list_movie.length; i++) {
-    await movie_model.find(
-      { [unique_key]: list_movie[i][unique_key] },
-      (err, result) => {
+  list_movie = req.body.data;
+  let movie_success = 0;
+  let movie_fail = 0;
+  let message = "";
+  let onComplete = () => {
+    if (movie_success > 0) {
+      message += `${movie_success}/${list_movie.length} phim đã được thêm thành công!\n`;
+    }
+    if (movie_fail > 0) {
+      message += `${movie_fail}/${list_movie.length} phim thêm thất bại!`;
+    }
+    res.status(200).json({ message: message });
+  };
+  let tasksToGo = list_movie.length;
+  if (tasksToGo === 0) {
+    onComplete();
+  } else {
+    await list_movie.map((movie, key) => {
+      movie_model.find({ movie_title: movie.movie_title }, (err, result) => {
         if (result.length == 0) {
           movie_model.find(
             {
-              [unique_key]: {
-                $regex: new RegExp(`^${list_movie[i][unique_key]}$`, "i"),
+              movie_title: {
+                $regex: new RegExp(`^${movie.movie_title}$`, "i"),
               },
             },
             (err, result) => {
               if (result.length == 0) {
-                let item = new movie_model(list_movie[i]);
-                item.save().then((item) => {
-                  console.log(item);
-                  count = count + 1;
-                });
+                let item = new movie_model(movie);
+                item.save();
+                movie_success++;
+                if (--tasksToGo === 0) {
+                  // No tasks left, good to go
+                  onComplete();
+                }
               }
             }
           );
+        } else {
+          movie_fail++;
+          console.log(movie_fail);
+          if (--tasksToGo === 0) {
+            // No tasks left, good to go
+            onComplete();
+          }
         }
-      }
-    );
+      });
+    });
   }
-  count > 0
-    ? (message = `Movies are added successfully`)
-    : (message = `No movie is added`);
-  res.status(200).json({ message: message });
 };
 
 exports.count_movie = async (req, res) => {
@@ -56,4 +74,11 @@ exports.count_movie = async (req, res) => {
     count_doc = result;
   });
   res.status(200).json(count_doc);
+};
+
+exports.get_greatest_movie_id = async (req, res) => {
+  let genre_id = 0;
+  movies = await movie_model.find({}, null, { sort: { genre_id: 1 } });
+  genre_id = movies[movies.length - 1].movie_id;
+  res.status(200).json(genre_id);
 };
