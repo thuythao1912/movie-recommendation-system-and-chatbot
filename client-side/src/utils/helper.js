@@ -28,3 +28,4 @@ exports.checkNull = (full_states, data) => {
   });
   return is_null;
 };
+

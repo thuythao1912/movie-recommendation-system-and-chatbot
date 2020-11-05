@@ -10,6 +10,8 @@ import utils.nlp_utils as nlp
 ENTITY_THRESHOLD = 0.8
 import re
 
+SYNONYM_WORD = [["and", "và"], ["or", "hoặc"]]
+
 class EntityRecognizer:
     def __init__(self):
         self.entity_list = []
@@ -36,8 +38,6 @@ class EntityRecognizer:
         for entity_val in self.entity_vals:
             self.entity_list.append((next(item for item in data if item["value"] == entity_val)))
 
-        # print(self.entity_vals)
-        # print(self.entity_list)
 
     def detect_entities(self, sentence):
         entities = []
@@ -47,7 +47,7 @@ class EntityRecognizer:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
                 print(sentence)
                 entities.append(self.entity_list[i])
-         res = [sub['key'] for sub in entities]
+        res = [sub['key'] for sub in entities]
         entities_unique = list(set().union(res))
         sign = []
         for ent in entities_unique:
@@ -70,5 +70,5 @@ class EntityRecognizer:
 
 if __name__ == "__main__":
     er = EntityRecognizer()
-    r = er.detect_entities("tôi muốn xem phim kinh dị hoạt hình người đẹp và quái vật")
+    r = er.detect_entities("tôi muốn xem phim kinh dị")
     print(r)

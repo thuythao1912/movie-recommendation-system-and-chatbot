@@ -1,7 +1,7 @@
 {
   "entities": [
     {
-      "key": "ten_phim",
+      "key": "movie_title",
       "values": [
         {
           "org_val": "Maleficient",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "key": "ten_the_loai",
+      "key": "genre_name",
       "values": [
         {
           "org_val": "hoạt hình",

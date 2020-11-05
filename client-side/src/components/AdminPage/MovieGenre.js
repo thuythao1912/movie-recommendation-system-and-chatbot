@@ -6,7 +6,7 @@ export default class MovieGenre extends Component {
     super();
     this.state = { count_movie: 0, count_genre: 0 };
   }
-  async get_movie_genre_count() {
+  get_movie_genre_count = async () => {
     let count_movie = 0;
     let count_genre = 0;
     await callApi("movies/count", "get").then((res) => {
@@ -15,8 +15,8 @@ export default class MovieGenre extends Component {
     await callApi("genres/count", "get").then((res) => {
       count_genre = res.data;
     });
-    this.setState({ count_genre: count_genre, count_movie: count_movie });
-  }
+    await this.setState({ count_genre: count_genre, count_movie: count_movie });
+  };
 
   componentDidMount() {
     this.get_movie_genre_count();

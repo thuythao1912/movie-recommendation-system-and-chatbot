@@ -38,7 +38,8 @@
         "hi",
         "chào bạn",
         "hello",
-        "alo", "bonjour"
+        "alo",
+        "bonjour"
       ],
       "responses": [
         "Xin chào bạn!",
@@ -46,7 +47,7 @@
         "Chào bạn, bạn cần mình trợ giúp gì?",
         "Nadine nghe đây! Mình có thể giúp gì cho bạn?"
       ],
-       "query": "",
+      "query": "",
       "description": "casual"
     },
     {
@@ -61,7 +62,7 @@
         "Bye bye",
         "Hẹn gặp lại bạn nha!"
       ],
-       "query": "",
+      "query": "",
       "description": "tam biet"
     },
     {
@@ -77,7 +78,7 @@
       "responses": [
         "Mình khỏe. Cảm ơn bạn!"
       ],
-       "query": "",
+      "query": "",
       "description": "casual"
     },
     {
@@ -89,20 +90,24 @@
         "bạn có yêu tôi không"
       ],
       "responses": [
-        "Mình rất yêu bạn", "Không yêu đâu nha!"
+        "Mình rất yêu bạn",
+        "Không yêu đâu nha!"
       ],
-       "query": "",
+      "query": "",
       "description": "casual"
     },
     {
       "intent_name": "chatbot ten gi",
       "training_phrases": [
-        "bạn tên gì", "tên bạn là gì", "what your name"
+        "bạn tên gì",
+        "tên bạn là gì",
+        "what your name"
       ],
       "responses": [
-        "Mình tên là Nadine nha!", "Nadine là tên của mình đó!"
+        "Mình tên là Nadine nha!",
+        "Nadine là tên của mình đó!"
       ],
-       "query": "",
+      "query": "",
       "description": "casual"
     }
   ]

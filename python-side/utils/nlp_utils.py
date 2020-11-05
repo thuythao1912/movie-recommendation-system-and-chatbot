@@ -60,17 +60,21 @@ def approximate_search(substring, string):
     output = {"matched": "", "score": 0}
     result = find_near_matches(substring, string, max_deletions=1, max_insertions=1, max_substitutions=0)
     if len(result) > 0:
-        start = result[0].start
-        end = result[0].end
+        dist = [d.dist for d in result]
+        min_index = dist.index(min(dist))
+
+        start = result[min_index].start
+        end = result[min_index].end
         while string[start - 1] != " " and start > 0:
             start = start - 1
 
         while end < len(string) and string[end] != " ":
             end = end + 1
         output["matched"] = string[start: end + 1].strip()
-        output["score"] = 1 - (round(result[0].dist / len(substring), 3))
+        output["score"] = 1- (round(result[min_index].dist / len(substring), 3))
     return output
 
 
 def remove_accents(doc):
     return ViUtils.remove_accents(doc).decode('utf-8')
+

@@ -82,3 +82,40 @@ exports.get_greatest_movie_id = async (req, res) => {
   genre_id = movies[movies.length - 1].movie_id;
   res.status(200).json(genre_id);
 };
+
+exports.delete_one_movie = (req, res) => {
+  movie_model.findByIdAndDelete(req.params.id, (err, movie) => {
+    if (err) {
+      res.json({ message: "Phim đã xóa thất bại!" });
+    } else {
+      res.json({ message: "Phim đã xóa thàng công!" });
+    }
+  });
+};
+
+exports.update_one_movie = (req, res) => {
+  movie_model
+    .findById(req.params.id, (err, item) => {
+      if (!item) {
+        res.json({ message: "Không tìm thấy phim cần cập nhật!" });
+      } else {
+        let data = req.body.data;
+        keys = Object.keys(data);
+        keys.map((key) => {
+          item[key] = data[key];
+        });
+        console.log(item);
+        item.updatedAt = new Date();
+        item.__v += 1;
+        item.save().then((itemUpdated) => {
+          res.status(200).json({
+            message: "Phim đã cập nhật thành công!",
+            object: itemUpdated,
+          });
+        });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

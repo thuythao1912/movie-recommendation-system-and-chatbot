@@ -51,11 +51,10 @@ class IntentRecognizer:
         intents.extend(intent_training)
         self.intents = intents
 
-
     def get_response(self, intent_name, entities, signs):
         print("get_res", intent_name)
         entity = ""
-        result={}
+        result = {}
         intent = next((item for item in self.intents if item["intent_name"] == intent_name), None)
         response = UNKNOWN_RESPONSE
         if not intent is None:
@@ -73,12 +72,14 @@ class IntentRecognizer:
 
                         opt = [s["value"] for s in signs if s["entity"] == entity]
                         ent_vals = [{e["key"]: e["org_val"]} for e in entities if e["key"] == entity]
-                        condition = {f'${opt[0]}': ent_vals}
+                        if len(opt) > 0:
+                            condition = {f'${opt[0]}': ent_vals}
+                        else:
+                            condition = ent_vals[0]
                         print(condition)
                         response = intent["query"].format(condition)
         result["response"] = response
         return result
-
 
     def run(self, sentence):
         sen_result = self.entity_recognizer.detect_entities(sentence)
