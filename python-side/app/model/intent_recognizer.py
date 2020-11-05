@@ -19,12 +19,11 @@ from joblib import load
 from app.model.entity_recognizer import EntityRecognizer
 from app.model.train import Train
 
-
 INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
 UNKNOWN_RESPONSE = 'Xin lỗi, bạn có thể cung cấp thêm thông tin không?'
 MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mình sẽ cập nhật sớm nhất có thể!'
-ENTITIES = ["ten_the_loai", "ten_phim"]
+ENTITIES = ["genre_name", "movie_title"]
 
 
 class IntentRecognizer:
@@ -37,7 +36,7 @@ class IntentRecognizer:
 
     def load_model(self):
         try:
-            self.clf = load(os.path.join(root, "app", "model", "trained","model_predicted.pkl"))
+            self.clf = load(os.path.join(root, "app", "model", "trained", "model_predicted.pkl"))
         except:
             print("Load model fail => Train model")
             train = Train()
@@ -52,38 +51,41 @@ class IntentRecognizer:
         intents.extend(intent_training)
         self.intents = intents
 
-    def get_response(self, intent_name, entities):
-        print(intent_name)
-        result = {}
+
+    def get_response(self, intent_name, entities, signs):
+        print("get_res", intent_name)
+        entity = ""
+        result={}
         intent = next((item for item in self.intents if item["intent_name"] == intent_name), None)
+        response = UNKNOWN_RESPONSE
         if not intent is None:
-            response = f'{random.choice(intent["responses"])}'
-            has_entities = False
-            for entity in ENTITIES:
-                if entity in intent_name:
-                    has_entities = True
-
-            if not has_entities:
-                print("# case 1 : intent has built-in response")
-                result["response"] = response
-
+            if intent["description"] != "domain":
+                response = f'{random.choice(intent["responses"])}'
             else:
-                print("# case 2 : intent replace entities in response")
                 if len(entities) == 0:
-                    print("# case 2.1: entities are empty")
-                    result["response"] = response
+                    response = f'{random.choice(intent["responses"])}'
                 else:
-                    print("# case 2.2: has entities")
-                    response = intent["description"].format("&".join(entities))
-                    result["response"] = response
-            result["description"] = intent["description"]
+
+                    if intent["query"] != "":
+                        for e in ENTITIES:
+                            if e in intent_name:
+                                entity = e
+
+                        opt = [s["value"] for s in signs if s["entity"] == entity]
+                        ent_vals = [{e["key"]: e["org_val"]} for e in entities if e["key"] == entity]
+                        condition = {f'${opt[0]}': ent_vals}
+                        print(condition)
+                        response = intent["query"].format(condition)
+        result["response"] = response
         return result
+
 
     def run(self, sentence):
         sen_result = self.entity_recognizer.detect_entities(sentence)
         sen_recognize = sen_result["sen_result"]
         sen_recognize = nlp.preprocess_step_2(nlp.preprocess_step_1(sen_recognize))
 
+        sign = sen_result["sign"]
         entities = sen_result["entitites"]
         entities_val = []
         data_predict = [{"feature": sen_recognize}]
@@ -98,7 +100,7 @@ class IntentRecognizer:
         # Get response
         score = max(self.clf.predict_proba(df_predict["feature"])[0])
 
-        output = {"input": sentence, "intent_name": "", "response": "", "score": score,  "entities": entities}
+        output = {"input": sentence, "intent_name": "", "response": "", "score": score, "entities": entities}
         if score < INTENT_THRESHOLD:
             output["response"] = UNKNOWN_RESPONSE
             output["intent_name"] = intent_predicted[0]
@@ -110,17 +112,11 @@ class IntentRecognizer:
                 name_predicted = name_predicted.replace(entity["key"], entity["org_val"])
                 name_predicted = nlp.remove_accents(name_predicted)
                 entities_val.append(entity["org_val"])
-            result = self.get_response(intent_predicted[0], entities_val)
+            result = self.get_response(intent_predicted[0], entities, sign)
             print(result)
 
-            # case missing intent_detail
-            if len(result) == 0:
-                output["response"] = MISSING_RESPONSE.format(sentence)
-            # case existing intent_detail
-            else:
-                output["response"] = result["response"]
+            output["response"] = result["response"]
 
-        # output = {"input": sentence, "intent_name": name_predicted, "response": response, "score": score}
         return output
 
 
