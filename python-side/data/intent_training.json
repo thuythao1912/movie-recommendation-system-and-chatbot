@@ -1,32 +1,35 @@
 {
   "intents": [
     {
-      "intent_name": "tra cuu thong tin ten_phim",
+      "intent_name": "tra cuu thong tin movie_title",
       "training_phrases": [
-        "muốn tra cứu phim ten_phim",
-        "muốn xem phim ten_phim",
-        "muốn coi phim ten_phim",
-        "thông tin phim ten_phim",
+        "muốn tra cứu phim movie_title",
+        "muốn xem phim movie_title",
+        "muốn coi phim movie_title",
+        "thông tin phim movie_title",
         "muốn coi phim",
         "muốn xem phim"
       ],
       "responses": [
         "Bạn muốn tra cứu phim gì?"
       ],
-      "description": "res ten phim {}"
+      "query": "movie_model.find({})",
+      "description": "domain"
     },
     {
-      "intent_name": "tra cuu thong tin ten_the_loai",
+      "intent_name": "tra cuu thong tin genre_name",
       "training_phrases": [
-        "muốn tra cứu phim ten_the_loai",
-        "muốn xem phim ten_the_loai",
-        "muốn coi phim ten_the_loai",
-        "thông tin phim ten_the_loai"
+        "muốn tra cứu phim genre_name",
+        "muốn xem phim genre_name",
+        "muốn coi phim genre_name",
+        "thông tin phim genre_name",
+        "muốn coi thể loại"
       ],
       "responses": [
         "Bạn muốn tra cứu thể loại phim gì?"
       ],
-      "description": "res ten the loai {}"
+      "query": "genre_model.find({})",
+      "description": "domain"
     },
     {
       "intent_name": "chao hoi",
@@ -43,7 +46,8 @@
         "Chào bạn, bạn cần mình trợ giúp gì?",
         "Nadine nghe đây! Mình có thể giúp gì cho bạn?"
       ],
-      "description": "chao hoi"
+       "query": "",
+      "description": "casual"
     },
     {
       "intent_name": "tam biet",
@@ -57,6 +61,7 @@
         "Bye bye",
         "Hẹn gặp lại bạn nha!"
       ],
+       "query": "",
       "description": "tam biet"
     },
     {
@@ -72,7 +77,8 @@
       "responses": [
         "Mình khỏe. Cảm ơn bạn!"
       ],
-      "description": "hoi tham suc khoe"
+       "query": "",
+      "description": "casual"
     },
     {
       "intent_name": "ban yeu toi khong",
@@ -85,7 +91,8 @@
       "responses": [
         "Mình rất yêu bạn", "Không yêu đâu nha!"
       ],
-      "description": "ban yeu toi khong"
+       "query": "",
+      "description": "casual"
     },
     {
       "intent_name": "chatbot ten gi",
@@ -95,7 +102,8 @@
       "responses": [
         "Mình tên là Nadine nha!", "Nadine là tên của mình đó!"
       ],
-      "description": "chatbot ten gi"
+       "query": "",
+      "description": "casual"
     }
   ]
 }
