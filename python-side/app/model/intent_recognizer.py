@@ -18,12 +18,13 @@ from joblib import load
 
 from app.model.entity_recognizer import EntityRecognizer
 from app.model.train import Train
+from app.model.db_connector import *
 
 INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
 UNKNOWN_RESPONSE = 'Xin lỗi, bạn có thể cung cấp thêm thông tin không?'
 MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mình sẽ cập nhật sớm nhất có thể!'
-ENTITIES = ["genre_name", "movie_title"]
+ENTITIES = ["movie_genres", "movie_title"]
 
 
 class IntentRecognizer:
@@ -76,10 +77,30 @@ class IntentRecognizer:
                             condition = {f'${opt[0]}': ent_vals}
                         else:
                             condition = ent_vals[0]
-                        print(condition)
                         response = intent["query"].format(condition)
+
+                        if "query#" in response:
+                            response = self.query_answer(response, condition)
         result["response"] = response
         return result
+
+    def query_answer(self, query, condition):
+        start = query.index("#") + 1
+        end = len(query)
+        model = query[start:query.index(".")]
+        filter = query[start:end]
+        print(condition)
+        result = None
+        res = "Xin lỗi, hiện mình không tìm được phim như bạn mong muốn rồi!"
+        if model == "movies":
+            obj = Movies()
+            result = obj.find_one(condition)
+        if model == "genres":
+            obj = Genres()
+            result = obj.find_one(condition)
+        if not result is None:
+            res = "Các phim có thể loại bạn đang tìm kiếm là: {}".format(result["movie_title"])
+        return res
 
     def run(self, sentence):
         sen_result = self.entity_recognizer.detect_entities(sentence)

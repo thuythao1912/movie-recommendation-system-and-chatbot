@@ -13,22 +13,22 @@
       "responses": [
         "Bạn muốn tra cứu phim gì?"
       ],
-      "query": "movie_model.find({})",
+      "query": "query#movies.find({})",
       "description": "domain"
     },
     {
-      "intent_name": "tra cuu thong tin genre_name",
+      "intent_name": "tra cuu thong tin movie_genres",
       "training_phrases": [
-        "muốn tra cứu phim genre_name",
-        "muốn xem phim genre_name",
-        "muốn coi phim genre_name",
-        "thông tin phim genre_name",
+        "muốn tra cứu phim movie_genres",
+        "muốn xem phim movie_genres",
+        "muốn coi phim movie_genres",
+        "thông tin phim movie_genres",
         "muốn coi thể loại"
       ],
       "responses": [
         "Bạn muốn tra cứu thể loại phim gì?"
       ],
-      "query": "genre_model.find({})",
+      "query": "query#movies.find({})",
       "description": "domain"
     },
     {

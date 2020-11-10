@@ -1,4 +1,3 @@
-const { count } = require("../models/movie_model");
 var movie_model = require("../models/movie_model");
 
 exports.get_list_movie = (req, res) => {
@@ -17,7 +16,7 @@ exports.get_list_movie = (req, res) => {
 };
 
 exports.add_list_movie = async (req, res) => {
-  list_movie = req.body.data;
+  let list_movie = req.body.data;
   let movie_success = 0;
   let movie_fail = 0;
   let message = "";
@@ -36,6 +35,7 @@ exports.add_list_movie = async (req, res) => {
   } else {
     await list_movie.map((movie, key) => {
       movie_model.find({ movie_title: movie.movie_title }, (err, result) => {
+        console.log(result);
         if (result.length == 0) {
           movie_model.find(
             {
@@ -49,7 +49,11 @@ exports.add_list_movie = async (req, res) => {
                 item.save();
                 movie_success++;
                 if (--tasksToGo === 0) {
-                  // No tasks left, good to go
+                  onComplete();
+                }
+              } else {
+                movie_fail++;
+                if (--tasksToGo === 0) {
                   onComplete();
                 }
               }
@@ -57,9 +61,7 @@ exports.add_list_movie = async (req, res) => {
           );
         } else {
           movie_fail++;
-          console.log(movie_fail);
           if (--tasksToGo === 0) {
-            // No tasks left, good to go
             onComplete();
           }
         }
@@ -77,10 +79,14 @@ exports.count_movie = async (req, res) => {
 };
 
 exports.get_greatest_movie_id = async (req, res) => {
-  let genre_id = 0;
-  movies = await movie_model.find({}, null, { sort: { genre_id: 1 } });
-  genre_id = movies[movies.length - 1].movie_id;
-  res.status(200).json(genre_id);
+  let movie_id = 0;
+  movies = await movie_model.find({}, null, { sort: { movie_id: 1 } });
+  id = [];
+  movies.forEach((movie) => {
+    id.push(parseInt(movie.movie_id));
+  });
+  movie_id = Math.max.apply(Math, id);
+  res.status(200).json(movie_id);
 };
 
 exports.delete_one_movie = (req, res) => {
@@ -99,20 +105,18 @@ exports.update_one_movie = (req, res) => {
       if (!item) {
         res.json({ message: "Không tìm thấy phim cần cập nhật!" });
       } else {
-        let data = req.body.data;
-        keys = Object.keys(data);
-        keys.map((key) => {
-          item[key] = data[key];
-        });
-        console.log(item);
-        item.updatedAt = new Date();
-        item.__v += 1;
-        item.save().then((itemUpdated) => {
-          res.status(200).json({
-            message: "Phim đã cập nhật thành công!",
-            object: itemUpdated,
-          });
-        });
+        movie_model.findByIdAndUpdate(
+          req.params.id,
+          req.body.data,
+          (err,
+          (itemUpdated) => {
+            if (err) {
+              res.json({ message: "Cập nhật phim thất bại!" });
+            } else {
+              res.json({ message: "Phim đã cập nhật thành công!" });
+            }
+          })
+        );
       }
     })
     .catch((err) => {

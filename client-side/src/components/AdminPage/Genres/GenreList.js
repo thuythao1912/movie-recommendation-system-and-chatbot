@@ -4,46 +4,31 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEdit,
-  faInfoCircle,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
-export default class MovieList extends Component {
+import { faEdit, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { socket } from "../../../utils/socket";
+import callApi from "../../../utils/apiCaller";
+import GenreModal from "./GenreModal";
+export default class GenreList extends Component {
   constructor(props) {
     super();
     this.state = {
-      data: [
-        { genreId: 1, genreName: "Fantasy" },
-        { genreId: 2, genreName: "Documentary" },
-        { genreId: 3, genreName: "War" },
-        { genreId: 4, genreName: "Horror" },
-        { genreId: 5, genreName: "Children" },
-        { genreId: 6, genreName: "Mystery" },
-        { genreId: 7, genreName: "Thriller" },
-        { genreId: 8, genreName: "Action" },
-        { genreId: 9, genreName: "Comedy" },
-        { genreId: 10, genreName: "Drama" },
-        { genreId: 11, genreName: "Musical" },
-        { genreId: 12, genreName: "IMAX" },
-        { genreId: 13, genreName: "Western" },
-        { genreId: 14, genreName: "Adventure" },
-        { genreId: 15, genreName: "Crime" },
-        { genreId: 16, genreName: "Film-Noir" },
-        { genreId: 17, genreName: "Sci-Fi" },
-        { genreId: 18, genreName: "Romance" },
-        { genreId: 19, genreName: "Animation" },
-      ],
+      data: [],
       columns: [
         {
-          dataField: "genreId",
+          dataField: "genre_id",
           text: "Mã thể loại",
           sort: true,
         },
         {
-          dataField: "genreName",
+          dataField: "genre_name",
           text: "Tên thể loại",
           sort: true,
+        },
+        {
+          dataField: "genre_description",
+          text: "Mô tả",
+          sort: true,
+          formatter: this.formatGenreDescription,
         },
         {
           dataField: "",
@@ -51,29 +36,83 @@ export default class MovieList extends Component {
           formatter: this.Action,
         },
       ],
+      selectRow: {
+        mode: "checkbox",
+        clickToSelect: true,
+      },
+      display_modal: false,
+      item_selected: {},
     };
+    this.delete_genre = this.delete_genre.bind(this);
+    this.open_modal = this.open_modal.bind(this);
+    this.close_modal = this.close_modal.bind(this);
   }
-  load_data() {}
-  Action(cell, row, rowIndex, formatExtraData) {
+  get_genre_list() {
+    callApi("genres", "get").then((res) => {
+      this.setState({ data: res.data });
+    });
+  }
+  componentDidMount() {
+    this.get_genre_list();
+  }
+
+  formatGenreDescription = (cell, row, rowIndex, formatExtraData) => {
+    if (row.genre_description == null) {
+      row.genre_description = [];
+    }
+    return <span key={rowIndex}>{row.genre_description.join(", ")}</span>;
+  };
+  delete_genre = (_id, genre_name) => {
+    let ans = window.confirm(`Bạn cố muốn xóa thể loại ${genre_name}?`);
+    if (ans) {
+      callApi(`genres/${_id}`, "delete").then((res) => {
+        alert(res.data.message);
+      });
+    }
+    this.get_genre_list();
+  };
+  open_modal = (item_selected) => {
+    console.log(item_selected);
+    this.setState({ display_modal: true, item_selected: item_selected });
+  };
+  close_modal = () => {
+    this.setState({ display_modal: false });
+    this.get_genre_list();
+  };
+
+  Action = (cell, row, rowIndex, formatExtraData) => {
     return (
-      <div>
+      <div key={rowIndex}>
         <span>
-          <FontAwesomeIcon icon={faInfoCircle} className="text-info mr-3" />
-          <FontAwesomeIcon icon={faEdit} className="text-info mr-3" />
-          <FontAwesomeIcon icon={faTrashAlt} className="text-info mr-3" />
+          <FontAwesomeIcon
+            icon={faEdit}
+            className="text-info mr-3"
+            onClick={() => this.open_modal(row)}
+          />
+          <FontAwesomeIcon
+            icon={faTrashAlt}
+            className="text-info mr-3"
+            onClick={() => this.delete_genre(row._id, row.genre_name)}
+          />
         </span>
       </div>
     );
-  }
-  componentDidMount() {
-    this.load_data();
-  }
+  };
   render() {
     const { SearchBar, ClearSearchButton } = Search;
     let data = this.state.data;
     let columns = this.state.columns;
     return (
-      <div className="bg-white my-4">
+      <div className="bg-white my-3 px-4 py-2 border">
+        {this.state.display_modal ? (
+          <GenreModal
+            item_selected={this.state.item_selected}
+            display_modal={this.state.display_modal}
+            onClickClose={this.close_modal}
+          />
+        ) : (
+          ""
+        )}
         {columns.length > 0 ? (
           <ToolkitProvider keyField="id" data={data} columns={columns} search>
             {(props) => (
@@ -84,19 +123,11 @@ export default class MovieList extends Component {
                     {...props.searchProps}
                     placeholder="Nhập vào để tìm ..."
                   />
-                  <ClearSearchButton
-                    {...props.searchProps}
-                    className="btn btn-danger"
-                    text="Xóa tìm kiếm"
-                  />
                 </div>
                 <BootstrapTable
                   {...props.baseProps}
                   pagination={paginationFactory()}
-                  striped
-                  hover
-                  condensed
-                  keyField="genre_id"
+                  keyField="id"
                 />
               </div>
             )}

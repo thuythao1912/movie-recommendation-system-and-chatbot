@@ -15,41 +15,61 @@ exports.get_list_genre = (req, res) => {
     });
 };
 
-exports.add_list_genre = (req, res) => {
-  list_genre = req.body.list_genre;
-  unique_key = req.body.unique_key;
-  count = 0;
-  for (let i = 0; i < list_genre.length; i++) {
-    genre_model.find(
-      { [unique_key]: list_genre[i][unique_key] },
-      (err, result) => {
+exports.add_list_genre = async (req, res) => {
+  list_genre = req.body.data;
+
+  let genre_success = 0;
+  let genre_fail = 0;
+  let message = "";
+  let onComplete = () => {
+    if (genre_success > 0) {
+      message += `${genre_success}/${list_genre.length} thể loại đã được thêm thành công!\n`;
+    }
+    if (genre_fail > 0) {
+      message += `${genre_fail}/${list_genre.length} thể loại thêm thất bại!`;
+    }
+    res.status(200).json({ message: message });
+  };
+  let tasksToGo = list_genre.length;
+  if (tasksToGo === 0) {
+    onComplete();
+  } else {
+    await list_genre.map((genre, key) => {
+      genre_model.find({ genre_name: genre.genre_name }, (err, result) => {
         if (result.length == 0) {
-          movie_model.find(
+          genre_model.find(
             {
-              [unique_key]: {
-                $regex: new RegExp(`^${list_genre[i][unique_key]}$`, "i"),
+              genre_name: {
+                $regex: new RegExp(`^${genre.genre_name}$`, "i"),
               },
             },
             (err, result) => {
               if (result.length == 0) {
-                let item = new genre_model(list_genre[i]);
-                item.save().then((item) => {
-                  console.log(item);
-                  count = count + 1;
-                });
+                let item = new genre_model(genre);
+                item.save();
+                genre_success++;
+                if (--tasksToGo === 0) {
+                  onComplete();
+                }
+              } else {
+                genre_fail++;
+                if (--tasksToGo === 0) {
+                  onComplete();
+                }
               }
             }
           );
+        } else {
+          genre_fail++;
+          // console.log(genre_fail);
+          if (--tasksToGo === 0) {
+            // No tasks left, good to go
+            onComplete();
+          }
         }
-      }
-    );
+      });
+    });
   }
-  count > 0
-    ? (message = `Genres are added successfully`)
-    : (message = `No genre is added`);
-  res.status(200).json({
-    message: message,
-  });
 };
 
 exports.count_genre = async (req, res) => {
@@ -58,4 +78,50 @@ exports.count_genre = async (req, res) => {
     count_doc = result;
   });
   res.status(200).json(count_doc);
+};
+
+exports.get_greatest_genre_id = async (req, res) => {
+  let genre_id = 0;
+  genres = await genre_model.find({}, null, { sort: { genre_id: 1 } });
+  id = [];
+  genres.forEach((genre) => {
+    id.push(parseInt(genre.genre_id));
+  });
+  genre_id = Math.max.apply(Math, id);
+  res.status(200).json(genre_id);
+};
+
+exports.delete_one_genre = (req, res) => {
+  genre_model.findByIdAndDelete(req.params.id, (err, genre) => {
+    if (err) {
+      res.json({ message: "Thể loại đã xóa thất bại!" });
+    } else {
+      res.json({ message: "Thể loại đã xóa thàng công!" });
+    }
+  });
+};
+
+exports.update_one_genre = (req, res) => {
+  genre_model
+    .findById(req.params.id, (err, item) => {
+      if (!item) {
+        res.json({ message: "Không tìm thấy thể loại cần cập nhật!" });
+      } else {
+        genre_model.findByIdAndUpdate(
+          req.params.id,
+          req.body.data,
+          (err,
+          (itemUpdated) => {
+            if (err) {
+              res.json({ message: "Cập nhật thể loại thất bại!" });
+            } else {
+              res.json({ message: "Thể loại đã cập nhật thành công!" });
+            }
+          })
+        );
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };

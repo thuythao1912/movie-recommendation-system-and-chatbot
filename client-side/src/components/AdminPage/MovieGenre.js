@@ -7,22 +7,23 @@ export default class MovieGenre extends Component {
     this.state = { count_movie: 0, count_genre: 0 };
   }
   get_movie_genre_count = async () => {
-    let count_movie = 0;
-    let count_genre = 0;
+    let count_movie;
+    let count_genre;
     await callApi("movies/count", "get").then((res) => {
       count_movie = res.data;
     });
     await callApi("genres/count", "get").then((res) => {
       count_genre = res.data;
     });
-    await this.setState({ count_genre: count_genre, count_movie: count_movie });
+    this.setState({ count_genre: count_genre, count_movie: count_movie });
   };
 
-  componentDidMount() {
-    this.get_movie_genre_count();
-  }
+  componentDidMount = async () => {
+    await this.get_movie_genre_count();
+  };
 
   render() {
+    console.log(this.state.count_genre, this.state.count_movie);
     return (
       <div className="d-flex justify-content-between pr-0">
         <div className="col-lg-6 btn border media px-4 mr-3 bg-white">

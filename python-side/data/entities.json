@@ -24,7 +24,7 @@
       ]
     },
     {
-      "key": "genre_name",
+      "key": "movie_genres",
       "values": [
         {
           "org_val": "hoạt hình",

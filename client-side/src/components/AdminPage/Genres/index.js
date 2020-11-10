@@ -19,13 +19,18 @@ export default class Genres extends Component {
           </div>
           <div className="col-lg-6 row">
             <div className="col-lg-6">
-              <div className="btn btn-block btn-outline-info">
-                <FontAwesomeIcon icon={faFileExcel} />
-                <span className="mx-2">Thêm từ excel</span>
+              <div className="btn btn-block btn-info">
+                <Link
+                  to="/admin/add"
+                  className="text-decoration-none text-white"
+                >
+                  <FontAwesomeIcon icon={faGlobe} />
+                  <span className="mx-2">Thêm từ web</span>
+                </Link>
               </div>
               <div className="btn btn-block btn-outline-info mt-3">
-                <FontAwesomeIcon icon={faGlobe} />
-                <span className="mx-2">Thêm từ web</span>
+                <FontAwesomeIcon icon={faFileExcel} />
+                <span className="mx-2">Thêm từ excel</span>
               </div>
             </div>
             <div className="col-lg-6">

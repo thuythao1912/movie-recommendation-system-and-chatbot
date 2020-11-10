@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default class Header extends Component {
   render() {
     return (
-      <nav class="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-dark bg-dark">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarToggleExternalContent"
@@ -13,9 +13,9 @@ export default class Header extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <Link class="navbar-brand" to="/admin">
+        <Link className="navbar-brand" to="/admin">
           <img src="/images/chatbot.svg" width="40" alt="" />
         </Link>
       </nav>

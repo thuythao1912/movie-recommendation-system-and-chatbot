@@ -57,8 +57,9 @@ export default class AddMovie extends Component {
     };
 
     let is_null = checkNull(this.state.required_fields, data);
-    console.log(is_null);
+
     if (is_null.length == 0) {
+      console.log(data);
       callApi("movies", "post", { data: [data] }).then((res) => {
         let message = res.data.message;
         if (message.includes("thành công")) {
