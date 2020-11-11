@@ -1,44 +1,485 @@
 {
   "entities": [
     {
-      "key": "movie_title",
+      "key": "movie_genres",
       "values": [
         {
-          "org_val": "Maleficient",
+          "org_val": "Sci-Fi",
+          "description": []
+        },
+        {
+          "org_val": "War",
+          "description": []
+        },
+        {
+          "org_val": "Animation",
+          "description": []
+        },
+        {
+          "org_val": "Comedy",
+          "description": []
+        },
+        {
+          "org_val": "Horror",
           "description": [
-            "Tiên hắc ám"
+            "kinh dị",
+            "có ma"
           ]
         },
         {
-          "org_val": "Beauty and the Beast",
-          "description": [
-            "Người đẹp và quái vật"
-          ]
+          "org_val": "Action",
+          "description": []
         },
         {
-          "org_val": "Ngôi nhà có ma",
-          "description": [
-            "nhà có ma"
-          ]
+          "org_val": "Adventure",
+          "description": []
+        },
+        {
+          "org_val": "Musical",
+          "description": []
+        },
+        {
+          "org_val": "Crime",
+          "description": []
+        },
+        {
+          "org_val": "Documentary",
+          "description": []
+        },
+        {
+          "org_val": "Children",
+          "description": []
+        },
+        {
+          "org_val": "Thriller",
+          "description": []
+        },
+        {
+          "org_val": "Romance",
+          "description": []
+        },
+        {
+          "org_val": "Mystery",
+          "description": []
+        },
+        {
+          "org_val": "Drama",
+          "description": []
+        },
+        {
+          "org_val": "Fantasy",
+          "description": []
+        },
+        {
+          "org_val": "IMAX",
+          "description": []
         }
       ]
     },
     {
-      "key": "movie_genres",
+      "key": "movie_title",
       "values": [
         {
-          "org_val": "hoạt hình",
+          "org_val": "Toy Story",
           "description": [
-            "anime",
-            "hoạt họa"
+            "Câu chuyện đồ chơi"
           ]
         },
         {
-          "org_val": "kinh dị",
-          "description": [
-            "rùng rợn",
-            "có ma"
-          ]
+          "org_val": "Jumanji",
+          "description": []
+        },
+        {
+          "org_val": "Grumpier Old Men",
+          "description": []
+        },
+        {
+          "org_val": "Waiting to Exhale",
+          "description": []
+        },
+        {
+          "org_val": "Father of the Bride Part II",
+          "description": []
+        },
+        {
+          "org_val": "Heat",
+          "description": []
+        },
+        {
+          "org_val": "Sabrina",
+          "description": []
+        },
+        {
+          "org_val": "Tom and Huck",
+          "description": []
+        },
+        {
+          "org_val": "Sudden Death",
+          "description": []
+        },
+        {
+          "org_val": "GoldenEye",
+          "description": []
+        },
+        {
+          "org_val": "American President, The",
+          "description": []
+        },
+        {
+          "org_val": "Dracula: Dead and Loving It",
+          "description": []
+        },
+        {
+          "org_val": "Balto",
+          "description": []
+        },
+        {
+          "org_val": "Nixon",
+          "description": []
+        },
+        {
+          "org_val": "Cutthroat Island",
+          "description": []
+        },
+        {
+          "org_val": "Casino",
+          "description": []
+        },
+        {
+          "org_val": "Sense and Sensibility",
+          "description": []
+        },
+        {
+          "org_val": "Four Rooms",
+          "description": []
+        },
+        {
+          "org_val": "Ace Ventura: When Nature Calls",
+          "description": []
+        },
+        {
+          "org_val": "Money Train",
+          "description": []
+        },
+        {
+          "org_val": "Get Shorty",
+          "description": []
+        },
+        {
+          "org_val": "Copycat",
+          "description": []
+        },
+        {
+          "org_val": "Assassins",
+          "description": []
+        },
+        {
+          "org_val": "Powder",
+          "description": []
+        },
+        {
+          "org_val": "Leaving Las Vegas",
+          "description": []
+        },
+        {
+          "org_val": "Othello",
+          "description": []
+        },
+        {
+          "org_val": "Now and Then",
+          "description": []
+        },
+        {
+          "org_val": "Persuasion",
+          "description": []
+        },
+        {
+          "org_val": "City of Lost Children, The (Cité des enfants perdus, La)",
+          "description": []
+        },
+        {
+          "org_val": "Shanghai Triad (Yao a yao yao dao waipo qiao)",
+          "description": []
+        },
+        {
+          "org_val": "Dangerous Minds",
+          "description": []
+        },
+        {
+          "org_val": "Twelve Monkeys (a.k.a. 12 Monkeys)",
+          "description": []
+        },
+        {
+          "org_val": "Wings of Courage",
+          "description": []
+        },
+        {
+          "org_val": "Babe",
+          "description": []
+        },
+        {
+          "org_val": "Carrington",
+          "description": []
+        },
+        {
+          "org_val": "Dead Man Walking",
+          "description": []
+        },
+        {
+          "org_val": "Across the Sea of Time",
+          "description": []
+        },
+        {
+          "org_val": "It Takes Two",
+          "description": []
+        },
+        {
+          "org_val": "Clueless",
+          "description": []
+        },
+        {
+          "org_val": "Cry, the Beloved Country",
+          "description": []
+        },
+        {
+          "org_val": "Richard III",
+          "description": []
+        },
+        {
+          "org_val": "Dead Presidents",
+          "description": []
+        },
+        {
+          "org_val": "Restoration",
+          "description": []
+        },
+        {
+          "org_val": "Mortal Kombat",
+          "description": []
+        },
+        {
+          "org_val": "To Die For",
+          "description": []
+        },
+        {
+          "org_val": "How to Make an American Quilt",
+          "description": []
+        },
+        {
+          "org_val": "Seven (a.k.a. Se7en)",
+          "description": []
+        },
+        {
+          "org_val": "Pocahontas",
+          "description": []
+        },
+        {
+          "org_val": "When Night Is Falling",
+          "description": []
+        },
+        {
+          "org_val": "Usual Suspects, The",
+          "description": []
+        },
+        {
+          "org_val": "Guardian Angel",
+          "description": []
+        },
+        {
+          "org_val": "Mighty Aphrodite",
+          "description": []
+        },
+        {
+          "org_val": "Lamerica",
+          "description": []
+        },
+        {
+          "org_val": "Big Green, The",
+          "description": []
+        },
+        {
+          "org_val": "Georgia",
+          "description": []
+        },
+        {
+          "org_val": "Kids of the Round Table",
+          "description": []
+        },
+        {
+          "org_val": "Home for the Holidays",
+          "description": []
+        },
+        {
+          "org_val": "Postman, The (Postino, Il)",
+          "description": []
+        },
+        {
+          "org_val": "Confessional, The (Confessionnal, Le)",
+          "description": []
+        },
+        {
+          "org_val": "Indian in the Cupboard, The",
+          "description": []
+        },
+        {
+          "org_val": "Eye for an Eye",
+          "description": []
+        },
+        {
+          "org_val": "Mr. Holland's Opus",
+          "description": []
+        },
+        {
+          "org_val": "Don't Be a Menace to South Central While Drinking Your Juice in the Hood",
+          "description": []
+        },
+        {
+          "org_val": "Two if by Sea",
+          "description": []
+        },
+        {
+          "org_val": "Bio-Dome",
+          "description": []
+        },
+        {
+          "org_val": "Lawnmower Man 2: Beyond Cyberspace",
+          "description": []
+        },
+        {
+          "org_val": "Two Bits",
+          "description": []
+        },
+        {
+          "org_val": "French Twist (Gazon maudit)",
+          "description": []
+        },
+        {
+          "org_val": "Friday",
+          "description": []
+        },
+        {
+          "org_val": "From Dusk Till Dawn",
+          "description": []
+        },
+        {
+          "org_val": "Fair Game",
+          "description": []
+        },
+        {
+          "org_val": "Kicking and Screaming",
+          "description": []
+        },
+        {
+          "org_val": "Misérables, Les",
+          "description": []
+        },
+        {
+          "org_val": "Bed of Roses",
+          "description": []
+        },
+        {
+          "org_val": "Big Bully",
+          "description": []
+        },
+        {
+          "org_val": "Screamers",
+          "description": []
+        },
+        {
+          "org_val": "Nico Icon",
+          "description": []
+        },
+        {
+          "org_val": "Crossing Guard, The",
+          "description": []
+        },
+        {
+          "org_val": "Juror, The",
+          "description": []
+        },
+        {
+          "org_val": "White Balloon, The (Badkonake sefid)",
+          "description": []
+        },
+        {
+          "org_val": "Things to Do in Denver When You're Dead",
+          "description": []
+        },
+        {
+          "org_val": "Antonia's Line (Antonia)",
+          "description": []
+        },
+        {
+          "org_val": "Once Upon a Time... When We Were Colored",
+          "description": []
+        },
+        {
+          "org_val": "Last Summer in the Hamptons",
+          "description": []
+        },
+        {
+          "org_val": "Angels and Insects",
+          "description": []
+        },
+        {
+          "org_val": "White Squall",
+          "description": []
+        },
+        {
+          "org_val": "Dunston Checks In",
+          "description": []
+        },
+        {
+          "org_val": "Black Sheep",
+          "description": []
+        },
+        {
+          "org_val": "Nick of Time",
+          "description": []
+        },
+        {
+          "org_val": "The Journey of August King",
+          "description": []
+        },
+        {
+          "org_val": "Mary Reilly",
+          "description": []
+        },
+        {
+          "org_val": "Vampire in Brooklyn",
+          "description": []
+        },
+        {
+          "org_val": "Beautiful Girls",
+          "description": []
+        },
+        {
+          "org_val": "Broken Arrow",
+          "description": []
+        },
+        {
+          "org_val": "In the Bleak Midwinter",
+          "description": []
+        },
+        {
+          "org_val": "Hate (Haine, La)",
+          "description": []
+        },
+        {
+          "org_val": "Shopping",
+          "description": []
+        },
+        {
+          "org_val": "Heidi Fleiss: Hollywood Madam",
+          "description": []
+        },
+        {
+          "org_val": "City Hall",
+          "description": []
+        },
+        {
+          "org_val": "Bottle Rocket",
+          "description": []
         }
       ]
     }

@@ -58,6 +58,7 @@ class IntentRecognizer:
         result = {}
         intent = next((item for item in self.intents if item["intent_name"] == intent_name), None)
         response = UNKNOWN_RESPONSE
+        condition = {}
         if not intent is None:
             if intent["description"] != "domain":
                 response = f'{random.choice(intent["responses"])}'
@@ -72,7 +73,8 @@ class IntentRecognizer:
                                 entity = e
 
                         opt = [s["value"] for s in signs if s["entity"] == entity]
-                        ent_vals = [{e["key"]: e["org_val"]} for e in entities if e["key"] == entity]
+                        ent_vals = [{e["key"]: {"$regex": e["org_val"], "$options": "i"}} for e in entities if
+                                    e["key"] == entity]
                         if len(opt) > 0:
                             condition = {f'${opt[0]}': ent_vals}
                         else:
@@ -80,26 +82,35 @@ class IntentRecognizer:
                         response = intent["query"].format(condition)
 
                         if "query#" in response:
-                            response = self.query_answer(response, condition)
+                            response = self.query_answer(response)
+        result["condition"] = condition
         result["response"] = response
         return result
 
-    def query_answer(self, query, condition):
-        start = query.index("#") + 1
-        end = len(query)
-        model = query[start:query.index(".")]
-        filter = query[start:end]
-        print(condition)
-        result = None
+    def query_answer(self, query):
+        query = query.split("#")
         res = "Xin lỗi, hiện mình không tìm được phim như bạn mong muốn rồi!"
-        if model == "movies":
+
+        if len(query) > 0:
+            model = query[1]
+            condition = eval(query[2])  # eval convert string to object
             obj = Movies()
-            result = obj.find_one(condition)
-        if model == "genres":
-            obj = Genres()
-            result = obj.find_one(condition)
-        if not result is None:
-            res = "Các phim có thể loại bạn đang tìm kiếm là: {}".format(result["movie_title"])
+            if model == "movies":
+                results = obj.find_one(condition)
+                if not results is None:
+                    res = f"Thông tin phim bạn cần tìm là:\n " \
+                          f"+Tựa phim: {results['movie_title']}\n " \
+                          f"+Năm sản xuất: {results['movie_year']}\n " \
+                          f"+Thể loại: {', '.join(results['movie_genres'])}\n" \
+                          f"+Diễn viên: {results['movie_actors']}\n " \
+                          f"+Đạo diễn: {results['movie_producers']}\n " \
+                          f"+Tên khác: {', '.join(results['movie_description'])}\n " \
+
+            elif model == "genres":
+                results = list(obj.find_all(condition, limit=5))
+                if len(results) > 0:
+                    movies = ", ".join([movie["movie_title"] for movie in results])
+                    res = "Các phim thuộc thể loại bạn đang tìm kiếm là: {}".format(movies)
         return res
 
     def run(self, sentence):
@@ -138,6 +149,7 @@ class IntentRecognizer:
             print(result)
 
             output["response"] = result["response"]
+            output["condition"] = result["condition"]
 
         return output
 

@@ -13,7 +13,7 @@
       "responses": [
         "Bạn muốn tra cứu phim gì?"
       ],
-      "query": "query#movies.find({})",
+      "query": "query#movies#{}",
       "description": "domain"
     },
     {
@@ -26,9 +26,9 @@
         "muốn coi thể loại"
       ],
       "responses": [
-        "Bạn muốn tra cứu thể loại phim gì?"
+        "Bạn muốn tìm phim thuộc thể loại gì?"
       ],
-      "query": "query#movies.find({})",
+      "query": "query#genres#{}",
       "description": "domain"
     },
     {

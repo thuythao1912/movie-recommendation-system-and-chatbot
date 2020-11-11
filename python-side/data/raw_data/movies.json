@@ -5,7 +5,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": ["Câu chuyện đồ chơi"]
   },
   {
     "movie_id": 2,
@@ -13,7 +14,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Children", "Fantasy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 3,
@@ -21,7 +23,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 4,
@@ -29,7 +32,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 5,
@@ -37,7 +41,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 6,
@@ -45,7 +50,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Crime", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 7,
@@ -53,7 +59,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 8,
@@ -61,7 +68,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Children"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 9,
@@ -69,7 +77,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 10,
@@ -77,7 +86,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Adventure", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 11,
@@ -85,7 +95,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 12,
@@ -93,7 +104,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Horror"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 13,
@@ -101,7 +113,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Animation", "Children"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 14,
@@ -109,7 +122,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 15,
@@ -117,7 +131,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Adventure", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 16,
@@ -125,7 +140,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 17,
@@ -133,7 +149,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 18,
@@ -141,7 +158,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 19,
@@ -149,7 +167,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 20,
@@ -157,7 +176,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Comedy", "Crime", "Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 21,
@@ -165,7 +185,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Crime", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 22,
@@ -173,7 +194,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama", "Horror", "Mystery", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 23,
@@ -181,7 +203,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Crime", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 24,
@@ -189,7 +212,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Sci-Fi"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 25,
@@ -197,7 +221,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 26,
@@ -205,7 +230,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 27,
@@ -213,7 +239,8 @@
     "movie_year": 1995,
     "movie_genres": ["Children", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 28,
@@ -221,7 +248,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 29,
@@ -229,7 +257,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Drama", "Fantasy", "Mystery", "Sci-Fi"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 30,
@@ -237,7 +266,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 31,
@@ -245,7 +275,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 32,
@@ -253,7 +284,8 @@
     "movie_year": 1995,
     "movie_genres": ["Mystery", "Sci-Fi", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 33,
@@ -261,7 +293,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Romance", "IMAX"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 34,
@@ -269,7 +302,8 @@
     "movie_year": 1995,
     "movie_genres": ["Children", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 35,
@@ -277,7 +311,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 36,
@@ -285,7 +320,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 37,
@@ -293,7 +329,8 @@
     "movie_year": 1995,
     "movie_genres": ["Documentary", "IMAX"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 38,
@@ -301,7 +338,8 @@
     "movie_year": 1995,
     "movie_genres": ["Children", "Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 39,
@@ -309,7 +347,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 40,
@@ -317,7 +356,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 41,
@@ -325,7 +365,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "War"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 42,
@@ -333,7 +374,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Crime", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 43,
@@ -341,7 +383,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 44,
@@ -349,7 +392,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Adventure", "Fantasy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 45,
@@ -357,7 +401,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 46,
@@ -365,7 +410,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 47,
@@ -373,7 +419,8 @@
     "movie_year": 1995,
     "movie_genres": ["Mystery", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 48,
@@ -381,7 +428,8 @@
     "movie_year": 1995,
     "movie_genres": ["Animation", "Children", "Drama", "Musical", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 49,
@@ -389,7 +437,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 50,
@@ -397,7 +446,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Mystery", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 51,
@@ -405,7 +455,8 @@
     "movie_year": 1994,
     "movie_genres": ["Action", "Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 52,
@@ -413,7 +464,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 53,
@@ -421,7 +473,8 @@
     "movie_year": 1994,
     "movie_genres": ["Adventure", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 54,
@@ -429,7 +482,8 @@
     "movie_year": 1995,
     "movie_genres": ["Children", "Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 55,
@@ -437,7 +491,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 56,
@@ -445,7 +500,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Children", "Comedy", "Fantasy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 57,
@@ -453,7 +509,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 58,
@@ -461,7 +518,8 @@
     "movie_year": 1994,
     "movie_genres": ["Comedy", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 59,
@@ -469,7 +527,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Mystery"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 60,
@@ -477,7 +536,8 @@
     "movie_year": 1995,
     "movie_genres": ["Adventure", "Children", "Fantasy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 61,
@@ -485,7 +545,8 @@
     "movie_year": 1996,
     "movie_genres": ["Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 62,
@@ -493,7 +554,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 63,
@@ -501,7 +563,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy", "Crime"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 64,
@@ -509,7 +572,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 65,
@@ -517,7 +581,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 66,
@@ -525,7 +590,8 @@
     "movie_year": 1996,
     "movie_genres": ["Action", "Sci-Fi", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 67,
@@ -533,7 +599,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 68,
@@ -541,7 +608,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 69,
@@ -549,7 +617,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 70,
@@ -557,7 +626,8 @@
     "movie_year": 1996,
     "movie_genres": ["Action", "Comedy", "Horror", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 71,
@@ -565,7 +635,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 72,
@@ -573,7 +644,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 73,
@@ -581,7 +653,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "War"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 74,
@@ -589,7 +662,8 @@
     "movie_year": 1996,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 75,
@@ -597,7 +671,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 76,
@@ -605,7 +680,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Sci-Fi", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 77,
@@ -613,7 +689,8 @@
     "movie_year": 1995,
     "movie_genres": ["Documentary"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 78,
@@ -621,7 +698,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Crime", "Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 79,
@@ -629,7 +707,8 @@
     "movie_year": 1996,
     "movie_genres": ["Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 80,
@@ -637,7 +716,8 @@
     "movie_year": 1995,
     "movie_genres": ["Children", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 81,
@@ -645,7 +725,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 82,
@@ -653,7 +734,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 83,
@@ -661,7 +743,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 84,
@@ -669,7 +752,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 85,
@@ -677,7 +761,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 86,
@@ -685,7 +770,8 @@
     "movie_year": 1996,
     "movie_genres": ["Action", "Adventure", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 87,
@@ -693,7 +779,8 @@
     "movie_year": 1996,
     "movie_genres": ["Children", "Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 88,
@@ -701,7 +788,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 89,
@@ -709,7 +797,8 @@
     "movie_year": 1995,
     "movie_genres": ["Action", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 90,
@@ -717,7 +806,8 @@
     "movie_year": 1995,
     "movie_genres": ["Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 92,
@@ -725,7 +815,8 @@
     "movie_year": 1996,
     "movie_genres": ["Drama", "Horror", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 93,
@@ -733,7 +824,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Horror", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 94,
@@ -741,7 +833,8 @@
     "movie_year": 1996,
     "movie_genres": ["Comedy", "Drama", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 95,
@@ -749,7 +842,8 @@
     "movie_year": 1996,
     "movie_genres": ["Action", "Adventure", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 96,
@@ -757,7 +851,8 @@
     "movie_year": 1995,
     "movie_genres": ["Comedy", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 97,
@@ -765,7 +860,8 @@
     "movie_year": 1995,
     "movie_genres": ["Crime", "Drama"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 98,
@@ -773,7 +869,8 @@
     "movie_year": 1994,
     "movie_genres": ["Action", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 99,
@@ -781,7 +878,8 @@
     "movie_year": 1995,
     "movie_genres": ["Documentary"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 100,
@@ -789,7 +887,8 @@
     "movie_year": 1996,
     "movie_genres": ["Drama", "Thriller"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   },
   {
     "movie_id": 101,
@@ -797,6 +896,7 @@
     "movie_year": 1996,
     "movie_genres": ["Adventure", "Comedy", "Crime", "Romance"],
     "movie_actors": null,
-    "movie_producers": null
+    "movie_producers": null,
+    "movie_description": []
   }
 ]

@@ -4,7 +4,12 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEdit,
+  faInfoCircle,
+  faSave,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { socket } from "../../../utils/socket";
 import callApi from "../../../utils/apiCaller";
 import MovieModal from "./MovieModal";
@@ -36,18 +41,6 @@ export default class MovieList extends Component {
           formatter: this.formatMovieGenres,
         },
         {
-          dataField: "movie_actors",
-          text: "Thể loại",
-          sort: true,
-          text: "Diễn viên",
-        },
-        {
-          dataField: "movie_producers",
-          text: "Thể loại",
-          sort: true,
-          text: "Nhà sản xuất",
-        },
-        {
           dataField: "",
           text: "Thao tác",
           formatter: this.Action,
@@ -59,6 +52,7 @@ export default class MovieList extends Component {
       },
       display_modal: false,
       item_selected: {},
+      is_not_edit: true,
     };
     this.delete_movie = this.delete_movie.bind(this);
     this.open_modal = this.open_modal.bind(this);
@@ -76,6 +70,14 @@ export default class MovieList extends Component {
   formatMovieGenres = (cell, row, rowIndex, formatExtraData) => {
     return <span key={rowIndex}>{row.movie_genres.join(", ")}</span>;
   };
+
+  formatMovieDescription = (cell, row, rowIndex, formatExtraData) => {
+    if (row.movie_description == null) {
+      row.movie_description = [];
+    }
+    return <span key={rowIndex}>{row.movie_description.join(", ")}</span>;
+  };
+
   delete_movie = (_id, movie_title) => {
     let ans = window.confirm(`Bạn cố muốn xóa phim ${movie_title}?`);
     if (ans) {
@@ -85,8 +87,12 @@ export default class MovieList extends Component {
     }
     this.get_movie_list();
   };
-  open_modal = (item_selected) => {
-    this.setState({ display_modal: true, item_selected: item_selected });
+  open_modal = (item_selected, is_not_edit) => {
+    this.setState({
+      display_modal: true,
+      item_selected: item_selected,
+      is_not_edit: is_not_edit,
+    });
   };
   close_modal = () => {
     this.setState({ display_modal: false });
@@ -98,9 +104,14 @@ export default class MovieList extends Component {
       <div key={rowIndex}>
         <span>
           <FontAwesomeIcon
+            icon={faInfoCircle}
+            className="text-info mr-3"
+            onClick={() => this.open_modal(row, true)}
+          />
+          <FontAwesomeIcon
             icon={faEdit}
             className="text-info mr-3"
-            onClick={() => this.open_modal(row)}
+            onClick={() => this.open_modal(row, false)}
           />
           <FontAwesomeIcon
             icon={faTrashAlt}
@@ -122,6 +133,7 @@ export default class MovieList extends Component {
             item_selected={this.state.item_selected}
             display_modal={this.state.display_modal}
             onClickClose={this.close_modal}
+            is_not_edit={this.state.is_not_edit}
           />
         ) : (
           ""

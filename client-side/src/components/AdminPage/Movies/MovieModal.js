@@ -9,6 +9,7 @@ export default class MovieModal extends Component {
     this.state = {
       genre_list: [],
       movie_genres: [],
+      movie_description: [],
       _id: "",
       movie_id: 0,
       movie_title: "",
@@ -22,6 +23,7 @@ export default class MovieModal extends Component {
         ["tựa phim", "tên thể loại"],
       ],
       message_color: "",
+      is_not_edit: null,
     };
   }
   close = () => {
@@ -29,6 +31,7 @@ export default class MovieModal extends Component {
   };
   componentDidMount() {
     let item = this.props.item_selected;
+    console.log(this.props.is_not_edit);
     this.setState({
       _id: item._id,
       movie_genres: item.movie_genres,
@@ -37,6 +40,8 @@ export default class MovieModal extends Component {
       movie_year: item.movie_year,
       movie_actors: item.movie_actors,
       movie_producers: item.movie_producers,
+      movie_description: item.movie_description,
+      is_not_edit: this.props.is_not_edit,
     });
     this.get_genre_list();
   }
@@ -73,7 +78,16 @@ export default class MovieModal extends Component {
       movie_year: this.state.movie_year,
       movie_actors: this.state.movie_actors,
       movie_producers: this.state.movie_producers,
+      movie_description: this.state.movie_description,
     };
+
+    if (typeof data.movie_description == "string") {
+      data.movie_description = data.movie_description.split(",");
+    }
+    for (let i = 0; i < data.movie_description.length; i++) {
+      data.movie_description[i] = data.movie_description[i].trim();
+    }
+
     let is_null = checkNull(this.state.required_fields, data);
 
     if (is_null.length == 0) {
@@ -115,6 +129,7 @@ export default class MovieModal extends Component {
           <span
             className="badge badge-light badge-pill ml-2"
             onClick={() => this.remove_genre(item)}
+            hidden={this.state.is_not_edit}
           >
             x
           </span>
@@ -154,6 +169,21 @@ export default class MovieModal extends Component {
                     onChange={this.handle_input}
                     name="movie_title"
                     value={this.state.movie_title}
+                    readOnly={this.state.is_not_edit}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Tên khác</td>
+                <td>
+                  <input
+                    placeholder="Tên khác"
+                    className="form-control form-control-sm"
+                    required
+                    onChange={this.handle_input}
+                    name="movie_description"
+                    value={this.state.movie_description}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -166,6 +196,7 @@ export default class MovieModal extends Component {
                     onChange={this.handle_input}
                     name="movie_year"
                     value={this.state.movie_year}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -178,6 +209,7 @@ export default class MovieModal extends Component {
                     onChange={this.handle_input}
                     name="movie_producers"
                     value={this.state.movie_producers}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -190,6 +222,7 @@ export default class MovieModal extends Component {
                     onChange={this.handle_input}
                     name="movie_actors"
                     value={this.state.movie_actors}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -199,6 +232,7 @@ export default class MovieModal extends Component {
                   <select
                     className="form-control form-control-sm"
                     onChange={this.select_genres}
+                    hidden={this.state.is_not_edit}
                   >
                     <option value="-1">Chọn thể loại</option>
                     {elGenre}
@@ -213,7 +247,11 @@ export default class MovieModal extends Component {
           </table>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={this.update_movie}>
+          <Button
+            variant="success"
+            onClick={this.update_movie}
+            hidden={this.state.is_not_edit}
+          >
             Lưu
           </Button>
           <Button onClick={this.close} variant="danger">

@@ -55,10 +55,12 @@ let run = (socket) => {
 
   // =============MODULE: RECEIVE AND SEND CHAT MESSAGE
   //1. Send data to client
-  socket.emit("greeting", {
-    text: `Xin chào, mình là chatbot. Mình có thể giúp gì cho bạn?`,
-    member: { username: "chatbot", color: "blue" },
-    send_time: new Date(),
+  socket.on("greeting", () => {
+    socket.emit("greeting", {
+      text: `Xin chào, mình là chatbot. Mình có thể giúp gì cho bạn?`,
+      member: { username: "chatbot", color: "blue" },
+      send_time: new Date(),
+    });
   });
 
   //2. Receive data from client

@@ -27,7 +27,6 @@ function get_color() {
 export default class App extends Component {
   constructor(props) {
     super();
-
     this.state = {
       messages: [],
       member: {
@@ -38,7 +37,8 @@ export default class App extends Component {
     };
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
+    socket.emit("greeting");
     socket.on("greeting", (data) => {
       const messages = this.state.messages;
       let date = formatDate(data.send_time, "dmy-hms");

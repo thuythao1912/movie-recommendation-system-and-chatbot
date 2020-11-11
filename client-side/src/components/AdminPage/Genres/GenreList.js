@@ -4,7 +4,11 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEdit,
+  faInfoCircle,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { socket } from "../../../utils/socket";
 import callApi from "../../../utils/apiCaller";
 import GenreModal from "./GenreModal";
@@ -42,6 +46,7 @@ export default class GenreList extends Component {
       },
       display_modal: false,
       item_selected: {},
+      is_not_edit: true,
     };
     this.delete_genre = this.delete_genre.bind(this);
     this.open_modal = this.open_modal.bind(this);
@@ -71,9 +76,12 @@ export default class GenreList extends Component {
     }
     this.get_genre_list();
   };
-  open_modal = (item_selected) => {
-    console.log(item_selected);
-    this.setState({ display_modal: true, item_selected: item_selected });
+  open_modal = (item_selected, is_not_edit) => {
+    this.setState({
+      is_not_edit: is_not_edit,
+      display_modal: true,
+      item_selected: item_selected,
+    });
   };
   close_modal = () => {
     this.setState({ display_modal: false });
@@ -85,9 +93,14 @@ export default class GenreList extends Component {
       <div key={rowIndex}>
         <span>
           <FontAwesomeIcon
+            icon={faInfoCircle}
+            className="text-info mr-3"
+            onClick={() => this.open_modal(row, true)}
+          />
+          <FontAwesomeIcon
             icon={faEdit}
             className="text-info mr-3"
-            onClick={() => this.open_modal(row)}
+            onClick={() => this.open_modal(row, false)}
           />
           <FontAwesomeIcon
             icon={faTrashAlt}
@@ -109,6 +122,7 @@ export default class GenreList extends Component {
             item_selected={this.state.item_selected}
             display_modal={this.state.display_modal}
             onClickClose={this.close_modal}
+            is_not_edit={this.state.is_not_edit}
           />
         ) : (
           ""

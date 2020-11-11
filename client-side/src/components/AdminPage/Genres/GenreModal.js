@@ -15,6 +15,7 @@ export default class GenreModal extends Component {
       display_message: "none",
       required_fields: [["genre_name"], ["tên thể loại"]],
       message_color: "",
+      is_not_edit: null,
     };
   }
   close = () => {
@@ -27,6 +28,7 @@ export default class GenreModal extends Component {
       genre_name: item.genre_name,
       genre_description: item.genre_description,
       genre_id: item.genre_id,
+      is_not_edit: this.props.is_not_edit,
     });
     this.get_genre_list();
   }
@@ -114,12 +116,13 @@ export default class GenreModal extends Component {
                 <td>Tên thể loại</td>
                 <td>
                   <input
-                    placeholder="Tựa phim (bắt buộc)"
+                    placeholder="Tên thể loại (bắt buộc)"
                     className="form-control form-control-sm"
                     required
                     onChange={this.handle_input}
                     name="genre_name"
                     value={this.state.genre_name}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -132,6 +135,7 @@ export default class GenreModal extends Component {
                     onChange={this.handle_input}
                     name="genre_description"
                     value={this.state.genre_description}
+                    readOnly={this.state.is_not_edit}
                   />
                 </td>
               </tr>
@@ -139,7 +143,11 @@ export default class GenreModal extends Component {
           </table>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={this.update_movie}>
+          <Button
+            variant="success"
+            onClick={this.update_movie}
+            hidden={this.state.is_not_edit}
+          >
             Lưu
           </Button>
           <Button onClick={this.close} variant="danger">
