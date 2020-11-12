@@ -5,15 +5,23 @@
       "values": [
         {
           "org_val": "Sci-Fi",
-          "description": []
+          "description": [
+            "khoa học viễn tưởng",
+            "viễn tưởng"
+          ]
         },
         {
           "org_val": "War",
-          "description": []
+          "description": [
+            "chiến",
+            "chiến tranh"
+          ]
         },
         {
           "org_val": "Animation",
-          "description": []
+          "description": [
+            "hoạt hình"
+          ]
         },
         {
           "org_val": "Comedy",
@@ -39,7 +47,7 @@
           "description": []
         },
         {
-          "org_val": "Crime",
+          "org_val": "Crimeee",
           "description": []
         },
         {
@@ -82,7 +90,8 @@
         {
           "org_val": "Toy Story",
           "description": [
-            "Câu chuyện đồ chơi"
+            "Câu chuyện đồ chơi",
+            "Chuyện đồ chơi"
           ]
         },
         {

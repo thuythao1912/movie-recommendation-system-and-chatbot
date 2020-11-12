@@ -1,4 +1,5 @@
 var genre_model = require("../models/genre_model");
+var movie_model = require("../models/movie_model");
 
 exports.get_list_genre = (req, res) => {
   genre_model
@@ -93,9 +94,31 @@ exports.get_greatest_genre_id = async (req, res) => {
 
 exports.delete_one_genre = (req, res) => {
   genre_model.findByIdAndDelete(req.params.id, (err, genre) => {
+    console.log(genre);
     if (err) {
       res.json({ message: "Thể loại đã xóa thất bại!" });
     } else {
+      movie_model.find({ movie_genres: genre.genre_name }, (err, items) => {
+        items.map((i) => {
+          idx = i.movie_genres.indexOf(genre.genre_name);
+          i.movie_genres.splice(idx, 1);
+          console.log(i);
+          movie_model.findByIdAndUpdate(
+            i._id,
+            i,
+            (err,
+            (itemUpdated) => {
+              if (err) {
+                console.log({ message: "Cập nhật phim thất bại!" });
+              } else {
+                console.log({
+                  message: `Thể loại phim ${i.movie_title} xóa thành công!`,
+                });
+              }
+            })
+          );
+        });
+      });
       res.json({ message: "Thể loại đã xóa thàng công!" });
     }
   });
@@ -110,14 +133,37 @@ exports.update_one_genre = (req, res) => {
         genre_model.findByIdAndUpdate(
           req.params.id,
           req.body.data,
-          (err,
-          (itemUpdated) => {
+          (err, itemUpdated) => {
+            movie_model.find(
+              { movie_genres: item.genre_name },
+              (err, items) => {
+                items.map((i) => {
+                  idx = i.movie_genres.indexOf(item.genre_name);
+                  i.movie_genres[idx] = req.body.data.genre_name;
+                  movie_model.findByIdAndUpdate(
+                    i._id,
+                    i,
+                    (err,
+                    (itemUpdated) => {
+                      if (err) {
+                        console.log({ message: "Cập nhật phim thất bại!" });
+                      } else {
+                        console.log({
+                          message: `Thể loại phim ${i.movie_title} cập nhật thành công!`,
+                        });
+                      }
+                    })
+                  );
+                });
+              }
+            );
+
             if (err) {
               res.json({ message: "Cập nhật thể loại thất bại!" });
             } else {
               res.json({ message: "Thể loại đã cập nhật thành công!" });
             }
-          })
+          }
         );
       }
     })

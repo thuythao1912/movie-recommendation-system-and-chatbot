@@ -15,10 +15,7 @@ export default class AddMovie extends Component {
       movie_producers: "",
       message: "",
       display_message: "none",
-      required_fields: [
-        ["movie_title", "movie_genres"],
-        ["tựa phim", "tên thể loại"],
-      ],
+      required_fields: [["movie_title"], ["tựa phim"]],
       message_color: "",
     };
   }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default class Panel extends Component {
   render() {
     return (
-      <ul className="p-0">
+      <ul className="p-0" style={{ minHeight: "98vh" }}>
         <Link to="/">
           <li className="list-group-item">Trang chủ</li>
         </Link>

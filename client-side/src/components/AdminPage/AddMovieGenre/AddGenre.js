@@ -99,7 +99,7 @@ export default class AddGenre extends Component {
 
   render() {
     return (
-      <div className="p-0">
+      <div className="p-0 my-5">
         <h3>THÊM THỂ LOẠI</h3>
         <div className="row px-3">
           <div className="col-lg-12 pr-3 pl-0">

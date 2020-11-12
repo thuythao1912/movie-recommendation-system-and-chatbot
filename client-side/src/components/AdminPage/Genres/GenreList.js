@@ -68,7 +68,9 @@ export default class GenreList extends Component {
     return <span key={rowIndex}>{row.genre_description.join(", ")}</span>;
   };
   delete_genre = (_id, genre_name) => {
-    let ans = window.confirm(`Bạn cố muốn xóa thể loại ${genre_name}?`);
+    let ans = window.confirm(
+      `Xóa thể loại ${genre_name} đồng nghĩa với xóa trong danh sách thể loại của phim. Bạn xác nhận xóa?`
+    );
     if (ans) {
       callApi(`genres/${_id}`, "delete").then((res) => {
         alert(res.data.message);
@@ -92,11 +94,11 @@ export default class GenreList extends Component {
     return (
       <div key={rowIndex}>
         <span>
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faInfoCircle}
             className="text-info mr-3"
             onClick={() => this.open_modal(row, true)}
-          />
+          /> */}
           <FontAwesomeIcon
             icon={faEdit}
             className="text-info mr-3"

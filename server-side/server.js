@@ -51,7 +51,8 @@ const SERVER_NODE = "http://127.0.0.1:4000";
 
 let run = (socket) => {
   //this will run when client successfully connected
-  console.log("====New client connected====");
+  console.log();
+  console.log(`====New client connected at: ${socket.handshake.address} ====`);
 
   // =============MODULE: RECEIVE AND SEND CHAT MESSAGE
   //1. Send data to client
