@@ -2,59 +2,214 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
-export default class GenreList extends Component {
+import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import filterFactory, { selectFilter } from "react-bootstrap-table2-filter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTrashAlt,
+  faInfoCircle,
+  faFilter,
+} from "@fortawesome/free-solid-svg-icons";
+import callApi from "../../../utils/apiCaller";
+import { Dropdown, Button } from "react-bootstrap";
+
+export default class ConversationList extends Component {
   constructor(props) {
     super();
     this.state = {
-      data: [
-        { genreId: 1, genreName: "Fantasy" },
-        { genreId: 2, genreName: "Documentary" },
-        { genreId: 3, genreName: "War" },
-        { genreId: 4, genreName: "Horror" },
-        { genreId: 5, genreName: "Children" },
-        { genreId: 6, genreName: "Mystery" },
-        { genreId: 7, genreName: "Thriller" },
-        { genreId: 8, genreName: "Action" },
-        { genreId: 9, genreName: "Comedy" },
-        { genreId: 10, genreName: "Drama" },
-        { genreId: 11, genreName: "Musical" },
-        { genreId: 12, genreName: "IMAX" },
-        { genreId: 13, genreName: "Western" },
-        { genreId: 14, genreName: "Adventure" },
-        { genreId: 15, genreName: "Crime" },
-        { genreId: 16, genreName: "Film-Noir" },
-        { genreId: 17, genreName: "Sci-Fi" },
-        { genreId: 18, genreName: "Romance" },
-        { genreId: 19, genreName: "Animation" },
-      ],
+      data: [],
       columns: [
         {
-          dataField: "genreId",
-          text: "Genre ID",
+          dataField: "input",
+          text: "Nội dung hỏi",
+          sort: true,
+          formatter: this.slice_display_string,
         },
         {
-          dataField: "genreName",
-          text: "Genre name",
+          dataField: "response",
+          text: "Nội dung trả lời",
+          sort: true,
+          formatter: this.slice_display_string,
+        },
+        {
+          dataField: "status",
+          text: "Trạng thái",
+          sort: true,
+        },
+        {
+          dataField: "created_time",
+          text: "Thời gian",
+          sort: true,
+        },
+        {
+          dataField: "",
+          text: "Thao tác",
+          formatter: this.Action,
         },
       ],
+      display_data: [],
+      filter_status: "",
     };
+    this.delete_message = this.delete_message.bind(this);
+    this.open_modal = this.open_modal.bind(this);
+    this.close_modal = this.close_modal.bind(this);
+    this.select_filter_status = this.select_filter_status.bind(this);
   }
-  load_data() {}
-  componentDidMount() {
-    this.load_data();
-  }
-  render() {
-    let data = this.state.data;
-    let columns = this.state.columns;
+  open_modal = (item_selected, is_not_edit) => {
+    this.setState({
+      is_not_edit: is_not_edit,
+      display_modal: true,
+      item_selected: item_selected,
+    });
+  };
+  close_modal = () => {
+    this.setState({ display_modal: false });
+    this.get_genre_list();
+  };
+
+  get_message_list = async () => {
+    await callApi("messages", "get").then((res) => {
+      this.setState({ data: res.data, display_data: res.data });
+    });
+    console.log(this.state.data);
+  };
+  componentDidMount = async () => {
+    this.get_message_list();
+  };
+  slice_display_string = (string) => {
+    if (string.length > 50) {
+      let end = 50;
+      while (string[end] != " ") {
+        end--;
+      }
+      string = string.slice(0, end) + " ...";
+    }
+    return string;
+  };
+  delete_message = async (_id) => {
+    let ans = window.confirm(`Bạn xác nhận xóa tin nhắn này?`);
+    if (ans) {
+      await callApi(`messages/${_id}`, "delete").then((res) => {
+        alert(res.data.message);
+      });
+      this.get_message_list();
+    }
+  };
+  Action = (cell, row, rowIndex, formatExtraData) => {
     return (
-      <div>
-        {columns.length > 0 ? (
-          <BootstrapTable
-            keyField="id"
-            data={this.state.data}
-            columns={this.state.columns}
-            pagination={paginationFactory()}
+      <div key={rowIndex}>
+        <span>
+          <FontAwesomeIcon
+            icon={faInfoCircle}
+            className="text-info mr-3"
+            onClick={() => this.open_modal(row, true)}
           />
+          <FontAwesomeIcon
+            icon={faTrashAlt}
+            className="text-info mr-3"
+            onClick={() => this.delete_message(row._id)}
+          />
+        </span>
+      </div>
+    );
+  };
+  delete_message_list = async () => {
+    if (this.state.data.length == 0) {
+      alert("Không có tin nhắn để xóa!");
+    } else {
+      let ans = window.confirm(`Bạn có xác nhận xóa tất cả tin nhắn?`);
+      if (ans) {
+        await callApi(`messages`, "delete").then((res) => {
+          alert(res.data.message);
+        });
+        this.get_message_list();
+      }
+    }
+  };
+  select_filter_status = async (value) => {
+    let filter_status = value;
+    let data = this.state.data;
+    let display_data = [];
+    console.log(value);
+    switch (await filter_status) {
+      case "":
+        display_data = data;
+        break;
+      case "handled":
+        data.map((d) => {
+          if (d.status == "handled") {
+            display_data.push(d);
+          }
+        });
+        break;
+      case "unhandled":
+        data.map((d) => {
+          if (d.status == "unhandled") {
+            display_data.push(d);
+          }
+        });
+        break;
+    }
+
+    await this.setState({ display_data: display_data });
+  };
+
+  render() {
+    const { SearchBar, ClearSearchButton } = Search;
+    let data = this.state.display_data;
+    let columns = this.state.columns;
+    // console.log(data);
+    return (
+      <div className="bg-white px-3 py-2">
+        {columns.length > 0 ? (
+          <ToolkitProvider keyField="id" data={data} columns={columns} search>
+            {(props) => (
+              <div>
+                <div className="form-inline mr-auto my-3">
+                  <h5 className="mr-3">Tìm kiếm:</h5>
+                  <SearchBar
+                    {...props.searchProps}
+                    placeholder="Nhập vào để tìm ..."
+                  />
+                  <Dropdown className="mx-3">
+                    <Dropdown.Toggle variant="info" id="dropdown-basic">
+                      <FontAwesomeIcon icon={faFilter} />
+                      <span className="mx-2">Lọc trạng thái</span>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item
+                        onSelect={() => this.select_filter_status("")}
+                      >
+                        Tất cả
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onSelect={() => this.select_filter_status("handled")}
+                      >
+                        Handled
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onSelect={() => this.select_filter_status("unhandled")}
+                      >
+                        Unhandled
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                  <Button variant="danger" onClick={this.delete_message_list}>
+                    <FontAwesomeIcon icon={faTrashAlt} />
+                    <span className="mx-2">Xóa tất cả</span>
+                  </Button>
+                </div>
+
+                <BootstrapTable
+                  {...props.baseProps}
+                  pagination={paginationFactory()}
+                  keyField="id"
+                  filter={filterFactory()}
+                />
+              </div>
+            )}
+          </ToolkitProvider>
         ) : (
           ""
         )}

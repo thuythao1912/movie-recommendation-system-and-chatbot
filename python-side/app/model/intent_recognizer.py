@@ -19,6 +19,7 @@ from joblib import load
 from app.model.entity_recognizer import EntityRecognizer
 from app.model.train import Train
 from app.model.db_connector import *
+from app.model.suggestor import Suggestor
 
 INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
@@ -57,10 +58,12 @@ class IntentRecognizer:
         entity = ""
         result = {}
         intent = next((item for item in self.intents if item["intent_name"] == intent_name), None)
+        description = ""
         response = UNKNOWN_RESPONSE
         condition = {}
         if not intent is None:
-            if intent["description"] != "domain":
+            description = intent["description"]
+            if intent["description"] != "query":
                 response = f'{random.choice(intent["responses"])}'
             else:
                 if len(entities) == 0:
@@ -85,6 +88,7 @@ class IntentRecognizer:
                             response = self.query_answer(response)
         result["condition"] = condition
         result["response"] = response
+        result["description"] = description
         return result
 
     def query_answer(self, query):
@@ -104,7 +108,7 @@ class IntentRecognizer:
                           f"+Thể loại: {', '.join(results['movie_genres'])}\n" \
                           f"+Diễn viên: {results['movie_actors']}\n " \
                           f"+Đạo diễn: {results['movie_producers']}\n " \
-                          f"+Tên khác: {', '.join(results['movie_description'])}\n " \
+                          f"+Tên khác: {', '.join(results['movie_description'])}\n "
 
             elif model == "genres":
                 results = list(obj.find_all(condition, limit=5))
@@ -114,6 +118,7 @@ class IntentRecognizer:
         return res
 
     def run(self, sentence):
+        print("====RUN===")
         sen_result = self.entity_recognizer.detect_entities(sentence)
         sen_recognize = sen_result["sen_result"]
         sen_recognize = nlp.preprocess_step_2(nlp.preprocess_step_1(sen_recognize))
@@ -133,7 +138,8 @@ class IntentRecognizer:
         # Get response
         score = max(self.clf.predict_proba(df_predict["feature"])[0])
 
-        output = {"input": sentence, "intent_name": "", "response": "", "score": score, "entities": entities}
+        output = {"input": sentence, "intent_name": "", "response": "", "score": score, "entities": entities,
+                  "condition": "", "description": "", "status": "unhandled"}
         if score < INTENT_THRESHOLD:
             output["response"] = UNKNOWN_RESPONSE
             output["intent_name"] = intent_predicted[0]
@@ -149,8 +155,34 @@ class IntentRecognizer:
             print(result)
 
             output["response"] = result["response"]
-            output["condition"] = result["condition"]
+            output["condition"] = str(result["condition"])
+            output["description"] = result["description"]
+            output["status"] = "handled"
 
+        return output
+
+    def run_with_history(self, sentence):
+        print("===RUN WITH HISTORY===")
+        sen_result = self.entity_recognizer.detect_entities(sentence)
+        sen_recognize = sen_result["sen_result"]
+        sen_recognize = nlp.preprocess_step_2(nlp.preprocess_step_1(sen_recognize))
+        entities_val = []
+        entities = sen_result["entitites"]
+
+        for entity in entities:
+            entities_val.append(entity["org_val"])
+
+        print("==> Sentence to recognize: {}".format(sen_recognize))
+        if len(entities_val) > 0:
+            movies_suggest = Suggestor().suggest_movies(entities_val)
+            response = "Dựa vào các phim bạn đã xem, mình nghĩ đây là những bộ phim phù hợp với bạn: {}".format(
+                "; ".join(movies_suggest))
+        else:
+            response = "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!"
+
+        output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 0,
+                  "entities": entities,
+                  "condition": "{}", "description": 'res_suggest', "status": "handled"}
         return output
 
 

@@ -18,7 +18,7 @@ import pymongo
 
 class DBConnector:
     def __init__(self):
-        self.client = pymongo.MongoClient("mongodb://localhost:27017/")
+        self.client = pymongo.MongoClient(config["DB"]["DB_HOST"])
         self.db = self.client[config["DB"]["DB_NAME"]]
 
 
@@ -32,7 +32,17 @@ class Collection:
         return self.collection.find_one(filter=filter)
 
     def find_all(self, filter=None, limit=0, sort=None):
-        return self.collection.find(filter=filter, limit=limit, sort=sort)
+        return list(self.collection.find(filter=filter, limit=limit, sort=sort))
+
+    def insert_one(self, doc):
+        return self.collection.insert_one(doc)
+
+    def get_last_record(self, filter):
+        results = self.find_all(filter=filter)
+        last_record = {}
+        if len(results) > 0:
+            last_record = results[len(results) - 1]
+        return last_record
 
 
 class Movies(Collection):
@@ -43,6 +53,11 @@ class Movies(Collection):
 class Genres(Collection):
     def __init__(self):
         Collection.__init__(self, "genres")
+
+
+class Messages(Collection):
+    def __init__(self):
+        Collection.__init__(self, "messages")
 
 
 if __name__ == "__main__":

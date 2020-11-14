@@ -78,14 +78,14 @@ export default class MovieList extends Component {
     return <span key={rowIndex}>{row.movie_description.join(", ")}</span>;
   };
 
-  delete_movie = (_id, movie_title) => {
+  delete_movie = async (_id, movie_title) => {
     let ans = window.confirm(`Bạn cố muốn xóa phim ${movie_title}?`);
     if (ans) {
-      callApi(`movies/${_id}`, "delete").then((res) => {
+      await callApi(`movies/${_id}`, "delete").then((res) => {
         alert(res.data.message);
       });
+      this.get_movie_list();
     }
-    this.get_movie_list();
   };
   open_modal = (item_selected, is_not_edit) => {
     this.setState({

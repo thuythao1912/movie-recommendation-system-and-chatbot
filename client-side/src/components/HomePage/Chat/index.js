@@ -29,11 +29,12 @@ export default class App extends Component {
     super();
     this.state = {
       messages: [],
-      member: {
+      user: {
         username: get_name(),
         color: get_color(),
       },
-      display_chat_box: "none",
+      session: "",
+      display_chat_box: "block",
     };
   }
 
@@ -41,28 +42,31 @@ export default class App extends Component {
     socket.emit("greeting");
     socket.on("greeting", (data) => {
       const messages = this.state.messages;
+      let session = data.session;
       let date = formatDate(data.send_time, "dmy-hms");
       messages.push({
         text: data.text,
-        member: data.member,
+        user: data.user,
         created_time: date,
       });
-      this.setState({ messages: messages });
+      this.setState({ messages: messages, session: session });
     });
   };
   onSendMessage = (message) => {
     message = message.trim();
     if (message != "") {
       const messages = this.state.messages;
+
       let date = formatDate(new Date(), "dmy-hms");
       socket.emit("message", {
         text: message,
-        member: this.state.member,
+        user: this.state.user,
         created_time: date,
+        session: this.state.session,
       });
       messages.push({
         text: message,
-        member: this.state.member,
+        user: this.state.user,
         created_time: date,
       });
       this.setState({ messages: messages });
@@ -92,7 +96,7 @@ export default class App extends Component {
         <div style={{ display: this.state.display_chat_box }}>
           <Messages
             messages={this.state.messages}
-            currentMember={this.state.member}
+            currentMember={this.state.user}
           />
           <Input onSendMessage={this.onSendMessage} />
         </div>

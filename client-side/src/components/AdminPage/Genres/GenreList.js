@@ -67,16 +67,16 @@ export default class GenreList extends Component {
     }
     return <span key={rowIndex}>{row.genre_description.join(", ")}</span>;
   };
-  delete_genre = (_id, genre_name) => {
+  delete_genre = async (_id, genre_name) => {
     let ans = window.confirm(
       `Xóa thể loại ${genre_name} đồng nghĩa với xóa trong danh sách thể loại của phim. Bạn xác nhận xóa?`
     );
     if (ans) {
-      callApi(`genres/${_id}`, "delete").then((res) => {
+      await callApi(`genres/${_id}`, "delete").then((res) => {
         alert(res.data.message);
       });
+      this.get_genre_list();
     }
-    this.get_genre_list();
   };
   open_modal = (item_selected, is_not_edit) => {
     this.setState({
@@ -94,11 +94,6 @@ export default class GenreList extends Component {
     return (
       <div key={rowIndex}>
         <span>
-          {/* <FontAwesomeIcon
-            icon={faInfoCircle}
-            className="text-info mr-3"
-            onClick={() => this.open_modal(row, true)}
-          /> */}
           <FontAwesomeIcon
             icon={faEdit}
             className="text-info mr-3"

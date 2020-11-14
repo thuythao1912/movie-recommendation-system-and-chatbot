@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 export default class Messages extends Component {
   render_message(message, index) {
-    let { member, text, created_time } = message;
-    let { currentMember } = this.props;
-    let messageFromMe = member.username !== "chatbot";
+    let { user, text, created_time } = message;
+    let messageFromMe = user.username !== "chatbot";
     let messageClass = messageFromMe
       ? "d-flex flex-row-reverse"
       : "d-flex flex-row message";
@@ -39,7 +38,7 @@ export default class Messages extends Component {
   }
   render() {
     let { messages } = this.props;
-    let { currentMember } = this.props;
+
     return (
       <div>
         <div className="message-list px-3">

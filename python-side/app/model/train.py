@@ -40,7 +40,8 @@ class Train:
         df_train = pd.DataFrame(train_data)
 
         # save train data to json
-        utils.save_json(train_data, os.path.join(root, "data", "data_train.json"))
+        utils.save_json(data={"intents": train_data}, prefix=True,
+                        json_path=os.path.join(root, "data", "data_train.json"))
 
         # init model naive bayes
         model = SVMModel()

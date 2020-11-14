@@ -8,6 +8,8 @@ root = Path(os.path.abspath(__file__)).parents[1]
 import string
 from pyvi import ViTokenizer, ViPosTagger, ViUtils
 from fuzzysearch import find_near_matches
+from sklearn.metrics.pairwise import cosine_similarity
+
 import utils.utils as utils
 
 
@@ -56,6 +58,7 @@ def preprocess_step_2(doc):
     doc = remove_stop_word(doc)
     return doc
 
+
 def approximate_search(substring, string):
     output = {"matched": "", "score": 0}
     result = find_near_matches(substring, string, max_deletions=1, max_insertions=1, max_substitutions=0)
@@ -78,3 +81,7 @@ def approximate_search(substring, string):
 def remove_accents(doc):
     return ViUtils.remove_accents(doc).decode('utf-8')
 
+
+def calculate_cosin_similarity(vec_1, vec_2):
+    cos_sim = cosine_similarity([vec_1], [vec_2])
+    return round(cos_sim[0][0], 3)

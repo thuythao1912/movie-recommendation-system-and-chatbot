@@ -14,7 +14,7 @@
         "Bạn muốn tra cứu phim gì?"
       ],
       "query": "query#movies#{}",
-      "description": "domain"
+      "description": "query"
     },
     {
       "intent_name": "tra cuu thong tin movie_genres",
@@ -29,7 +29,7 @@
         "Bạn muốn tìm phim thuộc thể loại gì?"
       ],
       "query": "query#genres#{}",
-      "description": "domain"
+      "description": "query"
     },
     {
       "intent_name": "chao hoi",
@@ -87,7 +87,9 @@
         "bạn yêu tôi không",
         "Anh yêu em không",
         "yêu không",
-        "bạn có yêu tôi không"
+        "bạn có yêu tôi không",
+        "bạn thích tôi không",
+        "thích không"
       ],
       "responses": [
         "Mình rất yêu bạn",
@@ -109,6 +111,19 @@
       ],
       "query": "",
       "description": "casual"
+    },
+    {
+      "intent_name": "yeu cau goi y phim",
+      "training_phrases": [
+        "gợi ý phim",
+        "muốn được gợi ý phim",
+        "có thể gợi ý phim cho tôi không"
+      ],
+      "responses": [
+        "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!"
+      ],
+      "query": "",
+      "description": "suggest"
     }
   ]
 }
