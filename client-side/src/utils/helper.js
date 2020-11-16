@@ -29,3 +29,6 @@ exports.checkNull = (full_states, data) => {
   return is_null;
 };
 
+exports.compareString = (str1, str2) => {
+  return str1 == str2;
+};

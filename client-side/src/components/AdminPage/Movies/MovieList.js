@@ -10,7 +10,6 @@ import {
   faSave,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { socket } from "../../../utils/socket";
 import callApi from "../../../utils/apiCaller";
 import MovieModal from "./MovieModal";
 export default class MovieList extends Component {

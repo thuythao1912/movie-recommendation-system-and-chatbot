@@ -13,7 +13,7 @@ const message_model = new Schema({
   status: { type: { type: String } },
   created_time: { type: String },
   session: { type: String },
-  entities: { type: Object },
+  user: { type: Object },
 });
 message_model.plugin(timeZone);
 module.exports = mongoose.model("message", message_model);

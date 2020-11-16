@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AdminPage from "./AdminPage";
+import Login from "./AuthenticationPage/Login.js";
 import HomePage from "./HomePage";
 export default class App extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends Component {
         <div>
           <Switch>
             <Route path="/admin" component={AdminPage} />
+            <Route path="/login" component={Login} />
             <Route exact path="/" component={HomePage} />
           </Switch>
         </div>

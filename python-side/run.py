@@ -3,11 +3,14 @@ import sys
 from pathlib import Path
 
 sys.path.append(os.path.join('../..'))
-root = Path(os.path.abspath(__file__)).parents[1]
+root = Path(os.path.abspath(__file__)).parents[0]
 
 from flask import Flask, jsonify, request
 from app.model.intent_recognizer import IntentRecognizer
+from app.model.train import Train
 from app.model.db_connector import Messages
+
+import utils.utils as utils
 
 from datetime import datetime
 
@@ -65,6 +68,25 @@ def predict_run():
         output["_id"] = str(output["_id"])
         return jsonify(output)
 
+
+@app.route('/train', methods=['POST'])
+def train():
+    try:
+        data = request.get_json()
+        intents = data.get("data")
+        if intents is not None:
+            utils.save_json(data=intents, prefix=True,
+                            json_path=os.path.join(root, "data", "intent_training.json"))
+            train = Train()
+            train.run(os.path.join(root, "data", "intent_training.json"))
+
+            ir.__init__()
+            return jsonify({"message": "Train model thành công!", "message_status": "success"})
+
+        return jsonify({"message": "Dữ liệu train không phù hợp!", "message_status": "fail"})
+    except Exception as err:
+        print(err)
+        return jsonify({"message": "Train model thất bại!", "message_status": "fail"})
 
 if __name__ == "__main__":
     app.run()

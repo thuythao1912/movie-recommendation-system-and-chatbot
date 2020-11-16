@@ -139,7 +139,11 @@ export default class MovieModal extends Component {
     return (
       <Modal show={true} onHide={this.close} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>Cập nhật thông tin phim</Modal.Title>
+          <Modal.Title>
+            {this.state.is_not_edit
+              ? "Chi tiết phim"
+              : "Cập nhật thông tin phim"}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row px-3">

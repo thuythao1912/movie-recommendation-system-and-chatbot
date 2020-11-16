@@ -30,22 +30,11 @@ export default class GenreModal extends Component {
       genre_id: item.genre_id,
       is_not_edit: this.props.is_not_edit,
     });
-    this.get_genre_list();
   }
   handle_input = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  get_genre_list = async () => {
-    //get genre list
-    let genre_list = [];
-    await callApi("genres", "get").then((res) => {
-      genre_list = res.data;
-    });
-    this.setState({
-      genre_list: genre_list,
-    });
-  };
   update_movie = async () => {
     let data = {
       _id: this.state._id,
@@ -92,7 +81,11 @@ export default class GenreModal extends Component {
     return (
       <Modal show={true} onHide={this.close} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>Cập nhật thông tin thể loại</Modal.Title>
+          <Modal.Title>
+            {this.state.is_not_edit
+              ? "Chi tiết thể loại"
+              : "Cập nhật thông tin thể loại"}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row px-3">

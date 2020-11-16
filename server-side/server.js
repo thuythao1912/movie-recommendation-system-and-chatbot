@@ -25,11 +25,13 @@ let index = require("./routes/index");
 let movie_route = require("./routes/movie_route");
 let genre_route = require("./routes/genre_route");
 let message_route = require("./routes/message_route");
+let user_route = require("./routes/user_route");
 
 //use route
 app.use("/movies", movie_route);
 app.use("/genres", genre_route);
 app.use("/messages", message_route);
+app.use("/users", user_route);
 app.use(index);
 
 //import socket controllers
@@ -59,10 +61,12 @@ let run = (socket) => {
 
   // =============MODULE: RECEIVE AND SEND CHAT MESSAGE
   //1. Send data to client
-  socket.on("greeting", () => {
+  socket.on("greeting", (data) => {
     socket.emit("greeting", {
       session: uuidv4(),
-      text: `Xin chào, mình là chatbot. Mình có thể giúp gì cho bạn?`,
+      text: `Xin chào ${
+        data.username == null ? "bạn" : data.username
+      }, mình là chatbot. Mình có thể giúp gì cho bạn?`,
       user: { username: "chatbot", color: "blue" },
       send_time: new Date(),
     });
@@ -89,7 +93,7 @@ let run = (socket) => {
         .catch((err) => {
           if (err.code == "ECONNREFUSED") {
             socket.emit("greeting", {
-              text: "Hic..hic, kết nối tới chatbot có vấn đề rồi!",
+              text: "Hic...hic, kết nối tới chatbot có vấn đề rồi!",
               user: { username: "chatbot", color: "blue" },
               send_time: new Date(),
               session: data.session,

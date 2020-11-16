@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-import filterFactory, { selectFilter } from "react-bootstrap-table2-filter";
+import filterFactory from "react-bootstrap-table2-filter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTrashAlt,
@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import callApi from "../../../utils/apiCaller";
 import { Dropdown, Button } from "react-bootstrap";
+import ConversationModal from "./ConversationModal";
 
 export default class ConversationList extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ export default class ConversationList extends Component {
       ],
       display_data: [],
       filter_status: "",
+      is_not_edit: true,
     };
     this.delete_message = this.delete_message.bind(this);
     this.open_modal = this.open_modal.bind(this);
@@ -64,7 +66,6 @@ export default class ConversationList extends Component {
   };
   close_modal = () => {
     this.setState({ display_modal: false });
-    this.get_genre_list();
   };
 
   get_message_list = async () => {
@@ -158,9 +159,18 @@ export default class ConversationList extends Component {
     const { SearchBar, ClearSearchButton } = Search;
     let data = this.state.display_data;
     let columns = this.state.columns;
-    // console.log(data);
     return (
       <div className="bg-white px-3 py-2">
+        {this.state.display_modal ? (
+          <ConversationModal
+            item_selected={this.state.item_selected}
+            display_modal={this.state.display_modal}
+            onClickClose={this.close_modal}
+            is_not_edit={this.state.is_not_edit}
+          />
+        ) : (
+          ""
+        )}
         {columns.length > 0 ? (
           <ToolkitProvider keyField="id" data={data} columns={columns} search>
             {(props) => (
@@ -203,9 +213,9 @@ export default class ConversationList extends Component {
 
                 <BootstrapTable
                   {...props.baseProps}
-                  pagination={paginationFactory()}
                   keyField="id"
                   filter={filterFactory()}
+                  pagination={paginationFactory()}
                 />
               </div>
             )}

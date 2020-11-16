@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { socket } from "../../utils/socket";
 import callApi from "../../utils/apiCaller";
 export default class MovieGenre extends Component {
   constructor(props) {

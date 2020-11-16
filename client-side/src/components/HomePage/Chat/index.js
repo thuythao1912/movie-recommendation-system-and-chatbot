@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Messages from "./Messages";
 import Input from "./Input";
 import "../../App.css";
-import { socket } from "../../../utils/socket";
 import { formatDate } from "../../../utils/helper";
+import { socket } from "../../../utils/socket";
+import ls from "../../../utils/localStorage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowMinimize } from "@fortawesome/free-solid-svg-icons";
@@ -23,14 +24,15 @@ function get_color() {
   return colors[index];
 }
 
-// let socket = socketIOClient(ENDPOINT);
 export default class App extends Component {
   constructor(props) {
     super();
     this.state = {
       messages: [],
       user: {
-        username: get_name(),
+        username: ls.getItem("username"),
+        user_id: ls.getItem("user_id"),
+        user_login: ls.getItem("user_login"),
         color: get_color(),
       },
       session: "",
@@ -39,7 +41,7 @@ export default class App extends Component {
   }
 
   componentDidMount = async () => {
-    socket.emit("greeting");
+    socket.emit("greeting", this.state.user);
     socket.on("greeting", (data) => {
       const messages = this.state.messages;
       let session = data.session;

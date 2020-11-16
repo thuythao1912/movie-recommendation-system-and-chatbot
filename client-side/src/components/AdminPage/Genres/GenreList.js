@@ -9,7 +9,6 @@ import {
   faInfoCircle,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { socket } from "../../../utils/socket";
 import callApi from "../../../utils/apiCaller";
 import GenreModal from "./GenreModal";
 export default class GenreList extends Component {

@@ -180,7 +180,7 @@ class IntentRecognizer:
         else:
             response = "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!"
 
-        output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 0,
+        output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
                   "entities": entities,
                   "condition": "{}", "description": 'res_suggest', "status": "handled"}
         return output

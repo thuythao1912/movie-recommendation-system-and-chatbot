@@ -1,6 +1,150 @@
 {
   "intents": [
     {
+      "feature": "xin chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "tạm_biệt",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tạm_biệt",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tam_biet",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tam_biet",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hen gap",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hen gap",
+      "target": "tam biet"
+    },
+    {
       "feature": "muốn tra_cứu phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },
@@ -175,150 +319,6 @@
     {
       "feature": "muon coi the_loai",
       "target": "tra cuu thong tin movie_genres"
-    },
-    {
-      "feature": "xin chào",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "xin chào",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "xin chao",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "xin chao",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hi",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hi",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hi",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hi",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "chào",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "chào",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "chao",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "chao",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hello",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hello",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hello",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "hello",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "alo",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "alo",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "alo",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "alo",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "bonjour",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "bonjour",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "bonjour",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "bonjour",
-      "target": "chao hoi"
-    },
-    {
-      "feature": "tạm_biệt",
-      "target": "tam biet"
-    },
-    {
-      "feature": "tạm_biệt",
-      "target": "tam biet"
-    },
-    {
-      "feature": "tam_biet",
-      "target": "tam biet"
-    },
-    {
-      "feature": "tam_biet",
-      "target": "tam biet"
-    },
-    {
-      "feature": "bye",
-      "target": "tam biet"
-    },
-    {
-      "feature": "bye",
-      "target": "tam biet"
-    },
-    {
-      "feature": "bye",
-      "target": "tam biet"
-    },
-    {
-      "feature": "bye",
-      "target": "tam biet"
-    },
-    {
-      "feature": "hẹn gặp",
-      "target": "tam biet"
-    },
-    {
-      "feature": "hẹn gặp",
-      "target": "tam biet"
-    },
-    {
-      "feature": "hen gap",
-      "target": "tam biet"
-    },
-    {
-      "feature": "hen gap",
-      "target": "tam biet"
     },
     {
       "feature": "khỏe không",

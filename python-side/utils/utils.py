@@ -25,6 +25,7 @@ def save_json(data, json_path, prefix=None, orient="records"):
     :param orient: split, records, index, columns, values, table
     :return:
     """
+
     if prefix:
         with codecs.open(json_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -49,3 +50,6 @@ def duplicate_object(object, time):
     for i in range(time):
         arr.append(object)
     return arr
+
+def hello_utils():
+    print("hello utils")
