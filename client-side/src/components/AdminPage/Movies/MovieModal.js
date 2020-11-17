@@ -234,18 +234,15 @@ export default class MovieModal extends Component {
                 <td>Thể loại</td>
                 <td>
                   <select
-                    className="form-control form-control-sm"
+                    className="form-control form-control-sm mb-3"
                     onChange={this.select_genres}
                     hidden={this.state.is_not_edit}
                   >
                     <option value="-1">Chọn thể loại</option>
                     {elGenre}
                   </select>
+                  {elMovieGenres}
                 </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>{elMovieGenres}</td>
               </tr>
             </tbody>
           </table>

@@ -22,6 +22,12 @@ export default class Panel extends Component {
             <Link to="/admin/genres">
               <li>Thể loại</li>
             </Link>
+            <Link to="/admin/users">
+              <li>Người dùng</li>
+            </Link>
+            <Link to="/admin/ratings">
+              <li>Bình chọn</li>
+            </Link>
           </ul>
         </li>
       </ul>

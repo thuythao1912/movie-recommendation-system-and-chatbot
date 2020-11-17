@@ -50,12 +50,13 @@ def remove_stop_word(doc):
 def preprocess_step_1(doc):
     doc = normalize(doc)
     doc = standardize(doc)
-    doc = tokenize(doc)
     doc = remove_punctuation(doc)
     return doc
 
+
 def preprocess_step_2(doc):
     doc = remove_stop_word(doc)
+    doc = tokenize(doc)
     return doc
 
 
@@ -74,7 +75,7 @@ def approximate_search(substring, string):
         while end < len(string) and string[end] != " ":
             end = end + 1
         output["matched"] = string[start: end + 1].strip()
-        output["score"] = 1- (round(result[min_index].dist / len(substring), 3))
+        output["score"] = 1 - (round(result[min_index].dist / len(substring), 3))
     return output
 
 
@@ -85,3 +86,6 @@ def remove_accents(doc):
 def calculate_cosin_similarity(vec_1, vec_2):
     cos_sim = cosine_similarity([vec_1], [vec_2])
     return round(cos_sim[0][0], 3)
+
+
+

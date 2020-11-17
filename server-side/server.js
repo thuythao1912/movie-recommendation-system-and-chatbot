@@ -14,6 +14,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const mongoose = require("mongoose");
 const db = require("./db");
+const gloabal_var = require("./global_variables");
 
 //setup server
 app.use(cors());
@@ -26,12 +27,14 @@ let movie_route = require("./routes/movie_route");
 let genre_route = require("./routes/genre_route");
 let message_route = require("./routes/message_route");
 let user_route = require("./routes/user_route");
+let ai_service_route = require("./routes/ai_service_route");
 
 //use route
 app.use("/movies", movie_route);
 app.use("/genres", genre_route);
 app.use("/messages", message_route);
 app.use("/users", user_route);
+app.use("/ai-service", ai_service_route);
 app.use(index);
 
 //import socket controllers
@@ -50,9 +53,6 @@ mongoose
       console.log(`Can not connect database! ${err}`);
     }
   );
-
-const SERVER_PYTHON = "http://127.0.0.1:5000";
-const SERVER_NODE = "http://127.0.0.1:4000";
 
 let run = (socket) => {
   //this will run when client successfully connected
@@ -76,7 +76,7 @@ let run = (socket) => {
   socket.on("message", (data) => {
     try {
       axios
-        .post(`${SERVER_PYTHON}/predict`, {
+        .post(`${gloabal_var.SERVER_PYTHON}/predict`, {
           input: data.text,
           created_time: data.created_time,
           session: data.session,

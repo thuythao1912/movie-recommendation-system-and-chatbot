@@ -74,13 +74,16 @@ class RawDataProcessor:
 
 
 if __name__ == "__main__":
-    rdp = RawDataProcessor()
-
-    # Test split_raw_data
-    rdp.split_raw_data(["data", "raw_data"], 100)
-
-    # Test create_json_from_excel for movies
-    rdp.create_json_from_excel(["data", "raw_data"], "movies")
-
-    # Test create_json_from_excel for genres
-    rdp.create_json_from_excel(["data", "raw_data"], "genres")
+    # rdp = RawDataProcessor()
+    #
+    # # Test split_raw_data
+    # rdp.split_raw_data(["data", "raw_data"], 100)
+    #
+    # # Test create_json_from_excel for movies
+    # rdp.create_json_from_excel(["data", "raw_data"], "movies")
+    #
+    # # Test create_json_from_excel for genres
+    # rdp.create_json_from_excel(["data", "raw_data"], "genres")
+    # print(    nlp.calculate_cosin_similarity([1.75, 0.75, 0, -1.25, -1.25], [2.25, 0, 1.25, -0.75, -2.75])
+# )
+    print(    nlp.calculate_cosin_similarity([2.4, 2.4, -0.6, -2.6, -1.6, 0, 0], [2,0,0,-2,0,0,0]))

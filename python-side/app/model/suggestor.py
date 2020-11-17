@@ -1,10 +1,4 @@
-from app.model.db_connector import *
-from app.model.entity_recognizer import EntityRecognizer
-import numpy as np
-import pandas as pd
-import utils.nlp_utils as nlp
-import utils.utils as utils
-import configparser
+
 import os
 import sys
 from pathlib import Path
@@ -12,9 +6,18 @@ from pathlib import Path
 sys.path.append(os.path.join('../..'))
 root = Path(os.path.abspath(__file__)).parents[2]
 
-
+import configparser
 config = configparser.ConfigParser()
 config.read(os.path.join(root, 'config.ini'))
+
+# from sklearn import cross_validation as cv
+import numpy as np
+import pandas as pd
+from app.model.db_connector import *
+from app.model.item_recognizer import EntityRecognizer
+
+import utils.nlp_utils as nlp
+import utils.utils as utils
 
 
 MAX_SUGGEST_BY_MOVIE = 7
@@ -76,6 +79,23 @@ class Suggestor:
         return suggest_movies_titles
 
 
+class SuggestBasedUser:
+    def __init__(self):
+        pass
+
+    def run(self):
+        data = utils.load_csv(os.path.join(
+            root, "data", "raw_data", "ratings.csv"))
+
+        # train_data, test_data = cv.train_test_split(small_data, test_size=0.2)
+        #
+        # # Create two user-item matrices for training and testing data
+        # train_data_matrix = train_data.as_matrix(columns=['user_id', 'movie_id', 'rating'])
+        # test_data_matrix = test_data.as_matrix(columns=['user_id', 'movie_id', 'rating'])
+
 if __name__ == "__main__":
-    suggestor = Suggestor()
-    print(suggestor.suggest_movies(["jumanji", "toy story"]))
+    # suggestor = Suggestor()
+    # print(suggestor.suggest_movies(["jumanji", "toy story"]))
+
+    sbu = SuggestBasedUser()
+    sbu.run()

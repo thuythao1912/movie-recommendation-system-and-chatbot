@@ -38,18 +38,22 @@ def save_json(data, json_path, prefix=None, orient="records"):
 def load_csv(csv_path, sep=None, usecols=None):
     return pd.read_csv(csv_path, sep=sep, encoding='utf-8', usecols=usecols, engine="python")
 
+
 def save_excel(dataframe, excel_path):
     print("===>Excel successfully saved at {}".format(excel_path))
     return dataframe.to_excel(excel_path, index=False)
 
+
 def load_excel(excel_path, sheetname=None):
     return pd.read_excel(excel_path, sheetname)
+
 
 def duplicate_object(object, time):
     arr = []
     for i in range(time):
         arr.append(object)
     return arr
+
 
 def hello_utils():
     print("hello utils")

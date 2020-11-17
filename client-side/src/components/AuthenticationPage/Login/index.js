@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import { faHome, faUserCog } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import callApi from "../../../utils/apiCaller";
 import { Link } from "react-router-dom";
 import ls from "../../../utils/localStorage";
@@ -90,6 +92,12 @@ export default class Login extends Component {
             </Button>
             <Link className="text-white" to="/register">
               <p>Đăng ký thành viên</p>
+            </Link>
+            <Link className="text-white" to="/">
+              <p>
+                <FontAwesomeIcon icon={faHome} className="mx-2" />
+                Trang chủ
+              </p>
             </Link>
           </div>
         </div>
