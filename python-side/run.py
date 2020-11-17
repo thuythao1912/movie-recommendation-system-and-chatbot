@@ -3,30 +3,127 @@ import sys
 from pathlib import Path
 
 sys.path.append(os.path.join('../..'))
-root = Path(os.path.abspath(__file__)).parents[1]
+root = Path(os.path.abspath(__file__)).parents[0]
 
 from flask import Flask, jsonify, request
 from app.model.intent_recognizer import IntentRecognizer
+from app.model.train import Train
+from app.model.db_connector import Messages
+
+import utils.utils as utils
+
+from datetime import datetime
 
 app = Flask(__name__)
 
 """Format message
-{"input" : "what is your name",
- "created_time": "123456789"}
+{"input" : "toy story",
+ "created_time": "17-11-2020 09:58:00",
+ "session":"bntt",
+ "user":{
+        "username": "Thao",
+        "user_id": "1",
+        "user_login": "bntt",
+        "color":"blue"
+ }            
+}
 """
+ir = IntentRecognizer()
+messages = Messages()
+MAX_TIME = 300
 
 
 @app.route('/predict', methods=['POST'])
 def predict_run():
-    message = request.get_json()
-    input = message.get("input")
-    ir = IntentRecognizer()
-    output = ir.run(input)
-    output["created_time"] = message.get("created_time")
-    print(f"Q: {input}")
-    print(f"A: {output}")
-    print("------------------")
-    return jsonify(output)
+    try:
+        message = request.get_json()
+        input = message.get("input")
+        session = message.get("session")
+        created_time = message.get("created_time")
+        user = message.get("user")
+        prev_mess = messages.get_last_record({"session": session})
+
+        if prev_mess == {}:
+            output = ir.run(input)
+        else:
+            time = (datetime.strptime(created_time, '%d-%m-%Y %H:%M:%S') - datetime.strptime(prev_mess["created_time"],
+                                                                                             '%d-%m-%Y %H:%M:%S')).total_seconds()
+            if prev_mess["description"] in ["suggest"] and time < MAX_TIME:
+                output = ir.run_with_history(input)
+            else:
+                output = ir.run(input)
+
+        output["created_time"] = created_time
+        output["session"] = session
+        output["user"] = user
+
+        print(f"Q: {input}")
+        print(f"A: {output}")
+
+        messages.insert_one(output)
+        print("------------------")
+        output["_id"] = str(output["_id"])
+        return jsonify(output)
+    except Exception as err:
+        print(err)
+        output = {"input": "", "intent_name": "", "response": "Đã có lỗi xảy ra. Vui lòng thử lại!", "score": 0,
+                  "entities": [], "condition": "{}", "description": "", "status": "unhandled",
+                  "created_time": str(datetime.now()),
+                  "session": "", "user": ""}
+        messages.insert_one(output)
+        print("------------------")
+        output["_id"] = str(output["_id"])
+        return jsonify(output)
+
+
+@app.route('/intents', methods=['POST'])
+def train():
+    try:
+        data = request.get_json()
+        intents = data.get("data")
+        if intents is not None:
+            utils.save_json(data=intents, prefix=True,
+                            json_path=os.path.join(root, "data", "intent_training.json"))
+            train = Train()
+            train.run(os.path.join(root, "data", "intent_training.json"))
+
+            ir.__init__()
+            return jsonify({"message": "Train dữ liệu thành công!", "message_status": "success"})
+
+        return jsonify({"message": "Dữ liệu train không phù hợp!", "message_status": "fail"})
+    except Exception as err:
+        print(err)
+        return jsonify({"message": "Train dữ liệu thất bại!", "message_status": "fail"})
+
+
+@app.route("/entities", methods=["POST"])
+def update_entities():
+    try:
+        data = request.get_json()
+        entities = data.get("data")
+        if entities is not None: utils.save_json(data=entities, prefix=True,
+                                                 json_path=os.path.join(root, "data", "entities.json"))
+        ir.__init__()
+        return jsonify(
+            {"message": "Cập nhật entities thành công!", "message_status": "success"})
+    except Exception as err:
+        print(err)
+        return jsonify({"message": "Cập nhật entities thất bại!", "message_status": "fail"})
+
+
+@app.route("/stop_words", methods=["POST"])
+def update_stop_words():
+    try:
+        data = request.get_json()
+        entities = data.get("data")
+        if entities is not None: utils.save_json(data=entities, prefix=True,
+                                                 json_path=os.path.join(root, "data", "stop_words.json"))
+        ir.__init__()
+        return jsonify(
+            {"message": "Cập nhật stop words thành công!", "message_status": "success"})
+    except Exception as err:
+        print(err)
+        return jsonify({"message": "Cập nhật stop words thất bại!", "message_status": "fail"})
 
 
 if __name__ == "__main__":

@@ -1,0 +1,105 @@
+{
+  "intents": [
+    {
+      "intent_name": "chao hoi",
+      "training_phrases": [
+        "xin chào",
+        "hi",
+        "chào bạn",
+        "hello",
+        "alo",
+        "bonjour"
+      ],
+      "responses": [
+        "Xin chào bạn!",
+        "Xin chào. Rất vui được gặp bạn!",
+        "Chào bạn, bạn cần mình trợ giúp gì?",
+        "Nadine nghe đây! Mình có thể giúp gì cho bạn?"
+      ],
+      "query": "",
+      "description": "casual"
+    },
+    {
+      "intent_name": "tam biet",
+      "training_phrases": ["tạm biệt", "bye", "hẹn gặp lại"],
+      "responses": ["Tạm biệt bạn!", "Bye bye", "Hẹn gặp lại bạn nha!"],
+      "query": "",
+      "description": "tam biet"
+    },
+    {
+      "intent_name": "tra cuu thong tin movie_title",
+      "training_phrases": [
+        "muốn tra cứu phim movie_title",
+        "muốn xem phim movie_title",
+        "muốn coi phim movie_title",
+        "thông tin phim movie_title",
+        "muốn coi phim",
+        "muốn xem phim"
+      ],
+      "responses": ["Bạn muốn tra cứu phim gì?"],
+      "query": "query#movies#{}",
+      "description": "query"
+    },
+    {
+      "intent_name": "tra cuu thong tin movie_genres",
+      "training_phrases": [
+        "muốn tra cứu phim movie_genres",
+        "muốn xem phim movie_genres",
+        "muốn coi phim movie_genres",
+        "thông tin phim movie_genres",
+        "muốn coi thể loại"
+      ],
+      "responses": ["Bạn muốn tìm phim thuộc thể loại gì?"],
+      "query": "query#genres#{}",
+      "description": "query"
+    },
+    {
+      "intent_name": "hoi tham suc khoe",
+      "training_phrases": [
+        "Bạn khỏe không",
+        "Bạn thế nào rồi",
+        "Bạn khỏe chứ",
+        "Dạo này bạn thế nào",
+        "Bạn có khỏe không",
+        "Sức khỏe bạn thế nào"
+      ],
+      "responses": ["Mình khỏe. Cảm ơn bạn!"],
+      "query": "",
+      "description": "casual"
+    },
+    {
+      "intent_name": "ban yeu toi khong",
+      "training_phrases": [
+        "bạn yêu tôi không",
+        "Anh yêu em không",
+        "yêu không",
+        "bạn có yêu tôi không",
+        "bạn thích tôi không",
+        "thích không"
+      ],
+      "responses": ["Mình rất yêu bạn", "Không yêu đâu nha!"],
+      "query": "",
+      "description": "casual"
+    },
+    {
+      "intent_name": "chatbot ten gi",
+      "training_phrases": ["bạn tên gì", "tên bạn là gì", "what your name"],
+      "responses": ["Mình tên là Nadine nha!", "Nadine là tên của mình đó!"],
+      "query": "",
+      "description": "casual"
+    },
+    {
+      "intent_name": "yeu cau goi y phim",
+      "training_phrases": [
+        "gợi ý phim",
+        "muốn được gợi ý phim",
+        "có thể gợi ý phim cho tôi không"
+      ],
+      "responses": [
+        "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!"
+      ],
+      "query": "",
+      "description": "suggest"
+    }
+  ]
+}

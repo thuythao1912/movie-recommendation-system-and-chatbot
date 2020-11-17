@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 export default class Input extends Component {
   constructor(props) {
     super();
@@ -7,27 +9,30 @@ export default class Input extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  onChange(e) {
+  onChange = (e) => {
     this.setState({ text: e.target.value });
-  }
+  };
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
     this.setState({ text: "" });
     this.props.onSendMessage(this.state.text);
-  }
+  };
   render() {
     return (
-      <div className="input">
-        <form onSubmit={(e) => this.onSubmit(e)}>
+      <div className="mt-auto py-2">
+        <form onSubmit={(e) => this.onSubmit(e)} className="form">
           <input
             onChange={(e) => this.onChange(e)}
             value={this.state.text}
             type="text"
-            placeholder="Enter your message and press ENTER"
+            placeholder="Bạn hãy hỏi mình nha ..."
             autoFocus={true}
+            className="form-control mx-2 input"
           />
-          <button>Send</button>
+          <button className="btn btn-danger">
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
         </form>
       </div>
     );
