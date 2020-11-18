@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import GenreList from "./GenreList";
 import MovieGenre from "../MovieGenre";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGlobe,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlusSquare, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 export default class Genres extends Component {
   render() {
     return (
@@ -23,7 +20,7 @@ export default class Genres extends Component {
                   to="/admin/add"
                   className="text-decoration-none text-white"
                 >
-                  <FontAwesomeIcon icon={faGlobe} />
+                  <FontAwesomeIcon icon={faPlusSquare} />
                   <span className="mx-2">Thêm mới</span>
                 </Link>
               </div>

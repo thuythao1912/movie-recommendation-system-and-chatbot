@@ -31,7 +31,7 @@ body {
 }
 
 .message-coming {
-  background-color: #dc3545;
+  background-color: #1783b0;
   color: #fff;
 }
 .message-sending {
@@ -44,4 +44,15 @@ body {
 }
 .chat-header:hover {
   cursor: pointer;
+}
+.bg-chatbot {
+  background-color: #1783b0;
+}
+.btn-chatbot {
+  background-color: #1783b0;
+  color: #fff;
+}
+.btn-chatbot:hover {
+  background-color: #0e739e;
+  color: #fff;
 }

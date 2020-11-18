@@ -1,0 +1,35 @@
+import React, { Component } from "react";
+import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+export default class MovieCard extends Component {
+  render() {
+    let data = this.props.data;
+    return (
+      <div className="p-2">
+        <Card style={{ width: "20rem" }}>
+          <Card.Img
+            variant="top"
+            src={
+              data.movie_image == null
+                ? "/images/movie_default.jpg"
+                : data.movie_image
+            }
+          />
+          <Card.Body>
+            <Card.Title>{data.movie_title}</Card.Title>
+            <Card.Text>
+              <span className="font-weight-bold justify">Thể loại: </span>
+              {data.movie_genres.join(", ")}
+            </Card.Text>
+            <Button variant="outline-primary">
+              <FontAwesomeIcon icon={faPlusCircle} className="mr-2" />
+              <spann>Xem thêm</spann>
+            </Button>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  }
+}

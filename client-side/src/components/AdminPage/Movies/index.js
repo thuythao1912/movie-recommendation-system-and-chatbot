@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFileExcel,
   faGlobe,
+  faPlusSquare,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import MovieGenre from "../MovieGenre";
@@ -27,7 +28,7 @@ export default class Movies extends Component {
                   to="/admin/add"
                   className="text-decoration-none text-white"
                 >
-                  <FontAwesomeIcon icon={faGlobe} />
+                  <FontAwesomeIcon icon={faPlusSquare} />
                   <span className="mx-2">Thêm mới</span>
                 </Link>
               </div>

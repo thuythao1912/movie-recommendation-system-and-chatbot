@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import callApi from "../../../utils/apiCaller";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCog } from "@fortawesome/free-solid-svg-icons";
+import { faUserCog, faFilter } from "@fortawesome/free-solid-svg-icons";
+import { Dropdown, Button } from "react-bootstrap";
+
 export default class Train extends Component {
   constructor(props) {
     super();
@@ -60,7 +62,7 @@ export default class Train extends Component {
     return (
       <div>
         <h3 className="text-dark font-weight-bold">
-          TRAIN VÀ CẬP NHẬT DỮ LIỆU TRAIN
+          TRAIN MODEL VÀ CẬP NHẬT DỮ LIỆU TRAIN
         </h3>
         <div
           className={`alert alert-${this.state.message_color} col-lg-8`}
@@ -84,7 +86,7 @@ export default class Train extends Component {
             <div>
               <input
                 type="file"
-                className="my-3 custom-file-input"
+                className="my-2 custom-file-input"
                 onChange={this.handle_upload_file}
                 aria-describedby="btnfile"
               />

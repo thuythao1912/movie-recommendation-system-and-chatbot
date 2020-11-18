@@ -26,7 +26,7 @@ class CollaborativeFilter:
         users = self.Y_data[:, 0]  # all users - first col of the Y_data
         self.Ybar_data = self.Y_data.copy()
         self.mu = np.zeros((self.n_users,))
-        for n in xrange(self.n_users):
+        for n in range(self.n_users):
             # row indices of rating done by user n
             # since indices need to be integers, we need to convert
             ids = np.where(users == n)[0].astype(np.int32)
@@ -94,8 +94,8 @@ class CollaborativeFilter:
         predict the rating of user u for item i (normalized)
         if you need the un
         """
-        if self.uuCF: return self.__pred(u, i, normalize)
-        return self.__pred(i, u, normalize)
+        if self.uuCF: return self.__pred(u, i, normalized)
+        return self.__pred(i, u, normalized)
 
     def recommend(self, u, normalized=1):
         """
@@ -108,7 +108,7 @@ class CollaborativeFilter:
         ids = np.where(self.Y_data[:, 0] == u)[0]
         items_rated_by_u = self.Y_data[ids, 1].tolist()
         recommended_items = []
-        for i in xrange(self.n_items):
+        for i in range(self.n_items):
             if i not in items_rated_by_u:
                 rating = self.__pred(u, i)
                 if rating > 0:
@@ -120,13 +120,51 @@ class CollaborativeFilter:
         """
         print all items which should be recommended for each user
         """
-        print
-        'Recommendation: '
-        for u in xrange(self.n_users):
+        print('Recommendation: ')
+        for u in range(5):
             recommended_items = self.recommend(u)
+
             if self.uuCF:
-                print
-                '    Recommend item(s):', recommended_items, 'to user', u
+                print('    Recommend item(s):', recommended_items[:5], 'to user', u)
+
             else:
-                print
-                '    Recommend item', u, 'to user(s) : ', recommended_items
+                print('    Recommend item', u, 'to user(s) : ', recommended_items[:5])
+
+
+r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
+
+ratings_base = pd.read_csv('./abc/ub.base', sep='\t', names=r_cols, encoding='latin-1')
+ratings_test = pd.read_csv('./abc/ub.test', sep='\t', names=r_cols, encoding='latin-1')
+
+rate_train = ratings_base.values
+rate_test = ratings_test.values
+
+# indices start from 0
+rate_train[:, :2] -= 1
+rate_test[:, :2] -= 1
+
+rs = CollaborativeFilter(rate_train, k=30, uuCF=1)
+rs.fit()
+
+n_tests = rate_test.shape[0]
+SE = 0  # squared error
+for n in range(n_tests):
+    pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
+    SE += (pred - rate_test[n, 2]) ** 2
+
+RMSE = np.sqrt(SE / n_tests)
+print('User-user CF, RMSE =', RMSE)
+rs.print_recommendation()
+
+rs = CollaborativeFilter(rate_train, k=30, uuCF=0)
+rs.fit()
+
+n_tests = rate_test.shape[0]
+SE = 0  # squared error
+for n in range(n_tests):
+    pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
+    SE += (pred - rate_test[n, 2]) ** 2
+
+RMSE = np.sqrt(SE / n_tests)
+print('Item-item CF, RMSE =', RMSE)
+rs.print_recommendation()
