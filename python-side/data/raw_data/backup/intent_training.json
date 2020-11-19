@@ -21,8 +21,16 @@
     },
     {
       "intent_name": "tam biet",
-      "training_phrases": ["tạm biệt", "bye", "hẹn gặp lại"],
-      "responses": ["Tạm biệt bạn!", "Bye bye", "Hẹn gặp lại bạn nha!"],
+      "training_phrases": [
+        "tạm biệt",
+        "bye",
+        "hẹn gặp lại"
+      ],
+      "responses": [
+        "Tạm biệt bạn!",
+        "Bye bye",
+        "Hẹn gặp lại bạn nha!"
+      ],
       "query": "",
       "description": "tam biet"
     },
@@ -36,7 +44,9 @@
         "muốn coi phim",
         "muốn xem phim"
       ],
-      "responses": ["Bạn muốn tra cứu phim gì?"],
+      "responses": [
+        "Bạn muốn tra cứu phim gì?"
+      ],
       "query": "query#movies#{}",
       "description": "query"
     },
@@ -49,7 +59,9 @@
         "thông tin phim movie_genres",
         "muốn coi thể loại"
       ],
-      "responses": ["Bạn muốn tìm phim thuộc thể loại gì?"],
+      "responses": [
+        "Bạn muốn tìm phim thuộc thể loại gì?"
+      ],
       "query": "query#genres#{}",
       "description": "query"
     },
@@ -63,7 +75,9 @@
         "Bạn có khỏe không",
         "Sức khỏe bạn thế nào"
       ],
-      "responses": ["Mình khỏe. Cảm ơn bạn!"],
+      "responses": [
+        "Mình khỏe. Cảm ơn bạn!"
+      ],
       "query": "",
       "description": "casual"
     },
@@ -77,14 +91,24 @@
         "bạn thích tôi không",
         "thích không"
       ],
-      "responses": ["Mình rất yêu bạn", "Không yêu đâu nha!"],
+      "responses": [
+        "Mình rất yêu bạn",
+        "Không yêu đâu nha!"
+      ],
       "query": "",
       "description": "casual"
     },
     {
       "intent_name": "chatbot ten gi",
-      "training_phrases": ["bạn tên gì", "tên bạn là gì", "what your name"],
-      "responses": ["Mình tên là Nadine nha!", "Nadine là tên của mình đó!"],
+      "training_phrases": [
+        "bạn tên gì",
+        "tên bạn là gì",
+        "what your name"
+      ],
+      "responses": [
+        "Mình tên là Nadine nha!",
+        "Nadine là tên của mình đó!"
+      ],
       "query": "",
       "description": "casual"
     },

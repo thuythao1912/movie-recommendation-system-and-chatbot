@@ -123,3 +123,20 @@ exports.update_one_movie = (req, res) => {
       console.log(err);
     });
 };
+
+exports.find_list_movie = (req, res) => {
+  let queries = req.query;
+  console.log(queries);
+  movie_model
+    .find(queries, (err, list) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send(`Something went wrong...`);
+      } else {
+        res.json(list);
+      }
+    })
+    .catch((err) => {
+      res.status(400).send(`Unable to get to database...`);
+    });
+};

@@ -42,9 +42,11 @@ class RawDataProcessor:
             # else:
             #     movie_year = ""
             #
+            description = []
             list_movies.append({"movie_id": row["movieId"], "movie_title": title, "movie_year": movie_year,
                                 "movie_genres": row["genres"].replace("|", ", "), "movie_actors": "",
                                 "movie_producers": "", "movie_images": "",
+                                "movie_description": list(description),
                                 "movie_trailer": "OLK3m02o7xE",
                                 "movie_overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a "
                                                   "justo neque. Cras vitae elementum urna, vel mattis ligula. Nunc "
@@ -104,11 +106,10 @@ if __name__ == "__main__":
     rdp = RawDataProcessor()
 
     # Test split_raw_data
-    rdp.split_raw_data(["data", "raw_data"])
+    rdp.split_raw_data(["data", "raw_data"], 200)
 
     # Test create_json_from_excel for movies
     rdp.create_json_from_excel(["data", "raw_data"], "movies")
 
     # Test create_json_from_excel for genres
     rdp.create_json_from_excel(["data", "raw_data"], "genres")
-

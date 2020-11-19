@@ -36,7 +36,7 @@ export default class App extends Component {
         color: get_color(),
       },
       session: "",
-      display_chat_box: "block",
+      display_chat_box: "none",
     };
   }
 

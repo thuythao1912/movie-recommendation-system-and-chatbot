@@ -17,6 +17,7 @@ import random
 from joblib import load
 
 from app.model.item_recognizer import EntityRecognizer, AgreeRecognizer
+from app.model.sentiment_recognizer import SentimentRecognizer
 from app.model.train import Train
 from app.model.db_connector import *
 from app.model.suggestor import Suggestor
@@ -25,6 +26,8 @@ INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
 UNKNOWN_RESPONSE = 'Xin lỗi, bạn có thể cung cấp thêm thông tin không?'
 MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mình sẽ cập nhật sớm nhất có thể!'
+POS_RESPONSE = "Hihi, cảm ơn bạn nha ^^"
+NEG_RESPONSE = "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :("
 ENTITIES = ["movie_genres", "movie_title"]
 
 
@@ -36,6 +39,7 @@ class IntentRecognizer:
         self.load_intents()
         self.entity_recognizer = EntityRecognizer()
         self.agree_recognizer = AgreeRecognizer()
+        self.sentiment_recognizer = SentimentRecognizer()
 
     def load_model(self):
         try:
@@ -140,10 +144,22 @@ class IntentRecognizer:
         score = max(self.clf.predict_proba(df_predict["feature"])[0])
 
         output = {"input": sentence, "intent_name": "", "response": "", "score": score, "entities": entities,
-                  "condition": "", "description": "", "status": "unhandled"}
+                  "condition": "", "description": "", "status": "unhandled", "sentiment_score": 0}
         if score < INTENT_THRESHOLD:
-            output["response"] = UNKNOWN_RESPONSE
-            output["intent_name"] = intent_predicted[0]
+            sentiment_score = self.sentiment_recognizer.run(sen_recognize)
+            if sentiment_score > 0:
+                response = POS_RESPONSE
+                intent_name = "positive_sentence"
+                output["sentiment_score"] = sentiment_score
+            elif sentiment_score < 0:
+                response = NEG_RESPONSE
+                intent_name = "negative_sentence"
+                output["sentiment_score"] = sentiment_score
+            else:
+                response = UNKNOWN_RESPONSE
+                intent_name = intent_predicted[0]
+            output["response"] = response
+            output["intent_name"] = intent_name
         else:
             name_predicted = intent_predicted[0]
             output["intent_name"] = name_predicted
@@ -228,8 +244,10 @@ class IntentRecognizer:
 
         output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
                   "entities": entities,
-                  "condition": "{}", "description": 'res_suggest', "status": "handled"}
+                  "condition": "{}", "description": 'res_suggest', "status": "handled", "sentiment_score": 0}
+
         return output
+
 
 if __name__ == "__main__":
     # sentence = ""

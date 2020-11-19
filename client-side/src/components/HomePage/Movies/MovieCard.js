@@ -8,7 +8,7 @@ export default class MovieCard extends Component {
     let data = this.props.data;
     return (
       <div className="p-2">
-        <Card style={{ width: "20rem" }}>
+        <Card style={{ width: "20rem", height: "450px" }}>
           <Card.Img
             variant="top"
             src={
@@ -18,14 +18,18 @@ export default class MovieCard extends Component {
             }
           />
           <Card.Body>
-            <Card.Title>{data.movie_title}</Card.Title>
+            <Card.Title>
+              {data.movie_title.length > 50
+                ? data.movie_title.slice(0, 40) + "..."
+                : data.movie_title}
+            </Card.Title>
             <Card.Text>
               <span className="font-weight-bold justify">Thể loại: </span>
               {data.movie_genres.join(", ")}
             </Card.Text>
             <Button variant="outline-primary">
               <FontAwesomeIcon icon={faPlusCircle} className="mr-2" />
-              <spann>Xem thêm</spann>
+              <span>Xem thêm</span>
             </Button>
           </Card.Body>
         </Card>

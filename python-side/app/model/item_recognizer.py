@@ -34,10 +34,11 @@ class EntityRecognizer:
                 data.append(
                     ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
                       "value": value["org_val"].lower()}))
-                for i in range(len(value["description"])):
-                    data.append(
-                        ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
-                          "value": value["description"][i].lower()}))
+                if value["description"] is not None:
+                    for i in range(len(value["description"])):
+                        data.append(
+                            ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
+                              "value": value["description"][i].lower()}))
 
             self.entity_key.append(entity["key"])
 
@@ -98,9 +99,8 @@ class EntityRecognizer:
 
         # Add movies
         result = list(Movies().find_all())
-        data_movie.extend(
-            [{"org_val": movie["movie_title"], "description": movie["movie_description"]}
-             for movie in result])
+        data_movie.extend([{"org_val": movie["movie_title"], "description": movie["movie_description"]}
+                           for movie in result])
 
         row = next((item for item in entity_list if item["key"] == "movie_title"), None)
 

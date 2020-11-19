@@ -10,13 +10,8 @@ export default class HomePage extends Component {
     return (
       <div>
         <Header />
-        <div className="row m-0">
-          <div className="col-lg-2 pl-0">
-            <HomePanel />
-          </div>
-          <div className="col-lg-10 ">
-            <Route path="/" component={MovieList} />
-          </div>
+        <div className="pb-5">
+          <Route path="/" component={MovieList} />
         </div>
         <Chat />
       </div>
