@@ -41,7 +41,7 @@ export default class MovieList extends Component {
         },
         {
           dataField: "",
-          text: "Thao tác",
+          text: "Xem chi tiết",
           formatter: this.Action,
         },
       ],
@@ -89,13 +89,16 @@ export default class MovieList extends Component {
   Action = (cell, row, rowIndex, formatExtraData) => {
     return (
       <div key={rowIndex}>
-        <span>
+        {/* <span>
           <FontAwesomeIcon
             icon={faInfoCircle}
             className="text-info mr-3"
             onClick={() => this.open_modal(row, true)}
           />
-        </span>
+        </span> */}
+        <Link to={`/movies?movie_title=${row.movie_title}`}>
+          <FontAwesomeIcon icon={faInfoCircle} className="text-info mr-3" />
+        </Link>
       </div>
     );
   };

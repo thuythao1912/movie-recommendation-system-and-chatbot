@@ -41,6 +41,7 @@ class EntityRecognizer:
                               "value": value["description"][i].lower()}))
 
             self.entity_key.append(entity["key"])
+        print(data)
 
         for item in data:
             self.entity_vals.append(item["value"])
@@ -50,9 +51,10 @@ class EntityRecognizer:
             self.entity_list.append((next(item for item in data if item["value"] == entity_val)))
 
     def detect_entities(self, sentence):
+        print("===>Origin sentence: ", sentence)
         entities = []
         for i in range(len(self.entity_vals)):
-            result = nlp.approximate_search(self.entity_vals[i], sentence)
+            result = nlp.approximate_search(self.entity_vals[i].lower(), sentence.lower())
             if result["score"] > ENTITY_THRESHOLD:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
                 print(sentence)

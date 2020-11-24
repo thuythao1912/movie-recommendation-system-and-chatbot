@@ -94,11 +94,16 @@
       "values": [
         {
           "org_val": "Toy Story",
-          "description": null
+          "description": [
+            "Câu chuyện đồ chơi",
+            "Chuyện đồ chơi"
+          ]
         },
         {
           "org_val": "Jumanji",
-          "description": null
+          "description": [
+            "abc"
+          ]
         },
         {
           "org_val": "Grumpier Old Men",

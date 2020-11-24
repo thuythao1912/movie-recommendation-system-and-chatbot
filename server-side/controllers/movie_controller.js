@@ -1,8 +1,12 @@
 var movie_model = require("../models/movie_model");
+const axios = require("axios");
+const global_var = require("../global_variables");
 
 exports.get_list_movie = (req, res) => {
+  let queries = req.query;
+  console.log(queries);
   movie_model
-    .find((err, list) => {
+    .find(queries, (err, list) => {
       if (err) {
         console.log(err);
         res.status(500).send(`Something went wrong...`);
@@ -27,6 +31,7 @@ exports.add_list_movie = async (req, res) => {
     if (movie_fail > 0) {
       message += `${movie_fail}/${list_movie.length} phim thêm thất bại!`;
     }
+    axios.put(`${global_var.SERVER_PYTHON}`);
     res.status(200).json({ message: message });
   };
   let tasksToGo = list_movie.length;
@@ -94,6 +99,7 @@ exports.delete_one_movie = (req, res) => {
     if (err) {
       res.json({ message: "Phim đã xóa thất bại!" });
     } else {
+      axios.put(`${global_var.SERVER_PYTHON}`);
       res.json({ message: "Phim đã xóa thàng công!" });
     }
   });
@@ -113,6 +119,7 @@ exports.update_one_movie = (req, res) => {
             if (err) {
               res.json({ message: "Cập nhật phim thất bại!" });
             } else {
+              axios.put(`${global_var.SERVER_PYTHON}`);
               res.json({ message: "Phim đã cập nhật thành công!" });
             }
           })

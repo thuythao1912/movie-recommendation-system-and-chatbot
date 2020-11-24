@@ -18,6 +18,9 @@ export default class Header extends Component {
         <Link className="navbar-brand" to="/login">
           Đăng nhập
         </Link>
+        <Link className="navbar-brand" to="/">
+          Trang chủ
+        </Link>
         <Link className="navbar-brand" to="/admin">
           <img src="/images/chatbot.svg" width="40" alt="" />
         </Link>

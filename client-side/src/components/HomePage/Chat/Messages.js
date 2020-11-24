@@ -9,6 +9,7 @@ export default class Messages extends Component {
     let messageContent = messageFromMe
       ? "message message-sending"
       : "message message-coming";
+
     return (
       <div className={messageClass} key={index}>
         {messageFromMe ? (

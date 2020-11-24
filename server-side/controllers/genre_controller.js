@@ -1,6 +1,7 @@
 var genre_model = require("../models/genre_model");
 var movie_model = require("../models/movie_model");
-
+const axios = require("axios");
+const global_var = require("../global_variables");
 exports.get_list_genre = (req, res) => {
   genre_model
     .find((err, list) => {
@@ -29,6 +30,7 @@ exports.add_list_genre = async (req, res) => {
     if (genre_fail > 0) {
       message += `${genre_fail}/${list_genre.length} thể loại thêm thất bại!`;
     }
+    axios.put(`${global_var.SERVER_PYTHON}`);
     res.status(200).json({ message: message });
   };
   let tasksToGo = list_genre.length;
@@ -119,6 +121,7 @@ exports.delete_one_genre = (req, res) => {
           );
         });
       });
+      axios.put(`${global_var.SERVER_PYTHON}`);
       res.json({ message: "Thể loại đã xóa thàng công!" });
     }
   });
@@ -157,10 +160,10 @@ exports.update_one_genre = (req, res) => {
                 });
               }
             );
-
             if (err) {
               res.json({ message: "Cập nhật thể loại thất bại!" });
             } else {
+              axios.put(`${global_var.SERVER_PYTHON}`);
               res.json({ message: "Thể loại đã cập nhật thành công!" });
             }
           }

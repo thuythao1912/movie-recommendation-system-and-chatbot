@@ -7,6 +7,7 @@ root = Path(os.path.abspath(__file__)).parents[0]
 
 from flask import Flask, jsonify, request
 from app.model.intent_recognizer import IntentRecognizer
+from app.model.suggestor import Suggestor
 from app.model.train import Train
 from app.model.db_connector import Messages
 
@@ -29,6 +30,7 @@ app = Flask(__name__)
 }
 """
 ir = IntentRecognizer()
+suggestor = Suggestor()
 messages = Messages()
 MAX_TIME = 300
 
@@ -66,14 +68,31 @@ def predict_run():
         return jsonify(output)
     except Exception as err:
         print(err)
+        now = datetime.now()
         output = {"input": "", "intent_name": "", "response": "Đã có lỗi xảy ra. Vui lòng thử lại!", "score": 0,
                   "entities": [], "condition": "{}", "description": "", "status": "unhandled",
-                  "created_time": str(datetime.now()),
+                  "created_time": now.strftime("%d-%m-%Y %H:%M:%S"),
                   "session": "", "user": "", "sentiment_score": 0}
         messages.insert_one(output)
         print("------------------")
         output["_id"] = str(output["_id"])
         return jsonify(output)
+
+
+@app.route('/suggest', methods=['POST'])
+def suggest_movies():
+    try:
+        data = request.get_json()
+        movies = data.get("data")
+        results = suggestor.suggest_movies(movies, chatbot=False)
+        for r in results:
+            r["_id"] = str(r["_id"])
+        return jsonify(results)
+
+    except Exception as err:
+        print(err)
+        return jsonify({"message": "Lấy danh sách phim gợi ý thất bại!", "message_status": "fail"})
+
 
 
 @app.route('/intents', methods=['POST'])

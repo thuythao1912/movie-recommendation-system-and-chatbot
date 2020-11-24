@@ -19,7 +19,7 @@ export default class MovieCard extends Component {
           />
           <Card.Body>
             <Card.Title>
-              {data.movie_title.length > 50
+              {data.movie_title.length > 40
                 ? data.movie_title.slice(0, 40) + "..."
                 : data.movie_title}
             </Card.Title>
@@ -27,10 +27,12 @@ export default class MovieCard extends Component {
               <span className="font-weight-bold justify">Thể loại: </span>
               {data.movie_genres.join(", ")}
             </Card.Text>
-            <Button variant="outline-primary">
-              <FontAwesomeIcon icon={faPlusCircle} className="mr-2" />
-              <span>Xem thêm</span>
-            </Button>
+            <Link to={`/movies?movie_title=${data.movie_title}`}>
+              <Button variant="outline-primary">
+                <FontAwesomeIcon icon={faPlusCircle} className="mr-2" />
+                <span>Xem thêm</span>
+              </Button>
+            </Link>
           </Card.Body>
         </Card>
       </div>

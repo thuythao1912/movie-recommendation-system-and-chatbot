@@ -1,3 +1,9 @@
+import os
+import sys
+from pathlib import Path
+
+sys.path.append(os.path.join('../..'))
+root = Path(os.path.abspath(__file__)).parents[2]
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
@@ -5,15 +11,18 @@ from scipy import sparse
 
 
 class CollaborativeFilter:
-    def __init__(self, Y_data, k, dist_func=cosine_similarity, uuCF=1):
+    def __init__(self, k, dist_func=cosine_similarity, uuCF=1):
         self.uuCF = uuCF  # user-user (1) or item-item (0) CF
-        self.Y_data = Y_data if uuCF else Y_data[:, [1, 0, 2]]
+        self.Y_data = None
         self.k = k  # number of neighbor points
         self.dist_func = dist_func
         self.Ybar_data = None
+        self.run()
         # number of users and items. Remember to add 1 since id starts from 0
         self.n_users = int(np.max(self.Y_data[:, 0])) + 1
         self.n_items = int(np.max(self.Y_data[:, 1])) + 1
+        self.fit()
+        # self.calculate_accuracy()
 
     def add(self, new_data):
         """
@@ -79,14 +88,15 @@ class CollaborativeFilter:
         sim = self.S[u, users_rated_i]
         # Step 4: find the k most similarity users
         a = np.argsort(sim)[-self.k:]
+
         # and the corresponding similarity levels
         nearest_s = sim[a]
         # How did each of 'near' users rated item i
         r = self.Ybar[i, users_rated_i[a]]
+
         if normalized:
             # add a small number, for instance, 1e-8, to avoid dividing by 0
             return (r * nearest_s)[0] / (np.abs(nearest_s).sum() + 1e-8)
-
         return (r * nearest_s)[0] / (np.abs(nearest_s).sum() + 1e-8) + self.mu[u]
 
     def pred(self, u, i, normalized=1):
@@ -97,7 +107,7 @@ class CollaborativeFilter:
         if self.uuCF: return self.__pred(u, i, normalized)
         return self.__pred(i, u, normalized)
 
-    def recommend(self, u, normalized=1):
+    def recommend(self, u):
         """
         Determine all items should be recommended for user u. (uuCF =1)
         or all users who might have interest on item u (uuCF = 0)
@@ -111,9 +121,8 @@ class CollaborativeFilter:
         for i in range(self.n_items):
             if i not in items_rated_by_u:
                 rating = self.__pred(u, i)
-                if rating > 0:
-                    recommended_items.append(i)
-
+                recommended_items.append({"movie_id": i, "rating": rating})
+        recommended_items = sorted(recommended_items, key=lambda x: x["rating"], reverse=True)
         return recommended_items
 
     def print_recommendation(self):
@@ -130,41 +139,68 @@ class CollaborativeFilter:
             else:
                 print('    Recommend item', u, 'to user(s) : ', recommended_items[:5])
 
+    def run(self):
+        r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
 
-r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
+        ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols)
+        print(ratings_base)
+        rate_train = ratings_base.values
+        self.Y_data = rate_train if self.uuCF else rate_train[:, [1, 0, 2]]
 
-ratings_base = pd.read_csv('./abc/ub.base', sep='\t', names=r_cols, encoding='latin-1')
-ratings_test = pd.read_csv('./abc/ub.test', sep='\t', names=r_cols, encoding='latin-1')
+    def recommend_for_user(self, user_id):
+        return self.recommend(user_id)[:5]
 
-rate_train = ratings_base.values
-rate_test = ratings_test.values
+    def calculate_accuracy(self):
+        r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
 
-# indices start from 0
-rate_train[:, :2] -= 1
-rate_test[:, :2] -= 1
+        ratings_test = pd.read_csv(os.path.join(root, "data", "raw_data", "rating_test.csv"), sep='\t', names=r_cols)
+        rate_test = ratings_test.values
+        rate_test[:, :2] -= 1
+        n_tests = rate_test.shape[0]
+        SE = 0  # squared error
+        for n in range(n_tests):
+            pred = self.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
+            SE += (pred - rate_test[n, 2]) ** 2
 
-rs = CollaborativeFilter(rate_train, k=30, uuCF=1)
-rs.fit()
+        RMSE = np.sqrt(SE / n_tests)
+        print('User-user CF, RMSE =', RMSE)
 
-n_tests = rate_test.shape[0]
-SE = 0  # squared error
-for n in range(n_tests):
-    pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
-    SE += (pred - rate_test[n, 2]) ** 2
+if __name__ == "__main__":
+    # r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
+    #
+    # ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols,
+    #                            )
+    #
+    # ratings_test = pd.read_csv('./abc/ub.test', sep='\t', names=r_cols, encoding='latin-1')
+    #
+    # rate_train = ratings_base.values
+    #
+    # # indices start from 0
+    # rate_train[:, :2] -= 1
+    # rate_test[:, :2] -= 1
 
-RMSE = np.sqrt(SE / n_tests)
-print('User-user CF, RMSE =', RMSE)
-rs.print_recommendation()
+    rs = CollaborativeFilter(k=30, uuCF=1)
+    print(rs.recommend_for_user(943))
 
-rs = CollaborativeFilter(rate_train, k=30, uuCF=0)
-rs.fit()
-
-n_tests = rate_test.shape[0]
-SE = 0  # squared error
-for n in range(n_tests):
-    pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
-    SE += (pred - rate_test[n, 2]) ** 2
-
-RMSE = np.sqrt(SE / n_tests)
-print('Item-item CF, RMSE =', RMSE)
-rs.print_recommendation()
+    # n_tests = rate_test.shape[0]
+    # SE = 0  # squared error
+    # for n in range(n_tests):
+    #     pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
+    #     SE += (pred - rate_test[n, 2]) ** 2
+    #
+    # RMSE = np.sqrt(SE / n_tests)
+    # print('User-user CF, RMSE =', RMSE)
+    # rs.print_recommendation()
+    #
+    # rs = CollaborativeFilter(rate_train, k=30, uuCF=0)
+    # rs.fit()
+    #
+    # n_tests = rate_test.shape[0]
+    # SE = 0  # squared error
+    # for n in range(n_tests):
+    #     pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
+    #     SE += (pred - rate_test[n, 2]) ** 2
+    #
+    # RMSE = np.sqrt(SE / n_tests)
+    # print('Item-item CF, RMSE =', RMSE)
+    # rs.print_recommendation()

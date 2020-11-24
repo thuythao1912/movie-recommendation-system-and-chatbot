@@ -48,6 +48,7 @@ def remove_stop_word(doc):
 
 
 def preprocess_step_1(doc):
+    doc = doc.strip()
     doc = normalize(doc)
     doc = standardize(doc)
     doc = remove_punctuation(doc)

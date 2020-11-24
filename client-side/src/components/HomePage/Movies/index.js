@@ -175,7 +175,6 @@ export default class Movies extends Component {
                   }
                 />
                 {elPage}
-                {() => this.handlePageChoosen(this.state.currentPage + 1)}
                 <Pagination.Next
                   disabled={
                     this.state.currentPage == this.state.totalPage

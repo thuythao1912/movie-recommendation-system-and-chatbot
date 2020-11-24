@@ -101,6 +101,14 @@ class RawDataProcessor:
         utils.save_json(data_source["Sheet1"], os.path.join(
             root, "\\".join(data_folder), f"{type}.json"))
 
+    def rating_split(self, data_folder, data_num=None):
+        data = utils.load_csv(os.path.join(
+            root, "\\".join(data_folder), "ratings_new.csv"))
+        list_rating = []
+        data = data if data_num is None else data.head(data_num)
+        # save excel genres
+        utils.save_excel(pd.DataFrame(data), os.path.join(
+            root, "\\".join(data_folder), "ratings.xlsx"))
 
 if __name__ == "__main__":
     rdp = RawDataProcessor()
@@ -113,3 +121,9 @@ if __name__ == "__main__":
 
     # Test create_json_from_excel for genres
     rdp.create_json_from_excel(["data", "raw_data"], "genres")
+
+    # Test rating_split
+    rdp.rating_split(["data", "raw_data"])
+
+    # Test create_json_from_excel for ratings
+    rdp.create_json_from_excel(["data", "raw_data"], "ratings")
