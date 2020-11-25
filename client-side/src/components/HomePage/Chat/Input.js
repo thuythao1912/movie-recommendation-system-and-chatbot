@@ -30,7 +30,7 @@ export default class Input extends Component {
             autoFocus={true}
             className="form-control mx-2 input"
           />
-          <button className="btn btn-danger">
+          <button className="btn btn-chatbot">
             <FontAwesomeIcon icon={faPaperPlane} />
           </button>
         </form>

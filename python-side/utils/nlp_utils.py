@@ -37,10 +37,10 @@ def remove_duplicate_spaces(doc):
 
 
 def remove_stop_word(doc):
-    stop_words_list = utils.load_json(os.path.join(root, "data", "stop_words.json"))["stop_words"]
+    stop_words_list = list(utils.load_json(os.path.join(root, "data", "stop_words.json"))["stop_words"])
     doc_list = doc.split()
-    for word in stop_words_list:
-        if word in doc_list:
+    for word in doc_list:
+        if word in stop_words_list:
             doc_list[doc_list.index(word)] = doc_list[doc_list.index(word)].replace(word, " ")
     doc = " ".join(doc_list)
     doc = remove_duplicate_spaces(doc)
@@ -48,6 +48,7 @@ def remove_stop_word(doc):
 
 
 def preprocess_step_1(doc):
+    doc = doc.strip()
     doc = normalize(doc)
     doc = standardize(doc)
     doc = remove_punctuation(doc)

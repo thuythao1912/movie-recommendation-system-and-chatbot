@@ -17,6 +17,7 @@ import random
 from joblib import load
 
 from app.model.item_recognizer import EntityRecognizer, AgreeRecognizer
+from app.model.sentiment_recognizer import SentimentRecognizer
 from app.model.train import Train
 from app.model.db_connector import *
 from app.model.suggestor import Suggestor
@@ -25,6 +26,8 @@ INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
 UNKNOWN_RESPONSE = 'Xin lỗi, bạn có thể cung cấp thêm thông tin không?'
 MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mình sẽ cập nhật sớm nhất có thể!'
+POS_RESPONSE = "Hihi, cảm ơn bạn nha ^^"
+NEG_RESPONSE = "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :("
 ENTITIES = ["movie_genres", "movie_title"]
 
 
@@ -36,6 +39,7 @@ class IntentRecognizer:
         self.load_intents()
         self.entity_recognizer = EntityRecognizer()
         self.agree_recognizer = AgreeRecognizer()
+        self.sentiment_recognizer = SentimentRecognizer()
 
     def load_model(self):
         try:
@@ -103,13 +107,14 @@ class IntentRecognizer:
             if model == "movies":
                 results = obj.find_one(condition)
                 if not results is None:
+                    movie_des = ", ".join(results["movie_description"]) if (results["movie_description"]) is not None else ""
                     res = f"Thông tin phim bạn cần tìm là:\n " \
                           f"+Tựa phim: {results['movie_title']}\n " \
                           f"+Năm sản xuất: {results['movie_year']}\n " \
                           f"+Thể loại: {', '.join(results['movie_genres'])}\n" \
                           f"+Diễn viên: {results['movie_actors']}\n " \
                           f"+Đạo diễn: {results['movie_producers']}\n " \
-                          f"+Tên khác: {', '.join(results['movie_description'])}\n "
+                          f"+Tên khác: {movie_des}\n "
 
             elif model == "genres":
                 results = list(obj.find_all(condition, limit=5))
@@ -120,9 +125,10 @@ class IntentRecognizer:
 
     def run(self, sentence):
         print("====RUN===")
+        sentence = nlp.preprocess_step_1(sentence)
         sen_result = self.entity_recognizer.detect_entities(sentence)
         sen_recognize = sen_result["sen_result"]
-        sen_recognize = nlp.preprocess_step_2(nlp.preprocess_step_1(sen_recognize))
+        sen_recognize = nlp.preprocess_step_2(sen_recognize)
 
         sign = sen_result["sign"]
         entities = sen_result["entitites"]
@@ -140,10 +146,22 @@ class IntentRecognizer:
         score = max(self.clf.predict_proba(df_predict["feature"])[0])
 
         output = {"input": sentence, "intent_name": "", "response": "", "score": score, "entities": entities,
-                  "condition": "", "description": "", "status": "unhandled"}
+                  "condition": "", "description": "", "status": "unhandled", "sentiment_score": 0}
         if score < INTENT_THRESHOLD:
-            output["response"] = UNKNOWN_RESPONSE
-            output["intent_name"] = intent_predicted[0]
+            sentiment_score = self.sentiment_recognizer.run(sen_recognize)
+            if sentiment_score > 0:
+                response = POS_RESPONSE
+                intent_name = "positive_sentence"
+                output["sentiment_score"] = sentiment_score
+            elif sentiment_score < 0:
+                response = NEG_RESPONSE
+                intent_name = "negative_sentence"
+                output["sentiment_score"] = sentiment_score
+            else:
+                response = UNKNOWN_RESPONSE
+                intent_name = intent_predicted[0]
+            output["response"] = response
+            output["intent_name"] = intent_name
         else:
             name_predicted = intent_predicted[0]
             output["intent_name"] = name_predicted
@@ -161,51 +179,6 @@ class IntentRecognizer:
             output["status"] = "handled"
 
         return output
-
-    # def run_with_history(self, sentence, prev_message):
-    #     print("===RUN WITH HISTORY===")
-    #     sen_result_er = self.entity_recognizer.detect_entities(sentence)
-    #     sen_recognize = sen_result_er["sen_result"]
-    #     sen_recognize = nlp.preprocess_step_2(nlp.preprocess_step_1(sen_recognize))
-    #     entities_val = []
-    #     entities = sen_result_er["entitites"]
-    #     sen_recognize_ar = self.agree_recognizer.detect_agree(sen_recognize)
-    #     description = ""
-    #
-    #     if "NO_AGREE" in sen_recognize_ar["sen_result"]:
-    #         response = "Vậy bạn không muốn gợi ý dựa vào thể loại phim. Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!"
-    #         description = "suggest_NO"
-    #         output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
-    #                   "entities": entities,
-    #                   "condition": "{}", "description": description, "status": "handled"}
-    #     elif "YES_AGREE" in sen_recognize_ar["sen_result"]:
-    #         response = "Vậy bạn muốn gợi ý dựa vào thể loại phim. Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!"
-    #         description = "suggest_YES"
-    #         output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
-    #                   "entities": entities,
-    #                   "condition": "{}", "description": description, "status": "handled"}
-    #     else:
-    #         if prev_message["description"] == "suggest_NO":
-    #             for entity in entities:
-    #                 entities_val.append(entity["org_val"])
-    #             print("==> Sentence to recognize: {}".format(sen_recognize))
-    #             if len(entities_val) > 0:
-    #                 movies_suggest = Suggestor().suggest_movies(entities_val)
-    #                 response = "Dựa vào các phim bạn đã xem, mình nghĩ đây là những bộ phim phù hợp với bạn: {} {}".format(
-    #                     "; ".join(movies_suggest), prev_message["description"])
-    #             else:
-    #                 response = "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!"
-    #
-    #         if prev_message["description"] == "suggest_YES":
-    #             entities.extend(prev_message["entities"])
-    #             for entity in entities:
-    #                 entities_val.append(entity["org_val"])
-    #             response = "YESS"
-    #
-    #         output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
-    #                   "entities": entities,
-    #                   "condition": "{}", "description": 'res_suggest', "status": "handled"}
-    #     return output
 
     def run_with_history(self, sentence):
         print("===RUN WITH HISTORY===")
@@ -228,8 +201,10 @@ class IntentRecognizer:
 
         output = {"input": sentence, "intent_name": "suggest_movie", "response": response, "score": 1.0,
                   "entities": entities,
-                  "condition": "{}", "description": 'res_suggest', "status": "handled"}
+                  "condition": "{}", "description": 'res_suggest', "status": "handled", "sentiment_score": 0}
+
         return output
+
 
 if __name__ == "__main__":
     # sentence = ""

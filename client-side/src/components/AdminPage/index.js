@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
 import Movies from "./Movies";
 import Genres from "./Genres";
-import Panel from "./Panel";
+import Panel from "./AdminPanel";
 import Train from "./Train";
 import Conversation from "./Conversation";
 import AddMovieGenre from "./AddMovieGenre";

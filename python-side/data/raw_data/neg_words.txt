@@ -1,0 +1,26 @@
+﻿Selfish: Ích kỷ
+Hot-temper: Nóng tính
+Cold: Lạnh l ùng
+Mad: điên, khùng
+Aggressive: Xấu bụng
+Unkind: Xấu bụng, không tốt
+Unpleasant: Khó chịu
+Cruel: Đ ộc ác
+Gruff: Thô lỗ cục cằn
+Insolent: Láo xược
+Haughty: Kiêu căng
+Boast: Khoe khoang
+Bad-tempered: Nóng tính
+Boring: Buồn chán.
+Careless: Bất cẩn, cẩu thả.
+Crazy: Điên khùng
+Impolite: Bất lịch sự.
+Lazy: Lười biếng
+Mean: Keo kiệt.
+Shy: Nhút nhát
+Stupid: Ngu ngốc
+Aggressive: Hung hăng, xông xáo
+Pessimistic: Bi quan
+Reckless: Hấp Tấp
+Strict: Nghiêm khắc
+Stubborn: Bướng bỉnh

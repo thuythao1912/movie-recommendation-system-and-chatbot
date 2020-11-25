@@ -31,9 +31,9 @@ export default class MovieGenre extends Component {
             width="70px"
             className="align-self-center"
           />
-          <div className="media-body">
-            <h3 className="mt-0">{this.state.count_movie}</h3>
-            <p>phim</p>
+          <div className="media-body pt-2">
+            <span className="mt-0 h1 mr-2">{this.state.count_movie}</span>
+            <span>phim</span>
           </div>
         </div>
         <div className="col-lg-6 btn border media px-4 bg-white">
@@ -42,9 +42,9 @@ export default class MovieGenre extends Component {
             width="70px"
             className="align-self-center"
           />
-          <div className="media-body">
-            <h3 className="mt-0">{this.state.count_genre}</h3>
-            <p>thể loại</p>
+          <div className="media-body pt-2">
+            <span className="mt-0 h1 mr-2">{this.state.count_genre}</span>
+            <span>thể loại</span>
           </div>
         </div>
       </div>

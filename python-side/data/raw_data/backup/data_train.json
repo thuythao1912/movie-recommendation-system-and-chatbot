@@ -1,0 +1,612 @@
+{
+  "intents": [
+    {
+      "feature": "xin chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "xin chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chao",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "tạm_biệt",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tạm_biệt",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tam_biet",
+      "target": "tam biet"
+    },
+    {
+      "feature": "tam_biet",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hen gap",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hen gap",
+      "target": "tam biet"
+    },
+    {
+      "feature": "muốn tra_cứu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn tra_cứu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon tra_cuu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon tra_cuu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon xem phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon xem phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "thông_tin phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "thông_tin phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "thong_tin phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "thong_tin phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon xem phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muon xem phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn tra_cứu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn tra_cứu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon tra_cuu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon tra_cuu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn xem phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn xem phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon xem phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon xem phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "thông_tin phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "thông_tin phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "thong_tin phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "thong_tin phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn coi thể_loại",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn coi thể_loại",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon coi the_loai",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muon coi the_loai",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khỏe",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khỏe",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khoe",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "khoe",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "dạo thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "dạo thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "dao the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "dao the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "có khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "có khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "co khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "co khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "sức_khỏe thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "sức_khỏe thế_nào",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "suc_khoe the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "suc_khoe the_nao",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "anh yêu em không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "anh yêu em không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "anh yeu em khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "anh yeu em khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "có yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "có yêu không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "co yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "co yeu khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thích không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thích không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thich khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thich khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thích không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thích không",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thich khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "thich khong",
+      "target": "ban yeu toi khong"
+    },
+    {
+      "feature": "tên",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "tên",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "tên",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "tên",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "what your name",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "what your name",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "what your name",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "what your name",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "gợi_ý phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "gợi_ý phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "goi_y phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "goi_y phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "muốn gợi_ý phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "muốn gợi_ý phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "muon goi_y phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "muon goi_y phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "gợi_ý phim không",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "gợi_ý phim không",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "goi_y phim khong",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "goi_y phim khong",
+      "target": "yeu cau goi y phim"
+    }
+  ]
+}

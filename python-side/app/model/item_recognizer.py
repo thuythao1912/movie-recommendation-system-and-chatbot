@@ -34,12 +34,14 @@ class EntityRecognizer:
                 data.append(
                     ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
                       "value": value["org_val"].lower()}))
-                for i in range(len(value["description"])):
-                    data.append(
-                        ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
-                          "value": value["description"][i].lower()}))
+                if value["description"] is not None:
+                    for i in range(len(value["description"])):
+                        data.append(
+                            ({"key": entity["key"].lower(), "org_val": value["org_val"].lower(),
+                              "value": value["description"][i].lower()}))
 
             self.entity_key.append(entity["key"])
+        print(data)
 
         for item in data:
             self.entity_vals.append(item["value"])
@@ -49,9 +51,10 @@ class EntityRecognizer:
             self.entity_list.append((next(item for item in data if item["value"] == entity_val)))
 
     def detect_entities(self, sentence):
+        print("===>Origin sentence: ", sentence)
         entities = []
         for i in range(len(self.entity_vals)):
-            result = nlp.approximate_search(self.entity_vals[i], sentence)
+            result = nlp.approximate_search(self.entity_vals[i].lower(), sentence.lower())
             if result["score"] > ENTITY_THRESHOLD:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
                 print(sentence)
@@ -98,9 +101,8 @@ class EntityRecognizer:
 
         # Add movies
         result = list(Movies().find_all())
-        data_movie.extend(
-            [{"org_val": movie["movie_title"], "description": movie["movie_description"]}
-             for movie in result])
+        data_movie.extend([{"org_val": movie["movie_title"], "description": movie["movie_description"]}
+                           for movie in result])
 
         row = next((item for item in entity_list if item["key"] == "movie_title"), None)
 

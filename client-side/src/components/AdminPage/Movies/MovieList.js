@@ -151,7 +151,7 @@ export default class MovieList extends Component {
                 <BootstrapTable
                   {...props.baseProps}
                   pagination={paginationFactory()}
-                  keyField="id"
+                  keyField="_id"
                 />
               </div>
             )}

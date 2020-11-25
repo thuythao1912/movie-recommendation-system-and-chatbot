@@ -36,7 +36,7 @@ export default class App extends Component {
         color: get_color(),
       },
       session: "",
-      display_chat_box: "block",
+      display_chat_box: "none",
     };
   }
 
@@ -83,14 +83,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="col-lg-3 col-md-5 border p-0 fixed-bottom offset-lg-8 offset-md-2">
+      <div className="col-lg-3 col-md-5 border p-0 fixed-bottom offset-lg-8 offset-md-2 bg-white">
         <div
-          className="bg-danger px-3 py-2 text-white font-weight-bold d-flex align-items-center chat-header"
+          className="bg-chatbot px-3 py-2 text-white font-weight-bold d-flex align-items-center chat-header"
           onClick={this.displayChatBox}
         >
           <span className="mr-auto">CHATBOT NADINE</span>
           <div className="ml-auto">
-            <button className="btn btn-danger">
+            <button className="btn btn-chatbot">
               <FontAwesomeIcon icon={faWindowMinimize} />
             </button>
           </div>

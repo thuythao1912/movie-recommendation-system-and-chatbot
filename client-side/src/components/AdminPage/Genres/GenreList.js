@@ -137,7 +137,7 @@ export default class GenreList extends Component {
                 <BootstrapTable
                   {...props.baseProps}
                   pagination={paginationFactory()}
-                  keyField="id"
+                  keyField="_id"
                 />
               </div>
             )}

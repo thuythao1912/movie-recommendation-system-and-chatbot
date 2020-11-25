@@ -14,7 +14,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const mongoose = require("mongoose");
 const db = require("./db");
-const gloabal_var = require("./global_variables");
+const global_var = require("./global_variables");
 
 //setup server
 app.use(cors());
@@ -76,7 +76,7 @@ let run = (socket) => {
   socket.on("message", (data) => {
     try {
       axios
-        .post(`${gloabal_var.SERVER_PYTHON}/predict`, {
+        .post(`${global_var.SERVER_PYTHON}/predict`, {
           input: data.text,
           created_time: data.created_time,
           session: data.session,
