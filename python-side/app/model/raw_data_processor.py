@@ -9,6 +9,8 @@ root = Path(os.path.abspath(__file__)).parents[2]
 import utils.nlp_utils as nlp
 import utils.utils as utils
 
+from datetime import datetime
+
 
 class RawDataProcessor:
     def __init__(self):
@@ -46,7 +48,7 @@ class RawDataProcessor:
             list_movies.append({"movie_id": row["movieId"], "movie_title": title, "movie_year": movie_year,
                                 "movie_genres": row["genres"].replace("|", ", "), "movie_actors": "",
                                 "movie_producers": "", "movie_images": "",
-                                "movie_description": list(description),
+                                "movie_description": None,
                                 "movie_trailer": "OLK3m02o7xE",
                                 "movie_overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a "
                                                   "justo neque. Cras vitae elementum urna, vel mattis ligula. Nunc "
@@ -101,20 +103,30 @@ class RawDataProcessor:
         utils.save_json(data_source["Sheet1"], os.path.join(
             root, "\\".join(data_folder), f"{type}.json"))
 
-    def rating_split(self, data_folder, data_num=None):
+    def rating_split(self, data_folder, movies_num, users_num, data_num=None):
         data = utils.load_csv(os.path.join(
             root, "\\".join(data_folder), "ratings_new.csv"))
-        list_rating = []
-        data = data if data_num is None else data.head(data_num)
+        list_data = []
+
+        for index, row in data.iterrows():
+            if row["user_id"] <= users_num and row["movie_id"] <= movies_num and row["rating_score"].is_integer():
+                list_data.append({"user_id": (row["user_id"]), "movie_id": (row["movie_id"]),
+                                  "rating_score": row["rating_score"],
+                                  "rating_time": datetime.now().strftime("%d-%m-%Y %H:%M:%S")})
+
+                list_data = list_data if data_num is None else list_data.head(data_num)
+        list_data = pd.DataFrame(list_data)
+
         # save excel genres
-        utils.save_excel(pd.DataFrame(data), os.path.join(
+        utils.save_excel(pd.DataFrame(list_data), os.path.join(
             root, "\\".join(data_folder), "ratings.xlsx"))
+
 
 if __name__ == "__main__":
     rdp = RawDataProcessor()
 
     # Test split_raw_data
-    rdp.split_raw_data(["data", "raw_data"], 200)
+    rdp.split_raw_data(["data", "raw_data"], 300)
 
     # Test create_json_from_excel for movies
     rdp.create_json_from_excel(["data", "raw_data"], "movies")
@@ -123,7 +135,7 @@ if __name__ == "__main__":
     rdp.create_json_from_excel(["data", "raw_data"], "genres")
 
     # Test rating_split
-    rdp.rating_split(["data", "raw_data"])
-
+    rdp.rating_split(["data", "raw_data"], 300, 20)
+    #
     # Test create_json_from_excel for ratings
     rdp.create_json_from_excel(["data", "raw_data"], "ratings")

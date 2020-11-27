@@ -1,6 +1,38 @@
 {
   "intents": [
     {
+      "feature": "sinh ở đâu",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh ở đâu",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh o dau",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh o dau",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh",
+      "target": "hoi noi sinh"
+    },
+    {
+      "feature": "sinh",
+      "target": "hoi noi sinh"
+    },
+    {
       "feature": "xin chào",
       "target": "chao hoi"
     },
@@ -433,19 +465,19 @@
       "target": "ban yeu toi khong"
     },
     {
-      "feature": "anh yêu em không",
+      "feature": "yêu không",
       "target": "ban yeu toi khong"
     },
     {
-      "feature": "anh yêu em không",
+      "feature": "yêu không",
       "target": "ban yeu toi khong"
     },
     {
-      "feature": "anh yeu em khong",
+      "feature": "yeu khong",
       "target": "ban yeu toi khong"
     },
     {
-      "feature": "anh yeu em khong",
+      "feature": "yeu khong",
       "target": "ban yeu toi khong"
     },
     {
@@ -593,19 +625,19 @@
       "target": "yeu cau goi y phim"
     },
     {
-      "feature": "gợi_ý phim không",
+      "feature": "có_thể gợi_ý phim không",
       "target": "yeu cau goi y phim"
     },
     {
-      "feature": "gợi_ý phim không",
+      "feature": "có_thể gợi_ý phim không",
       "target": "yeu cau goi y phim"
     },
     {
-      "feature": "goi_y phim khong",
+      "feature": "co_the goi_y phim khong",
       "target": "yeu cau goi y phim"
     },
     {
-      "feature": "goi_y phim khong",
+      "feature": "co_the goi_y phim khong",
       "target": "yeu cau goi y phim"
     }
   ]

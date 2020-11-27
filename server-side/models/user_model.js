@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const timeZone = require("mongoose-timezone");
 
 const user_model = new Schema({
-  user_id: { type: String },
+  user_id: { type: Number },
   username: { type: String },
   user_login: { type: String },
   user_password: { type: String },

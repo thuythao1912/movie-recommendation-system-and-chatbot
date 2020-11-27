@@ -6,6 +6,7 @@ import Panel from "./AdminPanel";
 import Train from "./Train";
 import Conversation from "./Conversation";
 import AddMovieGenre from "./AddMovieGenre";
+import Users from "./Users";
 export default class AdminPage extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ export default class AdminPage extends Component {
           <Route exact path="/admin/movies" component={Movies} />
           <Route exact path="/admin/train" component={Train} />
           <Route exact path="/admin/genres" component={Genres} />
+          <Route exact path="/admin/users" component={Users} />
           <Route exact path="/admin/conversation" component={Conversation} />
           <Route exact path="/admin/add" component={AddMovieGenre} />
         </div>

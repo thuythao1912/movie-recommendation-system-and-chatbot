@@ -29,17 +29,11 @@ class CollaborativeFilter:
 
     def run(self):
         r_cols = ['user_id', 'movie_id', 'rating_score', 'rating_time']
-        # ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols).head(
-        #     1714)
+
+        ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols)
         data = pd.DataFrame(self.ratings.find_all())
         del data["_id"]
-        del data["rating_time"]
-        # del ratings_base["rating_time"]
 
-        data["user_id"] = data["user_id"].astype(int)
-        data["movie_id"] = data["movie_id"].astype(int)
-        # print(data)
-        # print(ratings_base)
         rate_train = data.values
         self.Y_data = rate_train if self.uuCF else rate_train[:, [1, 0, 2]]
 
@@ -55,24 +49,22 @@ class CollaborativeFilter:
         self.Ybar_data = self.Y_data.copy()
         self.mu = np.zeros((self.n_users,))
         for n in range(self.n_users):
-            if n > 0:
-                # print("+", n)
-                # row indices of rating done by user n
-                # since indices need to be integers, we need to convert
-                ids = np.where(users == n)[0].astype(np.int32)
-                # print("///", ids)
-                # indices of all ratings associated with user n
-                item_ids = self.Y_data[ids, 1]
-                # and the corresponding ratings
-                ratings = self.Y_data[ids, 2]
-                # print("+***", ratings)
-                # take mean
-                m = np.mean(ratings)
-                # print("===", m)
-                if np.isnan(m):
-                    m = 0  # to avoid empty array and nan value
-                # normalize
-                self.Ybar_data[ids, 2] = ratings - self.mu[n]
+            # row indices of rating done by user n
+            # since indices need to be integers, we need to convert
+            ids = np.where(users == n)[0]
+            print("///", ids)
+            # indices of all ratings associated with user n
+            item_ids = self.Y_data[ids, 1]
+            # and the corresponding ratings
+            ratings = self.Y_data[ids, 2]
+            # print("+***", ratings)
+            # take mean
+            m = np.mean(ratings)
+            # print("===", m)
+            if np.isnan(m):
+                m = 0  # to avoid empty array and nan value
+            # normalize
+            self.Ybar_data[ids, 2] = ratings - self.mu[n]
 
         ################################################
         # form the rating matrix as a sparse matrix. Sparsity is important
@@ -104,9 +96,9 @@ class CollaborativeFilter:
         if you need the un
         """
         # Step 1: find all users who rated i
-        ids = np.where(self.Y_data[:, 1] == i)[0].astype(np.int32)
+        ids = np.where(self.Y_data[:, 1] == i)[0]
         # Step 2:
-        users_rated_i = (self.Y_data[ids, 0]).astype(np.int32)
+        users_rated_i = (self.Y_data[ids, 0])
         # Step 3: find similarity btw the current user and others
         # who already rated i
         sim = self.S[u, users_rated_i]
@@ -115,7 +107,6 @@ class CollaborativeFilter:
 
         # and the corresponding similarity levels
         nearest_s = sim[a]
-
         # How did each of 'near' users rated item i
         r = self.Ybar[i, users_rated_i[a]]
 
@@ -164,8 +155,9 @@ class CollaborativeFilter:
             else:
                 print('    Recommend item', u, 'to user(s) : ', recommended_items[:5])
 
+
     def recommend_for_user(self, user_id):
-        return self.recommend(int(user_id))[:5]
+        return self.recommend(user_id)[:5]
 
     def calculate_accuracy(self):
         r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
@@ -197,8 +189,8 @@ if __name__ == "__main__":
     # rate_train[:, :2] -= 1
     # rate_test[:, :2] -= 1
 
-    rs = CollaborativeFilter(k=20, uuCF=1)
-    print(rs.recommend_for_user("1"))
+    rs = CollaborativeFilter(k=30, uuCF=1)
+    print(rs.recommend_for_user(1))
 
     # n_tests = rate_test.shape[0]
     # SE = 0  # squared error

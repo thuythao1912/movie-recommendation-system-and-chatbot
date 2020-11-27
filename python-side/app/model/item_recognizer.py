@@ -53,11 +53,12 @@ class EntityRecognizer:
     def detect_entities(self, sentence):
         print("===>Origin sentence: ", sentence)
         entities = []
+
         for i in range(len(self.entity_vals)):
             result = nlp.approximate_search(self.entity_vals[i].lower(), sentence.lower())
+
             if result["score"] > ENTITY_THRESHOLD:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
-                print(sentence)
                 entities.append(self.entity_list[i])
         res = [sub['key'] for sub in entities]
         entities_unique = list(set().union(res))
@@ -66,6 +67,7 @@ class EntityRecognizer:
             if res.count(ent) > 1:
                 sign.append({"entity": ent, "value": self.detect_sign(sentence, ent)})
         sen_result = {"sen_result": sentence, "entitites": entities, "sign": sign}
+        print(sen_result)
         return sen_result
 
     def detect_sign(self, sentence, entity):

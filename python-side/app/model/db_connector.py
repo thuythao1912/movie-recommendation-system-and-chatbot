@@ -60,6 +60,12 @@ class Messages(Collection):
         Collection.__init__(self, "messages")
 
 
+class Ratings(Collection):
+    def __init__(self):
+        Collection.__init__(self, "ratings")
+
+
+
 if __name__ == "__main__":
     movie = Movies()
     print(movie.find_one())

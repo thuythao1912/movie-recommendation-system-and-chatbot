@@ -1,6 +1,18 @@
 {
   "intents": [
     {
+      "intent_name": "hoi noi sinh",
+      "training_phrases": [
+        "bạn sinh ở đâu vậy",
+        "nơi sinh của bạn"
+      ],
+      "responses": [
+        "Mình sinh ở Cần Thơ"
+      ],
+      "query": "",
+      "description": "casual"
+    },
+    {
       "intent_name": "chao hoi",
       "training_phrases": [
         "xin chào",

@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 const timeZone = require("mongoose-timezone");
 
 const movie_model = new Schema({
-  movie_id: { type: String },
+  movie_id: { type: Number },
   movie_title: { type: String },
-  movie_year: { type: String },
+  movie_year: { type: Number },
   movie_genres: { type: [String] },
   movie_actors: { type: String },
   movie_producers: { type: String },

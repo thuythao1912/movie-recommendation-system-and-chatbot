@@ -37,6 +37,7 @@ MAX_TIME = 300
 
 @app.route('/predict', methods=['POST'])
 def predict_run():
+
     try:
         message = request.get_json()
         input = message.get("input")
@@ -46,14 +47,14 @@ def predict_run():
         prev_mess = messages.get_last_record({"session": session})
 
         if prev_mess == {}:
-            output = ir.run(input)
+            output = ir.run(input, user["user_id"])
         else:
             time = (datetime.strptime(created_time, '%d-%m-%Y %H:%M:%S') - datetime.strptime(prev_mess["created_time"],
                                                                                              '%d-%m-%Y %H:%M:%S')).total_seconds()
             if prev_mess["description"] in ["suggest"] and time < MAX_TIME:
                 output = ir.run_with_history(input)
             else:
-                output = ir.run(input)
+                output = ir.run(input, user["user_id"])
 
         output["created_time"] = created_time
         output["session"] = session
