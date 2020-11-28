@@ -20,13 +20,18 @@ export default class UserList extends Component {
           sort: true,
         },
         {
-          dataField: "username",
-          text: "Tên người dùng",
+          dataField: "movie_id",
+          text: "Tên phim",
           sort: true,
         },
         {
-          dataField: "user_login",
-          text: "Tên đăng nhập",
+          dataField: "rating_score",
+          text: "Điểm đánh giá",
+          sort: true,
+        },
+        {
+          dataField: "rating_time",
+          text: "Thời gian đánh giá",
           sort: true,
         },
         {
@@ -41,13 +46,13 @@ export default class UserList extends Component {
     this.open_modal = this.open_modal.bind(this);
     this.close_modal = this.close_modal.bind(this);
   }
-  get_user_list() {
-    callApi("users", "get").then((res) => {
+  get_rating_list() {
+    callApi("rating", "get").then((res) => {
       this.setState({ data: res.data });
     });
   }
   componentDidMount() {
-    this.get_user_list();
+    this.get_rating_list();
   }
   delete_message_list = async () => {
     if (this.state.data.length == 0) {
@@ -58,7 +63,7 @@ export default class UserList extends Component {
         await callApi(`users`, "delete").then((res) => {
           alert(res.data.message);
         });
-        this.get_user_list();
+        this.get_rating_list();
       }
     }
   };
@@ -68,7 +73,7 @@ export default class UserList extends Component {
       await callApi(`users/${_id}`, "delete").then((res) => {
         alert(res.data.message);
       });
-      this.get_user_list();
+      this.get_rating_list();
     }
   };
   open_modal = (item_selected, is_not_edit) => {
@@ -100,6 +105,7 @@ export default class UserList extends Component {
     const { SearchBar, ClearSearchButton } = Search;
     let data = this.state.data;
     let columns = this.state.columns;
+
     return (
       <div className="bg-white my-3 px-4 py-2 border">
         {columns.length > 0 ? (

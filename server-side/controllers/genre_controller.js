@@ -2,6 +2,7 @@ var genre_model = require("../models/genre_model");
 var movie_model = require("../models/movie_model");
 const axios = require("axios");
 const global_var = require("../global_variables");
+const utils = require("../utils/utils");
 exports.get_list_genre = (req, res) => {
   genre_model
     .find((err, list) => {
@@ -18,8 +19,8 @@ exports.get_list_genre = (req, res) => {
 };
 
 exports.add_list_genre = async (req, res) => {
+  let genre_id = await utils.get_greatest_id("genres", "genre_id");
   list_genre = req.body.data;
-
   let genre_success = 0;
   let genre_fail = 0;
   let message = "";
@@ -49,6 +50,7 @@ exports.add_list_genre = async (req, res) => {
             (err, result) => {
               if (result.length == 0) {
                 let item = new genre_model(genre);
+                item.genre_id = genre_id;
                 item.save();
                 genre_success++;
                 if (--tasksToGo === 0) {

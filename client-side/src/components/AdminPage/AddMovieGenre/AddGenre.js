@@ -90,7 +90,7 @@ export default class AddGenre extends Component {
     this.setState({
       genre_description: [],
       genre_name: "",
-      genre_id: this.get_greatest_genre_id() + 1,
+      // genre_id: this.get_greatest_genre_id() + 1,
       genre_description: [],
       message_color: "success",
       message: "",

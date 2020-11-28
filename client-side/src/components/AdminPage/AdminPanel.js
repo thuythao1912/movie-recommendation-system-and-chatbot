@@ -26,7 +26,7 @@ export default class AdminPanel extends Component {
               <li>Người dùng</li>
             </Link>
             <Link to="/admin/ratings">
-              <li>Bình chọn</li>
+              <li>Đánh giá</li>
             </Link>
           </ul>
         </li>

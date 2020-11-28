@@ -183,6 +183,7 @@ def update_positive_words():
 @app.route("/", methods = ["PUT"])
 def update_data():
     ir.__init__()
+    return jsonify({"message": "ok", "message_status": "success"})
 
 
 if __name__ == "__main__":

@@ -57,7 +57,9 @@
         },
         {
           "org_val": "Comedy",
-          "description": null
+          "description": [
+            "hài"
+          ]
         },
         {
           "org_val": "Crime",
@@ -65,7 +67,9 @@
         },
         {
           "org_val": "War",
-          "description": null
+          "description": [
+            "chiến tranh"
+          ]
         },
         {
           "org_val": "Fantasy",
@@ -77,7 +81,15 @@
         },
         {
           "org_val": "Animation",
-          "description": null
+          "description": [
+            "hoạt hình"
+          ]
+        },
+        {
+          "org_val": "sadsa",
+          "description": [
+            "dsad"
+          ]
         }
       ]
     },
@@ -1292,6 +1304,10 @@
           "description": [
             "Beauty and the Beast"
           ]
+        },
+        {
+          "org_val": "xzczx",
+          "description": []
         }
       ]
     }

@@ -67,7 +67,7 @@ export default class MovieDetail extends Component {
                         <h5>Thể loại</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_genres !== undefined
+                        {data.movie_genres != undefined
                           ? data.movie_genres.join(", ")
                           : ""}
                       </td>
@@ -77,9 +77,9 @@ export default class MovieDetail extends Component {
                         <h5>Tên khác</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_description !== undefined ||
-                        data.movie_description !== null
-                          ? data.movie_description
+                        {data.movie_description != undefined ||
+                        data.movie_description != null
+                          ? data.movie_description.join(", ")
                           : ""}
                       </td>
                     </tr>
@@ -88,7 +88,7 @@ export default class MovieDetail extends Component {
                         <h5>Năm phát hành </h5>
                       </td>
                       <td width="60%">
-                        {data.movie_year !== undefined ? data.movie_year : ""}
+                        {data.movie_year != undefined ? data.movie_year : ""}
                       </td>
                     </tr>
                     <tr>
@@ -96,7 +96,7 @@ export default class MovieDetail extends Component {
                         <h5>Đạo diễn </h5>
                       </td>
                       <td width="60%">
-                        {data.movie_producers !== undefined
+                        {data.movie_producers != undefined
                           ? data.movie_producers
                           : ""}
                       </td>
@@ -106,7 +106,7 @@ export default class MovieDetail extends Component {
                         <h5>Diễn viên</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_actors !== undefined
+                        {data.movie_actors != undefined
                           ? data.movie_actors
                           : ""}
                       </td>

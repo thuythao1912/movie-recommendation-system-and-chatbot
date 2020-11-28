@@ -1,6 +1,7 @@
 var movie_model = require("../models/movie_model");
 const axios = require("axios");
 const global_var = require("../global_variables");
+const utils = require("../utils/utils");
 
 exports.get_list_movie = (req, res) => {
   let queries = req.query;
@@ -20,6 +21,7 @@ exports.get_list_movie = (req, res) => {
 };
 
 exports.add_list_movie = async (req, res) => {
+  let movie_id = await utils.get_greatest_id("movies", "movie_id");
   let list_movie = req.body.data;
   let movie_success = 0;
   let movie_fail = 0;
@@ -51,6 +53,7 @@ exports.add_list_movie = async (req, res) => {
             (err, result) => {
               if (result.length == 0) {
                 let item = new movie_model(movie);
+                item.movie_id = movie_id;
                 item.save();
                 movie_success++;
                 if (--tasksToGo === 0) {

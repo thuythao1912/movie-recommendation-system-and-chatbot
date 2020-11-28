@@ -7,6 +7,7 @@ import Train from "./Train";
 import Conversation from "./Conversation";
 import AddMovieGenre from "./AddMovieGenre";
 import Users from "./Users";
+import Ratings from "./Ratings";
 export default class AdminPage extends Component {
   render() {
     return (
@@ -21,6 +22,7 @@ export default class AdminPage extends Component {
           <Route exact path="/admin/users" component={Users} />
           <Route exact path="/admin/conversation" component={Conversation} />
           <Route exact path="/admin/add" component={AddMovieGenre} />
+          <Route exact path="/admin/ratings" component={Ratings} />
         </div>
       </div>
     );
