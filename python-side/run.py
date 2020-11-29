@@ -183,6 +183,9 @@ def update_positive_words():
 @app.route("/", methods = ["PUT"])
 def update_data():
     ir.__init__()
+    print("====> INIT INTENT RECOGNIZER")
+    suggestor.__init__()
+    print("====> INIT SUGGESTOR")
     return jsonify({"message": "ok", "message_status": "success"})
 
 

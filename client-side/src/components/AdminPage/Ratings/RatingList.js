@@ -8,7 +8,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import callApi from "../../../utils/apiCaller";
 import { Button } from "react-bootstrap";
 
-export default class UserList extends Component {
+export default class RatingList extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -20,7 +20,7 @@ export default class UserList extends Component {
           sort: true,
         },
         {
-          dataField: "movie_id",
+          dataField: "movie_title",
           text: "Tên phim",
           sort: true,
         },
@@ -42,13 +42,21 @@ export default class UserList extends Component {
       ],
       item_selected: {},
     };
-    this.delete_user = this.delete_user.bind(this);
+
+    this.delete_rating = this.delete_rating.bind(this);
     this.open_modal = this.open_modal.bind(this);
     this.close_modal = this.close_modal.bind(this);
   }
+
   get_rating_list() {
-    callApi("rating", "get").then((res) => {
-      this.setState({ data: res.data });
+    callApi("ratings", "get").then((res) => {
+      let rating_list = res.data[0];
+      let movie_name = res.data[1];
+      rating_list.map((rating, index) => {
+        rating.movie_title = movie_name[index];
+        return rating;
+      });
+      this.setState({ data: res.data[0] });
     });
   }
   componentDidMount() {
@@ -56,21 +64,21 @@ export default class UserList extends Component {
   }
   delete_message_list = async () => {
     if (this.state.data.length == 0) {
-      alert("Không có tin nhắn để xóa!");
+      alert("Không có đánh giá để xóa!");
     } else {
-      let ans = window.confirm(`Bạn có xác nhận xóa tất cả người dùng?`);
+      let ans = window.confirm(`Bạn có xác nhận xóa tất cả đánh giá?`);
       if (ans) {
-        await callApi(`users`, "delete").then((res) => {
+        await callApi(`ratings`, "delete").then((res) => {
           alert(res.data.message);
         });
         this.get_rating_list();
       }
     }
   };
-  delete_user = async (_id, user_login) => {
-    let ans = window.confirm(`Bạn cố muốn xóa người dùng ${user_login}?`);
+  delete_rating = async (_id) => {
+    let ans = window.confirm(`Bạn cố muốn xóa đánh giá này?`);
     if (ans) {
-      await callApi(`users/${_id}`, "delete").then((res) => {
+      await callApi(`ratings/${_id}`, "delete").then((res) => {
         alert(res.data.message);
       });
       this.get_rating_list();
@@ -95,7 +103,7 @@ export default class UserList extends Component {
           <FontAwesomeIcon
             icon={faTrashAlt}
             className="text-info mr-3"
-            onClick={() => this.delete_user(row._id, row.user_login)}
+            onClick={() => this.delete_rating(row._id)}
           />
         </span>
       </div>

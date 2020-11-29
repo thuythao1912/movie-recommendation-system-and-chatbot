@@ -7,7 +7,6 @@ export default class MovieGenre extends Component {
   }
 
   render() {
-    console.log(this.state.count_genre, this.state.count_movie);
     return (
       <div className="d-flex justify-content-between pr-0">
         <div className="col-lg-6 btn border media px-4 mr-3 bg-white">

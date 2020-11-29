@@ -5,7 +5,6 @@ export default class AddGenre extends Component {
   constructor(props) {
     super();
     this.state = {
-      genre_id: "",
       _id: "",
       genre_name: "",
       genre_description: [],
@@ -24,24 +23,11 @@ export default class AddGenre extends Component {
     this.setState({
       genre_list: genre_list,
     });
-    this.get_greatest_genre_id();
-  }
-
-  async get_greatest_genre_id() {
-    //get greatest genre id
-    let genre_id = 0;
-    await callApi("genres/greatest_id", "get").then((res) => {
-      genre_id = res.data;
-    });
-    this.setState({
-      genre_id: parseInt(genre_id),
-    });
   }
 
   send_data = async () => {
     let data = {
       genre_name: this.state.genre_name,
-      genre_id: this.state.genre_id + 1,
       genre_description: this.state.genre_description,
     };
 
@@ -63,7 +49,6 @@ export default class AddGenre extends Component {
             message: message,
             display_message: "block",
             genre_name: "",
-            genre_id: this.get_greatest_genre_id() + 1,
             message_color: "success",
           });
         } else {
@@ -90,7 +75,6 @@ export default class AddGenre extends Component {
     this.setState({
       genre_description: [],
       genre_name: "",
-      // genre_id: this.get_greatest_genre_id() + 1,
       genre_description: [],
       message_color: "success",
       message: "",
@@ -116,15 +100,6 @@ export default class AddGenre extends Component {
 
         <div className="">
           <div className="row px-3">
-            <div className="col-lg-2 pr-3 pl-0">
-              <input
-                placeholder="Mã thể loại"
-                className="form-control"
-                value={this.state.genre_id + 1}
-                disabled
-                name="genre_id"
-              />
-            </div>
             <div className="col-lg-3 pr-3 pl-0">
               <input
                 placeholder="Thể loại (bắt buộc)"
@@ -135,10 +110,10 @@ export default class AddGenre extends Component {
                 value={this.state.genre_name}
               />
             </div>
-            <div className="col-lg-7 row align-items-center">
+            <div className="col-lg-9 row align-items-center">
               <input
                 placeholder="Mô tả"
-                className="form-control form-control"
+                className="form-control"
                 onChange={this.handle_input}
                 name="genre_description"
                 value={this.state.genre_description}

@@ -14,7 +14,7 @@ import callApi from "../../../utils/apiCaller";
 export default class Movies extends Component {
   constructor(props) {
     super();
-    this.state = { count_genre: 0, count_movie: 0 };
+    this.state = { count_genre: 0, count_movie: 0, re_render: true };
   }
   get_movie_genre_count = async () => {
     let count_movie;
@@ -32,10 +32,14 @@ export default class Movies extends Component {
     await this.get_movie_genre_count();
   };
 
-  componentWillUnmount = async () => {
-    await this.get_movie_genre_count();
+  delete_movie_list = async () => {
+    let ans = window.confirm(`Bạn có xác nhận xóa tất cả phim?`);
+    if (ans) {
+      await callApi(`movies`, "delete").then((res) => {
+        alert(res.data.message);
+      });
+    }
   };
-
   render() {
     return (
       <div className="bg-light">
@@ -49,19 +53,19 @@ export default class Movies extends Component {
           </div>
           <div className="col-lg-4">
             <div className="col-lg-12">
-              <div className="btn btn-block btn-info">
-                <Link
-                  to="/admin/add"
-                  className="text-decoration-none text-white"
-                >
+              <Link to="/admin/add" className="text-decoration-none text-white">
+                <button className="btn btn-block btn-info">
                   <FontAwesomeIcon icon={faPlusSquare} />
                   <span className="mx-2">Thêm mới</span>
-                </Link>
-              </div>
-              <div className="btn btn-block btn-danger mt-3">
+                </button>
+              </Link>
+              <button
+                className="btn btn-block btn-danger mt-2"
+                onClick={this.delete_movie_list}
+              >
                 <FontAwesomeIcon icon={faTrashAlt} />
                 <span className="mx-2">Xóa tất cả</span>
-              </div>
+              </button>
             </div>
           </div>
         </div>

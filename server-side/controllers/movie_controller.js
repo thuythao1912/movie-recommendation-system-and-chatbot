@@ -134,19 +134,17 @@ exports.update_one_movie = (req, res) => {
     });
 };
 
-exports.find_list_movie = (req, res) => {
-  let queries = req.query;
-  console.log(queries);
+exports.delete_list_movie = (req, res) => {
   movie_model
-    .find(queries, (err, list) => {
+    .deleteMany((err, list) => {
       if (err) {
         console.log(err);
-        res.status(500).send(`Something went wrong...`);
+        res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
       } else {
-        res.json(list);
+        res.json({ message: `Tất cả phim đã xóa thành công` });
       }
     })
     .catch((err) => {
-      res.status(400).send(`Unable to get to database...`);
+      res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
     });
 };

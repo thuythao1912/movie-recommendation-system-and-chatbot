@@ -176,3 +176,18 @@ exports.update_one_genre = (req, res) => {
       console.log(err);
     });
 };
+
+exports.delete_list_genre = (req, res) => {
+  genre_model
+    .deleteMany((err, list) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+      } else {
+        res.json({ message: `Tất cả thể loại đã xóa thành công` });
+      }
+    })
+    .catch((err) => {
+      res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+    });
+};

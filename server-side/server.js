@@ -36,7 +36,7 @@ app.use("/genres", genre_route);
 app.use("/messages", message_route);
 app.use("/users", user_route);
 app.use("/ai-service", ai_service_route);
-app.use("/rating", rating_route);
+app.use("/ratings", rating_route);
 app.use(index);
 
 //import socket controllers

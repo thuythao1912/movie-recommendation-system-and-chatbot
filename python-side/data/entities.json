@@ -5,7 +5,7 @@
       "values": [
         {
           "org_val": "Thriller",
-          "description": null
+          "description": []
         },
         {
           "org_val": "Musical",
@@ -83,12 +83,6 @@
           "org_val": "Animation",
           "description": [
             "hoạt hình"
-          ]
-        },
-        {
-          "org_val": "sadsa",
-          "description": [
-            "dsad"
           ]
         }
       ]
@@ -1300,13 +1294,17 @@
           "description": null
         },
         {
-          "org_val": "Người đẹp và quái vật",
+          "org_val": "a",
           "description": [
-            "Beauty and the Beast"
+            "á"
           ]
         },
         {
-          "org_val": "xzczx",
+          "org_val": "á",
+          "description": []
+        },
+        {
+          "org_val": "Jumanjia",
           "description": []
         }
       ]

@@ -104,19 +104,17 @@ export default class Movies extends Component {
 
   select_genre = (genre) => {
     if (genre != "") {
-      callApi(`movies/find_list_movie?movie_genres=${genre}`, "get").then(
-        async (res) => {
-          let currentPage;
-          res.data.length > 0 ? (currentPage = 1) : (currentPage = 0);
-          await this.setState({
-            currentPage: currentPage,
-            data: res.data,
-            totalData: res.data.length,
-            totalPage: Math.ceil(res.data.length / this.state.limit),
-          });
-          await this.processData(this.state.data, this.state.currentPage);
-        }
-      );
+      callApi(`movies?movie_genres=${genre}`, "get").then(async (res) => {
+        let currentPage;
+        res.data.length > 0 ? (currentPage = 1) : (currentPage = 0);
+        await this.setState({
+          currentPage: currentPage,
+          data: res.data,
+          totalData: res.data.length,
+          totalPage: Math.ceil(res.data.length / this.state.limit),
+        });
+        await this.processData(this.state.data, this.state.currentPage);
+      });
     } else {
       this.get_movie_list();
     }
