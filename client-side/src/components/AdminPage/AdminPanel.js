@@ -30,6 +30,9 @@ export default class AdminPanel extends Component {
             </Link>
           </ul>
         </li>
+        <Link to="/admin/login">
+          <li className="list-group-item">Đăng xuất</li>
+        </Link>
       </ul>
     );
   }

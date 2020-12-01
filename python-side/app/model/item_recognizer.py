@@ -146,7 +146,8 @@ class AgreeRecognizer:
 
 if __name__ == "__main__":
     er = EntityRecognizer()
-    ar = AgreeRecoginzer()
+    print(er.detect_entities("alo"))
+    # ar = AgreeRecoginzer()
     # print(ar.detect_agree("tôi không có không có đâu"))
     # r = er.detect_entities("tôi muốn xem phim kinh dị")
     # print(r)

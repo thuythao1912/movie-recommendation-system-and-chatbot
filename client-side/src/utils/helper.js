@@ -22,7 +22,6 @@ exports.checkNull = (full_states, data) => {
   let is_null = [];
   let states = full_states[0];
   states.forEach((s, index) => {
-    console.log(data[s]);
     if (data[s] == "" || data[s] == [] || data[s] == null) {
       is_null.push(full_states[1][index]);
     }

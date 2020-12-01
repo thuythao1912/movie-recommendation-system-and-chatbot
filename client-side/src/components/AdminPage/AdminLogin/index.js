@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { faHome, faUserCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import callApi from "../../../utils/apiCaller";
+import callApi from "../../utils/apiCaller";
 import { Link } from "react-router-dom";
-import ls from "../../../utils/localStorage";
-import { checkNull, compareString } from "../../../utils/helper";
-export default class Login extends Component {
+import ls from "../../utils/localStorage";
+import { checkNull, compareString } from "../../utils/helper";
+export default class AdminLogin extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -60,7 +60,6 @@ export default class Login extends Component {
     return (
       <div
         style={{
-          backgroundImage: `url("/images/bg-login.jpeg")`,
           backgroundRepeat: "no - repeat",
           backgroundSize: "cover",
           height: "100vh",
@@ -73,7 +72,6 @@ export default class Login extends Component {
         >
           <h3>ĐĂNG NHẬP</h3>
           <div className="text-warning my-3">{this.state.message}</div>
-
           <div>
             <input
               className="form-control my-3 "

@@ -8,6 +8,8 @@ import Conversation from "./Conversation";
 import AddMovieGenre from "./AddMovieGenre";
 import Users from "./Users";
 import Ratings from "./Ratings";
+import AdminRoute from "../Routes/AdminRoute";
+
 export default class AdminPage extends Component {
   render() {
     return (
@@ -16,13 +18,17 @@ export default class AdminPage extends Component {
           <Panel />
         </div>
         <div className="col-lg-10 border col-md-9 col-sm-8 p-3 bg-light">
-          <Route exact path="/admin/movies" component={Movies} />
-          <Route exact path="/admin/train" component={Train} />
-          <Route exact path="/admin/genres" component={Genres} />
-          <Route exact path="/admin/users" component={Users} />
-          <Route exact path="/admin/conversation" component={Conversation} />
-          <Route exact path="/admin/add" component={AddMovieGenre} />
-          <Route exact path="/admin/ratings" component={Ratings} />
+          <AdminRoute exact path="/admin/movies" component={Movies} />
+          <AdminRoute exact path="/admin/train" component={Train} />
+          <AdminRoute exact path="/admin/genres" component={Genres} />
+          <AdminRoute exact path="/admin/users" component={Users} />
+          <AdminRoute
+            exact
+            path="/admin/conversation"
+            component={Conversation}
+          />
+          <AdminRoute exact path="/admin/add" component={AddMovieGenre} />
+          <AdminRoute exact path="/admin/ratings" component={Ratings} />
         </div>
       </div>
     );
