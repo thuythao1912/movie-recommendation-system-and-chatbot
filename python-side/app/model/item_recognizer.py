@@ -53,11 +53,12 @@ class EntityRecognizer:
     def detect_entities(self, sentence):
         print("===>Origin sentence: ", sentence)
         entities = []
+
         for i in range(len(self.entity_vals)):
             result = nlp.approximate_search(self.entity_vals[i].lower(), sentence.lower())
+
             if result["score"] > ENTITY_THRESHOLD:
                 sentence = sentence.replace(result["matched"], self.entity_list[i]["key"])
-                print(sentence)
                 entities.append(self.entity_list[i])
         res = [sub['key'] for sub in entities]
         entities_unique = list(set().union(res))
@@ -66,6 +67,7 @@ class EntityRecognizer:
             if res.count(ent) > 1:
                 sign.append({"entity": ent, "value": self.detect_sign(sentence, ent)})
         sen_result = {"sen_result": sentence, "entitites": entities, "sign": sign}
+        print(sen_result)
         return sen_result
 
     def detect_sign(self, sentence, entity):
@@ -144,7 +146,8 @@ class AgreeRecognizer:
 
 if __name__ == "__main__":
     er = EntityRecognizer()
-    ar = AgreeRecoginzer()
+    print(er.detect_entities("alo"))
+    # ar = AgreeRecoginzer()
     # print(ar.detect_agree("tôi không có không có đâu"))
     # r = er.detect_entities("tôi muốn xem phim kinh dị")
     # print(r)

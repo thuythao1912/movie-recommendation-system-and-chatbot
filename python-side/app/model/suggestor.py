@@ -81,18 +81,29 @@ class Suggestor:
 
 
 class SuggestBasedUser:
+    obj_movies = Movies()
+
     def __init__(self):
         self.cf = CollaborativeFilter(k=30, uuCF=1)
 
     def suggest_movies(self, user_id):
+        suggest_movies = []
+        print("==> SUGGEST MOVIE FOR USER")
         movies_recommend_for_user = self.cf.recommend_for_user(user_id)
         movies_suggested_id = [x["movie_id"] for x in movies_recommend_for_user]
-        return movies_suggested_id
+        for movie_id in movies_suggested_id:
+            result = self.get_movie_title(movie_id)
+            if result is not None:
+                suggest_movies.append(result["movie_title"])
+        return suggest_movies
+
+    def get_movie_title(self, movie_id):
+        return self.obj_movies.find_one({"movie_id": movie_id})
 
 
 if __name__ == "__main__":
-    suggestor = Suggestor()
-    print(suggestor.suggest_movies(["jumanji", "toy story"], chatbot=False))
+    # suggestor = Suggestor()
+    # print(suggestor.suggest_movies(["jumanji", "toy story"], chatbot=False))
 
-    # sbu = SuggestBasedUser()
-    # print(sbu.suggest_movies(100))
+    sbu = SuggestBasedUser()
+    print(sbu.suggest_movies("1"))

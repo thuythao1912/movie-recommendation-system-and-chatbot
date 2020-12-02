@@ -7,11 +7,14 @@ export default class AddMovie extends Component {
     this.state = {
       genre_list: [],
       movie_genres: [],
-      movie_id: 0,
+      movie_description: [],
       movie_title: "",
       movie_year: "",
       movie_actors: "",
       movie_producers: "",
+      movie_trailer: "",
+      movie_overview: "",
+      movie_images: "",
       message: "",
       display_message: "none",
       required_fields: [["movie_title"], ["tựa phim"]],
@@ -28,29 +31,27 @@ export default class AddMovie extends Component {
     this.setState({
       genre_list: genre_list,
     });
-    this.get_greatest_movie_id();
-  }
-
-  async get_greatest_movie_id() {
-    //get greatest movie id
-    let movie_id = 0;
-    await callApi("movies/greatest_id", "get").then((res) => {
-      movie_id = res.data;
-    });
-    this.setState({
-      movie_id: parseInt(movie_id),
-    });
   }
 
   send_data = async () => {
     let data = {
       movie_genres: this.state.movie_genres,
-      movie_id: this.state.movie_id + 1,
       movie_title: this.state.movie_title,
       movie_year: this.state.movie_year,
       movie_actors: this.state.movie_actors,
       movie_producers: this.state.movie_producers,
+      movie_description: this.state.movie_description,
+      movie_trailer: this.state.movie_trailer,
+      movie_overview: this.state.movie_overview,
+      movie_images: this.state.movie_images,
     };
+
+    if (typeof data.movie_description == "string") {
+      data.movie_description = data.movie_description.split(",");
+    }
+    for (let i = 0; i < data.movie_description.length; i++) {
+      data.movie_description[i] = data.movie_description[i].trim();
+    }
 
     let is_null = checkNull(this.state.required_fields, data);
 
@@ -63,11 +64,14 @@ export default class AddMovie extends Component {
             message: message,
             display_message: "block",
             movie_genres: [],
-            movie_id: this.get_greatest_movie_id(),
             movie_title: "",
             movie_year: "",
             movie_actors: "",
             movie_producers: "",
+            movie_description: [],
+            movie_trailer: "",
+            movie_overview: "",
+            movie_images: "",
             message_color: "success",
           });
         } else {
@@ -106,7 +110,6 @@ export default class AddMovie extends Component {
   reset_data = () => {
     this.setState({
       movie_genres: [],
-      movie_id: this.get_greatest_movie_id(),
       movie_title: "",
       movie_year: "",
       movie_actors: "",
@@ -135,6 +138,11 @@ export default class AddMovie extends Component {
         </button>
       );
     });
+    let year = 2020;
+    let elMovieYear = [];
+    for (let i = year; i >= 1950; i--) {
+      elMovieYear.push(<option>{i}</option>);
+    }
     return (
       <div className="p-0">
         <h3>THÊM PHIM</h3>
@@ -153,16 +161,7 @@ export default class AddMovie extends Component {
         <div className="">
           {/* <form> */}
           <div className="row px-3">
-            <div className="col-lg-2 pr-3 pl-0">
-              <input
-                placeholder="Mã phim"
-                className="form-control"
-                value={this.state.movie_id + 1}
-                disabled
-                name="movie_id"
-              />
-            </div>
-            <div className="col-lg-10 row align-items-center">
+            <div className="col-lg-6 row align-items-center">
               <input
                 placeholder="Tựa phim (bắt buộc)"
                 className="form-control"
@@ -172,18 +171,29 @@ export default class AddMovie extends Component {
                 value={this.state.movie_title}
               />
             </div>
-          </div>
-          <div className="row p-3">
-            <div className="col-lg-2 pr-3 pl-0">
+            <div className="col-lg-4 pr-0">
               <input
-                placeholder="Năm sản xuất"
+                placeholder="Tên khác"
+                className="form-control"
+                onChange={this.handle_input}
+                name="movie_description"
+                value={this.state.movie_description}
+              />
+            </div>
+            <div className="col-lg-2 px-3 pl-0">
+              <select
                 className="form-control"
                 onChange={this.handle_input}
                 name="movie_year"
                 value={this.state.movie_year}
-              />
+              >
+                <option value={-1}>Năm sản xuất</option>
+                {elMovieYear}
+              </select>
             </div>
-            <div className="col-lg-6 row">
+          </div>
+          <div className="row p-3">
+            <div className="col-lg-3 row">
               <input
                 placeholder="Diễn viên"
                 className="form-control"
@@ -192,7 +202,7 @@ export default class AddMovie extends Component {
                 value={this.state.movie_actors}
               />
             </div>
-            <div className="col-lg-4 pr-0">
+            <div className="col-lg-3 pr-0">
               <input
                 placeholder="Đạo diễn"
                 className="form-control"
@@ -200,6 +210,40 @@ export default class AddMovie extends Component {
                 name="movie_producers"
                 value={this.state.movie_producers}
               />
+            </div>
+            <div className="col-lg-3 pr-0">
+              <input
+                placeholder="Trailer"
+                className="form-control"
+                onChange={this.handle_input}
+                name="movie_trailer"
+                value={this.state.movie_trailer}
+              />
+            </div>
+            <div className="col-lg-3 px-3 pl-0">
+              <input
+                placeholder="Poster"
+                className="form-control"
+                onChange={this.handle_input}
+                name="movie_images"
+                value={this.state.movie_images}
+              />
+            </div>
+          </div>
+          <div className="row px-3 pt-3">
+            <div className="col-lg-12 pl-0">
+              <p>Tóm tắt</p>
+            </div>
+          </div>
+          <div className="row px-3">
+            <div className="col-lg-12 px-0 pr-5">
+              <textarea
+                className="form-control"
+                placeholder="Nhập tóm tắt phim..."
+                onChange={this.handle_input}
+                name="movie_overview"
+                value={this.state.movie_overview}
+              ></textarea>
             </div>
           </div>
           <div className="row px-3 pt-3">

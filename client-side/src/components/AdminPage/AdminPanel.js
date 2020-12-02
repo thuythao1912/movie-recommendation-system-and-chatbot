@@ -8,7 +8,7 @@ export default class AdminPanel extends Component {
           <li className="list-group-item">Trang chủ</li>
         </Link>
         <Link to="/admin/train">
-          <li className="list-group-item active">Huấn luyện</li>
+          <li className="list-group-item">Huấn luyện</li>
         </Link>
         <Link to="/admin/conversation">
           <li className="list-group-item">Quản lý hội thoại</li>
@@ -26,10 +26,13 @@ export default class AdminPanel extends Component {
               <li>Người dùng</li>
             </Link>
             <Link to="/admin/ratings">
-              <li>Bình chọn</li>
+              <li>Đánh giá</li>
             </Link>
           </ul>
         </li>
+        <Link to="/admin/login">
+          <li className="list-group-item">Đăng xuất</li>
+        </Link>
       </ul>
     );
   }

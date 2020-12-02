@@ -4,13 +4,43 @@
       "key": "movie_genres",
       "values": [
         {
+          "org_val": "Thriller",
+          "description": []
+        },
+        {
+          "org_val": "Musical",
+          "description": null
+        },
+        {
           "org_val": "Documentary",
-          "description": [
-            "tài liệu"
-          ]
+          "description": null
+        },
+        {
+          "org_val": "IMAX",
+          "description": null
+        },
+        {
+          "org_val": "Children",
+          "description": null
+        },
+        {
+          "org_val": "Mystery",
+          "description": null
         },
         {
           "org_val": "Romance",
+          "description": null
+        },
+        {
+          "org_val": "Horror",
+          "description": null
+        },
+        {
+          "org_val": "Film-Noir",
+          "description": null
+        },
+        {
+          "org_val": "Action",
           "description": null
         },
         {
@@ -18,11 +48,11 @@
           "description": null
         },
         {
-          "org_val": "Musical",
+          "org_val": "Drama",
           "description": null
         },
         {
-          "org_val": "Crime",
+          "org_val": "Western",
           "description": null
         },
         {
@@ -32,17 +62,13 @@
           ]
         },
         {
-          "org_val": "Action",
+          "org_val": "Crime",
           "description": null
         },
         {
-          "org_val": "Western",
-          "description": null
-        },
-        {
-          "org_val": "Horror",
+          "org_val": "War",
           "description": [
-            "kinh dị"
+            "chiến tranh"
           ]
         },
         {
@@ -50,19 +76,7 @@
           "description": null
         },
         {
-          "org_val": "War",
-          "description": null
-        },
-        {
-          "org_val": "Film-Noir",
-          "description": null
-        },
-        {
-          "org_val": "Children",
-          "description": null
-        },
-        {
-          "org_val": "Thriller",
+          "org_val": "Sci-Fi",
           "description": null
         },
         {
@@ -70,22 +84,6 @@
           "description": [
             "hoạt hình"
           ]
-        },
-        {
-          "org_val": "IMAX",
-          "description": null
-        },
-        {
-          "org_val": "Drama",
-          "description": null
-        },
-        {
-          "org_val": "Sci-Fi",
-          "description": null
-        },
-        {
-          "org_val": "Mystery",
-          "description": null
         }
       ]
     },
@@ -101,9 +99,7 @@
         },
         {
           "org_val": "Jumanji",
-          "description": [
-            "abc"
-          ]
+          "description": null
         },
         {
           "org_val": "Grumpier Old Men",
@@ -895,6 +891,406 @@
         },
         {
           "org_val": "Three Wishes",
+          "description": null
+        },
+        {
+          "org_val": "Total Eclipse",
+          "description": null
+        },
+        {
+          "org_val": "To Wong Foo, Thanks for Everything! Julie Newmar",
+          "description": null
+        },
+        {
+          "org_val": "Under Siege 2: Dark Territory",
+          "description": null
+        },
+        {
+          "org_val": "Unstrung Heroes",
+          "description": null
+        },
+        {
+          "org_val": "Unzipped",
+          "description": null
+        },
+        {
+          "org_val": "Walk in the Clouds, A",
+          "description": null
+        },
+        {
+          "org_val": "Waterworld",
+          "description": null
+        },
+        {
+          "org_val": "White Man's Burden",
+          "description": null
+        },
+        {
+          "org_val": "Wild Bill",
+          "description": null
+        },
+        {
+          "org_val": "Browning Version, The",
+          "description": null
+        },
+        {
+          "org_val": "Bushwhacked",
+          "description": null
+        },
+        {
+          "org_val": "Burnt by the Sun (Utomlyonnye solntsem)",
+          "description": null
+        },
+        {
+          "org_val": "Before the Rain (Pred dozhdot)",
+          "description": null
+        },
+        {
+          "org_val": "Before Sunrise",
+          "description": null
+        },
+        {
+          "org_val": "Billy Madison",
+          "description": null
+        },
+        {
+          "org_val": "Babysitter, The",
+          "description": null
+        },
+        {
+          "org_val": "Boys on the Side",
+          "description": null
+        },
+        {
+          "org_val": "Cure, The",
+          "description": null
+        },
+        {
+          "org_val": "Castle Freak",
+          "description": null
+        },
+        {
+          "org_val": "Circle of Friends",
+          "description": null
+        },
+        {
+          "org_val": "Clerks",
+          "description": null
+        },
+        {
+          "org_val": "Don Juan DeMarco",
+          "description": null
+        },
+        {
+          "org_val": "Disclosure",
+          "description": null
+        },
+        {
+          "org_val": "Dream Man",
+          "description": null
+        },
+        {
+          "org_val": "Drop Zone",
+          "description": null
+        },
+        {
+          "org_val": "Destiny Turns on the Radio",
+          "description": null
+        },
+        {
+          "org_val": "Death and the Maiden",
+          "description": null
+        },
+        {
+          "org_val": "Dolores Claiborne",
+          "description": null
+        },
+        {
+          "org_val": "Dumb & Dumber (Dumb and Dumber)",
+          "description": null
+        },
+        {
+          "org_val": "Eat Drink Man Woman (Yin shi nan nu)",
+          "description": null
+        },
+        {
+          "org_val": "Exotica",
+          "description": null
+        },
+        {
+          "org_val": "Exit to Eden",
+          "description": null
+        },
+        {
+          "org_val": "Ed Wood",
+          "description": null
+        },
+        {
+          "org_val": "French Kiss",
+          "description": null
+        },
+        {
+          "org_val": "Forget Paris",
+          "description": null
+        },
+        {
+          "org_val": "Far From Home: The Adventures of Yellow Dog",
+          "description": null
+        },
+        {
+          "org_val": "Goofy Movie, A",
+          "description": null
+        },
+        {
+          "org_val": "Hideaway",
+          "description": null
+        },
+        {
+          "org_val": "Fluke",
+          "description": null
+        },
+        {
+          "org_val": "Farinelli: il castrato",
+          "description": null
+        },
+        {
+          "org_val": "Gordy",
+          "description": null
+        },
+        {
+          "org_val": "Gumby: The Movie",
+          "description": null
+        },
+        {
+          "org_val": "The Glass Shield",
+          "description": null
+        },
+        {
+          "org_val": "Hoop Dreams",
+          "description": null
+        },
+        {
+          "org_val": "Heavenly Creatures",
+          "description": null
+        },
+        {
+          "org_val": "Houseguest",
+          "description": null
+        },
+        {
+          "org_val": "Immortal Beloved",
+          "description": null
+        },
+        {
+          "org_val": "Heavyweights (Heavy Weights)",
+          "description": null
+        },
+        {
+          "org_val": "Hunted, The",
+          "description": null
+        },
+        {
+          "org_val": "I.Q.",
+          "description": null
+        },
+        {
+          "org_val": "Interview with the Vampire: The Vampire Chronicles",
+          "description": null
+        },
+        {
+          "org_val": "Jefferson in Paris",
+          "description": null
+        },
+        {
+          "org_val": "Jerky Boys, The",
+          "description": null
+        },
+        {
+          "org_val": "Junior",
+          "description": null
+        },
+        {
+          "org_val": "Just Cause",
+          "description": null
+        },
+        {
+          "org_val": "Kid in King Arthur's Court, A",
+          "description": null
+        },
+        {
+          "org_val": "Kiss of Death",
+          "description": null
+        },
+        {
+          "org_val": "Star Wars: Episode IV - A New Hope",
+          "description": null
+        },
+        {
+          "org_val": "Little Women",
+          "description": null
+        },
+        {
+          "org_val": "Little Princess, A",
+          "description": null
+        },
+        {
+          "org_val": "Ladybird Ladybird",
+          "description": null
+        },
+        {
+          "org_val": "Enfer, L'",
+          "description": null
+        },
+        {
+          "org_val": "Like Water for Chocolate (Como agua para chocolate)",
+          "description": null
+        },
+        {
+          "org_val": "Legends of the Fall",
+          "description": null
+        },
+        {
+          "org_val": "Major Payne",
+          "description": null
+        },
+        {
+          "org_val": "Little Odessa",
+          "description": null
+        },
+        {
+          "org_val": "My Crazy Life (Mi vida loca)",
+          "description": null
+        },
+        {
+          "org_val": "Love Affair",
+          "description": null
+        },
+        {
+          "org_val": "Losing Isaiah",
+          "description": null
+        },
+        {
+          "org_val": "Madness of King George, The",
+          "description": null
+        },
+        {
+          "org_val": "Mary Shelley's Frankenstein (Frankenstein)",
+          "description": null
+        },
+        {
+          "org_val": "Man of the House",
+          "description": null
+        },
+        {
+          "org_val": "Mixed Nuts",
+          "description": null
+        },
+        {
+          "org_val": "Milk Money",
+          "description": null
+        },
+        {
+          "org_val": "Miracle on 34th Street",
+          "description": null
+        },
+        {
+          "org_val": "Miami Rhapsody",
+          "description": null
+        },
+        {
+          "org_val": "My Family",
+          "description": null
+        },
+        {
+          "org_val": "Murder in the First",
+          "description": null
+        },
+        {
+          "org_val": "Nobody's Fool",
+          "description": null
+        },
+        {
+          "org_val": "Nell",
+          "description": null
+        },
+        {
+          "org_val": "New Jersey Drive",
+          "description": null
+        },
+        {
+          "org_val": "New York Cop (Nyû Yôku no koppu)",
+          "description": null
+        },
+        {
+          "org_val": "Beyond Bedlam",
+          "description": null
+        },
+        {
+          "org_val": "Nemesis 2: Nebula",
+          "description": null
+        },
+        {
+          "org_val": "Nina Takes a Lover",
+          "description": null
+        },
+        {
+          "org_val": "Natural Born Killers",
+          "description": null
+        },
+        {
+          "org_val": "Only You",
+          "description": null
+        },
+        {
+          "org_val": "Once Were Warriors",
+          "description": null
+        },
+        {
+          "org_val": "Outbreak",
+          "description": null
+        },
+        {
+          "org_val": "Léon: The Professional (a.k.a. The Professional) (Léon)",
+          "description": null
+        },
+        {
+          "org_val": "Perez Family, The",
+          "description": null
+        },
+        {
+          "org_val": "Pyromaniac's Love Story, A",
+          "description": null
+        },
+        {
+          "org_val": "Pulp Fiction",
+          "description": null
+        },
+        {
+          "org_val": "Panther",
+          "description": null
+        },
+        {
+          "org_val": "Pushing Hands (Tui shou)",
+          "description": null
+        },
+        {
+          "org_val": "Priest",
+          "description": null
+        },
+        {
+          "org_val": "Quiz Show",
+          "description": null
+        },
+        {
+          "org_val": "Picture Bride (Bijo photo)",
+          "description": null
+        },
+        {
+          "org_val": "Queen Margot (Reine Margot, La)",
+          "description": null
+        },
+        {
+          "org_val": "Quick and the Dead, The",
           "description": null
         }
       ]

@@ -9,9 +9,12 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy import sparse
 
+from app.model.db_connector import Ratings
+
 
 class CollaborativeFilter:
     def __init__(self, k, dist_func=cosine_similarity, uuCF=1):
+        self.ratings = Ratings()
         self.uuCF = uuCF  # user-user (1) or item-item (0) CF
         self.Y_data = None
         self.k = k  # number of neighbor points
@@ -23,6 +26,22 @@ class CollaborativeFilter:
         self.n_items = int(np.max(self.Y_data[:, 1])) + 1
         self.fit()
         # self.calculate_accuracy()
+
+    def run(self):
+        r_cols = ['user_id', 'movie_id', 'rating_score', 'rating_time']
+        # ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols).head(
+        #     1714)
+        data = pd.DataFrame(self.ratings.find_all())
+        del data["_id"]
+        del data["rating_time"]
+        # del ratings_base["rating_time"]
+
+        data["user_id"] = data["user_id"].astype(int)
+        data["movie_id"] = data["movie_id"].astype(int)
+        # print(data)
+        # print(ratings_base)
+        rate_train = data.values
+        self.Y_data = rate_train if self.uuCF else rate_train[:, [1, 0, 2]]
 
     def add(self, new_data):
         """
@@ -36,19 +55,24 @@ class CollaborativeFilter:
         self.Ybar_data = self.Y_data.copy()
         self.mu = np.zeros((self.n_users,))
         for n in range(self.n_users):
-            # row indices of rating done by user n
-            # since indices need to be integers, we need to convert
-            ids = np.where(users == n)[0].astype(np.int32)
-            # indices of all ratings associated with user n
-            item_ids = self.Y_data[ids, 1]
-            # and the corresponding ratings
-            ratings = self.Y_data[ids, 2]
-            # take mean
-            m = np.mean(ratings)
-            if np.isnan(m):
-                m = 0  # to avoid empty array and nan value
-            # normalize
-            self.Ybar_data[ids, 2] = ratings - self.mu[n]
+            if n > 0:
+                # print("+", n)
+                # row indices of rating done by user n
+                # since indices need to be integers, we need to convert
+                ids = np.where(users == n)[0].astype(np.int32)
+                # print("///", ids)
+                # indices of all ratings associated with user n
+                item_ids = self.Y_data[ids, 1]
+                # and the corresponding ratings
+                ratings = self.Y_data[ids, 2]
+                # print("+***", ratings)
+                # take mean
+                m = np.mean(ratings)
+                # print("===", m)
+                if np.isnan(m):
+                    m = 0  # to avoid empty array and nan value
+                # normalize
+                self.Ybar_data[ids, 2] = ratings - self.mu[n]
 
         ################################################
         # form the rating matrix as a sparse matrix. Sparsity is important
@@ -91,6 +115,7 @@ class CollaborativeFilter:
 
         # and the corresponding similarity levels
         nearest_s = sim[a]
+
         # How did each of 'near' users rated item i
         r = self.Ybar[i, users_rated_i[a]]
 
@@ -139,16 +164,8 @@ class CollaborativeFilter:
             else:
                 print('    Recommend item', u, 'to user(s) : ', recommended_items[:5])
 
-    def run(self):
-        r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
-
-        ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols)
-        print(ratings_base)
-        rate_train = ratings_base.values
-        self.Y_data = rate_train if self.uuCF else rate_train[:, [1, 0, 2]]
-
     def recommend_for_user(self, user_id):
-        return self.recommend(user_id)[:5]
+        return self.recommend(int(user_id))[:5]
 
     def calculate_accuracy(self):
         r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
@@ -165,6 +182,7 @@ class CollaborativeFilter:
         RMSE = np.sqrt(SE / n_tests)
         print('User-user CF, RMSE =', RMSE)
 
+
 if __name__ == "__main__":
     # r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
     #
@@ -179,8 +197,8 @@ if __name__ == "__main__":
     # rate_train[:, :2] -= 1
     # rate_test[:, :2] -= 1
 
-    rs = CollaborativeFilter(k=30, uuCF=1)
-    print(rs.recommend_for_user(943))
+    rs = CollaborativeFilter(k=20, uuCF=1)
+    print(rs.recommend_for_user("1"))
 
     # n_tests = rate_test.shape[0]
     # SE = 0  # squared error

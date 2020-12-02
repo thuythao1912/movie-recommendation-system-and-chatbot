@@ -1,0 +1,3722 @@
+[
+  {
+    "user_id": 1,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 1147880044
+  },
+  {
+    "user_id": 1,
+    "movie_id": 307,
+    "rating_score": 5,
+    "rating_time": 1147868828
+  },
+  {
+    "user_id": 1,
+    "movie_id": 665,
+    "rating_score": 5,
+    "rating_time": 1147878820
+  },
+  {
+    "user_id": 2,
+    "movie_id": 110,
+    "rating_score": 5,
+    "rating_time": 1141416589
+  },
+  {
+    "user_id": 2,
+    "movie_id": 150,
+    "rating_score": 4,
+    "rating_time": 1141415790
+  },
+  {
+    "user_id": 2,
+    "movie_id": 236,
+    "rating_score": 4,
+    "rating_time": 1141415659
+  },
+  {
+    "user_id": 2,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 1141417172
+  },
+  {
+    "user_id": 2,
+    "movie_id": 266,
+    "rating_score": 1,
+    "rating_time": 1141415926
+  },
+  {
+    "user_id": 2,
+    "movie_id": 318,
+    "rating_score": 5,
+    "rating_time": 1141417181
+  },
+  {
+    "user_id": 2,
+    "movie_id": 333,
+    "rating_score": 5,
+    "rating_time": 1141415931
+  },
+  {
+    "user_id": 2,
+    "movie_id": 380,
+    "rating_score": 1,
+    "rating_time": 1141415808
+  },
+  {
+    "user_id": 2,
+    "movie_id": 457,
+    "rating_score": 5,
+    "rating_time": 1141416618
+  },
+  {
+    "user_id": 2,
+    "movie_id": 480,
+    "rating_score": 2,
+    "rating_time": 1141417088
+  },
+  {
+    "user_id": 2,
+    "movie_id": 497,
+    "rating_score": 4,
+    "rating_time": 1141415566
+  },
+  {
+    "user_id": 2,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 1141415816
+  },
+  {
+    "user_id": 2,
+    "movie_id": 553,
+    "rating_score": 2,
+    "rating_time": 1141415539
+  },
+  {
+    "user_id": 2,
+    "movie_id": 588,
+    "rating_score": 2,
+    "rating_time": 1141417189
+  },
+  {
+    "user_id": 2,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1141416748
+  },
+  {
+    "user_id": 2,
+    "movie_id": 653,
+    "rating_score": 3,
+    "rating_time": 1141415552
+  },
+  {
+    "user_id": 2,
+    "movie_id": 914,
+    "rating_score": 4,
+    "rating_time": 1141417642
+  },
+  {
+    "user_id": 3,
+    "movie_id": 1,
+    "rating_score": 4,
+    "rating_time": 1439472215
+  },
+  {
+    "user_id": 3,
+    "movie_id": 50,
+    "rating_score": 5,
+    "rating_time": 1439474391
+  },
+  {
+    "user_id": 3,
+    "movie_id": 111,
+    "rating_score": 4,
+    "rating_time": 1484753849
+  },
+  {
+    "user_id": 3,
+    "movie_id": 172,
+    "rating_score": 4,
+    "rating_time": 1439474871
+  },
+  {
+    "user_id": 3,
+    "movie_id": 173,
+    "rating_score": 3,
+    "rating_time": 1439474869
+  },
+  {
+    "user_id": 3,
+    "movie_id": 214,
+    "rating_score": 5,
+    "rating_time": 1484753888
+  },
+  {
+    "user_id": 3,
+    "movie_id": 260,
+    "rating_score": 4,
+    "rating_time": 1439472239
+  },
+  {
+    "user_id": 3,
+    "movie_id": 293,
+    "rating_score": 5,
+    "rating_time": 1484753912
+  },
+  {
+    "user_id": 3,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 1439474476
+  },
+  {
+    "user_id": 3,
+    "movie_id": 318,
+    "rating_score": 4,
+    "rating_time": 1439472424
+  },
+  {
+    "user_id": 3,
+    "movie_id": 356,
+    "rating_score": 4,
+    "rating_time": 1439472199
+  },
+  {
+    "user_id": 3,
+    "movie_id": 480,
+    "rating_score": 2,
+    "rating_time": 1439472219
+  },
+  {
+    "user_id": 3,
+    "movie_id": 527,
+    "rating_score": 4,
+    "rating_time": 1439472436
+  },
+  {
+    "user_id": 3,
+    "movie_id": 541,
+    "rating_score": 5,
+    "rating_time": 1439474625
+  },
+  {
+    "user_id": 3,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1439474657
+  },
+  {
+    "user_id": 3,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 1439472203
+  },
+  {
+    "user_id": 3,
+    "movie_id": 741,
+    "rating_score": 5,
+    "rating_time": 1484753808
+  },
+  {
+    "user_id": 3,
+    "movie_id": 745,
+    "rating_score": 5,
+    "rating_time": 1439474467
+  },
+  {
+    "user_id": 3,
+    "movie_id": 778,
+    "rating_score": 5,
+    "rating_time": 1484753842
+  },
+  {
+    "user_id": 3,
+    "movie_id": 858,
+    "rating_score": 5,
+    "rating_time": 1439474389
+  },
+  {
+    "user_id": 3,
+    "movie_id": 913,
+    "rating_score": 4,
+    "rating_time": 1439474487
+  },
+  {
+    "user_id": 3,
+    "movie_id": 924,
+    "rating_score": 5,
+    "rating_time": 1439474638
+  },
+  {
+    "user_id": 4,
+    "movie_id": 1,
+    "rating_score": 3,
+    "rating_time": 1573944252
+  },
+  {
+    "user_id": 4,
+    "movie_id": 296,
+    "rating_score": 4,
+    "rating_time": 1573938898
+  },
+  {
+    "user_id": 4,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1573939042
+  },
+  {
+    "user_id": 4,
+    "movie_id": 780,
+    "rating_score": 2,
+    "rating_time": 1573938243
+  },
+  {
+    "user_id": 4,
+    "movie_id": 924,
+    "rating_score": 4,
+    "rating_time": 1573942880
+  },
+  {
+    "user_id": 5,
+    "movie_id": 1,
+    "rating_score": 4,
+    "rating_time": 858625949
+  },
+  {
+    "user_id": 5,
+    "movie_id": 19,
+    "rating_score": 4,
+    "rating_time": 830786345
+  },
+  {
+    "user_id": 5,
+    "movie_id": 32,
+    "rating_score": 5,
+    "rating_time": 830786277
+  },
+  {
+    "user_id": 5,
+    "movie_id": 36,
+    "rating_score": 5,
+    "rating_time": 830786409
+  },
+  {
+    "user_id": 5,
+    "movie_id": 39,
+    "rating_score": 2,
+    "rating_time": 858627955
+  },
+  {
+    "user_id": 5,
+    "movie_id": 47,
+    "rating_score": 5,
+    "rating_time": 833146729
+  },
+  {
+    "user_id": 5,
+    "movie_id": 50,
+    "rating_score": 5,
+    "rating_time": 831900118
+  },
+  {
+    "user_id": 5,
+    "movie_id": 88,
+    "rating_score": 4,
+    "rating_time": 858625904
+  },
+  {
+    "user_id": 5,
+    "movie_id": 95,
+    "rating_score": 3,
+    "rating_time": 858627936
+  },
+  {
+    "user_id": 5,
+    "movie_id": 104,
+    "rating_score": 4,
+    "rating_time": 830786640
+  },
+  {
+    "user_id": 5,
+    "movie_id": 113,
+    "rating_score": 3,
+    "rating_time": 858626008
+  },
+  {
+    "user_id": 5,
+    "movie_id": 122,
+    "rating_score": 3,
+    "rating_time": 830786631
+  },
+  {
+    "user_id": 5,
+    "movie_id": 141,
+    "rating_score": 5,
+    "rating_time": 858625837
+  },
+  {
+    "user_id": 5,
+    "movie_id": 147,
+    "rating_score": 5,
+    "rating_time": 830786700
+  },
+  {
+    "user_id": 5,
+    "movie_id": 150,
+    "rating_score": 5,
+    "rating_time": 830786155
+  },
+  {
+    "user_id": 5,
+    "movie_id": 153,
+    "rating_score": 3,
+    "rating_time": 830786193
+  },
+  {
+    "user_id": 5,
+    "movie_id": 170,
+    "rating_score": 4,
+    "rating_time": 858627599
+  },
+  {
+    "user_id": 5,
+    "movie_id": 191,
+    "rating_score": 2,
+    "rating_time": 830786765
+  },
+  {
+    "user_id": 5,
+    "movie_id": 216,
+    "rating_score": 4,
+    "rating_time": 830786541
+  },
+  {
+    "user_id": 5,
+    "movie_id": 218,
+    "rating_score": 3,
+    "rating_time": 830786491
+  },
+  {
+    "user_id": 5,
+    "movie_id": 219,
+    "rating_score": 3,
+    "rating_time": 830788219
+  },
+  {
+    "user_id": 5,
+    "movie_id": 224,
+    "rating_score": 4,
+    "rating_time": 830786425
+  },
+  {
+    "user_id": 5,
+    "movie_id": 231,
+    "rating_score": 4,
+    "rating_time": 830786244
+  },
+  {
+    "user_id": 5,
+    "movie_id": 235,
+    "rating_score": 3,
+    "rating_time": 830786380
+  },
+  {
+    "user_id": 5,
+    "movie_id": 238,
+    "rating_score": 2,
+    "rating_time": 830786777
+  },
+  {
+    "user_id": 5,
+    "movie_id": 248,
+    "rating_score": 2,
+    "rating_time": 830786569
+  },
+  {
+    "user_id": 5,
+    "movie_id": 253,
+    "rating_score": 4,
+    "rating_time": 830786263
+  },
+  {
+    "user_id": 5,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 858625863
+  },
+  {
+    "user_id": 5,
+    "movie_id": 267,
+    "rating_score": 2,
+    "rating_time": 830786608
+  },
+  {
+    "user_id": 5,
+    "movie_id": 277,
+    "rating_score": 3,
+    "rating_time": 858627645
+  },
+  {
+    "user_id": 5,
+    "movie_id": 288,
+    "rating_score": 4,
+    "rating_time": 830786277
+  },
+  {
+    "user_id": 5,
+    "movie_id": 292,
+    "rating_score": 5,
+    "rating_time": 830786263
+  },
+  {
+    "user_id": 5,
+    "movie_id": 296,
+    "rating_score": 4,
+    "rating_time": 830786155
+  },
+  {
+    "user_id": 5,
+    "movie_id": 300,
+    "rating_score": 3,
+    "rating_time": 830786263
+  },
+  {
+    "user_id": 5,
+    "movie_id": 312,
+    "rating_score": 3,
+    "rating_time": 858628294
+  },
+  {
+    "user_id": 5,
+    "movie_id": 333,
+    "rating_score": 4,
+    "rating_time": 830786478
+  },
+  {
+    "user_id": 5,
+    "movie_id": 337,
+    "rating_score": 5,
+    "rating_time": 830786345
+  },
+  {
+    "user_id": 5,
+    "movie_id": 340,
+    "rating_score": 5,
+    "rating_time": 830786668
+  },
+  {
+    "user_id": 5,
+    "movie_id": 342,
+    "rating_score": 3,
+    "rating_time": 858628173
+  },
+  {
+    "user_id": 5,
+    "movie_id": 344,
+    "rating_score": 4,
+    "rating_time": 830786193
+  },
+  {
+    "user_id": 5,
+    "movie_id": 350,
+    "rating_score": 5,
+    "rating_time": 831900487
+  },
+  {
+    "user_id": 5,
+    "movie_id": 356,
+    "rating_score": 4,
+    "rating_time": 833146744
+  },
+  {
+    "user_id": 5,
+    "movie_id": 364,
+    "rating_score": 4,
+    "rating_time": 831900357
+  },
+  {
+    "user_id": 5,
+    "movie_id": 372,
+    "rating_score": 4,
+    "rating_time": 833146785
+  },
+  {
+    "user_id": 5,
+    "movie_id": 416,
+    "rating_score": 3,
+    "rating_time": 830786657
+  },
+  {
+    "user_id": 5,
+    "movie_id": 432,
+    "rating_score": 3,
+    "rating_time": 830786317
+  },
+  {
+    "user_id": 5,
+    "movie_id": 435,
+    "rating_score": 2,
+    "rating_time": 830786363
+  },
+  {
+    "user_id": 5,
+    "movie_id": 440,
+    "rating_score": 3,
+    "rating_time": 831900153
+  },
+  {
+    "user_id": 5,
+    "movie_id": 441,
+    "rating_score": 4,
+    "rating_time": 858628093
+  },
+  {
+    "user_id": 5,
+    "movie_id": 457,
+    "rating_score": 5,
+    "rating_time": 831900450
+  },
+  {
+    "user_id": 5,
+    "movie_id": 477,
+    "rating_score": 4,
+    "rating_time": 830786530
+  },
+  {
+    "user_id": 5,
+    "movie_id": 487,
+    "rating_score": 3,
+    "rating_time": 858628282
+  },
+  {
+    "user_id": 5,
+    "movie_id": 491,
+    "rating_score": 3,
+    "rating_time": 858626883
+  },
+  {
+    "user_id": 5,
+    "movie_id": 500,
+    "rating_score": 4,
+    "rating_time": 858628038
+  },
+  {
+    "user_id": 5,
+    "movie_id": 524,
+    "rating_score": 3,
+    "rating_time": 833146785
+  },
+  {
+    "user_id": 5,
+    "movie_id": 542,
+    "rating_score": 4,
+    "rating_time": 858628216
+  },
+  {
+    "user_id": 5,
+    "movie_id": 553,
+    "rating_score": 3,
+    "rating_time": 830786394
+  },
+  {
+    "user_id": 5,
+    "movie_id": 588,
+    "rating_score": 4,
+    "rating_time": 830786193
+  },
+  {
+    "user_id": 5,
+    "movie_id": 590,
+    "rating_score": 3,
+    "rating_time": 830786155
+  },
+  {
+    "user_id": 5,
+    "movie_id": 592,
+    "rating_score": 3,
+    "rating_time": 830786155
+  },
+  {
+    "user_id": 5,
+    "movie_id": 593,
+    "rating_score": 5,
+    "rating_time": 831900433
+  },
+  {
+    "user_id": 5,
+    "movie_id": 595,
+    "rating_score": 3,
+    "rating_time": 830786221
+  },
+  {
+    "user_id": 5,
+    "movie_id": 608,
+    "rating_score": 3,
+    "rating_time": 858626008
+  },
+  {
+    "user_id": 5,
+    "movie_id": 628,
+    "rating_score": 5,
+    "rating_time": 830786711
+  },
+  {
+    "user_id": 5,
+    "movie_id": 671,
+    "rating_score": 5,
+    "rating_time": 858625838
+  },
+  {
+    "user_id": 5,
+    "movie_id": 733,
+    "rating_score": 5,
+    "rating_time": 858625837
+  },
+  {
+    "user_id": 5,
+    "movie_id": 736,
+    "rating_score": 3,
+    "rating_time": 858626232
+  },
+  {
+    "user_id": 5,
+    "movie_id": 778,
+    "rating_score": 5,
+    "rating_time": 858625837
+  },
+  {
+    "user_id": 5,
+    "movie_id": 780,
+    "rating_score": 4,
+    "rating_time": 858625917
+  },
+  {
+    "user_id": 5,
+    "movie_id": 784,
+    "rating_score": 2,
+    "rating_time": 835334972
+  },
+  {
+    "user_id": 5,
+    "movie_id": 786,
+    "rating_score": 2,
+    "rating_time": 858625935
+  },
+  {
+    "user_id": 5,
+    "movie_id": 788,
+    "rating_score": 3,
+    "rating_time": 858625917
+  },
+  {
+    "user_id": 5,
+    "movie_id": 802,
+    "rating_score": 5,
+    "rating_time": 858625986
+  },
+  {
+    "user_id": 5,
+    "movie_id": 839,
+    "rating_score": 3,
+    "rating_time": 858626023
+  },
+  {
+    "user_id": 6,
+    "movie_id": 161,
+    "rating_score": 2,
+    "rating_time": 945141530
+  },
+  {
+    "user_id": 6,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 945142152
+  },
+  {
+    "user_id": 6,
+    "movie_id": 318,
+    "rating_score": 5,
+    "rating_time": 945142558
+  },
+  {
+    "user_id": 6,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 945142152
+  },
+  {
+    "user_id": 6,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 945142787
+  },
+  {
+    "user_id": 6,
+    "movie_id": 608,
+    "rating_score": 5,
+    "rating_time": 945142787
+  },
+  {
+    "user_id": 6,
+    "movie_id": 858,
+    "rating_score": 5,
+    "rating_time": 945141827
+  },
+  {
+    "user_id": 6,
+    "movie_id": 902,
+    "rating_score": 4,
+    "rating_time": 945141564
+  },
+  {
+    "user_id": 6,
+    "movie_id": 912,
+    "rating_score": 4,
+    "rating_time": 945143358
+  },
+  {
+    "user_id": 6,
+    "movie_id": 913,
+    "rating_score": 4,
+    "rating_time": 945143358
+  },
+  {
+    "user_id": 6,
+    "movie_id": 919,
+    "rating_score": 5,
+    "rating_time": 945143419
+  },
+  {
+    "user_id": 6,
+    "movie_id": 924,
+    "rating_score": 4,
+    "rating_time": 945143285
+  },
+  {
+    "user_id": 7,
+    "movie_id": 10,
+    "rating_score": 3,
+    "rating_time": 835444813
+  },
+  {
+    "user_id": 7,
+    "movie_id": 17,
+    "rating_score": 4,
+    "rating_time": 835444942
+  },
+  {
+    "user_id": 7,
+    "movie_id": 28,
+    "rating_score": 4,
+    "rating_time": 835444989
+  },
+  {
+    "user_id": 7,
+    "movie_id": 58,
+    "rating_score": 5,
+    "rating_time": 835444970
+  },
+  {
+    "user_id": 7,
+    "movie_id": 150,
+    "rating_score": 4,
+    "rating_time": 835444730
+  },
+  {
+    "user_id": 7,
+    "movie_id": 153,
+    "rating_score": 3,
+    "rating_time": 835444767
+  },
+  {
+    "user_id": 7,
+    "movie_id": 165,
+    "rating_score": 3,
+    "rating_time": 835444767
+  },
+  {
+    "user_id": 7,
+    "movie_id": 185,
+    "rating_score": 3,
+    "rating_time": 835444841
+  },
+  {
+    "user_id": 7,
+    "movie_id": 232,
+    "rating_score": 4,
+    "rating_time": 835444970
+  },
+  {
+    "user_id": 7,
+    "movie_id": 265,
+    "rating_score": 4,
+    "rating_time": 835444989
+  },
+  {
+    "user_id": 7,
+    "movie_id": 288,
+    "rating_score": 3,
+    "rating_time": 835444864
+  },
+  {
+    "user_id": 7,
+    "movie_id": 296,
+    "rating_score": 4,
+    "rating_time": 835444730
+  },
+  {
+    "user_id": 7,
+    "movie_id": 306,
+    "rating_score": 5,
+    "rating_time": 835444970
+  },
+  {
+    "user_id": 7,
+    "movie_id": 307,
+    "rating_score": 4,
+    "rating_time": 835445009
+  },
+  {
+    "user_id": 7,
+    "movie_id": 308,
+    "rating_score": 4,
+    "rating_time": 835445009
+  },
+  {
+    "user_id": 7,
+    "movie_id": 329,
+    "rating_score": 3,
+    "rating_time": 835444792
+  },
+  {
+    "user_id": 7,
+    "movie_id": 344,
+    "rating_score": 2,
+    "rating_time": 835444767
+  },
+  {
+    "user_id": 7,
+    "movie_id": 410,
+    "rating_score": 3,
+    "rating_time": 835444864
+  },
+  {
+    "user_id": 7,
+    "movie_id": 457,
+    "rating_score": 3,
+    "rating_time": 835444841
+  },
+  {
+    "user_id": 7,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 835444989
+  },
+  {
+    "user_id": 7,
+    "movie_id": 588,
+    "rating_score": 4,
+    "rating_time": 835444767
+  },
+  {
+    "user_id": 7,
+    "movie_id": 590,
+    "rating_score": 3,
+    "rating_time": 835444730
+  },
+  {
+    "user_id": 7,
+    "movie_id": 592,
+    "rating_score": 3,
+    "rating_time": 835444730
+  },
+  {
+    "user_id": 7,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 835444841
+  },
+  {
+    "user_id": 7,
+    "movie_id": 595,
+    "rating_score": 4,
+    "rating_time": 835444792
+  },
+  {
+    "user_id": 8,
+    "movie_id": 1,
+    "rating_score": 4,
+    "rating_time": 890492517
+  },
+  {
+    "user_id": 8,
+    "movie_id": 3,
+    "rating_score": 4,
+    "rating_time": 890492906
+  },
+  {
+    "user_id": 8,
+    "movie_id": 6,
+    "rating_score": 3,
+    "rating_time": 890489713
+  },
+  {
+    "user_id": 8,
+    "movie_id": 7,
+    "rating_score": 1,
+    "rating_time": 890492414
+  },
+  {
+    "user_id": 8,
+    "movie_id": 10,
+    "rating_score": 4,
+    "rating_time": 890490169
+  },
+  {
+    "user_id": 8,
+    "movie_id": 11,
+    "rating_score": 3,
+    "rating_time": 890493105
+  },
+  {
+    "user_id": 8,
+    "movie_id": 16,
+    "rating_score": 4,
+    "rating_time": 890489673
+  },
+  {
+    "user_id": 8,
+    "movie_id": 18,
+    "rating_score": 4,
+    "rating_time": 890509709
+  },
+  {
+    "user_id": 8,
+    "movie_id": 21,
+    "rating_score": 3,
+    "rating_time": 890489970
+  },
+  {
+    "user_id": 8,
+    "movie_id": 25,
+    "rating_score": 3,
+    "rating_time": 890510270
+  },
+  {
+    "user_id": 8,
+    "movie_id": 27,
+    "rating_score": 3,
+    "rating_time": 890509664
+  },
+  {
+    "user_id": 8,
+    "movie_id": 32,
+    "rating_score": 3,
+    "rating_time": 890489481
+  },
+  {
+    "user_id": 8,
+    "movie_id": 39,
+    "rating_score": 3,
+    "rating_time": 890492984
+  },
+  {
+    "user_id": 8,
+    "movie_id": 47,
+    "rating_score": 5,
+    "rating_time": 890489560
+  },
+  {
+    "user_id": 8,
+    "movie_id": 50,
+    "rating_score": 4,
+    "rating_time": 890489650
+  },
+  {
+    "user_id": 8,
+    "movie_id": 62,
+    "rating_score": 4,
+    "rating_time": 890490090
+  },
+  {
+    "user_id": 8,
+    "movie_id": 69,
+    "rating_score": 5,
+    "rating_time": 890510793
+  },
+  {
+    "user_id": 8,
+    "movie_id": 95,
+    "rating_score": 4,
+    "rating_time": 890510889
+  },
+  {
+    "user_id": 8,
+    "movie_id": 103,
+    "rating_score": 2,
+    "rating_time": 890510793
+  },
+  {
+    "user_id": 8,
+    "movie_id": 104,
+    "rating_score": 5,
+    "rating_time": 890492474
+  },
+  {
+    "user_id": 8,
+    "movie_id": 110,
+    "rating_score": 5,
+    "rating_time": 890489328
+  },
+  {
+    "user_id": 8,
+    "movie_id": 112,
+    "rating_score": 5,
+    "rating_time": 890492364
+  },
+  {
+    "user_id": 8,
+    "movie_id": 125,
+    "rating_score": 3,
+    "rating_time": 890490150
+  },
+  {
+    "user_id": 8,
+    "movie_id": 145,
+    "rating_score": 5,
+    "rating_time": 890490199
+  },
+  {
+    "user_id": 8,
+    "movie_id": 150,
+    "rating_score": 2,
+    "rating_time": 890492931
+  },
+  {
+    "user_id": 8,
+    "movie_id": 161,
+    "rating_score": 5,
+    "rating_time": 890489825
+  },
+  {
+    "user_id": 8,
+    "movie_id": 163,
+    "rating_score": 4,
+    "rating_time": 890493007
+  },
+  {
+    "user_id": 8,
+    "movie_id": 165,
+    "rating_score": 5,
+    "rating_time": 890509586
+  },
+  {
+    "user_id": 8,
+    "movie_id": 180,
+    "rating_score": 4,
+    "rating_time": 890493105
+  },
+  {
+    "user_id": 8,
+    "movie_id": 198,
+    "rating_score": 5,
+    "rating_time": 890490110
+  },
+  {
+    "user_id": 8,
+    "movie_id": 201,
+    "rating_score": 1,
+    "rating_time": 890489591
+  },
+  {
+    "user_id": 8,
+    "movie_id": 207,
+    "rating_score": 2,
+    "rating_time": 890490150
+  },
+  {
+    "user_id": 8,
+    "movie_id": 209,
+    "rating_score": 4,
+    "rating_time": 891279691
+  },
+  {
+    "user_id": 8,
+    "movie_id": 223,
+    "rating_score": 2,
+    "rating_time": 890489809
+  },
+  {
+    "user_id": 8,
+    "movie_id": 225,
+    "rating_score": 2,
+    "rating_time": 890489928
+  },
+  {
+    "user_id": 8,
+    "movie_id": 237,
+    "rating_score": 4,
+    "rating_time": 890510417
+  },
+  {
+    "user_id": 8,
+    "movie_id": 253,
+    "rating_score": 4,
+    "rating_time": 890490128
+  },
+  {
+    "user_id": 8,
+    "movie_id": 260,
+    "rating_score": 3,
+    "rating_time": 890489513
+  },
+  {
+    "user_id": 8,
+    "movie_id": 290,
+    "rating_score": 4,
+    "rating_time": 890489876
+  },
+  {
+    "user_id": 8,
+    "movie_id": 292,
+    "rating_score": 5,
+    "rating_time": 890510435
+  },
+  {
+    "user_id": 8,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 890489713
+  },
+  {
+    "user_id": 8,
+    "movie_id": 316,
+    "rating_score": 2,
+    "rating_time": 890492967
+  },
+  {
+    "user_id": 8,
+    "movie_id": 318,
+    "rating_score": 1,
+    "rating_time": 890489849
+  },
+  {
+    "user_id": 8,
+    "movie_id": 325,
+    "rating_score": 3,
+    "rating_time": 890511598
+  },
+  {
+    "user_id": 8,
+    "movie_id": 333,
+    "rating_score": 5,
+    "rating_time": 890490069
+  },
+  {
+    "user_id": 8,
+    "movie_id": 344,
+    "rating_score": 5,
+    "rating_time": 890510340
+  },
+  {
+    "user_id": 8,
+    "movie_id": 356,
+    "rating_score": 5,
+    "rating_time": 890489591
+  },
+  {
+    "user_id": 8,
+    "movie_id": 358,
+    "rating_score": 4,
+    "rating_time": 890489996
+  },
+  {
+    "user_id": 8,
+    "movie_id": 364,
+    "rating_score": 4,
+    "rating_time": 890489482
+  },
+  {
+    "user_id": 8,
+    "movie_id": 377,
+    "rating_score": 5,
+    "rating_time": 890489615
+  },
+  {
+    "user_id": 8,
+    "movie_id": 380,
+    "rating_score": 5,
+    "rating_time": 890489895
+  },
+  {
+    "user_id": 8,
+    "movie_id": 428,
+    "rating_score": 4,
+    "rating_time": 890492906
+  },
+  {
+    "user_id": 8,
+    "movie_id": 440,
+    "rating_score": 4,
+    "rating_time": 890511598
+  },
+  {
+    "user_id": 8,
+    "movie_id": 442,
+    "rating_score": 3,
+    "rating_time": 890492414
+  },
+  {
+    "user_id": 8,
+    "movie_id": 454,
+    "rating_score": 5,
+    "rating_time": 890489560
+  },
+  {
+    "user_id": 8,
+    "movie_id": 457,
+    "rating_score": 5,
+    "rating_time": 890508237
+  },
+  {
+    "user_id": 8,
+    "movie_id": 474,
+    "rating_score": 4,
+    "rating_time": 890490199
+  },
+  {
+    "user_id": 8,
+    "movie_id": 480,
+    "rating_score": 3,
+    "rating_time": 890490169
+  },
+  {
+    "user_id": 8,
+    "movie_id": 490,
+    "rating_score": 4,
+    "rating_time": 890510417
+  },
+  {
+    "user_id": 8,
+    "movie_id": 494,
+    "rating_score": 3,
+    "rating_time": 890510394
+  },
+  {
+    "user_id": 8,
+    "movie_id": 511,
+    "rating_score": 4,
+    "rating_time": 890489482
+  },
+  {
+    "user_id": 8,
+    "movie_id": 524,
+    "rating_score": 4,
+    "rating_time": 890492967
+  },
+  {
+    "user_id": 8,
+    "movie_id": 551,
+    "rating_score": 2,
+    "rating_time": 890489295
+  },
+  {
+    "user_id": 8,
+    "movie_id": 553,
+    "rating_score": 2,
+    "rating_time": 890490150
+  },
+  {
+    "user_id": 8,
+    "movie_id": 575,
+    "rating_score": 4,
+    "rating_time": 890492906
+  },
+  {
+    "user_id": 8,
+    "movie_id": 588,
+    "rating_score": 5,
+    "rating_time": 890492517
+  },
+  {
+    "user_id": 8,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 890489411
+  },
+  {
+    "user_id": 8,
+    "movie_id": 590,
+    "rating_score": 3,
+    "rating_time": 890490020
+  },
+  {
+    "user_id": 8,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 890490090
+  },
+  {
+    "user_id": 8,
+    "movie_id": 594,
+    "rating_score": 2,
+    "rating_time": 891279691
+  },
+  {
+    "user_id": 8,
+    "movie_id": 595,
+    "rating_score": 2,
+    "rating_time": 890489432
+  },
+  {
+    "user_id": 8,
+    "movie_id": 608,
+    "rating_score": 4,
+    "rating_time": 890489560
+  },
+  {
+    "user_id": 8,
+    "movie_id": 628,
+    "rating_score": 4,
+    "rating_time": 890509729
+  },
+  {
+    "user_id": 8,
+    "movie_id": 648,
+    "rating_score": 5,
+    "rating_time": 890490069
+  },
+  {
+    "user_id": 8,
+    "movie_id": 708,
+    "rating_score": 2,
+    "rating_time": 890492474
+  },
+  {
+    "user_id": 8,
+    "movie_id": 725,
+    "rating_score": 3,
+    "rating_time": 891279691
+  },
+  {
+    "user_id": 8,
+    "movie_id": 733,
+    "rating_score": 4,
+    "rating_time": 890489454
+  },
+  {
+    "user_id": 8,
+    "movie_id": 750,
+    "rating_score": 4,
+    "rating_time": 890489895
+  },
+  {
+    "user_id": 8,
+    "movie_id": 780,
+    "rating_score": 2,
+    "rating_time": 890490069
+  },
+  {
+    "user_id": 8,
+    "movie_id": 785,
+    "rating_score": 4,
+    "rating_time": 890510270
+  },
+  {
+    "user_id": 8,
+    "movie_id": 786,
+    "rating_score": 5,
+    "rating_time": 890490020
+  },
+  {
+    "user_id": 8,
+    "movie_id": 799,
+    "rating_score": 4,
+    "rating_time": 890510920
+  },
+  {
+    "user_id": 8,
+    "movie_id": 805,
+    "rating_score": 3,
+    "rating_time": 890510417
+  },
+  {
+    "user_id": 8,
+    "movie_id": 875,
+    "rating_score": 4,
+    "rating_time": 890489513
+  },
+  {
+    "user_id": 8,
+    "movie_id": 903,
+    "rating_score": 4,
+    "rating_time": 890489328
+  },
+  {
+    "user_id": 8,
+    "movie_id": 904,
+    "rating_score": 4,
+    "rating_time": 890509085
+  },
+  {
+    "user_id": 8,
+    "movie_id": 923,
+    "rating_score": 3,
+    "rating_time": 890489615
+  },
+  {
+    "user_id": 8,
+    "movie_id": 924,
+    "rating_score": 5,
+    "rating_time": 890510212
+  },
+  {
+    "user_id": 8,
+    "movie_id": 953,
+    "rating_score": 4,
+    "rating_time": 890489615
+  },
+  {
+    "user_id": 9,
+    "movie_id": 2,
+    "rating_score": 5,
+    "rating_time": 859383142
+  },
+  {
+    "user_id": 9,
+    "movie_id": 10,
+    "rating_score": 5,
+    "rating_time": 859383403
+  },
+  {
+    "user_id": 9,
+    "movie_id": 34,
+    "rating_score": 3,
+    "rating_time": 859383102
+  },
+  {
+    "user_id": 9,
+    "movie_id": 39,
+    "rating_score": 3,
+    "rating_time": 859383520
+  },
+  {
+    "user_id": 9,
+    "movie_id": 61,
+    "rating_score": 4,
+    "rating_time": 859382231
+  },
+  {
+    "user_id": 9,
+    "movie_id": 105,
+    "rating_score": 4,
+    "rating_time": 859384701
+  },
+  {
+    "user_id": 9,
+    "movie_id": 116,
+    "rating_score": 5,
+    "rating_time": 859382367
+  },
+  {
+    "user_id": 9,
+    "movie_id": 150,
+    "rating_score": 4,
+    "rating_time": 859384328
+  },
+  {
+    "user_id": 9,
+    "movie_id": 158,
+    "rating_score": 4,
+    "rating_time": 859383351
+  },
+  {
+    "user_id": 9,
+    "movie_id": 161,
+    "rating_score": 5,
+    "rating_time": 859382967
+  },
+  {
+    "user_id": 9,
+    "movie_id": 165,
+    "rating_score": 4,
+    "rating_time": 859383068
+  },
+  {
+    "user_id": 9,
+    "movie_id": 168,
+    "rating_score": 5,
+    "rating_time": 859383520
+  },
+  {
+    "user_id": 9,
+    "movie_id": 225,
+    "rating_score": 5,
+    "rating_time": 859384328
+  },
+  {
+    "user_id": 9,
+    "movie_id": 256,
+    "rating_score": 5,
+    "rating_time": 859384103
+  },
+  {
+    "user_id": 9,
+    "movie_id": 260,
+    "rating_score": 4,
+    "rating_time": 859382015
+  },
+  {
+    "user_id": 9,
+    "movie_id": 273,
+    "rating_score": 3,
+    "rating_time": 859384026
+  },
+  {
+    "user_id": 9,
+    "movie_id": 276,
+    "rating_score": 4,
+    "rating_time": 859383859
+  },
+  {
+    "user_id": 9,
+    "movie_id": 277,
+    "rating_score": 5,
+    "rating_time": 859383172
+  },
+  {
+    "user_id": 9,
+    "movie_id": 280,
+    "rating_score": 4,
+    "rating_time": 859383018
+  },
+  {
+    "user_id": 9,
+    "movie_id": 317,
+    "rating_score": 4,
+    "rating_time": 859383753
+  },
+  {
+    "user_id": 9,
+    "movie_id": 329,
+    "rating_score": 5,
+    "rating_time": 859382903
+  },
+  {
+    "user_id": 9,
+    "movie_id": 350,
+    "rating_score": 5,
+    "rating_time": 859383102
+  },
+  {
+    "user_id": 9,
+    "movie_id": 355,
+    "rating_score": 5,
+    "rating_time": 859384133
+  },
+  {
+    "user_id": 9,
+    "movie_id": 356,
+    "rating_score": 5,
+    "rating_time": 859383448
+  },
+  {
+    "user_id": 9,
+    "movie_id": 361,
+    "rating_score": 4,
+    "rating_time": 859383610
+  },
+  {
+    "user_id": 9,
+    "movie_id": 362,
+    "rating_score": 5,
+    "rating_time": 859382967
+  },
+  {
+    "user_id": 9,
+    "movie_id": 366,
+    "rating_score": 3,
+    "rating_time": 859383374
+  },
+  {
+    "user_id": 9,
+    "movie_id": 370,
+    "rating_score": 2,
+    "rating_time": 859383448
+  },
+  {
+    "user_id": 9,
+    "movie_id": 374,
+    "rating_score": 3,
+    "rating_time": 859383644
+  },
+  {
+    "user_id": 9,
+    "movie_id": 378,
+    "rating_score": 4,
+    "rating_time": 859384181
+  },
+  {
+    "user_id": 9,
+    "movie_id": 380,
+    "rating_score": 5,
+    "rating_time": 859384283
+  },
+  {
+    "user_id": 9,
+    "movie_id": 387,
+    "rating_score": 3,
+    "rating_time": 859385955
+  },
+  {
+    "user_id": 9,
+    "movie_id": 410,
+    "rating_score": 3,
+    "rating_time": 859383753
+  },
+  {
+    "user_id": 9,
+    "movie_id": 419,
+    "rating_score": 4,
+    "rating_time": 859383567
+  },
+  {
+    "user_id": 9,
+    "movie_id": 420,
+    "rating_score": 4,
+    "rating_time": 859383247
+  },
+  {
+    "user_id": 9,
+    "movie_id": 432,
+    "rating_score": 3,
+    "rating_time": 859383753
+  },
+  {
+    "user_id": 9,
+    "movie_id": 434,
+    "rating_score": 5,
+    "rating_time": 859383142
+  },
+  {
+    "user_id": 9,
+    "movie_id": 435,
+    "rating_score": 3,
+    "rating_time": 859384480
+  },
+  {
+    "user_id": 9,
+    "movie_id": 442,
+    "rating_score": 3,
+    "rating_time": 859383979
+  },
+  {
+    "user_id": 9,
+    "movie_id": 445,
+    "rating_score": 4,
+    "rating_time": 859384328
+  },
+  {
+    "user_id": 9,
+    "movie_id": 454,
+    "rating_score": 4,
+    "rating_time": 859383194
+  },
+  {
+    "user_id": 9,
+    "movie_id": 455,
+    "rating_score": 4,
+    "rating_time": 859383317
+  },
+  {
+    "user_id": 9,
+    "movie_id": 464,
+    "rating_score": 4,
+    "rating_time": 859383448
+  },
+  {
+    "user_id": 9,
+    "movie_id": 466,
+    "rating_score": 2,
+    "rating_time": 859383713
+  },
+  {
+    "user_id": 9,
+    "movie_id": 474,
+    "rating_score": 4,
+    "rating_time": 859383047
+  },
+  {
+    "user_id": 9,
+    "movie_id": 500,
+    "rating_score": 5,
+    "rating_time": 859382967
+  },
+  {
+    "user_id": 9,
+    "movie_id": 516,
+    "rating_score": 3,
+    "rating_time": 859383317
+  },
+  {
+    "user_id": 9,
+    "movie_id": 519,
+    "rating_score": 5,
+    "rating_time": 859384380
+  },
+  {
+    "user_id": 9,
+    "movie_id": 520,
+    "rating_score": 3,
+    "rating_time": 859383403
+  },
+  {
+    "user_id": 9,
+    "movie_id": 539,
+    "rating_score": 5,
+    "rating_time": 859384283
+  },
+  {
+    "user_id": 9,
+    "movie_id": 540,
+    "rating_score": 4,
+    "rating_time": 859383979
+  },
+  {
+    "user_id": 9,
+    "movie_id": 541,
+    "rating_score": 4,
+    "rating_time": 859384380
+  },
+  {
+    "user_id": 9,
+    "movie_id": 585,
+    "rating_score": 3,
+    "rating_time": 859383792
+  },
+  {
+    "user_id": 9,
+    "movie_id": 586,
+    "rating_score": 5,
+    "rating_time": 859382967
+  },
+  {
+    "user_id": 9,
+    "movie_id": 587,
+    "rating_score": 5,
+    "rating_time": 859383644
+  },
+  {
+    "user_id": 9,
+    "movie_id": 588,
+    "rating_score": 5,
+    "rating_time": 859382967
+  },
+  {
+    "user_id": 9,
+    "movie_id": 589,
+    "rating_score": 3,
+    "rating_time": 859383172
+  },
+  {
+    "user_id": 9,
+    "movie_id": 590,
+    "rating_score": 4,
+    "rating_time": 859383351
+  },
+  {
+    "user_id": 9,
+    "movie_id": 592,
+    "rating_score": 4,
+    "rating_time": 859383540
+  },
+  {
+    "user_id": 9,
+    "movie_id": 593,
+    "rating_score": 5,
+    "rating_time": 859383172
+  },
+  {
+    "user_id": 9,
+    "movie_id": 594,
+    "rating_score": 5,
+    "rating_time": 859383047
+  },
+  {
+    "user_id": 9,
+    "movie_id": 596,
+    "rating_score": 4,
+    "rating_time": 859383047
+  },
+  {
+    "user_id": 9,
+    "movie_id": 597,
+    "rating_score": 5,
+    "rating_time": 859383753
+  },
+  {
+    "user_id": 9,
+    "movie_id": 611,
+    "rating_score": 1,
+    "rating_time": 859384209
+  },
+  {
+    "user_id": 9,
+    "movie_id": 616,
+    "rating_score": 5,
+    "rating_time": 859383018
+  },
+  {
+    "user_id": 9,
+    "movie_id": 667,
+    "rating_score": 5,
+    "rating_time": 859382108
+  },
+  {
+    "user_id": 9,
+    "movie_id": 805,
+    "rating_score": 5,
+    "rating_time": 859382042
+  },
+  {
+    "user_id": 9,
+    "movie_id": 818,
+    "rating_score": 3,
+    "rating_time": 859382301
+  },
+  {
+    "user_id": 9,
+    "movie_id": 852,
+    "rating_score": 4,
+    "rating_time": 859384156
+  },
+  {
+    "user_id": 9,
+    "movie_id": 858,
+    "rating_score": 3,
+    "rating_time": 859382278
+  },
+  {
+    "user_id": 9,
+    "movie_id": 914,
+    "rating_score": 5,
+    "rating_time": 859385363
+  },
+  {
+    "user_id": 9,
+    "movie_id": 919,
+    "rating_score": 5,
+    "rating_time": 859384939
+  },
+  {
+    "user_id": 9,
+    "movie_id": 920,
+    "rating_score": 5,
+    "rating_time": 859385601
+  },
+  {
+    "user_id": 9,
+    "movie_id": 924,
+    "rating_score": 3,
+    "rating_time": 859385079
+  },
+  {
+    "user_id": 9,
+    "movie_id": 934,
+    "rating_score": 4,
+    "rating_time": 859385043
+  },
+  {
+    "user_id": 9,
+    "movie_id": 938,
+    "rating_score": 4,
+    "rating_time": 859385878
+  },
+  {
+    "user_id": 9,
+    "movie_id": 943,
+    "rating_score": 4,
+    "rating_time": 859385854
+  },
+  {
+    "user_id": 9,
+    "movie_id": 952,
+    "rating_score": 4,
+    "rating_time": 859385812
+  },
+  {
+    "user_id": 9,
+    "movie_id": 953,
+    "rating_score": 4,
+    "rating_time": 859385679
+  },
+  {
+    "user_id": 9,
+    "movie_id": 954,
+    "rating_score": 4,
+    "rating_time": 859385456
+  },
+  {
+    "user_id": 9,
+    "movie_id": 968,
+    "rating_score": 3,
+    "rating_time": 859385251
+  },
+  {
+    "user_id": 9,
+    "movie_id": 969,
+    "rating_score": 3,
+    "rating_time": 859385560
+  },
+  {
+    "user_id": 9,
+    "movie_id": 971,
+    "rating_score": 3,
+    "rating_time": 859385601
+  },
+  {
+    "user_id": 10,
+    "movie_id": 32,
+    "rating_score": 4,
+    "rating_time": 1227571055
+  },
+  {
+    "user_id": 10,
+    "movie_id": 50,
+    "rating_score": 5,
+    "rating_time": 1227571375
+  },
+  {
+    "user_id": 10,
+    "movie_id": 110,
+    "rating_score": 4,
+    "rating_time": 1227571327
+  },
+  {
+    "user_id": 10,
+    "movie_id": 150,
+    "rating_score": 4,
+    "rating_time": 1227571337
+  },
+  {
+    "user_id": 10,
+    "movie_id": 193,
+    "rating_score": 1,
+    "rating_time": 1227570860
+  },
+  {
+    "user_id": 10,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 1227571325
+  },
+  {
+    "user_id": 10,
+    "movie_id": 480,
+    "rating_score": 4,
+    "rating_time": 1227571315
+  },
+  {
+    "user_id": 10,
+    "movie_id": 588,
+    "rating_score": 3,
+    "rating_time": 1227571371
+  },
+  {
+    "user_id": 10,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1227571343
+  },
+  {
+    "user_id": 10,
+    "movie_id": 592,
+    "rating_score": 3,
+    "rating_time": 1227571332
+  },
+  {
+    "user_id": 10,
+    "movie_id": 780,
+    "rating_score": 3,
+    "rating_time": 1227571352
+  },
+  {
+    "user_id": 11,
+    "movie_id": 527,
+    "rating_score": 4,
+    "rating_time": 1208039263
+  },
+  {
+    "user_id": 12,
+    "movie_id": 1,
+    "rating_score": 4,
+    "rating_time": 1167582601
+  },
+  {
+    "user_id": 12,
+    "movie_id": 2,
+    "rating_score": 2,
+    "rating_time": 968257492
+  },
+  {
+    "user_id": 12,
+    "movie_id": 3,
+    "rating_score": 2,
+    "rating_time": 1137231033
+  },
+  {
+    "user_id": 12,
+    "movie_id": 7,
+    "rating_score": 3,
+    "rating_time": 940802609
+  },
+  {
+    "user_id": 12,
+    "movie_id": 10,
+    "rating_score": 3,
+    "rating_time": 940791277
+  },
+  {
+    "user_id": 12,
+    "movie_id": 16,
+    "rating_score": 5,
+    "rating_time": 940767812
+  },
+  {
+    "user_id": 12,
+    "movie_id": 18,
+    "rating_score": 4,
+    "rating_time": 1159805789
+  },
+  {
+    "user_id": 12,
+    "movie_id": 20,
+    "rating_score": 1,
+    "rating_time": 964631207
+  },
+  {
+    "user_id": 12,
+    "movie_id": 21,
+    "rating_score": 2,
+    "rating_time": 940768073
+  },
+  {
+    "user_id": 12,
+    "movie_id": 22,
+    "rating_score": 3,
+    "rating_time": 940787076
+  },
+  {
+    "user_id": 12,
+    "movie_id": 25,
+    "rating_score": 3,
+    "rating_time": 940767067
+  },
+  {
+    "user_id": 12,
+    "movie_id": 27,
+    "rating_score": 2,
+    "rating_time": 968257706
+  },
+  {
+    "user_id": 12,
+    "movie_id": 29,
+    "rating_score": 4,
+    "rating_time": 1167582484
+  },
+  {
+    "user_id": 12,
+    "movie_id": 31,
+    "rating_score": 2,
+    "rating_time": 940768545
+  },
+  {
+    "user_id": 12,
+    "movie_id": 32,
+    "rating_score": 2,
+    "rating_time": 940767592
+  },
+  {
+    "user_id": 12,
+    "movie_id": 36,
+    "rating_score": 4,
+    "rating_time": 1137234885
+  },
+  {
+    "user_id": 12,
+    "movie_id": 39,
+    "rating_score": 4,
+    "rating_time": 1167582480
+  },
+  {
+    "user_id": 12,
+    "movie_id": 45,
+    "rating_score": 2,
+    "rating_time": 940767647
+  },
+  {
+    "user_id": 12,
+    "movie_id": 47,
+    "rating_score": 4,
+    "rating_time": 1167582234
+  },
+  {
+    "user_id": 12,
+    "movie_id": 48,
+    "rating_score": 2,
+    "rating_time": 1137231133
+  },
+  {
+    "user_id": 12,
+    "movie_id": 50,
+    "rating_score": 5,
+    "rating_time": 1209130708
+  },
+  {
+    "user_id": 12,
+    "movie_id": 54,
+    "rating_score": 2,
+    "rating_time": 940801433
+  },
+  {
+    "user_id": 12,
+    "movie_id": 62,
+    "rating_score": 3,
+    "rating_time": 1119354597
+  },
+  {
+    "user_id": 12,
+    "movie_id": 68,
+    "rating_score": 3,
+    "rating_time": 1137233488
+  },
+  {
+    "user_id": 12,
+    "movie_id": 97,
+    "rating_score": 4,
+    "rating_time": 963590948
+  },
+  {
+    "user_id": 12,
+    "movie_id": 101,
+    "rating_score": 4,
+    "rating_time": 1255359683
+  },
+  {
+    "user_id": 12,
+    "movie_id": 140,
+    "rating_score": 3,
+    "rating_time": 1137232916
+  },
+  {
+    "user_id": 12,
+    "movie_id": 141,
+    "rating_score": 4,
+    "rating_time": 940766889
+  },
+  {
+    "user_id": 12,
+    "movie_id": 150,
+    "rating_score": 2,
+    "rating_time": 989507784
+  },
+  {
+    "user_id": 12,
+    "movie_id": 160,
+    "rating_score": 2,
+    "rating_time": 940802491
+  },
+  {
+    "user_id": 12,
+    "movie_id": 163,
+    "rating_score": 4,
+    "rating_time": 940767812
+  },
+  {
+    "user_id": 12,
+    "movie_id": 165,
+    "rating_score": 4,
+    "rating_time": 1167582469
+  },
+  {
+    "user_id": 12,
+    "movie_id": 168,
+    "rating_score": 3,
+    "rating_time": 1137234177
+  },
+  {
+    "user_id": 12,
+    "movie_id": 176,
+    "rating_score": 5,
+    "rating_time": 1060011757
+  },
+  {
+    "user_id": 12,
+    "movie_id": 185,
+    "rating_score": 2,
+    "rating_time": 940803104
+  },
+  {
+    "user_id": 12,
+    "movie_id": 209,
+    "rating_score": 4,
+    "rating_time": 1209130704
+  },
+  {
+    "user_id": 12,
+    "movie_id": 215,
+    "rating_score": 4,
+    "rating_time": 1159805221
+  },
+  {
+    "user_id": 12,
+    "movie_id": 222,
+    "rating_score": 3,
+    "rating_time": 940767702
+  },
+  {
+    "user_id": 12,
+    "movie_id": 223,
+    "rating_score": 4,
+    "rating_time": 1137234874
+  },
+  {
+    "user_id": 12,
+    "movie_id": 231,
+    "rating_score": 2,
+    "rating_time": 940804096
+  },
+  {
+    "user_id": 12,
+    "movie_id": 235,
+    "rating_score": 4,
+    "rating_time": 1167582450
+  },
+  {
+    "user_id": 12,
+    "movie_id": 238,
+    "rating_score": 3,
+    "rating_time": 940801520
+  },
+  {
+    "user_id": 12,
+    "movie_id": 249,
+    "rating_score": 4,
+    "rating_time": 1060010776
+  },
+  {
+    "user_id": 12,
+    "movie_id": 252,
+    "rating_score": 2,
+    "rating_time": 940767159
+  },
+  {
+    "user_id": 12,
+    "movie_id": 257,
+    "rating_score": 3,
+    "rating_time": 940787076
+  },
+  {
+    "user_id": 12,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 940796891
+  },
+  {
+    "user_id": 12,
+    "movie_id": 265,
+    "rating_score": 4,
+    "rating_time": 940766110
+  },
+  {
+    "user_id": 12,
+    "movie_id": 268,
+    "rating_score": 4,
+    "rating_time": 980886229
+  },
+  {
+    "user_id": 12,
+    "movie_id": 293,
+    "rating_score": 4,
+    "rating_time": 940787982
+  },
+  {
+    "user_id": 12,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 1119354604
+  },
+  {
+    "user_id": 12,
+    "movie_id": 313,
+    "rating_score": 3,
+    "rating_time": 940801333
+  },
+  {
+    "user_id": 12,
+    "movie_id": 316,
+    "rating_score": 3,
+    "rating_time": 940800689
+  },
+  {
+    "user_id": 12,
+    "movie_id": 317,
+    "rating_score": 2,
+    "rating_time": 1137231152
+  },
+  {
+    "user_id": 12,
+    "movie_id": 319,
+    "rating_score": 4,
+    "rating_time": 940766732
+  },
+  {
+    "user_id": 12,
+    "movie_id": 329,
+    "rating_score": 3,
+    "rating_time": 1040142316
+  },
+  {
+    "user_id": 12,
+    "movie_id": 337,
+    "rating_score": 4,
+    "rating_time": 940766481
+  },
+  {
+    "user_id": 12,
+    "movie_id": 342,
+    "rating_score": 4,
+    "rating_time": 1119355164
+  },
+  {
+    "user_id": 12,
+    "movie_id": 351,
+    "rating_score": 3,
+    "rating_time": 940802773
+  },
+  {
+    "user_id": 12,
+    "movie_id": 356,
+    "rating_score": 4,
+    "rating_time": 1167582720
+  },
+  {
+    "user_id": 12,
+    "movie_id": 364,
+    "rating_score": 3,
+    "rating_time": 1119354644
+  },
+  {
+    "user_id": 12,
+    "movie_id": 367,
+    "rating_score": 2,
+    "rating_time": 940768250
+  },
+  {
+    "user_id": 12,
+    "movie_id": 368,
+    "rating_score": 2,
+    "rating_time": 940768655
+  },
+  {
+    "user_id": 12,
+    "movie_id": 374,
+    "rating_score": 1,
+    "rating_time": 940801520
+  },
+  {
+    "user_id": 12,
+    "movie_id": 376,
+    "rating_score": 3,
+    "rating_time": 1137234197
+  },
+  {
+    "user_id": 12,
+    "movie_id": 377,
+    "rating_score": 4,
+    "rating_time": 1167582620
+  },
+  {
+    "user_id": 12,
+    "movie_id": 380,
+    "rating_score": 2,
+    "rating_time": 940768073
+  },
+  {
+    "user_id": 12,
+    "movie_id": 410,
+    "rating_score": 2,
+    "rating_time": 1137230975
+  },
+  {
+    "user_id": 12,
+    "movie_id": 413,
+    "rating_score": 3,
+    "rating_time": 940804682
+  },
+  {
+    "user_id": 12,
+    "movie_id": 440,
+    "rating_score": 4,
+    "rating_time": 1167582734
+  },
+  {
+    "user_id": 12,
+    "movie_id": 442,
+    "rating_score": 2,
+    "rating_time": 1137230752
+  },
+  {
+    "user_id": 12,
+    "movie_id": 450,
+    "rating_score": 3,
+    "rating_time": 1137232929
+  },
+  {
+    "user_id": 12,
+    "movie_id": 457,
+    "rating_score": 4,
+    "rating_time": 1167582430
+  },
+  {
+    "user_id": 12,
+    "movie_id": 466,
+    "rating_score": 3,
+    "rating_time": 940800797
+  },
+  {
+    "user_id": 12,
+    "movie_id": 471,
+    "rating_score": 4,
+    "rating_time": 1167582388
+  },
+  {
+    "user_id": 12,
+    "movie_id": 477,
+    "rating_score": 4,
+    "rating_time": 1167582206
+  },
+  {
+    "user_id": 12,
+    "movie_id": 480,
+    "rating_score": 4,
+    "rating_time": 940767875
+  },
+  {
+    "user_id": 12,
+    "movie_id": 497,
+    "rating_score": 3,
+    "rating_time": 1119354652
+  },
+  {
+    "user_id": 12,
+    "movie_id": 500,
+    "rating_score": 4,
+    "rating_time": 1167582345
+  },
+  {
+    "user_id": 12,
+    "movie_id": 505,
+    "rating_score": 2,
+    "rating_time": 1137230811
+  },
+  {
+    "user_id": 12,
+    "movie_id": 514,
+    "rating_score": 3,
+    "rating_time": 1137234032
+  },
+  {
+    "user_id": 12,
+    "movie_id": 515,
+    "rating_score": 4,
+    "rating_time": 1137232661
+  },
+  {
+    "user_id": 12,
+    "movie_id": 516,
+    "rating_score": 2,
+    "rating_time": 940803669
+  },
+  {
+    "user_id": 12,
+    "movie_id": 518,
+    "rating_score": 2,
+    "rating_time": 940804795
+  },
+  {
+    "user_id": 12,
+    "movie_id": 520,
+    "rating_score": 4,
+    "rating_time": 1167582255
+  },
+  {
+    "user_id": 12,
+    "movie_id": 524,
+    "rating_score": 3,
+    "rating_time": 940767812
+  },
+  {
+    "user_id": 12,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 940765824
+  },
+  {
+    "user_id": 12,
+    "movie_id": 528,
+    "rating_score": 2,
+    "rating_time": 940806564
+  },
+  {
+    "user_id": 12,
+    "movie_id": 531,
+    "rating_score": 3,
+    "rating_time": 940786747
+  },
+  {
+    "user_id": 12,
+    "movie_id": 538,
+    "rating_score": 4,
+    "rating_time": 940767321
+  },
+  {
+    "user_id": 12,
+    "movie_id": 543,
+    "rating_score": 3,
+    "rating_time": 940799390
+  },
+  {
+    "user_id": 12,
+    "movie_id": 546,
+    "rating_score": 1,
+    "rating_time": 940800970
+  },
+  {
+    "user_id": 12,
+    "movie_id": 551,
+    "rating_score": 4,
+    "rating_time": 1167582332
+  },
+  {
+    "user_id": 12,
+    "movie_id": 555,
+    "rating_score": 4,
+    "rating_time": 1159805603
+  },
+  {
+    "user_id": 12,
+    "movie_id": 575,
+    "rating_score": 2,
+    "rating_time": 1137230786
+  },
+  {
+    "user_id": 12,
+    "movie_id": 586,
+    "rating_score": 3,
+    "rating_time": 1137234002
+  },
+  {
+    "user_id": 12,
+    "movie_id": 588,
+    "rating_score": 4,
+    "rating_time": 940767702
+  },
+  {
+    "user_id": 12,
+    "movie_id": 592,
+    "rating_score": 5,
+    "rating_time": 940857312
+  },
+  {
+    "user_id": 12,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 940766180
+  },
+  {
+    "user_id": 12,
+    "movie_id": 603,
+    "rating_score": 1,
+    "rating_time": 980886271
+  },
+  {
+    "user_id": 12,
+    "movie_id": 605,
+    "rating_score": 3,
+    "rating_time": 1167743353
+  },
+  {
+    "user_id": 12,
+    "movie_id": 608,
+    "rating_score": 5,
+    "rating_time": 940766889
+  },
+  {
+    "user_id": 12,
+    "movie_id": 613,
+    "rating_score": 3,
+    "rating_time": 940789382
+  },
+  {
+    "user_id": 12,
+    "movie_id": 648,
+    "rating_score": 2,
+    "rating_time": 940789003
+  },
+  {
+    "user_id": 12,
+    "movie_id": 663,
+    "rating_score": 4,
+    "rating_time": 1060010863
+  },
+  {
+    "user_id": 12,
+    "movie_id": 708,
+    "rating_score": 2,
+    "rating_time": 940767647
+  },
+  {
+    "user_id": 12,
+    "movie_id": 719,
+    "rating_score": 2,
+    "rating_time": 968257707
+  },
+  {
+    "user_id": 12,
+    "movie_id": 724,
+    "rating_score": 2,
+    "rating_time": 1119355214
+  },
+  {
+    "user_id": 12,
+    "movie_id": 736,
+    "rating_score": 3,
+    "rating_time": 940787126
+  },
+  {
+    "user_id": 12,
+    "movie_id": 745,
+    "rating_score": 4,
+    "rating_time": 940766179
+  },
+  {
+    "user_id": 12,
+    "movie_id": 750,
+    "rating_score": 4,
+    "rating_time": 1167574020
+  },
+  {
+    "user_id": 12,
+    "movie_id": 765,
+    "rating_score": 2,
+    "rating_time": 968257493
+  },
+  {
+    "user_id": 12,
+    "movie_id": 778,
+    "rating_score": 5,
+    "rating_time": 1159805591
+  },
+  {
+    "user_id": 12,
+    "movie_id": 780,
+    "rating_score": 4,
+    "rating_time": 1167582383
+  },
+  {
+    "user_id": 12,
+    "movie_id": 784,
+    "rating_score": 2,
+    "rating_time": 940804565
+  },
+  {
+    "user_id": 12,
+    "movie_id": 805,
+    "rating_score": 4,
+    "rating_time": 940767647
+  },
+  {
+    "user_id": 12,
+    "movie_id": 832,
+    "rating_score": 2,
+    "rating_time": 1137230865
+  },
+  {
+    "user_id": 12,
+    "movie_id": 838,
+    "rating_score": 4,
+    "rating_time": 1167582723
+  },
+  {
+    "user_id": 12,
+    "movie_id": 851,
+    "rating_score": 4,
+    "rating_time": 1159805664
+  },
+  {
+    "user_id": 12,
+    "movie_id": 852,
+    "rating_score": 1,
+    "rating_time": 940789382
+  },
+  {
+    "user_id": 12,
+    "movie_id": 858,
+    "rating_score": 4,
+    "rating_time": 940873638
+  },
+  {
+    "user_id": 12,
+    "movie_id": 880,
+    "rating_score": 1,
+    "rating_time": 968257493
+  },
+  {
+    "user_id": 12,
+    "movie_id": 910,
+    "rating_score": 4,
+    "rating_time": 1210233646
+  },
+  {
+    "user_id": 12,
+    "movie_id": 911,
+    "rating_score": 5,
+    "rating_time": 963590439
+  },
+  {
+    "user_id": 12,
+    "movie_id": 914,
+    "rating_score": 3,
+    "rating_time": 1137234019
+  },
+  {
+    "user_id": 12,
+    "movie_id": 919,
+    "rating_score": 4,
+    "rating_time": 1266934114
+  },
+  {
+    "user_id": 12,
+    "movie_id": 923,
+    "rating_score": 5,
+    "rating_time": 940796773
+  },
+  {
+    "user_id": 12,
+    "movie_id": 928,
+    "rating_score": 4,
+    "rating_time": 1183550167
+  },
+  {
+    "user_id": 12,
+    "movie_id": 932,
+    "rating_score": 4,
+    "rating_time": 989507712
+  },
+  {
+    "user_id": 13,
+    "movie_id": 1,
+    "rating_score": 4,
+    "rating_time": 1265223970
+  },
+  {
+    "user_id": 13,
+    "movie_id": 32,
+    "rating_score": 4,
+    "rating_time": 1237970045
+  },
+  {
+    "user_id": 13,
+    "movie_id": 34,
+    "rating_score": 4,
+    "rating_time": 1265224043
+  },
+  {
+    "user_id": 13,
+    "movie_id": 47,
+    "rating_score": 4,
+    "rating_time": 1265224006
+  },
+  {
+    "user_id": 13,
+    "movie_id": 104,
+    "rating_score": 4,
+    "rating_time": 1320265447
+  },
+  {
+    "user_id": 13,
+    "movie_id": 112,
+    "rating_score": 4,
+    "rating_time": 1238029558
+  },
+  {
+    "user_id": 13,
+    "movie_id": 153,
+    "rating_score": 1,
+    "rating_time": 1237970521
+  },
+  {
+    "user_id": 13,
+    "movie_id": 173,
+    "rating_score": 2,
+    "rating_time": 1300410873
+  },
+  {
+    "user_id": 13,
+    "movie_id": 216,
+    "rating_score": 3,
+    "rating_time": 1320265412
+  },
+  {
+    "user_id": 13,
+    "movie_id": 231,
+    "rating_score": 5,
+    "rating_time": 1265224027
+  },
+  {
+    "user_id": 13,
+    "movie_id": 256,
+    "rating_score": 2,
+    "rating_time": 1278461736
+  },
+  {
+    "user_id": 13,
+    "movie_id": 277,
+    "rating_score": 3,
+    "rating_time": 1237969539
+  },
+  {
+    "user_id": 13,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 1238029599
+  },
+  {
+    "user_id": 13,
+    "movie_id": 303,
+    "rating_score": 3,
+    "rating_time": 1280261053
+  },
+  {
+    "user_id": 13,
+    "movie_id": 344,
+    "rating_score": 4,
+    "rating_time": 1238029841
+  },
+  {
+    "user_id": 13,
+    "movie_id": 356,
+    "rating_score": 5,
+    "rating_time": 1238029795
+  },
+  {
+    "user_id": 13,
+    "movie_id": 364,
+    "rating_score": 4,
+    "rating_time": 1265224015
+  },
+  {
+    "user_id": 13,
+    "movie_id": 367,
+    "rating_score": 4,
+    "rating_time": 1238029865
+  },
+  {
+    "user_id": 13,
+    "movie_id": 480,
+    "rating_score": 4,
+    "rating_time": 1238029156
+  },
+  {
+    "user_id": 13,
+    "movie_id": 553,
+    "rating_score": 4,
+    "rating_time": 1276166049
+  },
+  {
+    "user_id": 13,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1279447416
+  },
+  {
+    "user_id": 13,
+    "movie_id": 592,
+    "rating_score": 4,
+    "rating_time": 1237970495
+  },
+  {
+    "user_id": 13,
+    "movie_id": 736,
+    "rating_score": 3,
+    "rating_time": 1265059103
+  },
+  {
+    "user_id": 13,
+    "movie_id": 745,
+    "rating_score": 4,
+    "rating_time": 1276166820
+  },
+  {
+    "user_id": 13,
+    "movie_id": 780,
+    "rating_score": 3,
+    "rating_time": 1265058950
+  },
+  {
+    "user_id": 14,
+    "movie_id": 50,
+    "rating_score": 5,
+    "rating_time": 1506209168
+  },
+  {
+    "user_id": 14,
+    "movie_id": 293,
+    "rating_score": 5,
+    "rating_time": 1506209067
+  },
+  {
+    "user_id": 14,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 1506208897
+  },
+  {
+    "user_id": 14,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 1506208872
+  },
+  {
+    "user_id": 14,
+    "movie_id": 608,
+    "rating_score": 5,
+    "rating_time": 1506209155
+  },
+  {
+    "user_id": 15,
+    "movie_id": 110,
+    "rating_score": 3,
+    "rating_time": 946011409
+  },
+  {
+    "user_id": 15,
+    "movie_id": 141,
+    "rating_score": 5,
+    "rating_time": 946014513
+  },
+  {
+    "user_id": 15,
+    "movie_id": 216,
+    "rating_score": 4,
+    "rating_time": 946011361
+  },
+  {
+    "user_id": 15,
+    "movie_id": 296,
+    "rating_score": 5,
+    "rating_time": 946013314
+  },
+  {
+    "user_id": 15,
+    "movie_id": 349,
+    "rating_score": 5,
+    "rating_time": 946012516
+  },
+  {
+    "user_id": 15,
+    "movie_id": 356,
+    "rating_score": 5,
+    "rating_time": 946014478
+  },
+  {
+    "user_id": 15,
+    "movie_id": 380,
+    "rating_score": 4,
+    "rating_time": 946012608
+  },
+  {
+    "user_id": 15,
+    "movie_id": 480,
+    "rating_score": 3,
+    "rating_time": 946012608
+  },
+  {
+    "user_id": 15,
+    "movie_id": 541,
+    "rating_score": 5,
+    "rating_time": 946012065
+  },
+  {
+    "user_id": 15,
+    "movie_id": 543,
+    "rating_score": 5,
+    "rating_time": 946014612
+  },
+  {
+    "user_id": 15,
+    "movie_id": 608,
+    "rating_score": 5,
+    "rating_time": 946013314
+  },
+  {
+    "user_id": 15,
+    "movie_id": 736,
+    "rating_score": 3,
+    "rating_time": 946012791
+  },
+  {
+    "user_id": 15,
+    "movie_id": 778,
+    "rating_score": 5,
+    "rating_time": 946013361
+  },
+  {
+    "user_id": 16,
+    "movie_id": 318,
+    "rating_score": 5,
+    "rating_time": 1432432301
+  },
+  {
+    "user_id": 16,
+    "movie_id": 858,
+    "rating_score": 5,
+    "rating_time": 1432077566
+  },
+  {
+    "user_id": 17,
+    "movie_id": 588,
+    "rating_score": 3,
+    "rating_time": 1485581536
+  },
+  {
+    "user_id": 18,
+    "movie_id": 1,
+    "rating_score": 3,
+    "rating_time": 1108273483
+  },
+  {
+    "user_id": 18,
+    "movie_id": 5,
+    "rating_score": 4,
+    "rating_time": 1108273945
+  },
+  {
+    "user_id": 18,
+    "movie_id": 7,
+    "rating_score": 4,
+    "rating_time": 1108273895
+  },
+  {
+    "user_id": 18,
+    "movie_id": 10,
+    "rating_score": 4,
+    "rating_time": 1108273566
+  },
+  {
+    "user_id": 18,
+    "movie_id": 11,
+    "rating_score": 4,
+    "rating_time": 1108273734
+  },
+  {
+    "user_id": 18,
+    "movie_id": 17,
+    "rating_score": 3,
+    "rating_time": 1108273684
+  },
+  {
+    "user_id": 18,
+    "movie_id": 19,
+    "rating_score": 4,
+    "rating_time": 1108273248
+  },
+  {
+    "user_id": 18,
+    "movie_id": 47,
+    "rating_score": 4,
+    "rating_time": 1108273551
+  },
+  {
+    "user_id": 18,
+    "movie_id": 50,
+    "rating_score": 4,
+    "rating_time": 1108273392
+  },
+  {
+    "user_id": 18,
+    "movie_id": 95,
+    "rating_score": 3,
+    "rating_time": 1108273674
+  },
+  {
+    "user_id": 18,
+    "movie_id": 110,
+    "rating_score": 3,
+    "rating_time": 1108273454
+  },
+  {
+    "user_id": 18,
+    "movie_id": 141,
+    "rating_score": 4,
+    "rating_time": 1108273617
+  },
+  {
+    "user_id": 18,
+    "movie_id": 160,
+    "rating_score": 3,
+    "rating_time": 1108273858
+  },
+  {
+    "user_id": 18,
+    "movie_id": 165,
+    "rating_score": 3,
+    "rating_time": 1108273524
+  },
+  {
+    "user_id": 18,
+    "movie_id": 173,
+    "rating_score": 1,
+    "rating_time": 1108273950
+  },
+  {
+    "user_id": 18,
+    "movie_id": 186,
+    "rating_score": 3,
+    "rating_time": 1108271124
+  },
+  {
+    "user_id": 18,
+    "movie_id": 253,
+    "rating_score": 4,
+    "rating_time": 1108273614
+  },
+  {
+    "user_id": 18,
+    "movie_id": 260,
+    "rating_score": 3,
+    "rating_time": 1108273459
+  },
+  {
+    "user_id": 18,
+    "movie_id": 288,
+    "rating_score": 1,
+    "rating_time": 1108273672
+  },
+  {
+    "user_id": 18,
+    "movie_id": 293,
+    "rating_score": 4,
+    "rating_time": 1108273751
+  },
+  {
+    "user_id": 18,
+    "movie_id": 296,
+    "rating_score": 3,
+    "rating_time": 1108273426
+  },
+  {
+    "user_id": 18,
+    "movie_id": 329,
+    "rating_score": 3,
+    "rating_time": 1108273579
+  },
+  {
+    "user_id": 18,
+    "movie_id": 344,
+    "rating_score": 4,
+    "rating_time": 1108273537
+  },
+  {
+    "user_id": 18,
+    "movie_id": 349,
+    "rating_score": 4,
+    "rating_time": 1108273518
+  },
+  {
+    "user_id": 18,
+    "movie_id": 353,
+    "rating_score": 4,
+    "rating_time": 1108273880
+  },
+  {
+    "user_id": 18,
+    "movie_id": 356,
+    "rating_score": 3,
+    "rating_time": 1108273431
+  },
+  {
+    "user_id": 18,
+    "movie_id": 367,
+    "rating_score": 3,
+    "rating_time": 1108273574
+  },
+  {
+    "user_id": 18,
+    "movie_id": 410,
+    "rating_score": 3,
+    "rating_time": 1108273779
+  },
+  {
+    "user_id": 18,
+    "movie_id": 432,
+    "rating_score": 2,
+    "rating_time": 1108275210
+  },
+  {
+    "user_id": 18,
+    "movie_id": 480,
+    "rating_score": 4,
+    "rating_time": 1108273434
+  },
+  {
+    "user_id": 18,
+    "movie_id": 500,
+    "rating_score": 4,
+    "rating_time": 1108273569
+  },
+  {
+    "user_id": 18,
+    "movie_id": 539,
+    "rating_score": 3,
+    "rating_time": 1108273625
+  },
+  {
+    "user_id": 18,
+    "movie_id": 541,
+    "rating_score": 3,
+    "rating_time": 1108273724
+  },
+  {
+    "user_id": 18,
+    "movie_id": 551,
+    "rating_score": 4,
+    "rating_time": 1108273841
+  },
+  {
+    "user_id": 18,
+    "movie_id": 589,
+    "rating_score": 4,
+    "rating_time": 1108273473
+  },
+  {
+    "user_id": 18,
+    "movie_id": 592,
+    "rating_score": 5,
+    "rating_time": 1108273447
+  },
+  {
+    "user_id": 18,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 1108273429
+  },
+  {
+    "user_id": 18,
+    "movie_id": 597,
+    "rating_score": 3,
+    "rating_time": 1108273581
+  },
+  {
+    "user_id": 18,
+    "movie_id": 648,
+    "rating_score": 4,
+    "rating_time": 1108273530
+  },
+  {
+    "user_id": 18,
+    "movie_id": 708,
+    "rating_score": 4,
+    "rating_time": 1108273266
+  },
+  {
+    "user_id": 18,
+    "movie_id": 733,
+    "rating_score": 4,
+    "rating_time": 1108273563
+  },
+  {
+    "user_id": 18,
+    "movie_id": 736,
+    "rating_score": 4,
+    "rating_time": 1108273535
+  },
+  {
+    "user_id": 18,
+    "movie_id": 780,
+    "rating_score": 4,
+    "rating_time": 1108273477
+  },
+  {
+    "user_id": 18,
+    "movie_id": 784,
+    "rating_score": 3,
+    "rating_time": 1108274029
+  },
+  {
+    "user_id": 18,
+    "movie_id": 802,
+    "rating_score": 4,
+    "rating_time": 1108274024
+  },
+  {
+    "user_id": 18,
+    "movie_id": 858,
+    "rating_score": 3,
+    "rating_time": 1108273557
+  },
+  {
+    "user_id": 18,
+    "movie_id": 919,
+    "rating_score": 4,
+    "rating_time": 1108273760
+  },
+  {
+    "user_id": 18,
+    "movie_id": 924,
+    "rating_score": 3,
+    "rating_time": 1108273765
+  },
+  {
+    "user_id": 19,
+    "movie_id": 44,
+    "rating_score": 2,
+    "rating_time": 1454709124
+  },
+  {
+    "user_id": 19,
+    "movie_id": 110,
+    "rating_score": 3,
+    "rating_time": 1445286416
+  },
+  {
+    "user_id": 19,
+    "movie_id": 158,
+    "rating_score": 3,
+    "rating_time": 1454709102
+  },
+  {
+    "user_id": 19,
+    "movie_id": 231,
+    "rating_score": 4,
+    "rating_time": 1445286452
+  },
+  {
+    "user_id": 19,
+    "movie_id": 293,
+    "rating_score": 3,
+    "rating_time": 1454863954
+  },
+  {
+    "user_id": 19,
+    "movie_id": 318,
+    "rating_score": 4,
+    "rating_time": 1445286399
+  },
+  {
+    "user_id": 19,
+    "movie_id": 356,
+    "rating_score": 4,
+    "rating_time": 1445286376
+  },
+  {
+    "user_id": 19,
+    "movie_id": 364,
+    "rating_score": 2,
+    "rating_time": 1450544685
+  },
+  {
+    "user_id": 19,
+    "movie_id": 593,
+    "rating_score": 4,
+    "rating_time": 1445258867
+  },
+  {
+    "user_id": 19,
+    "movie_id": 595,
+    "rating_score": 3,
+    "rating_time": 1450544687
+  },
+  {
+    "user_id": 19,
+    "movie_id": 718,
+    "rating_score": 3,
+    "rating_time": 1454864107
+  },
+  {
+    "user_id": 19,
+    "movie_id": 741,
+    "rating_score": 5,
+    "rating_time": 1445286181
+  },
+  {
+    "user_id": 19,
+    "movie_id": 778,
+    "rating_score": 4,
+    "rating_time": 1447532961
+  },
+  {
+    "user_id": 19,
+    "movie_id": 858,
+    "rating_score": 5,
+    "rating_time": 1445258693
+  },
+  {
+    "user_id": 19,
+    "movie_id": 924,
+    "rating_score": 5,
+    "rating_time": 1445515773
+  },
+  {
+    "user_id": 19,
+    "movie_id": 968,
+    "rating_score": 4,
+    "rating_time": 1445874477
+  },
+  {
+    "user_id": 20,
+    "movie_id": 44,
+    "rating_score": 3,
+    "rating_time": 1061998044
+  },
+  {
+    "user_id": 20,
+    "movie_id": 260,
+    "rating_score": 5,
+    "rating_time": 1062003978
+  },
+  {
+    "user_id": 20,
+    "movie_id": 318,
+    "rating_score": 5,
+    "rating_time": 1155082736
+  },
+  {
+    "user_id": 20,
+    "movie_id": 356,
+    "rating_score": 5,
+    "rating_time": 1155084844
+  },
+  {
+    "user_id": 20,
+    "movie_id": 367,
+    "rating_score": 4,
+    "rating_time": 1062004121
+  },
+  {
+    "user_id": 20,
+    "movie_id": 539,
+    "rating_score": 3,
+    "rating_time": 1155082352
+  },
+  {
+    "user_id": 20,
+    "movie_id": 593,
+    "rating_score": 5,
+    "rating_time": 1155082702
+  },
+  {
+    "user_id": 20,
+    "movie_id": 780,
+    "rating_score": 5,
+    "rating_time": 1155082344
+  },
+  {
+    "user_id": 20,
+    "movie_id": 858,
+    "rating_score": 5,
+    "rating_time": 1155084883
+  },
+  {
+    "user_id": 21,
+    "movie_id": 260,
+    "rating_score": 4,
+    "rating_time": 1456284490
+  },
+  {
+    "user_id": 21,
+    "movie_id": 293,
+    "rating_score": 4,
+    "rating_time": 1456285398
+  },
+  {
+    "user_id": 21,
+    "movie_id": 318,
+    "rating_score": 5,
+    "rating_time": 1456284625
+  },
+  {
+    "user_id": 21,
+    "movie_id": 527,
+    "rating_score": 5,
+    "rating_time": 1456284628
+  },
+  {
+    "user_id": 21,
+    "movie_id": 541,
+    "rating_score": 5,
+    "rating_time": 1456284648
+  },
+  {
+    "user_id": 21,
+    "movie_id": 589,
+    "rating_score": 5,
+    "rating_time": 1456284795
+  },
+  {
+    "user_id": 21,
+    "movie_id": 741,
+    "rating_score": 5,
+    "rating_time": 1456284783
+  },
+  {
+    "user_id": 21,
+    "movie_id": 750,
+    "rating_score": 4,
+    "rating_time": 1456285387
+  },
+  {
+    "user_id": 21,
+    "movie_id": 778,
+    "rating_score": 3,
+    "rating_time": 1456284692
+  },
+  {
+    "user_id": 22,
+    "movie_id": 150,
+    "rating_score": 5,
+    "rating_time": 832862128
+  },
+  {
+    "user_id": 22,
+    "movie_id": 153,
+    "rating_score": 5,
+    "rating_time": 832862164
+  },
+  {
+    "user_id": 22,
+    "movie_id": 161,
+    "rating_score": 4,
+    "rating_time": 832862225
+  },
+  {
+    "user_id": 22,
+    "movie_id": 165,
+    "rating_score": 5,
+    "rating_time": 832862164
+  },
+  {
+    "user_id": 22,
+    "movie_id": 185,
+    "rating_score": 5,
+    "rating_time": 832862254
+  },
+  {
+    "user_id": 22,
+    "movie_id": 208,
+    "rating_score": 4,
+    "rating_time": 832862254
+  },
+  {
+    "user_id": 22,
+    "movie_id": 231,
+    "rating_score": 1,
+    "rating_time": 832862192
+  },
+  {
+    "user_id": 22,
+    "movie_id": 253,
+    "rating_score": 4,
+    "rating_time": 832862254
+  },
+  {
+    "user_id": 22,
+    "movie_id": 292,
+    "rating_score": 5,
+    "rating_time": 832862254
+  },
+  {
+    "user_id": 22,
+    "movie_id": 296,
+    "rating_score": 3,
+    "rating_time": 832862128
+  },
+  {
+    "user_id": 22,
+    "movie_id": 316,
+    "rating_score": 5,
+    "rating_time": 832862193
+  },
+  {
+    "user_id": 22,
+    "movie_id": 318,
+    "rating_score": 4,
+    "rating_time": 832862192
+  },
+  {
+    "user_id": 22,
+    "movie_id": 329,
+    "rating_score": 5,
+    "rating_time": 832862192
+  },
+  {
+    "user_id": 22,
+    "movie_id": 339,
+    "rating_score": 5,
+    "rating_time": 832862225
+  },
+  {
+    "user_id": 22,
+    "movie_id": 344,
+    "rating_score": 3,
+    "rating_time": 832862164
+  },
+  {
+    "user_id": 22,
+    "movie_id": 349,
+    "rating_score": 5,
+    "rating_time": 832862164
+  },
+  {
+    "user_id": 22,
+    "movie_id": 380,
+    "rating_score": 4,
+    "rating_time": 832862128
+  },
+  {
+    "user_id": 22,
+    "movie_id": 434,
+    "rating_score": 4,
+    "rating_time": 832862225
+  },
+  {
+    "user_id": 22,
+    "movie_id": 588,
+    "rating_score": 5,
+    "rating_time": 832862164
+  },
+  {
+    "user_id": 22,
+    "movie_id": 590,
+    "rating_score": 5,
+    "rating_time": 832862128
+  },
+  {
+    "user_id": 22,
+    "movie_id": 592,
+    "rating_score": 5,
+    "rating_time": 832862128
+  },
+  {
+    "user_id": 22,
+    "movie_id": 595,
+    "rating_score": 4,
+    "rating_time": 832862193
+  }
+]

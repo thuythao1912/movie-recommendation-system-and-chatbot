@@ -28,6 +28,7 @@ let genre_route = require("./routes/genre_route");
 let message_route = require("./routes/message_route");
 let user_route = require("./routes/user_route");
 let ai_service_route = require("./routes/ai_service_route");
+let rating_route = require("./routes/rating_route");
 
 //use route
 app.use("/movies", movie_route);
@@ -35,6 +36,7 @@ app.use("/genres", genre_route);
 app.use("/messages", message_route);
 app.use("/users", user_route);
 app.use("/ai-service", ai_service_route);
+app.use("/ratings", rating_route);
 app.use(index);
 
 //import socket controllers

@@ -1,6 +1,7 @@
 var movie_model = require("../models/movie_model");
 const axios = require("axios");
 const global_var = require("../global_variables");
+const utils = require("../utils/utils");
 
 exports.get_list_movie = (req, res) => {
   let queries = req.query;
@@ -20,6 +21,7 @@ exports.get_list_movie = (req, res) => {
 };
 
 exports.add_list_movie = async (req, res) => {
+  let movie_id = await utils.get_greatest_id("movies", "movie_id");
   let list_movie = req.body.data;
   let movie_success = 0;
   let movie_fail = 0;
@@ -51,6 +53,7 @@ exports.add_list_movie = async (req, res) => {
             (err, result) => {
               if (result.length == 0) {
                 let item = new movie_model(movie);
+                item.movie_id = movie_id;
                 item.save();
                 movie_success++;
                 if (--tasksToGo === 0) {
@@ -131,19 +134,17 @@ exports.update_one_movie = (req, res) => {
     });
 };
 
-exports.find_list_movie = (req, res) => {
-  let queries = req.query;
-  console.log(queries);
+exports.delete_list_movie = (req, res) => {
   movie_model
-    .find(queries, (err, list) => {
+    .deleteMany((err, list) => {
       if (err) {
         console.log(err);
-        res.status(500).send(`Something went wrong...`);
+        res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
       } else {
-        res.json(list);
+        res.json({ message: `Tất cả phim đã xóa thành công` });
       }
     })
     .catch((err) => {
-      res.status(400).send(`Unable to get to database...`);
+      res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
     });
 };

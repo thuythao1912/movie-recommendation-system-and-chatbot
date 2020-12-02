@@ -20,7 +20,7 @@ from app.model.item_recognizer import EntityRecognizer, AgreeRecognizer
 from app.model.sentiment_recognizer import SentimentRecognizer
 from app.model.train import Train
 from app.model.db_connector import *
-from app.model.suggestor import Suggestor
+from app.model.suggestor import Suggestor, SuggestBasedUser
 
 INTENT_THRESHOLD = float(config["INTENT"]["INTENT_THRESHOLD"])
 
@@ -107,7 +107,8 @@ class IntentRecognizer:
             if model == "movies":
                 results = obj.find_one(condition)
                 if not results is None:
-                    movie_des = ", ".join(results["movie_description"]) if (results["movie_description"]) is not None else ""
+                    movie_des = ", ".join(results["movie_description"]) if (results[
+                        "movie_description"]) is not None else ""
                     res = f"Thông tin phim bạn cần tìm là:\n " \
                           f"+Tựa phim: {results['movie_title']}\n " \
                           f"+Năm sản xuất: {results['movie_year']}\n " \
@@ -123,7 +124,7 @@ class IntentRecognizer:
                     res = "Các phim thuộc thể loại bạn đang tìm kiếm là: {}".format(movies)
         return res
 
-    def run(self, sentence):
+    def run(self, sentence, user_id):
         print("====RUN===")
         sentence = nlp.preprocess_step_1(sentence)
         sen_result = self.entity_recognizer.detect_entities(sentence)
@@ -172,6 +173,13 @@ class IntentRecognizer:
                 entities_val.append(entity["org_val"])
             result = self.get_response(intent_predicted[0], entities, sign)
             print(result)
+
+            if result["description"] == "suggest" and user_id is not None:
+                suggest_based_user = SuggestBasedUser().suggest_movies(user_id)
+                result[
+                    "response"] = "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: " + ", ".join(
+                    suggest_based_user)
+                result["description"] = "res_suggest"
 
             output["response"] = result["response"]
             output["condition"] = str(result["condition"])

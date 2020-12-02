@@ -12,9 +12,9 @@ export default class MovieCardRecommended extends Component {
           <div className="col-lg-4 p-0">
             <img
               src={
-                data.movie_image == null
+                data.movie_images == null
                   ? "/images/movie_default.jpg"
-                  : data.movie_image
+                  : data.movie_images
               }
               width="100%"
             />

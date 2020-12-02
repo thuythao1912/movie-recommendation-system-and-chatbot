@@ -17,6 +17,9 @@ export default class MovieModal extends Component {
       movie_actors: "",
       movie_producers: "",
       message: "",
+      movie_trailer: "",
+      movie_overview: "",
+      movie_images: "",
       display_message: "none",
       required_fields: [
         ["movie_title", "movie_genres"],
@@ -41,6 +44,9 @@ export default class MovieModal extends Component {
       movie_actors: item.movie_actors,
       movie_producers: item.movie_producers,
       movie_description: item.movie_description,
+      movie_trailer: item.movie_trailer,
+      movie_overview: item.movie_overview,
+      movie_images: item.movie_images,
       is_not_edit: this.props.is_not_edit,
     });
     this.get_genre_list();
@@ -79,13 +85,18 @@ export default class MovieModal extends Component {
       movie_actors: this.state.movie_actors,
       movie_producers: this.state.movie_producers,
       movie_description: this.state.movie_description,
+      movie_trailer: this.state.movie_trailer,
+      movie_overview: this.state.movie_overview,
+      movie_images: this.state.movie_images,
     };
 
     if (typeof data.movie_description == "string") {
       data.movie_description = data.movie_description.split(",");
     }
-    for (let i = 0; i < data.movie_description.length; i++) {
-      data.movie_description[i] = data.movie_description[i].trim();
+    if (data.movie_description != null) {
+      for (let i = 0; i < data.movie_description.length; i++) {
+        data.movie_description[i] = data.movie_description[i].trim();
+      }
     }
 
     let is_null = checkNull(this.state.required_fields, data);
@@ -136,6 +147,11 @@ export default class MovieModal extends Component {
         </button>
       );
     });
+    let year = 2020;
+    let elMovieYear = [];
+    for (let i = year; i >= 1950; i--) {
+      elMovieYear.push(<option>{i}</option>);
+    }
     return (
       <Modal show={true} onHide={this.close} size="lg">
         <Modal.Header closeButton>
@@ -194,14 +210,16 @@ export default class MovieModal extends Component {
               <tr>
                 <td>Năm sản xuất</td>
                 <td>
-                  <input
-                    placeholder="Năm sản xuất"
-                    className="form-control form-control-sm"
+                  <select
+                    className="form-control"
                     onChange={this.handle_input}
                     name="movie_year"
                     value={this.state.movie_year}
-                    readOnly={this.state.is_not_edit}
-                  />
+                    disabled={this.state.is_not_edit}
+                  >
+                    <option value={-1}>Chọn năm sản xuất</option>
+                    {elMovieYear}
+                  </select>
                 </td>
               </tr>
               <tr>
@@ -226,6 +244,45 @@ export default class MovieModal extends Component {
                     onChange={this.handle_input}
                     name="movie_actors"
                     value={this.state.movie_actors}
+                    readOnly={this.state.is_not_edit}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Trailer</td>
+                <td>
+                  <input
+                    placeholder="Link trailer youtube"
+                    className="form-control form-control-sm"
+                    onChange={this.handle_input}
+                    name="movie_trailer"
+                    value={this.state.movie_trailer}
+                    readOnly={this.state.is_not_edit}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Poster</td>
+                <td>
+                  <input
+                    placeholder="Link poster"
+                    className="form-control form-control-sm"
+                    onChange={this.handle_input}
+                    name="movie_images"
+                    value={this.state.movie_images}
+                    readOnly={this.state.is_not_edit}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Tóm tắt</td>
+                <td>
+                  <textarea
+                    placeholder="Tóm tắt"
+                    className="form-control form-control-sm"
+                    onChange={this.handle_input}
+                    name="movie_overview"
+                    value={this.state.movie_overview}
                     readOnly={this.state.is_not_edit}
                   />
                 </td>

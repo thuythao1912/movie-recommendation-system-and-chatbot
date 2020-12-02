@@ -1,14 +1,21 @@
 import React, { Component } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import StarsRating from "stars-rating";
 import callApi from "../../../../utils/apiCaller";
 import MovieCardRecommended from "./MovieCardRecommend";
+import ls from "../../../../utils/localStorage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 export default class MovieDetail extends Component {
   constructor(props) {
     super();
-    this.state = { movie: {}, movies_suggest: [] };
+    this.state = {
+      movie: {},
+      movies_suggest: [],
+      rating_score: 0,
+      user_id: ls.getItem("user_id"),
+    };
   }
   componentWillReceiveProps(nextProps) {
     this.get_movie(nextProps.location.search.split("?").join(""));
@@ -18,6 +25,9 @@ export default class MovieDetail extends Component {
     callApi(`movies?${link}`, "get").then((res) => {
       if (res.data.length > 0) {
         this.setState({ movie: res.data[0] });
+        if (this.state.user_id != null) {
+          this.get_rating_by_user(this.state.user_id);
+        }
       }
     });
   };
@@ -30,9 +40,29 @@ export default class MovieDetail extends Component {
       this.setState({ movies_suggest: res.data });
     });
   };
-  componentDidMount = () => {
-    this.get_movie(this.props.location.search.split("?").join(""));
+  get_rating_by_user = (user_id) => {
+    callApi(
+      `ratings?user_id=${user_id}&movie_id=${this.state.movie.movie_id}`,
+      "get"
+    ).then((res) => {
+      console.log(res.data);
+      if (res.data[0].length > 0) {
+        this.setState({ rating_score: res.data[0][0].rating_score });
+      }
+    });
+  };
+  componentDidMount = async () => {
+    await this.get_movie(this.props.location.search.split("?").join(""));
     this.get_movies_suggest(this.props.location.search.split("=")[1]);
+  };
+  handle_rating_score = (rating_score) => {
+    this.setState({ rating_score: rating_score });
+  };
+  send_rating_score = () => {
+    if (this.state.user_id != null) {
+    } else {
+      alert("Bạn hãy đăng nhập trước khi đánh giá nhé!");
+    }
   };
   render() {
     let data = this.state.movie;
@@ -49,9 +79,9 @@ export default class MovieDetail extends Component {
               <div className="col-lg-5 col-md-12 col-sm-12">
                 <img
                   src={`${
-                    data.movie_image == undefined
+                    data.movie_images == undefined
                       ? "/images/movie_default.jpg"
-                      : data.movie_image
+                      : data.movie_images
                   }`}
                   width="100%"
                 />
@@ -67,7 +97,7 @@ export default class MovieDetail extends Component {
                         <h5>Thể loại</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_genres !== undefined
+                        {data.movie_genres != undefined
                           ? data.movie_genres.join(", ")
                           : ""}
                       </td>
@@ -77,9 +107,9 @@ export default class MovieDetail extends Component {
                         <h5>Tên khác</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_description !== undefined ||
-                        data.movie_description !== null
-                          ? data.movie_description
+                        {data.movie_description != undefined ||
+                        data.movie_description != null
+                          ? data.movie_description.join(", ")
                           : ""}
                       </td>
                     </tr>
@@ -88,7 +118,7 @@ export default class MovieDetail extends Component {
                         <h5>Năm phát hành </h5>
                       </td>
                       <td width="60%">
-                        {data.movie_year !== undefined ? data.movie_year : ""}
+                        {data.movie_year != undefined ? data.movie_year : ""}
                       </td>
                     </tr>
                     <tr>
@@ -96,7 +126,7 @@ export default class MovieDetail extends Component {
                         <h5>Đạo diễn </h5>
                       </td>
                       <td width="60%">
-                        {data.movie_producers !== undefined
+                        {data.movie_producers != undefined
                           ? data.movie_producers
                           : ""}
                       </td>
@@ -106,7 +136,7 @@ export default class MovieDetail extends Component {
                         <h5>Diễn viên</h5>
                       </td>
                       <td width="60%">
-                        {data.movie_actors !== undefined
+                        {data.movie_actors != undefined
                           ? data.movie_actors
                           : ""}
                       </td>
@@ -116,6 +146,24 @@ export default class MovieDetail extends Component {
               </div>
             </div>
             <div>
+              <div className="row m-0">
+                <Button
+                  variant="info"
+                  className="mb-3 mr-3"
+                  onClick={this.send_rating_score}
+                >
+                  <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
+                  <span>Đánh giá</span>
+                </Button>
+                <StarsRating
+                  count={5}
+                  onChange={this.handle_rating_score}
+                  size={30}
+                  color2={"#ffd700"}
+                  half={false}
+                  value={this.state.rating_score}
+                />
+              </div>
               <h5>Tóm tắt</h5>
               <p className="text-justify">{data.movie_overview}</p>
             </div>

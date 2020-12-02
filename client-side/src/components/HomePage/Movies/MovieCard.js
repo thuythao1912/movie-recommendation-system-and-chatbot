@@ -12,9 +12,9 @@ export default class MovieCard extends Component {
           <Card.Img
             variant="top"
             src={
-              data.movie_image == null
+              data.movie_images == null
                 ? "/images/movie_default.jpg"
-                : data.movie_image
+                : data.movie_images
             }
           />
           <Card.Body>

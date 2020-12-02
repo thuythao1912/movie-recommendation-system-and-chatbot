@@ -29,6 +29,7 @@ export default class Register extends Component {
       user_login: this.state.user_login.toLowerCase(),
       user_password: this.state.user_password,
       username: this.state.username,
+      is_admin: this.state.is_admin,
     };
     let is_null = checkNull(this.state.required_fields, data);
 
@@ -38,12 +39,12 @@ export default class Register extends Component {
         data.user_login
       );
       if (compare == false) {
-        callApi("users/check-login-user", "post", data).then((res) => {
+        callApi("users", "post", data).then((res) => {
           let message = res.data.message;
           let data = res.data.data;
           if (res.data.message.includes("thành công")) {
             alert(message);
-            window.location.href = "/";
+            window.location.href = "/login";
           } else {
             this.setState({
               message: message,

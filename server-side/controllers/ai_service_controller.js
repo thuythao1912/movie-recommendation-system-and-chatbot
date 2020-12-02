@@ -15,9 +15,14 @@ exports.handle_function = (req, res) => {
 
 exports.get_movies_suggest = (req, res) => {
   let data = req.body.data;
+  let movies_suggest = [];
   axios
     .post(`${global_var.SERVER_PYTHON}/suggest`, { data: data })
     .then((response) => {
-      res.json(response.data);
+      movies_suggest = response.data;
+      res.json(movies_suggest);
+    })
+    .catch((err) => {
+      res.json(movies_suggest);
     });
 };
