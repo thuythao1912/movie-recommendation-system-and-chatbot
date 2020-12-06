@@ -33,6 +33,7 @@ ENTITIES = ["movie_genres", "movie_title"]
 
 class IntentRecognizer:
     def __init__(self):
+        print("====> INIT INTENT RECOGNIZER")
         self.clf = None
         self.load_model()
         self.intents = None
@@ -166,11 +167,11 @@ class IntentRecognizer:
         else:
             name_predicted = intent_predicted[0]
             output["intent_name"] = name_predicted
-            # replace entity key by its values
-            for entity in entities:
-                name_predicted = name_predicted.replace(entity["key"], entity["org_val"])
-                name_predicted = nlp.remove_accents(name_predicted)
-                entities_val.append(entity["org_val"])
+            # # replace entity key by its values
+            # for entity in entities:
+            #     name_predicted = name_predicted.replace(entity["key"], entity["org_val"])
+            #     name_predicted = nlp.remove_accents(name_predicted)
+            #     entities_val.append(entity["org_val"])
             result = self.get_response(intent_predicted[0], entities, sign)
             print(result)
 

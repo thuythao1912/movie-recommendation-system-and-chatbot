@@ -125,6 +125,7 @@ def update_entities():
             utils.save_json(data=entities, prefix=True,
                                                  json_path=os.path.join(root, "data", "entities.json"))
         ir.__init__()
+        suggestor.__init__()
         return jsonify(
             {"message": "Cập nhật entities thành công!", "message_status": "success"})
     except Exception as err:
@@ -183,9 +184,7 @@ def update_positive_words():
 @app.route("/", methods = ["PUT"])
 def update_data():
     ir.__init__()
-    print("====> INIT INTENT RECOGNIZER")
     suggestor.__init__()
-    print("====> INIT SUGGESTOR")
     return jsonify({"message": "ok", "message_status": "success"})
 
 

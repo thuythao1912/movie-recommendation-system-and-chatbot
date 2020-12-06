@@ -29,6 +29,7 @@ class Suggestor:
     obj_genres = Genres()
 
     def __init__(self):
+        print("====> INIT SUGGESTOR")
         self.data_movies = self.obj_movies.find_all()
         self.data_genres = self.obj_genres.find_all()
         self.data_titles = [x["movie_title"].lower() for x in self.data_movies]
