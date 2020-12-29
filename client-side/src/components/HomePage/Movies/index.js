@@ -148,7 +148,11 @@ export default class Movies extends Component {
           <div className="p-3">
             <div className="justify-content-between row p-1">
               <h3 className="text-dark font-weight-bold">DANH SÁCH PHIM</h3>
-              <Button variant="light" onClick={this.set_display_mode}>
+              <Button
+                variant="light"
+                onClick={this.set_display_mode}
+                className="rounded-pill"
+              >
                 <FontAwesomeIcon icon={faEye} className="mr-2" />
                 <span>
                   {this.state.is_card ? "Xem dạng bảng" : "Xem dạng thẻ"}

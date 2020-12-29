@@ -9,7 +9,7 @@ import MovieDetail from "./Movies/MovieDetail";
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
+      <div className="">
         <Header />
         <div className="pb-5">
           <Route exact path="/movies" component={MovieDetail} />

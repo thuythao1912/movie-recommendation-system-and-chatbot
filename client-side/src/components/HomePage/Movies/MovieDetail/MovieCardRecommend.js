@@ -20,8 +20,11 @@ export default class MovieCardRecommended extends Component {
             />
           </div>
           <div className="col-lg-8 pt-2">
-            <Link to={`/movies?movie_title=${data.movie_title}`}>
-              <p className="font-weight-bold justify h5">
+            <Link
+              to={`/movies?movie_title=${data.movie_title}`}
+              className="text-decoration-none"
+            >
+              <p className="font-weight-bold justify h5 ">
                 {data.movie_title.length > 50
                   ? data.movie_title.slice(0, 50) + "..."
                   : data.movie_title}

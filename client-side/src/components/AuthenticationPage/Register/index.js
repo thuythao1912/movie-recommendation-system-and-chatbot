@@ -85,12 +85,14 @@ export default class Register extends Component {
               placeholder="Tên của bạn..."
               name="username"
               onChange={this.handle_input}
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
               className="form-control my-3 "
               placeholder="Tên đăng nhập..."
               name="user_login"
               onChange={this.handle_input}
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
               className="form-control my-3"
@@ -98,6 +100,7 @@ export default class Register extends Component {
               name="user_password"
               onChange={this.handle_input}
               type="password"
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <Button variant="info" className="my-3" onClick={this.send_login}>
               Đăng ký

@@ -34,7 +34,7 @@ class CollaborativeFilter:
         data = pd.DataFrame(self.ratings.find_all())
         del data["_id"]
 
-        rate_train = data.values
+        rate_train = ratings_base.values
         self.Y_data = rate_train if self.uuCF else rate_train[:, [1, 0, 2]]
 
     def add(self, new_data):

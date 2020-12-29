@@ -1,52 +1,6 @@
 {
   "intents": [
     {
-      "intent_name": "hoi noi sinh",
-      "training_phrases": [
-        "bạn sinh ở đâu vậy",
-        "nơi sinh của bạn"
-      ],
-      "responses": [
-        "Mình sinh ở Cần Thơ"
-      ],
-      "query": "",
-      "description": "casual"
-    },
-    {
-      "intent_name": "chao hoi",
-      "training_phrases": [
-        "xin chào",
-        "hi",
-        "chào bạn",
-        "hello",
-        "alo",
-        "bonjour"
-      ],
-      "responses": [
-        "Xin chào bạn!",
-        "Xin chào. Rất vui được gặp bạn!",
-        "Chào bạn, bạn cần mình trợ giúp gì?",
-        "Nadine nghe đây! Mình có thể giúp gì cho bạn?"
-      ],
-      "query": "",
-      "description": "casual"
-    },
-    {
-      "intent_name": "tam biet",
-      "training_phrases": [
-        "tạm biệt",
-        "bye",
-        "hẹn gặp lại"
-      ],
-      "responses": [
-        "Tạm biệt bạn!",
-        "Bye bye",
-        "Hẹn gặp lại bạn nha!"
-      ],
-      "query": "",
-      "description": "tam biet"
-    },
-    {
       "intent_name": "tra cuu thong tin movie_title",
       "training_phrases": [
         "muốn tra cứu phim movie_title",
@@ -78,6 +32,62 @@
       "description": "query"
     },
     {
+      "intent_name": "yeu cau goi y phim",
+      "training_phrases": [
+        "gợi ý phim",
+        "muốn được gợi ý phim",
+        "có thể gợi ý phim cho tôi không",
+        "gợi ý phim cho tôi",
+        "có gợi ý phim nào cho tôi không",
+        "bạn đề xuất phim cho tôi",
+        "đề xuất phim",
+        "muốn đề xuất phim"
+      ],
+      "responses": [
+        "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!"
+      ],
+      "query": "",
+      "description": "suggest"
+    },
+    {
+      "intent_name": "chao hoi",
+      "training_phrases": [
+        "xin chào",
+        "hi",
+        "chào bạn",
+        "hello",
+        "alo",
+        "bonjour",
+        "chào", "chào bạn nhe"
+      ],
+      "responses": [
+        "Xin chào bạn!",
+        "Xin chào. Rất vui được gặp bạn!",
+        "Chào bạn, bạn cần mình trợ giúp gì?",
+        "Nadine nghe đây! Mình có thể giúp gì cho bạn?"
+      ],
+      "query": "",
+      "description": "casual"
+    },
+    {
+      "intent_name": "tam biet",
+      "training_phrases": [
+        "tạm biệt",
+        "tạm biệt bạn nhé",
+        "bye nhé",
+        "bye",
+        "hẹn gặp bạn nhé",
+        "hẹn gặp lại"
+      ],
+      "responses": [
+        "Tạm biệt bạn!",
+        "Bye bye",
+        "Hẹn gặp lại bạn nha!"
+      ],
+      "query": "",
+      "description": "tam biet"
+    },
+    {
       "intent_name": "hoi tham suc khoe",
       "training_phrases": [
         "Bạn khỏe không",
@@ -94,28 +104,16 @@
       "description": "casual"
     },
     {
-      "intent_name": "ban yeu toi khong",
-      "training_phrases": [
-        "bạn yêu tôi không",
-        "Anh yêu em không",
-        "yêu không",
-        "bạn có yêu tôi không",
-        "bạn thích tôi không",
-        "thích không"
-      ],
-      "responses": [
-        "Mình rất yêu bạn",
-        "Không yêu đâu nha!"
-      ],
-      "query": "",
-      "description": "casual"
-    },
-    {
       "intent_name": "chatbot ten gi",
       "training_phrases": [
         "bạn tên gì",
         "tên bạn là gì",
-        "what your name"
+        "what is your name",
+        "what your name",
+        "chatbot tên gì",
+        "chatbot tên",
+        "có thể gọi bạn là gì",
+        "gọi bạn là gì"
       ],
       "responses": [
         "Mình tên là Nadine nha!",
@@ -125,17 +123,36 @@
       "description": "casual"
     },
     {
-      "intent_name": "yeu cau goi y phim",
+      "intent_name": "nadine la gi",
       "training_phrases": [
-        "gợi ý phim",
-        "muốn được gợi ý phim",
-        "có thể gợi ý phim cho tôi không"
+        "nadine là gì",
+        "không hiểu nadine là gì",
+        "nadine là ai",
+        "nadine có ý nghĩa gì",
+        "nadine là tên ai"
       ],
       "responses": [
-        "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!"
+        "Nadine là mình, là chatbot gợi ý phim cho bạn"
       ],
       "query": "",
-      "description": "suggest"
+      "description": "casual"
+    },
+    {
+      "intent_name": "nhiem vu chatbot",
+      "training_phrases": [
+        "nhiệm vụ của bạn là gì",
+        "có thể làm gì",
+        "bạn có thể làm gì cho tôi",
+        "khả năng của bạn",
+        "nhiệm vụ của bạn như thế nào",
+        "bạn có thể giúp tôi như thế nào",
+        "bạn có thể giúp tôi ra sao"
+      ],
+      "responses": [
+        "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!"
+      ],
+      "query": "",
+      "description": "casual"
     }
   ]
 }

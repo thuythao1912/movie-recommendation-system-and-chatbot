@@ -37,6 +37,10 @@ export default class AdminLogin extends Component {
         alert("Đăng nhập thành công!");
         ls.setItem("is_admin", true);
         window.location.href = "/admin";
+      } else {
+        this.setState({
+          message: `Sai tên đăng nhập hoặc mật khẩu!`,
+        });
       }
     } else {
       this.setState({
@@ -51,6 +55,7 @@ export default class AdminLogin extends Component {
           backgroundRepeat: "no - repeat",
           backgroundSize: "cover",
           height: "100vh",
+          backgroundImage: `url("/images/bg-login-admin.jfif")`,
         }}
         className="d-flex"
       >
@@ -66,6 +71,7 @@ export default class AdminLogin extends Component {
               placeholder="Tên đăng nhập..."
               name="admin_login"
               onChange={this.handle_input}
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
               className="form-control my-3"
@@ -73,11 +79,12 @@ export default class AdminLogin extends Component {
               name="admin_password"
               onChange={this.handle_input}
               type="password"
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
+
             <Button variant="info" className="my-3" onClick={this.send_login}>
               Đăng nhập
             </Button>
-
             <Link className="text-white" to="/">
               <p>
                 <FontAwesomeIcon icon={faHome} className="mx-2" />

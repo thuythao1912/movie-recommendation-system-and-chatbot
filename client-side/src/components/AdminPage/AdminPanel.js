@@ -1,38 +1,75 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faSignOutAlt,
+  faUserCog,
+} from "@fortawesome/free-solid-svg-icons";
 export default class AdminPanel extends Component {
   render() {
     return (
-      <ul className="p-0" style={{ minHeight: "98vh" }}>
-        <Link to="/">
+      <ul className="p-0 " style={{ minHeight: "98vh" }}>
+        <NavLink to="/" className="text-dark text-decoration-none">
           <li className="list-group-item">Trang chủ</li>
-        </Link>
-        <Link to="/admin/train">
+        </NavLink>
+        <NavLink
+          to="/admin/train"
+          className="text-decoration-none text-dark"
+          activeClassName="font-weight-bold"
+        >
           <li className="list-group-item">Huấn luyện</li>
-        </Link>
-        <Link to="/admin/conversation">
-          <li className="list-group-item">Quản lý hội thoại</li>
-        </Link>
+        </NavLink>
+        <NavLink
+          to="/admin/conversation"
+          className="text-decoration-none text-dark"
+          activeClassName="font-weight-bold"
+        >
+          <li className="list-group-item">Quản lý tin nhắn</li>
+        </NavLink>
         <li className="list-group-item">
           Quản lý dữ liệu
           <ul>
-            <Link to="/admin/movies">
+            <NavLink
+              to="/admin/movies"
+              className="text-decoration-none text-dark"
+              activeClassName="font-weight-bold"
+            >
               <li>Phim</li>
-            </Link>
-            <Link to="/admin/genres">
+            </NavLink>
+            <NavLink
+              to="/admin/genres"
+              className="text-decoration-none text-dark"
+              activeClassName="font-weight-bold"
+            >
               <li>Thể loại</li>
-            </Link>
-            <Link to="/admin/users">
+            </NavLink>
+            <NavLink
+              to="/admin/users"
+              className="text-decoration-none text-dark"
+              activeClassName="font-weight-bold"
+            >
               <li>Người dùng</li>
-            </Link>
-            <Link to="/admin/ratings">
+            </NavLink>
+            <NavLink
+              to="/admin/ratings"
+              className="text-decoration-none text-dark"
+              activeClassName="font-weight-bold"
+            >
               <li>Đánh giá</li>
-            </Link>
+            </NavLink>
           </ul>
         </li>
-        <Link to="/admin/login">
-          <li className="list-group-item">Đăng xuất</li>
-        </Link>
+        <NavLink
+          to="/admin/login"
+          className="text-decoration-none text-dark"
+          activeClassName="font-weight-bold"
+        >
+          <li className="list-group-item">
+            <FontAwesomeIcon icon={faSignOutAlt} className="mx-2" />
+            <span>Đăng xuất</span>
+          </li>
+        </NavLink>
       </ul>
     );
   }

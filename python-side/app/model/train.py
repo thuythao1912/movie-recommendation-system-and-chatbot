@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
 import pandas as pd
-from app.model.svm_model import SVMModel
+from app.model.model_type import SVMModel, NaiveBayesModel, KNNModel, DecisionTreeModel
 from joblib import dump
 
 
@@ -32,7 +32,7 @@ class Train:
             for phrase in data["training_phrases"]:
                 train_object = {"feature": f'{nlp.preprocess_step_2(nlp.preprocess_step_1(phrase))}',
                                 "target": nlp.normalize(data["intent_name"])}
-                train_data.extend(utils.duplicate_object(train_object, 2))
+                train_data.extend(utils.duplicate_object(train_object, 1))
                 remove_accent_object = {"feature": f"{nlp.remove_accents(train_object['feature'])}",
                                         "target": train_object["target"]}
                 train_data.extend(utils.duplicate_object(remove_accent_object, 2))
@@ -43,8 +43,12 @@ class Train:
         utils.save_json(data={"intents": train_data}, prefix=True,
                         json_path=os.path.join(root, "data", "data_train.json"))
 
-        # init model naive bayes
+        # ================ CHOOSE MODEL ================
         model = SVMModel()
+        # model = NaiveBayesModel()
+        # model= KNNModel()
+        # model = DecisionTreeModel()
+        # ==============================================
 
         # Split dataset into training set and test set
         X_train, X_test, y_train, y_test = train_test_split(df_train["feature"], df_train.target, test_size=0.2,
@@ -57,6 +61,7 @@ class Train:
 
         # Model Accuracy: how often is the classifier correct?
         print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+        print("Report:", metrics.classification_report(y_test, y_pred))
 
         # save model to file
         dump(clf, os.path.join(root, "app", "model", "trained", "model_predicted.pkl"))

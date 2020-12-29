@@ -14,10 +14,10 @@ export default class AdminPage extends Component {
   render() {
     return (
       <div className="row m-0">
-        <div className="col-lg-2 pl-0 col-md-3 col-sm-4">
+        <div className="col-lg-2 p-0 col-md-3 col-sm-4 ">
           <Panel />
         </div>
-        <div className="col-lg-10 border col-md-9 col-sm-8 p-3 bg-light">
+        <div className="col-lg-10 col-md-9 col-sm-8 p-3 bg-light">
           <AdminRoute exact path="/admin/movies" component={Movies} />
           <AdminRoute exact path="/admin/train" component={Train} />
           <AdminRoute exact path="/admin/genres" component={Genres} />

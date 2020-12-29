@@ -69,7 +69,7 @@ export default class Login extends Component {
       >
         <div
           className="text-white bg-dark col-lg-4 text-center offset-lg-3 p-5"
-          style={{ height: "400px", margin: "auto", opacity: "0.85" }}
+          style={{ height: "450px", margin: "auto", opacity: "0.85" }}
         >
           <h3>ĐĂNG NHẬP</h3>
           <div className="text-warning my-3">{this.state.message}</div>
@@ -80,6 +80,7 @@ export default class Login extends Component {
               placeholder="Tên đăng nhập..."
               name="user_login"
               onChange={this.handle_input}
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
               className="form-control my-3"
@@ -87,6 +88,7 @@ export default class Login extends Component {
               name="user_password"
               onChange={this.handle_input}
               type="password"
+              onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <Button variant="info" className="my-3" onClick={this.send_login}>
               Đăng nhập

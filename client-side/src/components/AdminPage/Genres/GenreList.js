@@ -132,6 +132,7 @@ export default class GenreList extends Component {
                   <SearchBar
                     {...props.searchProps}
                     placeholder="Nhập vào để tìm ..."
+                    className="rounded-pill"
                   />
                 </div>
                 <BootstrapTable

@@ -149,7 +149,7 @@ export default class MovieDetail extends Component {
               <div className="row m-0">
                 <Button
                   variant="info"
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 rounded-pill"
                   onClick={this.send_rating_score}
                 >
                   <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
@@ -182,7 +182,7 @@ export default class MovieDetail extends Component {
           </div>
           <div className="col-lg-4 p-4 mx-3">
             <div>
-              <h5>Có thể bạn thích</h5>
+              <h5>Phim gợi ý cho bạn</h5>
             </div>
             <div>{elMovieSuggest}</div>
           </div>

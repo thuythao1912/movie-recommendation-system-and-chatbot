@@ -180,9 +180,14 @@ export default class ConversationList extends Component {
                   <SearchBar
                     {...props.searchProps}
                     placeholder="Nhập vào để tìm ..."
+                    className="rounded-pill"
                   />
                   <Dropdown className="mx-3">
-                    <Dropdown.Toggle variant="info" id="dropdown-basic">
+                    <Dropdown.Toggle
+                      variant="info"
+                      id="dropdown-basic"
+                      className="rounded-pill"
+                    >
                       <FontAwesomeIcon icon={faFilter} />
                       <span className="mx-2">Lọc trạng thái</span>
                     </Dropdown.Toggle>
@@ -205,7 +210,11 @@ export default class ConversationList extends Component {
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                  <Button variant="danger" onClick={this.delete_message_list}>
+                  <Button
+                    variant="danger"
+                    onClick={this.delete_message_list}
+                    className="rounded-pill"
+                  >
                     <FontAwesomeIcon icon={faTrashAlt} />
                     <span className="mx-2">Xóa tất cả</span>
                   </Button>
