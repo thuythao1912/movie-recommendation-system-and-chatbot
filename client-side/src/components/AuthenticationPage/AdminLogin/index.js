@@ -67,14 +67,14 @@ export default class AdminLogin extends Component {
           <div className="text-warning my-3">{this.state.message}</div>
           <div>
             <input
-              className="form-control my-3 "
+              className="form-control my-3 rounded-pill"
               placeholder="Tên đăng nhập..."
               name="admin_login"
               onChange={this.handle_input}
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
-              className="form-control my-3"
+              className="form-control my-3 rounded-pill"
               placeholder="Mật khẩu..."
               name="admin_password"
               onChange={this.handle_input}
@@ -82,7 +82,11 @@ export default class AdminLogin extends Component {
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
 
-            <Button variant="info" className="my-3" onClick={this.send_login}>
+            <Button
+              variant="info"
+              className="my-3 rounded-pill"
+              onClick={this.send_login}
+            >
               Đăng nhập
             </Button>
             <Link className="text-white" to="/">

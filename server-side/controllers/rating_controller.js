@@ -27,3 +27,11 @@ exports.get_list_rating = (req, res) => {
       res.status(400).send(`Unable to get to database...`);
     });
 };
+
+exports.count_rating = async (req, res) => {
+  let count_doc = 0;
+  await rating_model.countDocuments((err, result) => {
+    count_doc = result;
+  });
+  res.status(200).json(count_doc);
+};

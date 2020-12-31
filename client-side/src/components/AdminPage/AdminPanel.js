@@ -60,6 +60,7 @@ export default class AdminPanel extends Component {
             </NavLink>
           </ul>
         </li>
+
         <NavLink
           to="/admin/login"
           className="text-decoration-none text-dark"

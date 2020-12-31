@@ -76,21 +76,25 @@ export default class Login extends Component {
 
           <div>
             <input
-              className="form-control my-3 "
+              className="form-control my-3 rounded-pill"
               placeholder="Tên đăng nhập..."
               name="user_login"
               onChange={this.handle_input}
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
-              className="form-control my-3"
+              className="form-control my-3 rounded-pill"
               placeholder="Mật khẩu..."
               name="user_password"
               onChange={this.handle_input}
               type="password"
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
-            <Button variant="info" className="my-3" onClick={this.send_login}>
+            <Button
+              variant="info"
+              className="my-3 rounded-pill"
+              onClick={this.send_login}
+            >
               Đăng nhập
             </Button>
             <Link className="text-white" to="/register">

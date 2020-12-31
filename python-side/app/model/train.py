@@ -32,7 +32,7 @@ class Train:
             for phrase in data["training_phrases"]:
                 train_object = {"feature": f'{nlp.preprocess_step_2(nlp.preprocess_step_1(phrase))}',
                                 "target": nlp.normalize(data["intent_name"])}
-                train_data.extend(utils.duplicate_object(train_object, 1))
+                train_data.extend(utils.duplicate_object(train_object, 2))
                 remove_accent_object = {"feature": f"{nlp.remove_accents(train_object['feature'])}",
                                         "target": train_object["target"]}
                 train_data.extend(utils.duplicate_object(remove_accent_object, 2))

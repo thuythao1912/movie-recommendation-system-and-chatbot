@@ -9,6 +9,8 @@ import AddMovieGenre from "./AddMovieGenre";
 import Users from "./Users";
 import Ratings from "./Ratings";
 import AdminRoute from "../Routes/AdminRoute";
+import AddMovie from "./AddMovieGenre/AddMovie";
+import AddGenre from "./AddMovieGenre/AddGenre";
 
 export default class AdminPage extends Component {
   render() {
@@ -27,7 +29,8 @@ export default class AdminPage extends Component {
             path="/admin/conversation"
             component={Conversation}
           />
-          <AdminRoute exact path="/admin/add" component={AddMovieGenre} />
+          <AdminRoute exact path="/admin/add-movie" component={AddMovie} />
+          <AdminRoute exact path="/admin/add-genre" component={AddGenre} />
           <AdminRoute exact path="/admin/ratings" component={Ratings} />
         </div>
       </div>

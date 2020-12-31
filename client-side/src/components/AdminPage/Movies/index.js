@@ -8,30 +8,10 @@ import {
   faPlusSquare,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import MovieGenre from "../MovieGenre";
+import Statistics from "../Statistics";
 import callApi from "../../../utils/apiCaller";
 
 export default class Movies extends Component {
-  constructor(props) {
-    super();
-    this.state = { count_genre: 0, count_movie: 0, re_render: true };
-  }
-  get_movie_genre_count = async () => {
-    let count_movie;
-    let count_genre;
-    await callApi("movies/count", "get").then((res) => {
-      count_movie = res.data;
-    });
-    await callApi("genres/count", "get").then((res) => {
-      count_genre = res.data;
-    });
-    this.setState({ count_genre: count_genre, count_movie: count_movie });
-  };
-
-  componentDidMount = async () => {
-    await this.get_movie_genre_count();
-  };
-
   delete_movie_list = async () => {
     let ans = window.confirm(`Bạn có xác nhận xóa tất cả phim?`);
     if (ans) {
@@ -45,15 +25,15 @@ export default class Movies extends Component {
       <div className="bg-light">
         <h3 className="text-dark font-weight-bold">QUẢN LÝ DỮ LIỆU PHIM</h3>
         <div className="row mt-4">
-          <div className="col-lg-8">
-            <MovieGenre
-              count_genre={this.state.count_genre}
-              count_movie={this.state.count_movie}
-            />
+          <div className="col-lg-10">
+            <Statistics />
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-2">
             <div className="col-lg-12">
-              <Link to="/admin/add" className="text-decoration-none text-white">
+              <Link
+                to="/admin/add-movie"
+                className="text-decoration-none text-white"
+              >
                 <button className="btn btn-block btn-info">
                   <FontAwesomeIcon icon={faPlusSquare} />
                   <span className="mx-2">Thêm mới</span>

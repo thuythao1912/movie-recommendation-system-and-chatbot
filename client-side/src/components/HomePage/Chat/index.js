@@ -60,11 +60,13 @@ export default class App extends Component {
       const messages = this.state.messages;
 
       let date = formatDate(new Date(), "dmy-hms");
+      let timestamp = new Date().getTime();
       socket.emit("message", {
         text: message,
         user: this.state.user,
         created_time: date,
         session: this.state.session,
+        timestamp: timestamp,
       });
       messages.push({
         text: message,
@@ -85,14 +87,12 @@ export default class App extends Component {
     return (
       <div className="col-lg-3 col-md-5 border p-0 fixed-bottom offset-lg-8 offset-md-2 bg-white">
         <div
-          className="bg-chatbot px-3 py-2 text-white font-weight-bold d-flex align-items-center chat-header"
+          className="bg-chatbot p-3 text-white font-weight-bold d-flex align-items-center chat-header"
           onClick={this.displayChatBox}
         >
           <span className="mr-auto">CHATBOT NADINE</span>
-          <div className="ml-auto">
-            <button className="btn btn-chatbot">
-              <FontAwesomeIcon icon={faWindowMinimize} />
-            </button>
+          <div className="ml-auto ">
+            <FontAwesomeIcon icon={faWindowMinimize} />
           </div>
         </div>
         <div style={{ display: this.state.display_chat_box }}>

@@ -5,11 +5,19 @@
       "target": "tra cuu thong tin movie_title"
     },
     {
+      "feature": "muốn tra_cứu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
       "feature": "muon tra_cuu phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },
     {
       "feature": "muon tra_cuu phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },
     {
@@ -29,11 +37,19 @@
       "target": "tra cuu thong tin movie_title"
     },
     {
+      "feature": "muốn coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
       "feature": "muon coi phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },
     {
       "feature": "muon coi phim movie_title",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "thông_tin phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },
     {
@@ -53,11 +69,19 @@
       "target": "tra cuu thong tin movie_title"
     },
     {
+      "feature": "muốn coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
       "feature": "muon coi phim",
       "target": "tra cuu thong tin movie_title"
     },
     {
       "feature": "muon coi phim",
+      "target": "tra cuu thong tin movie_title"
+    },
+    {
+      "feature": "muốn xem phim",
       "target": "tra cuu thong tin movie_title"
     },
     {
@@ -77,11 +101,19 @@
       "target": "tra cuu thong tin movie_genres"
     },
     {
+      "feature": "muốn tra_cứu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
       "feature": "muon tra_cuu phim movie_genres",
       "target": "tra cuu thong tin movie_genres"
     },
     {
       "feature": "muon tra_cuu phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "muốn xem phim movie_genres",
       "target": "tra cuu thong tin movie_genres"
     },
     {
@@ -101,11 +133,19 @@
       "target": "tra cuu thong tin movie_genres"
     },
     {
+      "feature": "muốn coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
       "feature": "muon coi phim movie_genres",
       "target": "tra cuu thong tin movie_genres"
     },
     {
       "feature": "muon coi phim movie_genres",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
+      "feature": "thông_tin phim movie_genres",
       "target": "tra cuu thong tin movie_genres"
     },
     {
@@ -125,6 +165,10 @@
       "target": "tra cuu thong tin movie_genres"
     },
     {
+      "feature": "muốn coi thể_loại",
+      "target": "tra cuu thong tin movie_genres"
+    },
+    {
       "feature": "muon coi the_loai",
       "target": "tra cuu thong tin movie_genres"
     },
@@ -137,11 +181,19 @@
       "target": "yeu cau goi y phim"
     },
     {
+      "feature": "gợi_ý phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
       "feature": "goi_y phim",
       "target": "yeu cau goi y phim"
     },
     {
       "feature": "goi_y phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "muốn gợi_ý phim",
       "target": "yeu cau goi y phim"
     },
     {
@@ -161,11 +213,19 @@
       "target": "yeu cau goi y phim"
     },
     {
+      "feature": "có_thể gợi_ý phim không",
+      "target": "yeu cau goi y phim"
+    },
+    {
       "feature": "co_the goi_y phim khong",
       "target": "yeu cau goi y phim"
     },
     {
       "feature": "co_the goi_y phim khong",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "gợi_ý phim",
       "target": "yeu cau goi y phim"
     },
     {
@@ -185,6 +245,10 @@
       "target": "yeu cau goi y phim"
     },
     {
+      "feature": "có gợi_ý phim nào không",
+      "target": "yeu cau goi y phim"
+    },
+    {
       "feature": "co goi_y phim nao khong",
       "target": "yeu cau goi y phim"
     },
@@ -197,11 +261,19 @@
       "target": "yeu cau goi y phim"
     },
     {
+      "feature": "đề_xuất phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
       "feature": "de_xuat phim",
       "target": "yeu cau goi y phim"
     },
     {
       "feature": "de_xuat phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "đề_xuất phim",
       "target": "yeu cau goi y phim"
     },
     {
@@ -221,12 +293,20 @@
       "target": "yeu cau goi y phim"
     },
     {
+      "feature": "muốn đề_xuất phim",
+      "target": "yeu cau goi y phim"
+    },
+    {
       "feature": "muon de_xuat phim",
       "target": "yeu cau goi y phim"
     },
     {
       "feature": "muon de_xuat phim",
       "target": "yeu cau goi y phim"
+    },
+    {
+      "feature": "xin chào",
+      "target": "chao hoi"
     },
     {
       "feature": "xin chào",
@@ -253,6 +333,14 @@
       "target": "chao hoi"
     },
     {
+      "feature": "hi",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
+      "target": "chao hoi"
+    },
+    {
       "feature": "chào",
       "target": "chao hoi"
     },
@@ -277,6 +365,14 @@
       "target": "chao hoi"
     },
     {
+      "feature": "hello",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "alo",
+      "target": "chao hoi"
+    },
+    {
       "feature": "alo",
       "target": "chao hoi"
     },
@@ -298,6 +394,14 @@
     },
     {
       "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "bonjour",
+      "target": "chao hoi"
+    },
+    {
+      "feature": "chào",
       "target": "chao hoi"
     },
     {
@@ -317,12 +421,20 @@
       "target": "chao hoi"
     },
     {
+      "feature": "chào_nhe",
+      "target": "chao hoi"
+    },
+    {
       "feature": "chao_nhe",
       "target": "chao hoi"
     },
     {
       "feature": "chao_nhe",
       "target": "chao hoi"
+    },
+    {
+      "feature": "tạm_biệt",
+      "target": "tam biet"
     },
     {
       "feature": "tạm_biệt",
@@ -341,11 +453,19 @@
       "target": "tam biet"
     },
     {
+      "feature": "tạm_biệt nhé",
+      "target": "tam biet"
+    },
+    {
       "feature": "tam_biet nhe",
       "target": "tam biet"
     },
     {
       "feature": "tam_biet nhe",
+      "target": "tam biet"
+    },
+    {
+      "feature": "bye nhé",
       "target": "tam biet"
     },
     {
@@ -373,6 +493,14 @@
       "target": "tam biet"
     },
     {
+      "feature": "bye",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp nhé",
+      "target": "tam biet"
+    },
+    {
       "feature": "hẹn gặp nhé",
       "target": "tam biet"
     },
@@ -382,6 +510,10 @@
     },
     {
       "feature": "hen gap nhe",
+      "target": "tam biet"
+    },
+    {
+      "feature": "hẹn gặp",
       "target": "tam biet"
     },
     {
@@ -401,11 +533,19 @@
       "target": "hoi tham suc khoe"
     },
     {
+      "feature": "khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
       "feature": "khoe khong",
       "target": "hoi tham suc khoe"
     },
     {
       "feature": "khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "thế_nào",
       "target": "hoi tham suc khoe"
     },
     {
@@ -425,11 +565,19 @@
       "target": "hoi tham suc khoe"
     },
     {
+      "feature": "khỏe",
+      "target": "hoi tham suc khoe"
+    },
+    {
       "feature": "khoe",
       "target": "hoi tham suc khoe"
     },
     {
       "feature": "khoe",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "dạo thế_nào",
       "target": "hoi tham suc khoe"
     },
     {
@@ -449,11 +597,19 @@
       "target": "hoi tham suc khoe"
     },
     {
+      "feature": "có khỏe không",
+      "target": "hoi tham suc khoe"
+    },
+    {
       "feature": "co khoe khong",
       "target": "hoi tham suc khoe"
     },
     {
       "feature": "co khoe khong",
+      "target": "hoi tham suc khoe"
+    },
+    {
+      "feature": "sức_khỏe thế_nào",
       "target": "hoi tham suc khoe"
     },
     {
@@ -473,11 +629,19 @@
       "target": "chatbot ten gi"
     },
     {
+      "feature": "tên",
+      "target": "chatbot ten gi"
+    },
+    {
       "feature": "ten",
       "target": "chatbot ten gi"
     },
     {
       "feature": "ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "tên",
       "target": "chatbot ten gi"
     },
     {
@@ -505,6 +669,14 @@
       "target": "chatbot ten gi"
     },
     {
+      "feature": "what is your name",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "what your name",
+      "target": "chatbot ten gi"
+    },
+    {
       "feature": "what your name",
       "target": "chatbot ten gi"
     },
@@ -521,11 +693,19 @@
       "target": "chatbot ten gi"
     },
     {
+      "feature": "chatbot tên",
+      "target": "chatbot ten gi"
+    },
+    {
       "feature": "chatbot ten",
       "target": "chatbot ten gi"
     },
     {
       "feature": "chatbot ten",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "chatbot tên",
       "target": "chatbot ten gi"
     },
     {
@@ -545,11 +725,19 @@
       "target": "chatbot ten gi"
     },
     {
+      "feature": "có_thể gọi",
+      "target": "chatbot ten gi"
+    },
+    {
       "feature": "co_the goi",
       "target": "chatbot ten gi"
     },
     {
       "feature": "co_the goi",
+      "target": "chatbot ten gi"
+    },
+    {
+      "feature": "gọi",
       "target": "chatbot ten gi"
     },
     {
@@ -577,6 +765,14 @@
       "target": "nadine la gi"
     },
     {
+      "feature": "nadine",
+      "target": "nadine la gi"
+    },
+    {
+      "feature": "không hiểu nadine",
+      "target": "nadine la gi"
+    },
+    {
       "feature": "không hiểu nadine",
       "target": "nadine la gi"
     },
@@ -601,6 +797,14 @@
       "target": "nadine la gi"
     },
     {
+      "feature": "nadine ai",
+      "target": "nadine la gi"
+    },
+    {
+      "feature": "nadine có ý_nghĩa",
+      "target": "nadine la gi"
+    },
+    {
       "feature": "nadine có ý_nghĩa",
       "target": "nadine la gi"
     },
@@ -610,6 +814,10 @@
     },
     {
       "feature": "nadine co y_nghia",
+      "target": "nadine la gi"
+    },
+    {
+      "feature": "nadine tên ai",
       "target": "nadine la gi"
     },
     {
@@ -629,6 +837,10 @@
       "target": "nhiem vu chatbot"
     },
     {
+      "feature": "nhiệm_vụ",
+      "target": "nhiem vu chatbot"
+    },
+    {
       "feature": "nhiem_vu",
       "target": "nhiem vu chatbot"
     },
@@ -641,11 +853,19 @@
       "target": "nhiem vu chatbot"
     },
     {
+      "feature": "có_thể",
+      "target": "nhiem vu chatbot"
+    },
+    {
       "feature": "co_the",
       "target": "nhiem vu chatbot"
     },
     {
       "feature": "co_the",
+      "target": "nhiem vu chatbot"
+    },
+    {
+      "feature": "có_thể",
       "target": "nhiem vu chatbot"
     },
     {
@@ -665,11 +885,19 @@
       "target": "nhiem vu chatbot"
     },
     {
+      "feature": "khả_năng",
+      "target": "nhiem vu chatbot"
+    },
+    {
       "feature": "kha_nang",
       "target": "nhiem vu chatbot"
     },
     {
       "feature": "kha_nang",
+      "target": "nhiem vu chatbot"
+    },
+    {
+      "feature": "nhiệm_vụ thế_nào",
       "target": "nhiem vu chatbot"
     },
     {
@@ -689,11 +917,19 @@
       "target": "nhiem vu chatbot"
     },
     {
+      "feature": "có_thể giúp thế_nào",
+      "target": "nhiem vu chatbot"
+    },
+    {
       "feature": "co_the giup the_nao",
       "target": "nhiem vu chatbot"
     },
     {
       "feature": "co_the giup the_nao",
+      "target": "nhiem vu chatbot"
+    },
+    {
+      "feature": "có_thể giúp",
       "target": "nhiem vu chatbot"
     },
     {

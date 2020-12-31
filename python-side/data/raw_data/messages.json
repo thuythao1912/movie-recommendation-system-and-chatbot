@@ -1,0 +1,3597 @@
+[{
+  "_id": {
+    "$oid": "5fc143434b72881b4c56d20a"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.7214062424277651,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:19:47",
+  "session": "24329009-4e93-4e26-a902-b7583974de8d",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc143542368387f8b26c72c"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.7214062424277651,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:20:04",
+  "session": "24329009-4e93-4e26-a902-b7583974de8d",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc143ff2368387f8b26c72d"
+  },
+  "input": "bạn sinh ở đâu",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.15512387805326944,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:22:55",
+  "session": "24329009-4e93-4e26-a902-b7583974de8d",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc144402368387f8b26c72e"
+  },
+  "input": "bạn sinh ở đâu vậy bạn",
+  "intent_name": "hoi noi sinh",
+  "response": "Mình sinh ở Cần Thơ",
+  "score": 0.6317923484872624,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:24:00",
+  "session": "f1323541-ae8e-4852-bade-eb614b5a3fe8",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc1445a2368387f8b26c72f"
+  },
+  "input": "bạn sinh ở đâu vậy",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.16092742587126022,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:24:26",
+  "session": "ce3fedec-a7ac-4e3d-b260-2a88d3c52671",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc1446b2368387f8b26c730"
+  },
+  "input": "bạn sinh ở đâu vậy",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.16092742587126022,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:24:43",
+  "session": "34c45614-e1ed-4f47-a5ad-80ece1df48dc",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc1449c2368387f8b26c731"
+  },
+  "input": "bạn sinh ở đâu thế",
+  "intent_name": "hoi noi sinh",
+  "response": "Mình sinh ở Cần Thơ",
+  "score": 0.7579072306380752,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 01:25:32",
+  "session": "31136fa5-d0b5-44df-a7e5-301c89602dc2",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fc269474550d8eba8410a07"
+  },
+  "input": "xem phim hài",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Grumpier Old Men, Waiting to Exhale, Father of the Bride Part II, Sabrina",
+  "score": 0.788772185425322,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "comedy",
+      "value": "hài"
+    }
+  ],
+  "condition": "{'movie_genres': {'$regex': 'comedy', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-11-2020 22:14:15",
+  "session": "ce962f11-309e-4b3e-b4c8-97fb007f8b67",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66b35244dc9334efcf356"
+  },
+  "input": "aloo",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Jumanji\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Children, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: \n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "a",
+      "value": "a"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'a', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:11:33",
+  "session": "0848feda-ae0b-4a3a-b09c-ed44d097c931",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66b62244dc9334efcf357"
+  },
+  "input": "alo",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Jumanji\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Children, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: \n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "a",
+      "value": "a"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'a', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:12:18",
+  "session": "0848feda-ae0b-4a3a-b09c-ed44d097c931",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66b64244dc9334efcf358"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.6457361981950658,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:12:20",
+  "session": "0848feda-ae0b-4a3a-b09c-ed44d097c931",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66b65244dc9334efcf359"
+  },
+  "input": "alo",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Jumanji\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Children, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: \n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "a",
+      "value": "a"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'a', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:12:21",
+  "session": "0848feda-ae0b-4a3a-b09c-ed44d097c931",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66c43244dc9334efcf35a"
+  },
+  "input": "alo",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Jumanji\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Children, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: \n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "a",
+      "value": "a"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'a', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:16:03",
+  "session": "53afcbf0-04bb-45cf-93ec-aa9f86c3e9f0",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66c69244dc9334efcf35b"
+  },
+  "input": "alo",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.6458537707619201,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:16:41",
+  "session": "41b01909-9c61-491a-a7e2-2b826240bab6",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc66c6c244dc9334efcf35c"
+  },
+  "input": "aloo",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "01-12-2020 23:16:44",
+  "session": "41b01909-9c61-491a-a7e2-2b826240bab6",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c64c64d3719a0dd70706"
+  },
+  "input": "tui muốn coi phim",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Bạn muốn tra cứu phim gì?",
+  "score": 0.7330281919269821,
+  "entities": [],
+  "condition": "{}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:52:28",
+  "session": "be9fe95b-8ee0-481f-9625-9fdd9dcc7a68",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c65064d3719a0dd70707"
+  },
+  "input": "toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:52:32",
+  "session": "be9fe95b-8ee0-481f-9625-9fdd9dcc7a68",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c65764d3719a0dd70708"
+  },
+  "input": "jumanji",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Jumanji\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Children, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: \n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "jumanji",
+      "value": "jumanji"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'jumanji', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:52:39",
+  "session": "be9fe95b-8ee0-481f-9625-9fdd9dcc7a68",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c65f64d3719a0dd70709"
+  },
+  "input": "bạn gợi ý phim cho tui được chứ",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.6381157807089346,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:52:47",
+  "session": "be9fe95b-8ee0-481f-9625-9fdd9dcc7a68",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c66764d3719a0dd7070a"
+  },
+  "input": "jumanji, toy story",
+  "intent_name": "suggest_movie",
+  "response": "Dựa vào các phim bạn đã xem, mình nghĩ đây là những bộ phim phù hợp với bạn: Tom and Huck; Balto; Amazing Panda Adventure, The; Far From Home: The Adventures of Yellow Dog; Gordy",
+  "score": 1,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    },
+    {
+      "key": "movie_title",
+      "org_val": "jumanji",
+      "value": "jumanji"
+    }
+  ],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:52:54",
+  "session": "be9fe95b-8ee0-481f-9625-9fdd9dcc7a68",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fc7c67c64d3719a0dd7070b"
+  },
+  "input": "gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: Outbreak, Before the Rain (Pred dozhdot), Postman, The (Postino, Il), Living in Oblivion, Friday",
+  "score": 0.6381157807089346,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "02-12-2020 23:53:16",
+  "session": "89c2867b-5760-48c4-8d97-28b12f2e02d8",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fcca7700d57d1196e66895b"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Chào bạn, bạn cần mình trợ giúp gì?",
+  "score": 0.6457361981950658,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 16:42:08",
+  "session": "859f71a7-449c-4b39-832b-6e301b155752",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fcca7770d57d1196e66895c"
+  },
+  "input": "toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.6001209456716448,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 16:42:14",
+  "session": "859f71a7-449c-4b39-832b-6e301b155752",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fcca77b0d57d1196e66895d"
+  },
+  "input": "gợi ý phi",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.4605445657970561,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 16:42:19",
+  "session": "859f71a7-449c-4b39-832b-6e301b155752",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fcca77f0d57d1196e66895e"
+  },
+  "input": "gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.6381157807089346,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 16:42:23",
+  "session": "859f71a7-449c-4b39-832b-6e301b155752",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fcca7840d57d1196e66895f"
+  },
+  "input": "toy story",
+  "intent_name": "suggest_movie",
+  "response": "Dựa vào các phim bạn đã xem, mình nghĩ đây là những bộ phim phù hợp với bạn: Jumanji; Balto; Kids of the Round Table; NeverEnding Story III, The; Gordy",
+  "score": 1,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 16:42:27",
+  "session": "859f71a7-449c-4b39-832b-6e301b155752",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fccfdaa0fd4d99f3fad0671"
+  },
+  "input": "ngu",
+  "intent_name": "negative_sentence",
+  "response": "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :(",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": -1,
+  "created_time": "06-12-2020 22:50:02",
+  "session": "0ba17be4-26d4-4602-a6af-5d4a4a34440b",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fccfdc60fd4d99f3fad0672"
+  },
+  "input": "hơi bị ngu đó nha",
+  "intent_name": "negative_sentence",
+  "response": "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :(",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": -1,
+  "created_time": "06-12-2020 22:50:30",
+  "session": "0ba17be4-26d4-4602-a6af-5d4a4a34440b",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fccfdd00fd4d99f3fad0673"
+  },
+  "input": "ngu đẹp",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "06-12-2020 22:50:40",
+  "session": "0ba17be4-26d4-4602-a6af-5d4a4a34440b",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fccfdea0fd4d99f3fad0674"
+  },
+  "input": "ngu ngu đẹp",
+  "intent_name": "negative_sentence",
+  "response": "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :(",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": -0.6666666666666666,
+  "created_time": "06-12-2020 22:51:06",
+  "session": "0ba17be4-26d4-4602-a6af-5d4a4a34440b",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdce288a91d164cc4edf052"
+  },
+  "input": "tui muốn coi phim toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.8690751213749854,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "19-12-2020 00:10:32",
+  "session": "e5f8fd5d-5873-4a2c-9520-2e6fd6961314",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fdce2afa91d164cc4edf053"
+  },
+  "input": "tui muốn coi phim abc",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Bạn muốn tra cứu phim gì?",
+  "score": 0.7330281919269821,
+  "entities": [],
+  "condition": "{}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "19-12-2020 00:11:11",
+  "session": "e5f8fd5d-5873-4a2c-9520-2e6fd6961314",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fdce2b3a91d164cc4edf054"
+  },
+  "input": "abc",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "19-12-2020 00:11:15",
+  "session": "e5f8fd5d-5873-4a2c-9520-2e6fd6961314",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fdce2fda91d164cc4edf055"
+  },
+  "input": "gợi ý phim cho tui đi",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: Outbreak, Before the Rain (Pred dozhdot), Postman, The (Postino, Il), Living in Oblivion, Friday",
+  "score": 0.6381157807089346,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "19-12-2020 00:12:29",
+  "session": "5dde8d64-ebfc-4a77-8eef-f00cf54ee9f7",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fdce3baa91d164cc4edf056"
+  },
+  "input": "gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.6381157807089346,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "19-12-2020 00:15:38",
+  "session": "d2c5f633-2760-4796-89cf-eb14595a1407",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedb421728a48f764cc2a2"
+  },
+  "input": "khi nào tui có người yêu",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.28056147981631163,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:04:02",
+  "session": "047590d3-3dfa-4d62-a792-26d30cb139de",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedb4d1728a48f764cc2a3"
+  },
+  "input": "tui tên đức 23 tuổi",
+  "intent_name": "chatbot ten gi",
+  "response": "Mình tên là Nadine nha!",
+  "score": 0.686246614627923,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:04:12",
+  "session": "047590d3-3dfa-4d62-a792-26d30cb139de",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedb5b1728a48f764cc2a4"
+  },
+  "input": "nadine là aii",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:04:27",
+  "session": "047590d3-3dfa-4d62-a792-26d30cb139de",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedb5f1728a48f764cc2a5"
+  },
+  "input": "nadine là ai",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13192854973680562,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:04:31",
+  "session": "047590d3-3dfa-4d62-a792-26d30cb139de",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedc381728a48f764cc2a6"
+  },
+  "input": "nadine là gì",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là chatbot gợi ý phim!",
+  "score": 0.7145814534625196,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:08:08",
+  "session": "55cbafc8-9306-4691-afa8-9f530aa1624e",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedc3f1728a48f764cc2a7"
+  },
+  "input": "nadine nghĩa là gì",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là chatbot gợi ý phim!",
+  "score": 0.6803674620966143,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:08:15",
+  "session": "55cbafc8-9306-4691-afa8-9f530aa1624e",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedc451728a48f764cc2a8"
+  },
+  "input": "ai là nadine",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là chatbot gợi ý phim!",
+  "score": 0.7145879977607398,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:08:21",
+  "session": "55cbafc8-9306-4691-afa8-9f530aa1624e",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdedc491728a48f764cc2a9"
+  },
+  "input": "nadine",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là chatbot gợi ý phim!",
+  "score": 0.7145814534625196,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 12:08:25",
+  "session": "55cbafc8-9306-4691-afa8-9f530aa1624e",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdef1dc1728a48f764cc2aa"
+  },
+  "input": "xin chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.7269786288822329,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 13:40:28",
+  "session": "9de818c8-d847-47e1-ba1d-070ffc55a9e3",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fdef2151728a48f764cc2ab"
+  },
+  "input": "bạn có thể gợi ý phim cho tôi không",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: Outbreak, Before the Rain (Pred dozhdot), Postman, The (Postino, Il), Living in Oblivion, Friday",
+  "score": 0.7047949926326337,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "20-12-2020 13:41:25",
+  "session": "9de818c8-d847-47e1-ba1d-070ffc55a9e3",
+  "user": {
+    "username": "Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8badac8f0a23412e532"
+  },
+  "input": "hi bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6500372916137424,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:09:30",
+  "session": "224b0b12-2177-473d-87a9-e769d6128c3d",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8c7dac8f0a23412e533"
+  },
+  "input": "mình muốn được bạn gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5094388238941319,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:09:43",
+  "session": "224b0b12-2177-473d-87a9-e769d6128c3d",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8d4dac8f0a23412e534"
+  },
+  "input": "mình muốn được gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5094388238941319,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:09:56",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8e9dac8f0a23412e535"
+  },
+  "input": "tôi muốn được gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5094388238941319,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:10:16",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8f3dac8f0a23412e536"
+  },
+  "input": "gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.633046871948899,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:10:27",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8f6dac8f0a23412e537"
+  },
+  "input": "mướn",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:10:30",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c8fadac8f0a23412e538"
+  },
+  "input": "muốn gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5094388238941319,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:10:34",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c917dac8f0a23412e539"
+  },
+  "input": "bạn có thể gợi ý phim cho mình không",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.7047949926326337,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:11:03",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c91edac8f0a23412e53a"
+  },
+  "input": "gợi ý phim mình đi",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:11:10",
+  "session": "49b7e05a-f007-4a13-8969-dc84974e79ca",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c927dac8f0a23412e53b"
+  },
+  "input": "gợi ý phim mình đi",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong list này nhé!",
+  "score": 0.633046871948899,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:11:19",
+  "session": "c9c93672-283c-4c98-b79f-d131c7649b27",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe0c92fdac8f0a23412e53c"
+  },
+  "input": "mình coi toy story rồi á",
+  "intent_name": "suggest_movie",
+  "response": "Dựa vào các phim bạn đã xem, mình nghĩ đây là những bộ phim phù hợp với bạn: Jumanji; Balto; Kids of the Round Table; NeverEnding Story III, The; Gordy",
+  "score": 1,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "21-12-2020 23:11:27",
+  "session": "c9c93672-283c-4c98-b79f-d131c7649b27",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "red"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9da91796d343f444c0440"
+  },
+  "input": "xin chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5527001376768474,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:16:01",
+  "session": "282b96da-aa81-4581-835b-3e43b6dfaa61",
+  "user": {
+    "username": "Thụy Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9daa0796d343f444c0441"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5527001376768474,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:16:16",
+  "session": "282b96da-aa81-4581-835b-3e43b6dfaa61",
+  "user": {
+    "username": "Thụy Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dac004b3b743756965bd"
+  },
+  "input": "gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: Outbreak, Before the Rain (Pred dozhdot), Postman, The (Postino, Il), Living in Oblivion, Friday",
+  "score": 0.7654632577608561,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:16:48",
+  "session": "282b96da-aa81-4581-835b-3e43b6dfaa61",
+  "user": {
+    "username": "Thụy Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dacc04b3b743756965be"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5527001376768474,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:00",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dacf04b3b743756965bf"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.38772360986590304,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:03",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dad104b3b743756965c0"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.660966559122226,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:05",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dad404b3b743756965c1"
+  },
+  "input": "hello",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.6617856935788382,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:08",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dad604b3b743756965c2"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5527001376768474,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:10",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dadd04b3b743756965c3"
+  },
+  "input": "chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.38772360986590304,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:17",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dade04b3b743756965c4"
+  },
+  "input": "alo",
+  "intent_name": "chao hoi",
+  "response": "Chào bạn, bạn cần mình trợ giúp gì?",
+  "score": 0.6617277028226398,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:17:18",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db140d5f17c268f557db"
+  },
+  "input": "chhafo",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.1279340295757983,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:18:12",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db150d5f17c268f557dc"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.3721749030554204,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:18:13",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db390d5f17c268f557dd"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5399557563516533,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:18:49",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db420d5f17c268f557de"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Chào bạn, bạn cần mình trợ giúp gì?",
+  "score": 0.6593998996035971,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:18:58",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db66d643a5af553e11fb"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.6461415734394936,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:19:34",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9db69d643a5af553e11fc"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.6642380369800358,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:19:37",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dbb73e0d7fd1a09fbb99"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Chào bạn, bạn cần mình trợ giúp gì?",
+  "score": 0.6647161709439097,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:20:55",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de233a812cc3ab25ea05"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6583009481967911,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:15",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de253a812cc3ab25ea06"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5504887677708109,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:17",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de263a812cc3ab25ea07"
+  },
+  "input": "alo",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6585517989307067,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:18",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de2a3a812cc3ab25ea08"
+  },
+  "input": "bonjour",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6591389055794802,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:22",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de2c3a812cc3ab25ea09"
+  },
+  "input": "xin chào",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.643719544245708,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:24",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de2e3a812cc3ab25ea0a"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5504887677708109,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:31:26",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de501910c1c56157aaf8"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.5621293858161993,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:32:00",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de632a45d4787b202535"
+  },
+  "input": "chào",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.5621293858161993,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:32:19",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de742a45d4787b202536"
+  },
+  "input": "xin chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6172374435322543,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:32:36",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de7a2a45d4787b202537"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6595664620385479,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:32:42",
+  "session": "3ddfb2ce-7884-48f2-8a27-f0138b65e297",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "yellow"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de932a45d4787b202538"
+  },
+  "input": "chào bạn nhé",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.43334505569835036,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:07",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9de9d2a45d4787b202539"
+  },
+  "input": "alo bạn ơi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.5998927346583255,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:17",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dea42a45d4787b20253a"
+  },
+  "input": "chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Nadine nghe đây! Mình có thể giúp gì cho bạn?",
+  "score": 0.5621293858161993,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:24",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dea92a45d4787b20253b"
+  },
+  "input": "chào bạn nhe",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.4910415344963377,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9deb8c2e2e58f6ea8453e"
+  },
+  "input": "chào bạn",
+  "intent_name": "chao hoi",
+  "response": "Chào bạn, bạn cần mình trợ giúp gì?",
+  "score": 0.5621293858161993,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:44",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dec2c2e2e58f6ea8453f"
+  },
+  "input": "chào bạn nhé",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.43334505569835036,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:33:54",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9ded0c2e2e58f6ea84540"
+  },
+  "input": "bye nhé",
+  "intent_name": "tam biet",
+  "response": "Hẹn gặp lại bạn nha!",
+  "score": 0.676348936287178,
+  "entities": [],
+  "condition": "{}",
+  "description": "tam biet",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:34:08",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9ded6c2e2e58f6ea84541"
+  },
+  "input": "tạm biệt bạn nhen",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14886507525039222,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:34:14",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dee8c2e2e58f6ea84542"
+  },
+  "input": "tạm biệt bạn",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14886507525039222,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:34:32",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9deecc2e2e58f6ea84543"
+  },
+  "input": "tạm biệt",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14886507525039222,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:34:36",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df15a80f580de4e4a615"
+  },
+  "input": " tạm biệt bạn nhé ",
+  "intent_name": "tam biet",
+  "response": "Tạm biệt bạn!",
+  "score": 0.6606129489337741,
+  "entities": [],
+  "condition": "{}",
+  "description": "tam biet",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:17",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df1aa80f580de4e4a616"
+  },
+  "input": "bye bye bạn",
+  "intent_name": "tam biet",
+  "response": "Bye bye",
+  "score": 0.6796088182956268,
+  "entities": [],
+  "condition": "{}",
+  "description": "tam biet",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:22",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df1fa80f580de4e4a617"
+  },
+  "input": "gặp bạn sau nhé",
+  "intent_name": "tam biet",
+  "response": "Tạm biệt bạn!",
+  "score": 0.5070631787946226,
+  "entities": [],
+  "condition": "{}",
+  "description": "tam biet",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:27",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df22a80f580de4e4a618"
+  },
+  "input": "hẹn khi khác gặp nhé",
+  "intent_name": "tam biet",
+  "response": "Tạm biệt bạn!",
+  "score": 0.5351941385950167,
+  "entities": [],
+  "condition": "{}",
+  "description": "tam biet",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:30",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df2ba80f580de4e4a619"
+  },
+  "input": "bạn khỏe không ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Mình khỏe. Cảm ơn bạn!",
+  "score": 0.5660808837708659,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:39",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df2fa80f580de4e4a61a"
+  },
+  "input": "sức khỏe bạn dạo này ra sao ",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:35:43",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df42a80f580de4e4a61b"
+  },
+  "input": "sức khỏe bạn ra sao",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.32088774241636053,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:02",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df48a80f580de4e4a61c"
+  },
+  "input": "sức khỏe như thế nào",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Mình khỏe. Cảm ơn bạn!",
+  "score": 0.5680738029254755,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:08",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df55a80f580de4e4a61d"
+  },
+  "input": "bạn thế nào rồi ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Mình khỏe. Cảm ơn bạn!",
+  "score": 0.5596847042416573,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:21",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df59a80f580de4e4a61e"
+  },
+  "input": "dạo này thế nào ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Mình khỏe. Cảm ơn bạn!",
+  "score": 0.5695284017315405,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:25",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df5da80f580de4e4a61f"
+  },
+  "input": "bạn có khỏe không vậy bạn ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Mình khỏe. Cảm ơn bạn!",
+  "score": 0.5730714779871041,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df69a80f580de4e4a620"
+  },
+  "input": "bạn tên gì vậy ",
+  "intent_name": "chatbot ten gi",
+  "response": "Mình tên là Nadine nha!",
+  "score": 0.6232868709258967,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:41",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df6da80f580de4e4a621"
+  },
+  "input": "tên bạn là gì ",
+  "intent_name": "chatbot ten gi",
+  "response": "Mình tên là Nadine nha!",
+  "score": 0.6232868709258967,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:45",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df70a80f580de4e4a622"
+  },
+  "input": "tôi có thể gọi bạn là gì ",
+  "intent_name": "chatbot ten gi",
+  "response": "Nadine là tên của mình đó!",
+  "score": 0.5467781039701576,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:48",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df74a80f580de4e4a623"
+  },
+  "input": "họ tên bạn là gì dạ ",
+  "intent_name": "chatbot ten gi",
+  "response": "Nadine là tên của mình đó!",
+  "score": 0.6232868709258967,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:52",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df78a80f580de4e4a624"
+  },
+  "input": "bạn là ai ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.40571908162887754,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:36:55",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df82a80f580de4e4a625"
+  },
+  "input": "nadine nghĩa là gì vậy ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.8244949239694009,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:06",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df8ca80f580de4e4a626"
+  },
+  "input": "nadine nghĩa là gì vậy ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.8244949239694009,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:16",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df92a80f580de4e4a627"
+  },
+  "input": "nadine là gì dạ ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.8244949239694009,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:22",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df95a80f580de4e4a628"
+  },
+  "input": "mình không biết nadine là gì",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.6882622651573932,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:25",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df99a80f580de4e4a629"
+  },
+  "input": "nadine có ý nghĩa ra sao dạ ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.631603770864838,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9df9da80f580de4e4a62a"
+  },
+  "input": "nadine là gì hả ",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.8244949239694009,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:33",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfb0a80f580de4e4a62b"
+  },
+  "input": "mình muốn xem phim toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.828058087674071,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:52",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfb6a80f580de4e4a62c"
+  },
+  "input": "tôi muốn tra cứu thông tin phim toy tory",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.6932242622635065,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:37:58",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfbaa80f580de4e4a62d"
+  },
+  "input": "tôi muốn xem phim",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Bạn muốn tra cứu phim gì?",
+  "score": 0.7268759839063009,
+  "entities": [],
+  "condition": "{}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:38:02",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfbfa80f580de4e4a62e"
+  },
+  "input": "thông tin toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.5083772688725997,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:38:07",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfcaa80f580de4e4a62f"
+  },
+  "input": "bạn có thể cho tôi coi thông tin phim toy tory được không ",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.6547235186509495,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:38:18",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dfd8a80f580de4e4a630"
+  },
+  "input": "toy story",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Thông tin phim bạn cần tìm là:\n +Tựa phim: Toy Story\n +Năm sản xuất: 1995\n +Thể loại: Adventure, Animation, Children, Comedy, Fantasy\n+Diễn viên: None\n +Đạo diễn: None\n +Tên khác: Câu chuyện đồ chơi, Chuyện đồ chơi\n ",
+  "score": 0.6099766654929307,
+  "entities": [
+    {
+      "key": "movie_title",
+      "org_val": "toy story",
+      "value": "toy story"
+    }
+  ],
+  "condition": "{'movie_title': {'$regex': 'toy story', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:38:32",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9dffca80f580de4e4a631"
+  },
+  "input": "mình muốn xem phim hài",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Grumpier Old Men, Waiting to Exhale, Father of the Bride Part II, Sabrina",
+  "score": 0.5212127360900639,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "comedy",
+      "value": "hài"
+    }
+  ],
+  "condition": "{'movie_genres': {'$regex': 'comedy', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:08",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e000a80f580de4e4a632"
+  },
+  "input": "tôi muốn tra cứu thông tin phim hài và hoạt hình",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Goofy Movie, A",
+  "score": 0.6287871975248783,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "animation",
+      "value": "hoạt hình"
+    },
+    {
+      "key": "movie_genres",
+      "org_val": "comedy",
+      "value": "hài"
+    }
+  ],
+  "condition": "{'$and': [{'movie_genres': {'$regex': 'animation', '$options': 'i'}}, {'movie_genres': {'$regex': 'comedy', '$options': 'i'}}]}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:12",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e008a80f580de4e4a633"
+  },
+  "input": "tôi muốn xem phim thể loại",
+  "intent_name": "tra cuu thong tin movie_title",
+  "response": "Bạn muốn tra cứu phim gì?",
+  "score": 0.7268759839063009,
+  "entities": [],
+  "condition": "{}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:20",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e00ca80f580de4e4a634"
+  },
+  "input": "thông tin các bộ phim hoạt hình",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Balto, Pocahontas, Goofy Movie, A, Gumby: The Movie",
+  "score": 0.5624039110936897,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "animation",
+      "value": "hoạt hình"
+    }
+  ],
+  "condition": "{'movie_genres': {'$regex': 'animation', '$options': 'i'}}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:24",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e011a80f580de4e4a635"
+  },
+  "input": "bạn có thể cho tôi coi thông tin những phim hài hoặc hoạt hình chứ ",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Grumpier Old Men, Waiting to Exhale, Father of the Bride Part II, Sabrina",
+  "score": 0.6986753852069093,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "animation",
+      "value": "hoạt hình"
+    },
+    {
+      "key": "movie_genres",
+      "org_val": "comedy",
+      "value": "hài"
+    }
+  ],
+  "condition": "{'$or': [{'movie_genres': {'$regex': 'animation', '$options': 'i'}}, {'movie_genres': {'$regex': 'comedy', '$options': 'i'}}]}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e014a80f580de4e4a636"
+  },
+  "input": "hài và hoạt hình",
+  "intent_name": "tra cuu thong tin movie_genres",
+  "response": "Các phim thuộc thể loại bạn đang tìm kiếm là: Toy Story, Goofy Movie, A",
+  "score": 0.54889241480766,
+  "entities": [
+    {
+      "key": "movie_genres",
+      "org_val": "animation",
+      "value": "hoạt hình"
+    },
+    {
+      "key": "movie_genres",
+      "org_val": "comedy",
+      "value": "hài"
+    }
+  ],
+  "condition": "{'$and': [{'movie_genres': {'$regex': 'animation', '$options': 'i'}}, {'movie_genres': {'$regex': 'comedy', '$options': 'i'}}]}",
+  "description": "query",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:39:32",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e027a80f580de4e4a637"
+  },
+  "input": "bạn giỏi quá",
+  "intent_name": "positive_sentence",
+  "response": "Hihi, cảm ơn bạn nha ^^",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 1,
+  "created_time": "28-12-2020 20:39:51",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e02ba80f580de4e4a638"
+  },
+  "input": "thông minh quá vậy",
+  "intent_name": "positive_sentence",
+  "response": "Hihi, cảm ơn bạn nha ^^",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 1,
+  "created_time": "28-12-2020 20:39:54",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e02fa80f580de4e4a639"
+  },
+  "input": "bạn dở quá",
+  "intent_name": "negative_sentence",
+  "response": "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :(",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": -1,
+  "created_time": "28-12-2020 20:39:59",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e033a80f580de4e4a63a"
+  },
+  "input": "bạn ngốc ghê",
+  "intent_name": "negative_sentence",
+  "response": "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :(",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": -1,
+  "created_time": "28-12-2020 20:40:03",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e036a80f580de4e4a63b"
+  },
+  "input": "sao bạn giỏi quá chừng dạ",
+  "intent_name": "positive_sentence",
+  "response": "Hihi, cảm ơn bạn nha ^^",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 1,
+  "created_time": "28-12-2020 20:40:06",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0cba80f580de4e4a63c"
+  },
+  "input": "chatbot làm được gì",
+  "intent_name": "chatbot ten gi",
+  "response": "Mình tên là Nadine nha!",
+  "score": 0.5424332836300796,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:42:35",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0d6a80f580de4e4a63d"
+  },
+  "input": "bạn làm được gì",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:42:46",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0dba80f580de4e4a63e"
+  },
+  "input": "bạn làm gì được",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:42:51",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0dea80f580de4e4a63f"
+  },
+  "input": "nhiệm vụ bạn là gì",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.569973892437024,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:42:54",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0e2a80f580de4e4a640"
+  },
+  "input": "bạn giúp gì được cho tôi ",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.43151891518335656,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:42:58",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0e6a80f580de4e4a641"
+  },
+  "input": "bạn có thể làm được những việc nào ",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.5440258221544634,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:02",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e0fda80f580de4e4a642"
+  },
+  "input": "bạn giúp gì được ",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.43151891518335656,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:25",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e101a80f580de4e4a643"
+  },
+  "input": "v",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e103a80f580de4e4a644"
+  },
+  "input": "công việc của bạn ra sao ",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.14166604763271068,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:31",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e10ea80f580de4e4a645"
+  },
+  "input": "nhiệm vụ bạn như thế nào",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.5776439074890325,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:42",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e118a80f580de4e4a646"
+  },
+  "input": "nhiệm vụ bạn gồm những gì",
+  "intent_name": "nhiem vu chatbot",
+  "response": "Mình có thể đưa ra những gợi ý phim dành riêng cho bạn. Hãy cung cấp thông tin cho mình nhé!",
+  "score": 0.569973892437024,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:43:52",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e203aa0e1dc018b0489b"
+  },
+  "input": "đề xuất phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.6839340209404307,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:47:47",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e21caa0e1dc018b0489c"
+  },
+  "input": "Bạn gợi ý phim cho tôi được không?",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:12",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e220aa0e1dc018b0489d"
+  },
+  "input": "bạn gợi ý phim cho tôi được không ",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.7092173987333319,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:16",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e226aa0e1dc018b0489e"
+  },
+  "input": "Gợi ý phim đi",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:22",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e227aa0e1dc018b0489f"
+  },
+  "input": "gợi ý phim đi",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.7583431697550864,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:22",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e22caa0e1dc018b048a0"
+  },
+  "input": "Tôi muốn được gợi ý phim",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:28",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e22daa0e1dc018b048a1"
+  },
+  "input": "tôi muốn được gợi ý phim",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.6829614659419422,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:29",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e232aa0e1dc018b048a2"
+  },
+  "input": "Đề xuất phim cho tôi",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:34",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e236aa0e1dc018b048a3"
+  },
+  "input": "đề xuất phim cho tôi",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.6839340209404307,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:38",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e23baa0e1dc018b048a4"
+  },
+  "input": "Danh sách phim đề xuất",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:43",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e23daa0e1dc018b048a5"
+  },
+  "input": "danh sách phim đề xuất",
+  "intent_name": "yeu cau goi y phim",
+  "response": "Bạn hãy cung cấp tên một số bộ phim mà bạn đã xem trong danh sách nhé!",
+  "score": 0.6839340209404307,
+  "entities": [],
+  "condition": "{}",
+  "description": "suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:48:45",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e320aa0e1dc018b048a6"
+  },
+  "input": "tôi là gì",
+  "intent_name": "suggest_movie",
+  "response": "Tên phim bạn cung cấp không có trong danh sách nên mình không gợi ý được rồi!",
+  "score": 1,
+  "entities": [],
+  "condition": "{}",
+  "description": "res_suggest",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:52:32",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e323aa0e1dc018b048a7"
+  },
+  "input": "tôi là ai",
+  "intent_name": "nadine la gi",
+  "response": "Nadine là mình, là chatbot gợi ý phim cho bạn",
+  "score": 0.44515552232059996,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:52:35",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e34caa0e1dc018b048a8"
+  },
+  "input": "bạn đến từ đâu ",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13899917312579885,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:53:16",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e351aa0e1dc018b048a9"
+  },
+  "input": "bạn sinh ra ở đâu ",
+  "intent_name": "chao hoi",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.13899917312579885,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:53:21",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e355aa0e1dc018b048aa"
+  },
+  "input": "bạn có thích nghe nhạc không ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.34383081122704473,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:53:25",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e358aa0e1dc018b048ab"
+  },
+  "input": "bạn có hay đi du lịch không ",
+  "intent_name": "positive_sentence",
+  "response": "Hihi, cảm ơn bạn nha ^^",
+  "score": 0.34383081122704473,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 1,
+  "created_time": "28-12-2020 20:53:28",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e381aa0e1dc018b048ac"
+  },
+  "input": "bạn có thích du lịch không",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.34383081122704473,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:54:09",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fe9e38baa0e1dc018b048ad"
+  },
+  "input": "gia đình bạn có mấy thành viên ",
+  "intent_name": "hoi tham suc khoe",
+  "response": "Xin lỗi, bạn có thể cung cấp thêm thông tin không?",
+  "score": 0.2178421992087617,
+  "entities": [],
+  "condition": "",
+  "description": "",
+  "status": "unhandled",
+  "sentiment_score": 0,
+  "created_time": "28-12-2020 20:54:19",
+  "session": "a6591b4d-26e3-49b8-9773-090e3445526a",
+  "user": {
+    "username": null,
+    "user_id": null,
+    "user_login": null,
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fed5dd175c84aa332cd12bd"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào bạn!",
+  "score": 0.6575885774537797,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "31-12-2020 12:12:49",
+  "session": "f87c08cd-1426-464f-ad0f-388569c8d65c",
+  "user": {
+    "username": "Thụy Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "green"
+  }
+},{
+  "_id": {
+    "$oid": "5fed5de875c84aa332cd12be"
+  },
+  "input": "hi",
+  "intent_name": "chao hoi",
+  "response": "Xin chào. Rất vui được gặp bạn!",
+  "score": 0.6575885774537797,
+  "entities": [],
+  "condition": "{}",
+  "description": "casual",
+  "status": "handled",
+  "sentiment_score": 0,
+  "created_time": "31-12-2020 12:13:12",
+  "session": "d7274755-8c0b-4a98-ab23-2a75b98915eb",
+  "user": {
+    "username": "Thụy Thảo",
+    "user_id": "1",
+    "user_login": "bntt",
+    "color": "yellow"
+  }
+}]

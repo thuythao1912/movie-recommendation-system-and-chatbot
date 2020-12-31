@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import MovieCard from "./MovieCard";
 import MovieList from "./MovieList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash, faList } from "@fortawesome/free-solid-svg-icons";
 import { Button, Pagination } from "react-bootstrap";
 import callApi from "../../../utils/apiCaller";
 import HomePanel from "../HomePanel";
+import SlideShow from "./Slideshow";
 
 export default class Movies extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ export default class Movies extends Component {
     this.state = {
       data: [],
       is_card: true,
+      is_slideshow: true,
       display_data: [],
       limit: 8,
       currentPage: 0,
@@ -101,6 +103,9 @@ export default class Movies extends Component {
   set_display_mode = () => {
     this.setState({ is_card: !this.state.is_card });
   };
+  set_display_slideshow = () => {
+    this.setState({ is_slideshow: !this.state.is_slideshow });
+  };
 
   select_genre = (genre) => {
     if (genre != "") {
@@ -140,57 +145,73 @@ export default class Movies extends Component {
     }
 
     return (
-      <div className="row m-0">
-        <div className="col-lg-2 pl-0">
-          <HomePanel select_genre={this.select_genre} />
-        </div>
-        <div className="col-lg-10">
-          <div className="p-3">
-            <div className="justify-content-between row p-1">
-              <h3 className="text-dark font-weight-bold">DANH SÁCH PHIM</h3>
-              <Button
-                variant="light"
-                onClick={this.set_display_mode}
-                className="rounded-pill"
+      <div>
+        <div className="row m-0">
+          <div className="col-lg-2 pl-0">
+            <HomePanel select_genre={this.select_genre} />
+          </div>
+          <div className="col-lg-10">
+            <SlideShow is_slideshow={this.state.is_slideshow} />
+            <div className="p-3">
+              <div className="justify-content-between row p-1">
+                <h3 className="text-dark font-weight-bold">DANH SÁCH PHIM</h3>
+                <div>
+                  <Button
+                    variant="light"
+                    onClick={this.set_display_mode}
+                    className="rounded-pill mr-2"
+                  >
+                    <FontAwesomeIcon icon={faList} className="mr-2" />
+                    <span>
+                      {this.state.is_card ? "Xem dạng bảng" : "Xem dạng thẻ"}
+                    </span>
+                  </Button>
+                  <Button
+                    variant="light"
+                    onClick={this.set_display_slideshow}
+                    className="rounded-pill"
+                  >
+                    {this.state.is_slideshow ? (
+                      <FontAwesomeIcon icon={faEyeSlash} className="mr-2" />
+                    ) : (
+                      <FontAwesomeIcon icon={faEye} className="mr-2" />
+                    )}
+                  </Button>
+                </div>
+              </div>
+              <div className="row flex-wrap justify-content-start">
+                {elMovies}
+              </div>
+              <div
+                style={{
+                  display: this.state.is_card ? "block" : "none",
+                }}
+                className="offset-lg-4"
               >
-                <FontAwesomeIcon icon={faEye} className="mr-2" />
-                <span>
-                  {this.state.is_card ? "Xem dạng bảng" : "Xem dạng thẻ"}
-                </span>
-              </Button>
-            </div>
-            <div className="row flex-wrap justify-content-start">
-              {elMovies}
-            </div>
-            <div
-              style={{
-                display: this.state.is_card ? "block" : "none",
-              }}
-              className="offset-lg-4"
-            >
-              <Pagination>
-                <Pagination.First onClick={() => this.handlePageChoosen(1)} />
-                <Pagination.Prev
-                  disabled={this.state.currentPage == 1 ? true : false}
-                  onClick={() =>
-                    this.handlePageChoosen(this.state.currentPage - 1)
-                  }
-                />
-                {elPage}
-                <Pagination.Next
-                  disabled={
-                    this.state.currentPage == this.state.totalPage
-                      ? true
-                      : false
-                  }
-                  onClick={() =>
-                    this.handlePageChoosen(this.state.currentPage + 1)
-                  }
-                />
-                <Pagination.Last
-                  onClick={() => this.handlePageChoosen(this.state.totalPage)}
-                />
-              </Pagination>
+                <Pagination>
+                  <Pagination.First onClick={() => this.handlePageChoosen(1)} />
+                  <Pagination.Prev
+                    disabled={this.state.currentPage == 1 ? true : false}
+                    onClick={() =>
+                      this.handlePageChoosen(this.state.currentPage - 1)
+                    }
+                  />
+                  {elPage}
+                  <Pagination.Next
+                    disabled={
+                      this.state.currentPage == this.state.totalPage
+                        ? true
+                        : false
+                    }
+                    onClick={() =>
+                      this.handlePageChoosen(this.state.currentPage + 1)
+                    }
+                  />
+                  <Pagination.Last
+                    onClick={() => this.handlePageChoosen(this.state.totalPage)}
+                  />
+                </Pagination>
+              </div>
             </div>
           </div>
         </div>

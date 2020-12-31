@@ -218,6 +218,22 @@ export default class ConversationList extends Component {
                     <FontAwesomeIcon icon={faTrashAlt} />
                     <span className="mx-2">Xóa tất cả</span>
                   </Button>
+                  <div className="mx-2 row">
+                    <div>
+                      <span>Từ ngày</span>
+                      <input
+                        type="date"
+                        className="form-control rounded-pill mx-2"
+                      />
+                    </div>
+                    <div>
+                      <span>Đến ngày</span>
+                      <input
+                        type="date"
+                        className="form-control rounded-pill mx-2"
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <BootstrapTable

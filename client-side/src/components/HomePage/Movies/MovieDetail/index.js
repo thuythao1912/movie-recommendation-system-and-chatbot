@@ -149,7 +149,7 @@ export default class MovieDetail extends Component {
               <div className="row m-0">
                 <Button
                   variant="info"
-                  className="mb-3 mr-3 rounded-pill"
+                  className="mb-3 mr-3 rounded-pill btn-chatbot"
                   onClick={this.send_rating_score}
                 >
                   <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />

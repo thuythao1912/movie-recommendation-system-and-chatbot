@@ -95,3 +95,11 @@ exports.delete_list_user = (req, res) => {
       res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
     });
 };
+
+exports.count_user = async (req, res) => {
+  let count_doc = 0;
+  await user_model.countDocuments((err, result) => {
+    count_doc = result;
+  });
+  res.status(200).json(count_doc);
+};

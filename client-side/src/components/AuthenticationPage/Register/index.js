@@ -81,28 +81,32 @@ export default class Register extends Component {
           <div className="text-warning my-3">{this.state.message}</div>
           <div>
             <input
-              className="form-control my-3 "
+              className="form-control my-3 rounded-pill"
               placeholder="Tên của bạn..."
               name="username"
               onChange={this.handle_input}
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
-              className="form-control my-3 "
+              className="form-control my-3 rounded-pill "
               placeholder="Tên đăng nhập..."
               name="user_login"
               onChange={this.handle_input}
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
             <input
-              className="form-control my-3"
+              className="form-control my-3 rounded-pill"
               placeholder="Mật khẩu..."
               name="user_password"
               onChange={this.handle_input}
               type="password"
               onKeyPress={(e) => (e.key == "Enter" ? this.send_login() : "")}
             />
-            <Button variant="info" className="my-3" onClick={this.send_login}>
+            <Button
+              variant="info"
+              className="my-3 rounded-pill"
+              onClick={this.send_login}
+            >
               Đăng ký
             </Button>
             <Link className="text-white" to="/login">

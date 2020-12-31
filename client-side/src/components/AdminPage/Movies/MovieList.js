@@ -138,7 +138,7 @@ export default class MovieList extends Component {
           ""
         )}
         {columns.length > 0 ? (
-          <ToolkitProvider keyField="id" data={data} columns={columns} search>
+          <ToolkitProvider keyField="_id" data={data} columns={columns} search>
             {(props) => (
               <div>
                 <div className="form-inline mr-auto my-3">
