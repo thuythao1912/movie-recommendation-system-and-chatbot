@@ -5,6 +5,9 @@ var genre_model = require("../models/genre_model");
 
 exports.count_docs = async (req, res) => {
   let obj = {};
+  await movie_model.countDocuments((err, result) => {
+    obj.count_movie = result;
+  });
   await rating_model.countDocuments((err, result) => {
     obj.count_rating = result;
   });
@@ -14,8 +17,6 @@ exports.count_docs = async (req, res) => {
   await genre_model.countDocuments((err, result) => {
     obj.count_genre = result;
   });
-  await movie_model.countDocuments((err, result) => {
-    obj.count_movie = result;
-  });
+
   res.status(200).json(obj);
 };

@@ -17,6 +17,7 @@ export default class Header extends Component {
       ls.removeItem("username");
       ls.removeItem("user_id");
       this.setState({ username: null });
+      window.location.href = "/";
     }
   };
   componentDidMount = () => {};

@@ -36,7 +36,7 @@ export default class Genres extends Component {
             <Statistics />
           </div>
           <div className="col-lg-2">
-            <div className="col-lg-12">
+            <div className="col-lg-12 pr-0 pl-5">
               <Link
                 to="/admin/add-genre"
                 className="text-decoration-none text-white"

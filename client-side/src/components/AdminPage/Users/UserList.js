@@ -63,7 +63,9 @@ export default class UserList extends Component {
     }
   };
   delete_user = async (_id, user_login) => {
-    let ans = window.confirm(`Bạn cố muốn xóa người dùng ${user_login}?`);
+    let ans = window.confirm(
+      `Bạn cố muốn xóa người dùng ${user_login}? Xóa đồng nghĩa với xóa tất cả đánh giá phim của người dùng này. Xác nhận xóa?`
+    );
     if (ans) {
       await callApi(`users/${_id}`, "delete").then((res) => {
         alert(res.data.message);

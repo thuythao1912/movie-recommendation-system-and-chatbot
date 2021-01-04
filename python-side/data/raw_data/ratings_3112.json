@@ -1,0 +1,1833 @@
+[{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904e8"
+  },
+  "user_id": 1,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904e9"
+  },
+  "user_id": 2,
+  "movie_id": 110,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ea"
+  },
+  "user_id": 2,
+  "movie_id": 150,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904eb"
+  },
+  "user_id": 2,
+  "movie_id": 236,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ec"
+  },
+  "user_id": 2,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ed"
+  },
+  "user_id": 2,
+  "movie_id": 266,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ee"
+  },
+  "user_id": 3,
+  "movie_id": 1,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ef"
+  },
+  "user_id": 3,
+  "movie_id": 50,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f0"
+  },
+  "user_id": 3,
+  "movie_id": 111,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f1"
+  },
+  "user_id": 3,
+  "movie_id": 172,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f2"
+  },
+  "user_id": 3,
+  "movie_id": 173,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f3"
+  },
+  "user_id": 3,
+  "movie_id": 214,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f4"
+  },
+  "user_id": 3,
+  "movie_id": 260,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f5"
+  },
+  "user_id": 3,
+  "movie_id": 293,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f6"
+  },
+  "user_id": 3,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f7"
+  },
+  "user_id": 4,
+  "movie_id": 1,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f8"
+  },
+  "user_id": 4,
+  "movie_id": 296,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904f9"
+  },
+  "user_id": 5,
+  "movie_id": 1,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904fa"
+  },
+  "user_id": 5,
+  "movie_id": 19,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904fb"
+  },
+  "user_id": 5,
+  "movie_id": 32,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904fc"
+  },
+  "user_id": 5,
+  "movie_id": 36,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904fd"
+  },
+  "user_id": 5,
+  "movie_id": 39,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904fe"
+  },
+  "user_id": 5,
+  "movie_id": 47,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007904ff"
+  },
+  "user_id": 5,
+  "movie_id": 50,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790500"
+  },
+  "user_id": 5,
+  "movie_id": 88,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790501"
+  },
+  "user_id": 5,
+  "movie_id": 95,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790502"
+  },
+  "user_id": 5,
+  "movie_id": 104,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790503"
+  },
+  "user_id": 5,
+  "movie_id": 113,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790504"
+  },
+  "user_id": 5,
+  "movie_id": 122,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790505"
+  },
+  "user_id": 5,
+  "movie_id": 141,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790506"
+  },
+  "user_id": 5,
+  "movie_id": 147,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790507"
+  },
+  "user_id": 5,
+  "movie_id": 150,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790508"
+  },
+  "user_id": 5,
+  "movie_id": 153,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790509"
+  },
+  "user_id": 5,
+  "movie_id": 170,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050a"
+  },
+  "user_id": 5,
+  "movie_id": 191,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050b"
+  },
+  "user_id": 5,
+  "movie_id": 216,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050c"
+  },
+  "user_id": 5,
+  "movie_id": 218,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050d"
+  },
+  "user_id": 5,
+  "movie_id": 219,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050e"
+  },
+  "user_id": 5,
+  "movie_id": 224,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079050f"
+  },
+  "user_id": 5,
+  "movie_id": 231,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790510"
+  },
+  "user_id": 5,
+  "movie_id": 235,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790511"
+  },
+  "user_id": 5,
+  "movie_id": 238,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790512"
+  },
+  "user_id": 5,
+  "movie_id": 248,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790513"
+  },
+  "user_id": 5,
+  "movie_id": 253,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790514"
+  },
+  "user_id": 5,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790515"
+  },
+  "user_id": 5,
+  "movie_id": 267,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790516"
+  },
+  "user_id": 5,
+  "movie_id": 277,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790517"
+  },
+  "user_id": 5,
+  "movie_id": 288,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790518"
+  },
+  "user_id": 5,
+  "movie_id": 292,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790519"
+  },
+  "user_id": 5,
+  "movie_id": 296,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051a"
+  },
+  "user_id": 5,
+  "movie_id": 300,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051b"
+  },
+  "user_id": 6,
+  "movie_id": 161,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051c"
+  },
+  "user_id": 6,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051d"
+  },
+  "user_id": 7,
+  "movie_id": 10,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051e"
+  },
+  "user_id": 7,
+  "movie_id": 17,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079051f"
+  },
+  "user_id": 7,
+  "movie_id": 28,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790520"
+  },
+  "user_id": 7,
+  "movie_id": 58,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790521"
+  },
+  "user_id": 7,
+  "movie_id": 150,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790522"
+  },
+  "user_id": 7,
+  "movie_id": 153,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790523"
+  },
+  "user_id": 7,
+  "movie_id": 165,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790524"
+  },
+  "user_id": 7,
+  "movie_id": 185,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790525"
+  },
+  "user_id": 7,
+  "movie_id": 232,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790526"
+  },
+  "user_id": 7,
+  "movie_id": 265,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790527"
+  },
+  "user_id": 7,
+  "movie_id": 288,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790528"
+  },
+  "user_id": 7,
+  "movie_id": 296,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790529"
+  },
+  "user_id": 8,
+  "movie_id": 1,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052a"
+  },
+  "user_id": 8,
+  "movie_id": 3,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052b"
+  },
+  "user_id": 8,
+  "movie_id": 6,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052c"
+  },
+  "user_id": 8,
+  "movie_id": 7,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052d"
+  },
+  "user_id": 8,
+  "movie_id": 10,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052e"
+  },
+  "user_id": 8,
+  "movie_id": 11,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079052f"
+  },
+  "user_id": 8,
+  "movie_id": 16,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790530"
+  },
+  "user_id": 8,
+  "movie_id": 18,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790531"
+  },
+  "user_id": 8,
+  "movie_id": 21,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790532"
+  },
+  "user_id": 8,
+  "movie_id": 25,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790533"
+  },
+  "user_id": 8,
+  "movie_id": 27,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790534"
+  },
+  "user_id": 8,
+  "movie_id": 32,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790535"
+  },
+  "user_id": 8,
+  "movie_id": 39,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790536"
+  },
+  "user_id": 8,
+  "movie_id": 47,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790537"
+  },
+  "user_id": 8,
+  "movie_id": 50,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790538"
+  },
+  "user_id": 8,
+  "movie_id": 62,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790539"
+  },
+  "user_id": 8,
+  "movie_id": 69,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053a"
+  },
+  "user_id": 8,
+  "movie_id": 95,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053b"
+  },
+  "user_id": 8,
+  "movie_id": 103,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053c"
+  },
+  "user_id": 8,
+  "movie_id": 104,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053d"
+  },
+  "user_id": 8,
+  "movie_id": 110,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053e"
+  },
+  "user_id": 8,
+  "movie_id": 112,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079053f"
+  },
+  "user_id": 8,
+  "movie_id": 125,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790540"
+  },
+  "user_id": 8,
+  "movie_id": 145,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790541"
+  },
+  "user_id": 8,
+  "movie_id": 150,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790542"
+  },
+  "user_id": 8,
+  "movie_id": 161,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790543"
+  },
+  "user_id": 8,
+  "movie_id": 163,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790544"
+  },
+  "user_id": 8,
+  "movie_id": 165,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790545"
+  },
+  "user_id": 8,
+  "movie_id": 180,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790546"
+  },
+  "user_id": 8,
+  "movie_id": 198,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790547"
+  },
+  "user_id": 8,
+  "movie_id": 201,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790548"
+  },
+  "user_id": 8,
+  "movie_id": 207,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790549"
+  },
+  "user_id": 8,
+  "movie_id": 209,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054a"
+  },
+  "user_id": 8,
+  "movie_id": 223,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054b"
+  },
+  "user_id": 8,
+  "movie_id": 225,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054c"
+  },
+  "user_id": 8,
+  "movie_id": 237,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054d"
+  },
+  "user_id": 8,
+  "movie_id": 253,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054e"
+  },
+  "user_id": 8,
+  "movie_id": 260,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079054f"
+  },
+  "user_id": 8,
+  "movie_id": 290,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790550"
+  },
+  "user_id": 8,
+  "movie_id": 292,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790551"
+  },
+  "user_id": 8,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790552"
+  },
+  "user_id": 9,
+  "movie_id": 2,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790553"
+  },
+  "user_id": 9,
+  "movie_id": 10,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790554"
+  },
+  "user_id": 9,
+  "movie_id": 34,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790555"
+  },
+  "user_id": 9,
+  "movie_id": 39,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790556"
+  },
+  "user_id": 9,
+  "movie_id": 61,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790557"
+  },
+  "user_id": 9,
+  "movie_id": 105,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790558"
+  },
+  "user_id": 9,
+  "movie_id": 116,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790559"
+  },
+  "user_id": 9,
+  "movie_id": 150,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055a"
+  },
+  "user_id": 9,
+  "movie_id": 158,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055b"
+  },
+  "user_id": 9,
+  "movie_id": 161,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055c"
+  },
+  "user_id": 9,
+  "movie_id": 165,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055d"
+  },
+  "user_id": 9,
+  "movie_id": 168,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055e"
+  },
+  "user_id": 9,
+  "movie_id": 225,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079055f"
+  },
+  "user_id": 9,
+  "movie_id": 256,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790560"
+  },
+  "user_id": 9,
+  "movie_id": 260,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790561"
+  },
+  "user_id": 9,
+  "movie_id": 273,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790562"
+  },
+  "user_id": 9,
+  "movie_id": 276,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790563"
+  },
+  "user_id": 9,
+  "movie_id": 277,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790564"
+  },
+  "user_id": 9,
+  "movie_id": 280,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790565"
+  },
+  "user_id": 10,
+  "movie_id": 32,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790566"
+  },
+  "user_id": 10,
+  "movie_id": 50,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790567"
+  },
+  "user_id": 10,
+  "movie_id": 110,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790568"
+  },
+  "user_id": 10,
+  "movie_id": 150,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790569"
+  },
+  "user_id": 10,
+  "movie_id": 193,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056a"
+  },
+  "user_id": 10,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056b"
+  },
+  "user_id": 12,
+  "movie_id": 1,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056c"
+  },
+  "user_id": 12,
+  "movie_id": 2,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056d"
+  },
+  "user_id": 12,
+  "movie_id": 3,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056e"
+  },
+  "user_id": 12,
+  "movie_id": 7,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079056f"
+  },
+  "user_id": 12,
+  "movie_id": 10,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790570"
+  },
+  "user_id": 12,
+  "movie_id": 16,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790571"
+  },
+  "user_id": 12,
+  "movie_id": 18,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790572"
+  },
+  "user_id": 12,
+  "movie_id": 20,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790573"
+  },
+  "user_id": 12,
+  "movie_id": 21,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790574"
+  },
+  "user_id": 12,
+  "movie_id": 22,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790575"
+  },
+  "user_id": 12,
+  "movie_id": 25,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790576"
+  },
+  "user_id": 12,
+  "movie_id": 27,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790577"
+  },
+  "user_id": 12,
+  "movie_id": 29,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790578"
+  },
+  "user_id": 12,
+  "movie_id": 31,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790579"
+  },
+  "user_id": 12,
+  "movie_id": 32,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057a"
+  },
+  "user_id": 12,
+  "movie_id": 36,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057b"
+  },
+  "user_id": 12,
+  "movie_id": 39,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057c"
+  },
+  "user_id": 12,
+  "movie_id": 45,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057d"
+  },
+  "user_id": 12,
+  "movie_id": 47,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057e"
+  },
+  "user_id": 12,
+  "movie_id": 48,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079057f"
+  },
+  "user_id": 12,
+  "movie_id": 50,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790580"
+  },
+  "user_id": 12,
+  "movie_id": 54,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790581"
+  },
+  "user_id": 12,
+  "movie_id": 62,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790582"
+  },
+  "user_id": 12,
+  "movie_id": 68,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790583"
+  },
+  "user_id": 12,
+  "movie_id": 97,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790584"
+  },
+  "user_id": 12,
+  "movie_id": 101,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790585"
+  },
+  "user_id": 12,
+  "movie_id": 140,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790586"
+  },
+  "user_id": 12,
+  "movie_id": 141,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790587"
+  },
+  "user_id": 12,
+  "movie_id": 150,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790588"
+  },
+  "user_id": 12,
+  "movie_id": 160,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790589"
+  },
+  "user_id": 12,
+  "movie_id": 163,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058a"
+  },
+  "user_id": 12,
+  "movie_id": 165,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058b"
+  },
+  "user_id": 12,
+  "movie_id": 168,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058c"
+  },
+  "user_id": 12,
+  "movie_id": 176,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058d"
+  },
+  "user_id": 12,
+  "movie_id": 185,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058e"
+  },
+  "user_id": 12,
+  "movie_id": 209,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079058f"
+  },
+  "user_id": 12,
+  "movie_id": 215,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790590"
+  },
+  "user_id": 12,
+  "movie_id": 222,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790591"
+  },
+  "user_id": 12,
+  "movie_id": 223,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790592"
+  },
+  "user_id": 12,
+  "movie_id": 231,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790593"
+  },
+  "user_id": 12,
+  "movie_id": 235,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790594"
+  },
+  "user_id": 12,
+  "movie_id": 238,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790595"
+  },
+  "user_id": 12,
+  "movie_id": 249,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790596"
+  },
+  "user_id": 12,
+  "movie_id": 252,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790597"
+  },
+  "user_id": 12,
+  "movie_id": 257,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790598"
+  },
+  "user_id": 12,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b5942500790599"
+  },
+  "user_id": 12,
+  "movie_id": 265,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059a"
+  },
+  "user_id": 12,
+  "movie_id": 268,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059b"
+  },
+  "user_id": 12,
+  "movie_id": 293,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059c"
+  },
+  "user_id": 12,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059d"
+  },
+  "user_id": 13,
+  "movie_id": 1,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059e"
+  },
+  "user_id": 13,
+  "movie_id": 32,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b594250079059f"
+  },
+  "user_id": 13,
+  "movie_id": 34,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a0"
+  },
+  "user_id": 13,
+  "movie_id": 47,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a1"
+  },
+  "user_id": 13,
+  "movie_id": 104,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a2"
+  },
+  "user_id": 13,
+  "movie_id": 112,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a3"
+  },
+  "user_id": 13,
+  "movie_id": 153,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a4"
+  },
+  "user_id": 13,
+  "movie_id": 173,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a5"
+  },
+  "user_id": 13,
+  "movie_id": 216,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a6"
+  },
+  "user_id": 13,
+  "movie_id": 231,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a7"
+  },
+  "user_id": 13,
+  "movie_id": 256,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a8"
+  },
+  "user_id": 13,
+  "movie_id": 277,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905a9"
+  },
+  "user_id": 13,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905aa"
+  },
+  "user_id": 14,
+  "movie_id": 50,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ab"
+  },
+  "user_id": 14,
+  "movie_id": 293,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ac"
+  },
+  "user_id": 14,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ad"
+  },
+  "user_id": 15,
+  "movie_id": 110,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ae"
+  },
+  "user_id": 15,
+  "movie_id": 141,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905af"
+  },
+  "user_id": 15,
+  "movie_id": 216,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b0"
+  },
+  "user_id": 15,
+  "movie_id": 296,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b1"
+  },
+  "user_id": 18,
+  "movie_id": 1,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b2"
+  },
+  "user_id": 18,
+  "movie_id": 5,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b3"
+  },
+  "user_id": 18,
+  "movie_id": 7,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b4"
+  },
+  "user_id": 18,
+  "movie_id": 10,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b5"
+  },
+  "user_id": 18,
+  "movie_id": 11,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b6"
+  },
+  "user_id": 18,
+  "movie_id": 17,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b7"
+  },
+  "user_id": 18,
+  "movie_id": 19,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b8"
+  },
+  "user_id": 18,
+  "movie_id": 47,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905b9"
+  },
+  "user_id": 18,
+  "movie_id": 50,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ba"
+  },
+  "user_id": 18,
+  "movie_id": 95,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905bb"
+  },
+  "user_id": 18,
+  "movie_id": 110,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905bc"
+  },
+  "user_id": 18,
+  "movie_id": 141,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905bd"
+  },
+  "user_id": 18,
+  "movie_id": 160,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905be"
+  },
+  "user_id": 18,
+  "movie_id": 165,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905bf"
+  },
+  "user_id": 18,
+  "movie_id": 173,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c0"
+  },
+  "user_id": 18,
+  "movie_id": 186,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c1"
+  },
+  "user_id": 18,
+  "movie_id": 253,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c2"
+  },
+  "user_id": 18,
+  "movie_id": 260,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c3"
+  },
+  "user_id": 18,
+  "movie_id": 288,
+  "rating_score": 1,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c4"
+  },
+  "user_id": 18,
+  "movie_id": 293,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c5"
+  },
+  "user_id": 18,
+  "movie_id": 296,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c6"
+  },
+  "user_id": 19,
+  "movie_id": 44,
+  "rating_score": 2,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c7"
+  },
+  "user_id": 19,
+  "movie_id": 110,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c8"
+  },
+  "user_id": 19,
+  "movie_id": 158,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905c9"
+  },
+  "user_id": 19,
+  "movie_id": 231,
+  "rating_score": 4,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905ca"
+  },
+  "user_id": 19,
+  "movie_id": 293,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905cb"
+  },
+  "user_id": 20,
+  "movie_id": 44,
+  "rating_score": 3,
+  "rating_time": "27-11-2020 22:29:26"
+},{
+  "_id": {
+    "$oid": "5fc11c4b08b59425007905cc"
+  },
+  "user_id": 20,
+  "movie_id": 260,
+  "rating_score": 5,
+  "rating_time": "27-11-2020 22:29:26"
+}]

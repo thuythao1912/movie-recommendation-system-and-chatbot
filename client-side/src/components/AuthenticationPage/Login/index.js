@@ -28,6 +28,7 @@ export default class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   send_login = () => {
+    this.setState({ message: "" });
     let data = {
       user_login: this.state.user_login,
       user_password: this.state.user_password,
@@ -60,7 +61,7 @@ export default class Login extends Component {
     return (
       <div
         style={{
-          backgroundImage: `url("/images/bg-login.jpeg")`,
+          backgroundImage: `url("/images/bg-login-2.jpg")`,
           backgroundRepeat: "no - repeat",
           backgroundSize: "cover",
           height: "100vh",
@@ -68,11 +69,11 @@ export default class Login extends Component {
         className="d-flex"
       >
         <div
-          className="text-white bg-dark col-lg-4 text-center offset-lg-3 p-5"
-          style={{ height: "450px", margin: "auto", opacity: "0.85" }}
+          className="bg-white col-lg-4 text-center offset-lg-6 p-5 shadow"
+          style={{ height: "450px", margin: "auto", opacity: "" }}
         >
-          <h3>ĐĂNG NHẬP</h3>
-          <div className="text-warning my-3">{this.state.message}</div>
+          <h3 className="font-weight-bold">ĐĂNG NHẬP</h3>
+          <div className="text-danger my-3">{this.state.message}</div>
 
           <div>
             <input
@@ -97,10 +98,10 @@ export default class Login extends Component {
             >
               Đăng nhập
             </Button>
-            <Link className="text-white" to="/register">
+            <Link className="text-dark" to="/register">
               <p>Đăng ký thành viên</p>
             </Link>
-            <Link className="text-white" to="/">
+            <Link className="text-dark" to="/">
               <p>
                 <FontAwesomeIcon icon={faHome} className="mx-2" />
                 Trang chủ

@@ -2,7 +2,7 @@ var message_model = require("../models/message_model");
 
 exports.get_list_message = (req, res) => {
   message_model
-    .find({}, null, { sort: { created_time: -1 } }, (err, list) => {
+    .find({}, null, { sort: { timestamp: -1 } }, (err, list) => {
       if (err) {
         console.log(err);
         res.status(500).send(`Something went wrong...`);

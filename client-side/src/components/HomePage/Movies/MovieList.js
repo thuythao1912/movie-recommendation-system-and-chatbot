@@ -97,7 +97,7 @@ export default class MovieList extends Component {
           />
         </span> */}
         <Link to={`/movies?movie_title=${row.movie_title}`}>
-          <FontAwesomeIcon icon={faInfoCircle} className="text-info mr-3" />
+          <FontAwesomeIcon icon={faInfoCircle} className="text-primary mr-3" />
         </Link>
       </div>
     );

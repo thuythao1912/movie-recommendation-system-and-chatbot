@@ -39,6 +39,7 @@ export default class ConversationModal extends Component {
       created_time: item.created_time,
       session: item.session,
       user: item.user,
+      timestamp: item.timestamp,
       response: item.response,
       is_not_edit: this.props.is_not_edit,
     });

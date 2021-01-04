@@ -28,8 +28,14 @@ exports.check_login_user = (req, res) => {
           user_password,
           user.user_password
         );
+
         if (isCorrectPasssword) {
           res.json({ message: `Đăng nhập thành công`, data: user });
+        } else {
+          res.json({
+            message: `Sai tên đăng nhập hoặc mật khẩu, hoặc bạn không có quyền truy cập trang web này!`,
+            data: user,
+          });
         }
       } else {
         res.json({

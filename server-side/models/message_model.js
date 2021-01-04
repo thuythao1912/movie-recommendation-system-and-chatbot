@@ -15,7 +15,7 @@ const message_model = new Schema(
     created_time: { type: String },
     session: { type: String },
     user: { type: Object },
-    timestamp: { type: Date },
+    timestamp: { type: Number },
   },
   { versionKey: false }
 );

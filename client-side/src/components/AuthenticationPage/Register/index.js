@@ -25,6 +25,7 @@ export default class Register extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   send_login = () => {
+    this.setState({ message: "" });
     let data = {
       user_login: this.state.user_login.toLowerCase(),
       user_password: this.state.user_password,

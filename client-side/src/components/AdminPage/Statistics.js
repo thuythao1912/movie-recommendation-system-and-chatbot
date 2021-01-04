@@ -61,7 +61,7 @@ export default class Statistics extends Component {
             <span>người dùng</span>
           </div>
         </div>
-        <div className="col-lg-3 btn border media px-4 mr-3 bg-white ">
+        <div className="col-lg-3 btn border media px-4 bg-white ">
           <img
             src="/images/rating.png"
             width="70px"

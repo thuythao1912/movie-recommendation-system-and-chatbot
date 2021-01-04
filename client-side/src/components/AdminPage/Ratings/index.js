@@ -8,6 +8,8 @@ import {
   faPlusSquare,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import Statistics from "../Statistics";
+
 export default class Ratings extends Component {
   constructor(props) {
     super();
@@ -18,6 +20,9 @@ export default class Ratings extends Component {
         <h3 className="text-dark font-weight-bold">
           QUẢN LÝ DỮ LIỆU ĐÁNH GIÁ PHIM
         </h3>
+        <div className="col-lg-11 p-0">
+          <Statistics />
+        </div>
         <RatingList />
       </div>
     );

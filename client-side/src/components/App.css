@@ -46,8 +46,24 @@ body {
 .chat-header:hover {
   cursor: pointer;
 }
+.bg-admin-panel {
+  background-image: linear-gradient(to left, #71dbf8 0%, #538eec 100%);
+}
+.bg-admin-menu {
+  background-image: linear-gradient(to left, #71dbf8 0%, #538eec 100%);
+}
+.bg-admin-menu:hover {
+  background-image: linear-gradient(to left, #4fcef1 0%, #3a80f0 100%);
+  font-weight: bold;
+}
+
 .bg-chatbot {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-chatbot:hover {
+  background-image: linear-gradient(135deg, #607aee 0%, #5d2e8d 100%);
+  cursor: pointer;
 }
 .btn-chatbot {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

@@ -33,7 +33,6 @@ export default class App extends Component {
         username: ls.getItem("username"),
         user_id: ls.getItem("user_id"),
         user_login: ls.getItem("user_login"),
-        color: get_color(),
       },
       session: "",
       display_chat_box: "none",

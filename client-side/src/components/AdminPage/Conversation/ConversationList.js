@@ -9,6 +9,8 @@ import {
   faTrashAlt,
   faInfoCircle,
   faFilter,
+  faHandPointer,
+  faUndo,
 } from "@fortawesome/free-solid-svg-icons";
 import callApi from "../../../utils/apiCaller";
 import { Dropdown, Button } from "react-bootstrap";
@@ -51,6 +53,8 @@ export default class ConversationList extends Component {
       display_data: [],
       filter_status: "",
       is_not_edit: true,
+      from_date: null,
+      to_date: null,
     };
     this.delete_message = this.delete_message.bind(this);
     this.open_modal = this.open_modal.bind(this);
@@ -72,7 +76,6 @@ export default class ConversationList extends Component {
     await callApi("messages", "get").then((res) => {
       this.setState({ data: res.data, display_data: res.data });
     });
-    console.log(this.state.data);
   };
   componentDidMount = async () => {
     this.get_message_list();
@@ -93,7 +96,8 @@ export default class ConversationList extends Component {
       await callApi(`messages/${_id}`, "delete").then((res) => {
         alert(res.data.message);
       });
-      this.get_message_list();
+      await this.get_message_list();
+      this.select_time();
     }
   };
   Action = (cell, row, rowIndex, formatExtraData) => {
@@ -131,7 +135,6 @@ export default class ConversationList extends Component {
     let filter_status = value;
     let data = this.state.data;
     let display_data = [];
-    console.log(value);
     switch (await filter_status) {
       case "":
         display_data = data;
@@ -154,6 +157,41 @@ export default class ConversationList extends Component {
 
     await this.setState({ display_data: display_data });
   };
+  handle_from_date = async (e) => {
+    await this.setState({
+      from_date: new Date(e.target.value).getTime(),
+    });
+  };
+
+  handle_to_date = async (e) => {
+    await this.setState({
+      to_date: new Date(e.target.value).getTime() + 86399000,
+    });
+  };
+  select_time = async () => {
+    let data = this.state.data;
+    let display_data = [];
+    if (
+      this.state.from_date > this.state.to_date ||
+      this.state.from_date == null ||
+      this.state.to_date == null
+    ) {
+      alert("Bạn hãy chọn khoảng thời gian thích hợp nhé!");
+    } else {
+      data.map((d) => {
+        if (
+          d.timestamp >= this.state.from_date &&
+          d.timestamp <= this.state.to_date
+        ) {
+          display_data.push(d);
+        }
+      });
+      await this.setState({ display_data: display_data });
+    }
+  };
+  reset_data = () => {
+    this.setState({ display_data: this.state.data });
+  };
 
   render() {
     const { SearchBar, ClearSearchButton } = Search;
@@ -172,7 +210,7 @@ export default class ConversationList extends Component {
           ""
         )}
         {columns.length > 0 ? (
-          <ToolkitProvider keyField="id" data={data} columns={columns} search>
+          <ToolkitProvider keyField="_id" data={data} columns={columns} search>
             {(props) => (
               <div>
                 <div className="form-inline mr-auto my-3">
@@ -224,6 +262,8 @@ export default class ConversationList extends Component {
                       <input
                         type="date"
                         className="form-control rounded-pill mx-2"
+                        name="from_date"
+                        onChange={this.handle_from_date}
                       />
                     </div>
                     <div>
@@ -231,17 +271,34 @@ export default class ConversationList extends Component {
                       <input
                         type="date"
                         className="form-control rounded-pill mx-2"
+                        name="to_date"
+                        onChange={this.handle_to_date}
                       />
                     </div>
                   </div>
+                  <Button
+                    variant="outline-dark"
+                    className="rounded-pill mx-2"
+                    onClick={this.select_time}
+                  >
+                    Xem
+                  </Button>
+                  <Button
+                    variant="outline-dark"
+                    className="rounded-pill"
+                    onClick={this.reset_data}
+                  >
+                    <FontAwesomeIcon icon={faUndo} />
+                  </Button>
                 </div>
 
                 <BootstrapTable
                   {...props.baseProps}
-                  keyField="id"
+                  keyField="_id"
                   filter={filterFactory()}
                   pagination={paginationFactory()}
                 />
+                <p>Tổng cộng: {this.state.display_data.length} tin nhắn.</p>
               </div>
             )}
           </ToolkitProvider>
