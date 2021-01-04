@@ -33,7 +33,7 @@ export default class AdminPage extends Component {
           <AdminRoute exact path="/admin/add-movie" component={AddMovie} />
           <AdminRoute exact path="/admin/add-genre" component={AddGenre} />
           <AdminRoute exact path="/admin/ratings" component={Ratings} />
-          <AdminRoute path="/admin" component={AdminHomePage} />
+          <AdminRoute exact path="/admin" component={AdminHomePage} />
         </div>
       </div>
     );

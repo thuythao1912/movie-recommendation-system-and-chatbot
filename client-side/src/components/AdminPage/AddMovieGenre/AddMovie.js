@@ -144,8 +144,8 @@ export default class AddMovie extends Component {
       elMovieYear.push(<option>{i}</option>);
     }
     return (
-      <div className="p-0">
-        <h3>THÊM PHIM</h3>
+      <div className="p-0 bg-white">
+        <h3 className="text-dark font-weight-bold">THÊM PHIM</h3>
         <div className="row px-3">
           <div className="col-lg-12 pr-3 pl-0">
             <div
