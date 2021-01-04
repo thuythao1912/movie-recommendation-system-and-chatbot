@@ -78,7 +78,9 @@ export default class MovieList extends Component {
   };
 
   delete_movie = async (_id, movie_title) => {
-    let ans = window.confirm(`Bạn cố muốn xóa phim ${movie_title}?`);
+    let ans = window.confirm(
+      `Bạn cố muốn xóa phim ${movie_title}? Xóa phim đồng nghĩa với xóa tất cả đánh giá về phim. Xác nhận xóa?`
+    );
     if (ans) {
       await callApi(`movies/${_id}`, "delete").then((res) => {
         alert(res.data.message);
@@ -138,7 +140,7 @@ export default class MovieList extends Component {
           ""
         )}
         {columns.length > 0 ? (
-          <ToolkitProvider keyField="id" data={data} columns={columns} search>
+          <ToolkitProvider keyField="_id" data={data} columns={columns} search>
             {(props) => (
               <div>
                 <div className="form-inline mr-auto my-3">
@@ -146,6 +148,7 @@ export default class MovieList extends Component {
                   <SearchBar
                     {...props.searchProps}
                     placeholder="Nhập vào để tìm ..."
+                    className="rounded-pill"
                   />
                 </div>
                 <BootstrapTable

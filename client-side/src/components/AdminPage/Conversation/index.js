@@ -7,7 +7,7 @@ export default class Conversation extends Component {
   render() {
     return (
       <div>
-        <h3 className="text-dark font-weight-bold">QUẢN LÝ HỘI THOẠI</h3>
+        <h3 className="text-dark font-weight-bold">QUẢN LÝ TIN NHẮN</h3>
         <ConversationList />
       </div>
     );

@@ -165,7 +165,10 @@ class CollaborativeFilter:
                 print('    Recommend item', u, 'to user(s) : ', recommended_items[:5])
 
     def recommend_for_user(self, user_id):
-        return self.recommend(int(user_id))[:5]
+        result = self.recommend(int(user_id))
+        if len(result) > 5:
+            return result[:5]
+        return result
 
     def calculate_accuracy(self):
         r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
@@ -184,41 +187,5 @@ class CollaborativeFilter:
 
 
 if __name__ == "__main__":
-    # r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
-    #
-    # ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols,
-    #                            )
-    #
-    # ratings_test = pd.read_csv('./abc/ub.test', sep='\t', names=r_cols, encoding='latin-1')
-    #
-    # rate_train = ratings_base.values
-    #
-    # # indices start from 0
-    # rate_train[:, :2] -= 1
-    # rate_test[:, :2] -= 1
-
     rs = CollaborativeFilter(k=20, uuCF=1)
     print(rs.recommend_for_user("1"))
-
-    # n_tests = rate_test.shape[0]
-    # SE = 0  # squared error
-    # for n in range(n_tests):
-    #     pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
-    #     SE += (pred - rate_test[n, 2]) ** 2
-    #
-    # RMSE = np.sqrt(SE / n_tests)
-    # print('User-user CF, RMSE =', RMSE)
-    # rs.print_recommendation()
-    #
-    # rs = CollaborativeFilter(rate_train, k=30, uuCF=0)
-    # rs.fit()
-    #
-    # n_tests = rate_test.shape[0]
-    # SE = 0  # squared error
-    # for n in range(n_tests):
-    #     pred = rs.pred(rate_test[n, 0], rate_test[n, 1], normalized=0)
-    #     SE += (pred - rate_test[n, 2]) ** 2
-    #
-    # RMSE = np.sqrt(SE / n_tests)
-    # print('Item-item CF, RMSE =', RMSE)
-    # rs.print_recommendation()

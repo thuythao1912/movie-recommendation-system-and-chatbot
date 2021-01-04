@@ -63,7 +63,9 @@ export default class UserList extends Component {
     }
   };
   delete_user = async (_id, user_login) => {
-    let ans = window.confirm(`Bạn cố muốn xóa người dùng ${user_login}?`);
+    let ans = window.confirm(
+      `Bạn cố muốn xóa người dùng ${user_login}? Xóa đồng nghĩa với xóa tất cả đánh giá phim của người dùng này. Xác nhận xóa?`
+    );
     if (ans) {
       await callApi(`users/${_id}`, "delete").then((res) => {
         alert(res.data.message);
@@ -111,11 +113,12 @@ export default class UserList extends Component {
                   <SearchBar
                     {...props.searchProps}
                     placeholder="Nhập vào để tìm ..."
+                    className="rounded-pill"
                   />
                   <Button
                     variant="danger"
                     onClick={this.delete_message_list}
-                    className="mx-2"
+                    className="mx-2 rounded-pill"
                   >
                     <FontAwesomeIcon icon={faTrashAlt} />
                     <span className="mx-2">Xóa tất cả</span>

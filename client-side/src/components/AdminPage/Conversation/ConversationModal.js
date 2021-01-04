@@ -39,6 +39,7 @@ export default class ConversationModal extends Component {
       created_time: item.created_time,
       session: item.session,
       user: item.user,
+      timestamp: item.timestamp,
       response: item.response,
       is_not_edit: this.props.is_not_edit,
     });
@@ -50,8 +51,8 @@ export default class ConversationModal extends Component {
         <Modal.Header closeButton>
           <Modal.Title>
             {this.state.is_not_edit
-              ? "Chi tiết hội thoại"
-              : "Cập nhật thông tin hội thoại"}
+              ? "Chi tiết tin nhắn"
+              : "Cập nhật thông tin tin nhắn"}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -86,7 +87,7 @@ export default class ConversationModal extends Component {
                 <td width="80%">{this.state.intent_name}</td>
               </tr>
               <tr>
-                <td width="20%">Độ chính xác</td>
+                <td width="20%">Độ tin cậy</td>
                 <td width="80%">{this.state.score}</td>
               </tr>
               <tr>

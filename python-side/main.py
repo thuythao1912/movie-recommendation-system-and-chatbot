@@ -9,7 +9,7 @@ import utils.utils as utils
 import utils.nlp_utils as nlp
 
 import pandas as pd
-from app.model.svm_model import SVMModel
+from app.model.model_type import SVMModel
 
 class TextClassificationPredict(object):
     def __init__(self):

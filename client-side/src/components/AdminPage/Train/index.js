@@ -32,7 +32,7 @@ export default class Train extends Component {
       try {
         let func_type = Object.keys(JSON.parse(data))[0];
         data = { data: JSON.parse(data) };
-        callApi(`ai-service/${func_type}`, "post", data).then((res) => {
+        callApi(`ai-service/${func_type}`, "put", data).then((res) => {
           let message = res.data.message;
           if (res.data.message_status == "success") {
             this.setState({

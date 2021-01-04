@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import GenreList from "./GenreList";
-import MovieGenre from "../MovieGenre";
+import Statistics from "../Statistics";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import callApi from "../../../utils/apiCaller";
@@ -32,15 +32,15 @@ export default class Genres extends Component {
       <div className="">
         <h3 className="text-dark font-weight-bold">QUẢN LÝ DỮ LIỆU THỂ LOẠI</h3>
         <div className="row mt-4">
-          <div className="col-lg-8">
-            <MovieGenre
-              count_genre={this.state.count_genre}
-              count_movie={this.state.count_movie}
-            />
+          <div className="col-lg-10">
+            <Statistics />
           </div>
-          <div className="col-lg-4">
-            <div className="col-lg-12">
-              <Link to="/admin/add" className="text-decoration-none text-white">
+          <div className="col-lg-2">
+            <div className="col-lg-12 pr-0 pl-5">
+              <Link
+                to="/admin/add-genre"
+                className="text-decoration-none text-white"
+              >
                 <button className="btn btn-block btn-info">
                   <FontAwesomeIcon icon={faPlusSquare} />
                   <span className="mx-2">Thêm mới</span>

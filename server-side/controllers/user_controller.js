@@ -28,8 +28,14 @@ exports.check_login_user = (req, res) => {
           user_password,
           user.user_password
         );
+
         if (isCorrectPasssword) {
           res.json({ message: `Đăng nhập thành công`, data: user });
+        } else {
+          res.json({
+            message: `Sai tên đăng nhập hoặc mật khẩu, hoặc bạn không có quyền truy cập trang web này!`,
+            data: user,
+          });
         }
       } else {
         res.json({
@@ -94,4 +100,12 @@ exports.delete_list_user = (req, res) => {
     .catch((err) => {
       res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
     });
+};
+
+exports.count_user = async (req, res) => {
+  let count_doc = 0;
+  await user_model.countDocuments((err, result) => {
+    count_doc = result;
+  });
+  res.status(200).json(count_doc);
 };

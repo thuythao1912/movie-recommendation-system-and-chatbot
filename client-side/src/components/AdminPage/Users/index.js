@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import UserList from "./UserList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFileExcel,
-  faGlobe,
-  faPlusSquare,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-solid-svg-icons";
+import Statistics from "../Statistics";
+
 export default class Users extends Component {
   constructor(props) {
     super();
@@ -18,6 +15,9 @@ export default class Users extends Component {
         <h3 className="text-dark font-weight-bold">
           QUẢN LÝ DỮ LIỆU NGƯỜI DÙNG
         </h3>
+        <div className="col-lg-11 p-0">
+          <Statistics />
+        </div>
         <UserList />
       </div>
     );

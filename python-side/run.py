@@ -44,6 +44,7 @@ def predict_run():
         session = message.get("session")
         created_time = message.get("created_time")
         user = message.get("user")
+        timestamp = message.get("timestamp")
         prev_mess = messages.get_last_record({"session": session})
 
         if prev_mess == {}:
@@ -59,6 +60,7 @@ def predict_run():
         output["created_time"] = created_time
         output["session"] = session
         output["user"] = user
+        output["timestamp"] = timestamp
 
         print(f"Q: {input}")
         print(f"A: {output}")
@@ -73,7 +75,7 @@ def predict_run():
         output = {"input": "", "intent_name": "", "response": "Đã có lỗi xảy ra. Vui lòng thử lại!", "score": 0,
                   "entities": [], "condition": "{}", "description": "", "status": "unhandled",
                   "created_time": now.strftime("%d-%m-%Y %H:%M:%S"),
-                  "session": "", "user": "", "sentiment_score": 0}
+                  "session": "", "user": "", "sentiment_score": 0, "timestamp": timestamp}
         messages.insert_one(output)
         print("------------------")
         output["_id"] = str(output["_id"])
@@ -125,6 +127,7 @@ def update_entities():
             utils.save_json(data=entities, prefix=True,
                                                  json_path=os.path.join(root, "data", "entities.json"))
         ir.__init__()
+        suggestor.__init__()
         return jsonify(
             {"message": "Cập nhật entities thành công!", "message_status": "success"})
     except Exception as err:
@@ -183,9 +186,7 @@ def update_positive_words():
 @app.route("/", methods = ["PUT"])
 def update_data():
     ir.__init__()
-    print("====> INIT INTENT RECOGNIZER")
     suggestor.__init__()
-    print("====> INIT SUGGESTOR")
     return jsonify({"message": "ok", "message_status": "success"})
 
 

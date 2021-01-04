@@ -41,8 +41,14 @@ export default class HomePanel extends Component {
       );
     });
     return (
-      <ul className="p-0" style={{ minHeight: "98vh" }}>
-        <li className="list-group-item bg-chatbot text-white h5">
+      <ul className="p-0 position-relative" style={{ minHeight: "98vh" }}>
+        <li
+          className="list-group-item text-white h5"
+          style={{
+            backgroundImage:
+              "linear-gradient(to left, #00c6fb 0%, #005bea 100%)",
+          }}
+        >
           <span>THỂ LOẠI</span>
         </li>
         {elGenre}

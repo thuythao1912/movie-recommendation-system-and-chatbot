@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat";
+  font-family: "Nunito";
 }
 /* ==============My CSS============== */
 .message-list {
@@ -32,6 +32,7 @@ body {
 
 .message-coming {
   background-color: #1783b0;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
 }
 .message-sending {
@@ -45,17 +46,55 @@ body {
 .chat-header:hover {
   cursor: pointer;
 }
+.bg-admin-panel {
+  background-image: linear-gradient(to left, #71dbf8 0%, #538eec 100%);
+}
+.bg-admin-menu {
+  background-image: linear-gradient(to left, #71dbf8 0%, #538eec 100%);
+}
+.bg-admin-menu:hover {
+  background-image: linear-gradient(to left, #4fcef1 0%, #3a80f0 100%);
+  font-weight: bold;
+}
+
 .bg-chatbot {
-  background-color: #1783b0;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-chatbot:hover {
+  background-image: linear-gradient(135deg, #607aee 0%, #5d2e8d 100%);
+  cursor: pointer;
 }
 .btn-chatbot {
-  background-color: #1783b0;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
 }
 .btn-chatbot:hover {
-  background-color: #0e739e;
+  background-image: linear-gradient(135deg, #667eea 0%, #5d2e8d 100%);
   color: #fff;
 }
+
+.bg-chatbot-2 {
+  background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+}
+.btn-chatbot-2 {
+  background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+  color: #fff;
+}
+.btn-chatbot-2:hover {
+  background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+  color: #fff;
+}
+
 .bg-item-chatbot {
   background-color: #d3f2ff;
+}
+.img-thumbnail {
+  width: 100%;
+  height: 450px;
+  background-color: #80bdff;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

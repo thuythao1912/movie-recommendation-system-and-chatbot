@@ -29,6 +29,7 @@ let message_route = require("./routes/message_route");
 let user_route = require("./routes/user_route");
 let ai_service_route = require("./routes/ai_service_route");
 let rating_route = require("./routes/rating_route");
+let statistic_route = require("./routes/statistic_route");
 
 //use route
 app.use("/movies", movie_route);
@@ -37,11 +38,8 @@ app.use("/messages", message_route);
 app.use("/users", user_route);
 app.use("/ai-service", ai_service_route);
 app.use("/ratings", rating_route);
+app.use("/statistics", statistic_route);
 app.use(index);
-
-//import socket controllers
-let movie_controller = require("./socket_controllers/movie_socket_controller");
-let genre_controller = require("./socket_controllers/genre_socket_controller");
 
 //connect mongodb
 mongoose.Promise = global.Promise;
@@ -83,6 +81,7 @@ let run = (socket) => {
           created_time: data.created_time,
           session: data.session,
           user: data.user,
+          timestamp: data.timestamp,
         })
         .then((res) => {
           socket.emit("greeting", {

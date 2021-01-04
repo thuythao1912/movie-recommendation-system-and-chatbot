@@ -7,5 +7,6 @@ router.post("/", user_controller.add_one_user);
 router.delete("/:id", user_controller.delete_one_user);
 router.post("/check-login-user", user_controller.check_login_user);
 router.delete("/", user_controller.delete_list_user);
+router.get("/count", user_controller.count_user);
 
 module.exports = router;

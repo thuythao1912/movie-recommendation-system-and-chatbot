@@ -25,7 +25,7 @@ class SentimentRecognizer:
         self.positive_words = list(utils.load_json(os.path.join(root, "data", "positive_words.json"))["positive_words"])
 
     def run(self, sentence):
-        sentence = (nlp.preprocess_step_2(nlp.preprocess_step_1(sentence)))
+        # sentence = (nlp.preprocess_step_2(nlp.preprocess_step_1(sentence)))
         sentence = sentence.split(" ")
         print(sentence)
         count_negative_words = 0
@@ -40,6 +40,7 @@ class SentimentRecognizer:
                 count_negative_words += 1
             else:
                 len_sen -= 1
+        print(len_sen)
         if len_sen > 0:
             neg_score = count_negative_words / len_sen
             pos_score = count_positive_words / len_sen

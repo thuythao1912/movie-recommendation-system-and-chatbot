@@ -7,6 +7,8 @@ import MovieCardRecommended from "./MovieCardRecommend";
 import ls from "../../../../utils/localStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { formatDate } from "../../../../utils/helper";
+
 export default class MovieDetail extends Component {
   constructor(props) {
     super();
@@ -48,6 +50,8 @@ export default class MovieDetail extends Component {
       console.log(res.data);
       if (res.data[0].length > 0) {
         this.setState({ rating_score: res.data[0][0].rating_score });
+      } else {
+        this.setState({ rating_score: 0 });
       }
     });
   };
@@ -60,6 +64,20 @@ export default class MovieDetail extends Component {
   };
   send_rating_score = () => {
     if (this.state.user_id != null) {
+      if (this.state.rating_score > 0) {
+        let obj = {
+          user_id: this.state.user_id,
+          movie_id: this.state.movie.movie_id,
+          rating_score: this.state.rating_score,
+          rating_time: formatDate(new Date(), "dmy-hms"),
+        };
+        console.log(obj);
+        callApi("ratings", "post", obj).then((res) => {
+          alert(res.data.message);
+        });
+      } else {
+        alert("Bạn hãy đánh giá điểm số cho phim nhé!");
+      }
     } else {
       alert("Bạn hãy đăng nhập trước khi đánh giá nhé!");
     }
@@ -149,7 +167,7 @@ export default class MovieDetail extends Component {
               <div className="row m-0">
                 <Button
                   variant="info"
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 rounded-pill btn-chatbot"
                   onClick={this.send_rating_score}
                 >
                   <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
@@ -182,7 +200,7 @@ export default class MovieDetail extends Component {
           </div>
           <div className="col-lg-4 p-4 mx-3">
             <div>
-              <h5>Có thể bạn thích</h5>
+              <h5>Phim gợi ý cho bạn</h5>
             </div>
             <div>{elMovieSuggest}</div>
           </div>
