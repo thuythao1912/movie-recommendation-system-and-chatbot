@@ -97,7 +97,7 @@ export default class ConversationList extends Component {
         alert(res.data.message);
       });
       await this.get_message_list();
-      this.select_time();
+      // this.select_time();
     }
   };
   Action = (cell, row, rowIndex, formatExtraData) => {

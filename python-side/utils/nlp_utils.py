@@ -22,6 +22,13 @@ def normalize(doc):
 
 
 def standardize(doc):
+    standardize_words_list = (
+    utils.load_json(os.path.join(root, "data", "standardize_words.json"))["standardize_words"])
+    new_doc = doc.split(" ")
+    for key, value in standardize_words_list.items():
+        for word in new_doc:
+            if word in value:
+                doc = doc.replace(word, key)
     return doc
 
 
@@ -87,6 +94,3 @@ def remove_accents(doc):
 def calculate_cosin_similarity(vec_1, vec_2):
     cos_sim = cosine_similarity([vec_1], [vec_2])
     return round(cos_sim[0][0], 3)
-
-
-
