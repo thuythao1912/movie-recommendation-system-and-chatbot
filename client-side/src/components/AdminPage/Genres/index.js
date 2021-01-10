@@ -7,24 +7,21 @@ import { faPlusSquare, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import callApi from "../../../utils/apiCaller";
 
 export default class Genres extends Component {
-  constructor(props) {
+  constructor() {
     super();
-    this.state = { count_genre: 0, count_movie: 0 };
+    this.state = { re_render: true };
   }
-  get_movie_genre_count = async () => {
-    let count_movie;
-    let count_genre;
-    await callApi("movies/count", "get").then((res) => {
-      count_movie = res.data;
-    });
-    await callApi("genres/count", "get").then((res) => {
-      count_genre = res.data;
-    });
-    this.setState({ count_genre: count_genre, count_movie: count_movie });
+  delete_movie_list = async () => {
+    let ans = window.confirm(`Bạn có xác nhận xóa tất cả thể loại?`);
+    if (ans) {
+      await callApi(`genres`, "delete").then((res) => {
+        alert(res.data.message);
+      });
+    }
+    this.re_render();
   };
-
-  componentDidMount = async () => {
-    await this.get_movie_genre_count();
+  re_render = () => {
+    this.setState({ re_render: !this.state.re_render });
   };
 
   render() {
@@ -33,7 +30,7 @@ export default class Genres extends Component {
         <h3 className="text-dark font-weight-bold">QUẢN LÝ DỮ LIỆU THỂ LOẠI</h3>
         <div className="row mt-4">
           <div className="col-lg-10">
-            <Statistics />
+            <Statistics re_render={this.state.re_render} />
           </div>
           <div className="col-lg-2">
             <div className="col-lg-12 pr-0 pl-5">
@@ -56,7 +53,7 @@ export default class Genres extends Component {
             </div>
           </div>
         </div>
-        <GenreList />
+        <GenreList re_render={this.re_render} />
       </div>
     );
   }

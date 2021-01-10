@@ -12,13 +12,21 @@ import Statistics from "../Statistics";
 import callApi from "../../../utils/apiCaller";
 
 export default class Movies extends Component {
+  constructor() {
+    super();
+    this.state = { re_render: true };
+  }
   delete_movie_list = async () => {
     let ans = window.confirm(`Bạn có xác nhận xóa tất cả phim?`);
     if (ans) {
       await callApi(`movies`, "delete").then((res) => {
         alert(res.data.message);
       });
+      this.re_render();
     }
+  };
+  re_render = () => {
+    this.setState({ re_render: !this.state.re_render });
   };
   render() {
     return (
@@ -26,7 +34,7 @@ export default class Movies extends Component {
         <h3 className="text-dark font-weight-bold">QUẢN LÝ DỮ LIỆU PHIM</h3>
         <div className="row mt-4">
           <div className="col-lg-10">
-            <Statistics />
+            <Statistics re_render={this.state.re_render} />
           </div>
           <div className="col-lg-2">
             <div className="col-lg-12 pr-0 pl-5">
@@ -49,7 +57,7 @@ export default class Movies extends Component {
             </div>
           </div>
         </div>
-        <MovieList />
+        <MovieList re_render={this.re_render} />
       </div>
     );
   }

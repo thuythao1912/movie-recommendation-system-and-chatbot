@@ -72,6 +72,7 @@ export default class RatingList extends Component {
           alert(res.data.message);
         });
         this.get_rating_list();
+        this.props.re_render();
       }
     }
   };
@@ -82,6 +83,7 @@ export default class RatingList extends Component {
         alert(res.data.message);
       });
       this.get_rating_list();
+      this.props.re_render();
     }
   };
   open_modal = (item_selected, is_not_edit) => {

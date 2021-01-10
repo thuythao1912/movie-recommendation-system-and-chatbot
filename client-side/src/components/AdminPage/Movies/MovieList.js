@@ -86,6 +86,7 @@ export default class MovieList extends Component {
         alert(res.data.message);
       });
       this.get_movie_list();
+      this.props.re_render();
     }
   };
   open_modal = (item_selected, is_not_edit) => {
