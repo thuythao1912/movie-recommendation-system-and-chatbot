@@ -29,8 +29,7 @@ class CollaborativeFilter:
 
     def run(self):
         r_cols = ['user_id', 'movie_id', 'rating_score', 'rating_time']
-        # ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols).head(
-        #     1714)
+        ratings_base = pd.read_csv(os.path.join(root, "data", "raw_data", "ratings.csv"), sep='\t', names=r_cols)
         data = pd.DataFrame(self.ratings.find_all())
         del data["_id"]
         del data["rating_time"]
