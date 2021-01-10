@@ -75,6 +75,7 @@ export default class GenreList extends Component {
         alert(res.data.message);
       });
       this.get_genre_list();
+      this.props.re_render();
     }
   };
   open_modal = (item_selected, is_not_edit) => {

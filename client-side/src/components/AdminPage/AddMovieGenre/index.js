@@ -9,7 +9,7 @@ export default class AddMovieGenre extends Component {
 
   render() {
     return (
-      <div className="p-0" style={{ minHeight: "95vh" }}>
+      <div className="p-0 " style={{ minHeight: "95vh" }}>
         <AddMovie />
         <AddGenre />
       </div>

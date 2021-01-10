@@ -22,6 +22,9 @@ export default class Statistics extends Component {
     });
   };
 
+  componentWillReceiveProps() {
+    this.get_count();
+  }
   componentDidMount = () => {
     this.get_count();
   };

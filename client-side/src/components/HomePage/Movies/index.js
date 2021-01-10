@@ -172,9 +172,15 @@ export default class Movies extends Component {
                     className="rounded-pill"
                   >
                     {this.state.is_slideshow ? (
-                      <FontAwesomeIcon icon={faEyeSlash} className="mr-2" />
+                      <span>
+                        <FontAwesomeIcon icon={faEyeSlash} className="mr-2" />
+                        Tắt bannner
+                      </span>
                     ) : (
-                      <FontAwesomeIcon icon={faEye} className="mr-2" />
+                      <span>
+                        <FontAwesomeIcon icon={faEye} className="mr-2" />
+                        Mở banner
+                      </span>
                     )}
                   </Button>
                 </div>

@@ -8,7 +8,11 @@ import Statistics from "../Statistics";
 export default class Users extends Component {
   constructor(props) {
     super();
+    this.state = { re_render: true };
   }
+  re_render = () => {
+    this.setState({ re_render: !this.state.re_render });
+  };
   render() {
     return (
       <div className="bg-light">
@@ -16,9 +20,9 @@ export default class Users extends Component {
           QUẢN LÝ DỮ LIỆU NGƯỜI DÙNG
         </h3>
         <div className="col-lg-11 p-0">
-          <Statistics />
+          <Statistics re_render={this.state.re_render} />
         </div>
-        <UserList />
+        <UserList re_render={this.re_render} />
       </div>
     );
   }

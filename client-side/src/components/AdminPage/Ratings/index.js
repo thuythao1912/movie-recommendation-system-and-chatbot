@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import RatingList from "./RatingList";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFileExcel,
-  faGlobe,
-  faPlusSquare,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
 import Statistics from "../Statistics";
 
 export default class Ratings extends Component {
   constructor(props) {
     super();
+    this.state = { re_render: true };
   }
+  re_render = () => {
+    this.setState({ re_render: !this.state.re_render });
+  };
   render() {
     return (
       <div className="bg-light">
@@ -21,9 +18,9 @@ export default class Ratings extends Component {
           QUẢN LÝ DỮ LIỆU ĐÁNH GIÁ PHIM
         </h3>
         <div className="col-lg-11 p-0">
-          <Statistics />
+          <Statistics re_render={this.state.re_render} />
         </div>
-        <RatingList />
+        <RatingList re_render={this.re_render} />
       </div>
     );
   }

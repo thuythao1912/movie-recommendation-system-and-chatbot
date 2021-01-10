@@ -155,10 +155,12 @@ class IntentRecognizer:
                 response = POS_RESPONSE
                 intent_name = "positive_sentence"
                 output["sentiment_score"] = sentiment_score
+                output["status"] = "handled"
             elif sentiment_score < 0:
                 response = NEG_RESPONSE
                 intent_name = "negative_sentence"
                 output["sentiment_score"] = sentiment_score
+                output["status"] = "handled"
             else:
                 response = UNKNOWN_RESPONSE
                 intent_name = intent_predicted[0]

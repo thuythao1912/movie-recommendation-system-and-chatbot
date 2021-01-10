@@ -81,3 +81,28 @@ exports.add_one_rating = async (req, res) => {
     )
     .catch((err) => console.log(err));
 };
+
+exports.delete_one_rating = (req, res) => {
+  rating_model.findByIdAndDelete(req.params.id, (err, rating) => {
+    if (err) {
+      res.json({ message: "Đánh giá đã xóa thất bại!" });
+    } else {
+      res.json({ message: "Đánh giá đã xóa thàng công!" });
+    }
+  });
+};
+
+exports.delete_list_rating = (req, res) => {
+  rating_model
+    .deleteMany((err, list) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+      } else {
+        res.json({ message: `Tất cả đánh giá đã xóa thành công` });
+      }
+    })
+    .catch((err) => {
+      res.status(400).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+    });
+};

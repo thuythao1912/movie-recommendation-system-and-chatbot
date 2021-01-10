@@ -1,0 +1,17 @@
+{
+  "standardize_words": {
+    "không": ["ko", "k0", "k", "kg", "hong", "hk", "hok", "h0k"],
+    "được": ["dc", "dk"],
+    "bạn": ["bn", "pn"],
+    "biết": ["bk", "bik", "pk", "pik"],
+    "gì": ["j", "zi", "ji", "dzi"],
+    "vậy": ["v", "z", "dzi", "zi", "gị"],
+    "muốn": ["mún"],
+    "sao": ["s"],
+    "tôi": ["tui", "t"],
+    "thôi": ["thui", "thuj", "thoy", "thoj"],
+    "trước": ["trc"],
+    "đăng ký": ["dki", "dky"],
+    "điều kiện": ["dkien"]
+  }
+}

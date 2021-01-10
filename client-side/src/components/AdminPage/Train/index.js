@@ -60,7 +60,7 @@ export default class Train extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="bg-white">
         <h3 className="text-dark font-weight-bold">
           TRAIN MODEL VÀ CẬP NHẬT DỮ LIỆU TRAIN
         </h3>
