@@ -1,38 +1,6 @@
 {
   "intents": [
     {
-      "feature": "sinh",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh ở đâu",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh ở đâu",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh o dau",
-      "target": "noi sinh chatbot"
-    },
-    {
-      "feature": "sinh o dau",
-      "target": "noi sinh chatbot"
-    },
-    {
       "feature": "muốn tra_cứu phim movie_title",
       "target": "tra cuu thong tin movie_title"
     },

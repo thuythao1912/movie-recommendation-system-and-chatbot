@@ -5,10 +5,12 @@ from pathlib import Path
 sys.path.append(os.path.join('../..'))
 root = Path(os.path.abspath(__file__)).parents[2]
 
-import utils.utils as utils
-import utils.nlp_utils as nlp
+import configparser
 
-ENTITY_THRESHOLD = 0.8
+config = configparser.ConfigParser()
+config.read(os.path.join(root, 'config.ini'))
+
+
 import re
 
 from app.model.db_connector import *
@@ -16,6 +18,7 @@ from app.model.db_connector import *
 SYNONYM_WORD = [["and", "và"], ["or", "hoặc"]]
 YES_AGREE = ["có", "có chứ"]
 NO_AGREE = ["không", "không có"]
+ENTITY_THRESHOLD = float(config["ENTITY"]["ENTITY_THRESHOLD"])
 
 
 class EntityRecognizer:

@@ -129,7 +129,9 @@
         },
         {
           "org_val": "Jumanji",
-          "description": null
+          "description": [
+            "Trò chơi kỳ ảo"
+          ]
         },
         {
           "org_val": "Grumpier Old Men",

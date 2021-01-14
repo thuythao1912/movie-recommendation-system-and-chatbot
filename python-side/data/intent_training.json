@@ -1,18 +1,6 @@
 {
   "intents": [
     {
-      "intent_name": "noi sinh chatbot",
-      "training_phrases": [
-        "nơi sinh của bạn",
-        "bạn sinh ra ở đâu"
-      ],
-      "responses": [
-        "Mình sinh ở Cần Thơ"
-      ],
-      "query": "",
-      "description": "casual"
-    },
-    {
       "intent_name": "tra cuu thong tin movie_title",
       "training_phrases": [
         "muốn tra cứu phim movie_title",
