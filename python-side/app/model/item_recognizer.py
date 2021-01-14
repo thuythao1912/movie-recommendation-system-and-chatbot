@@ -15,7 +15,7 @@ import re
 
 from app.model.db_connector import *
 
-SYNONYM_WORD = [["and", "và"], ["or", "hoặc"]]
+SYNONYM_WORD = [["and", "và", "vs", "với"], ["or", "hoặc"]]
 YES_AGREE = ["có", "có chứ"]
 NO_AGREE = ["không", "không có"]
 ENTITY_THRESHOLD = float(config["ENTITY"]["ENTITY_THRESHOLD"])

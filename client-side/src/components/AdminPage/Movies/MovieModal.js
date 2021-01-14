@@ -147,7 +147,7 @@ export default class MovieModal extends Component {
         </button>
       );
     });
-    let year = 2020;
+    let year = new Date().getFullYear();
     let elMovieYear = [];
     for (let i = year; i >= 1950; i--) {
       elMovieYear.push(<option>{i}</option>);

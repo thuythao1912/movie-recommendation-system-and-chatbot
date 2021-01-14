@@ -31,6 +31,7 @@ NEG_RESPONSE = "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông t
 ENTITIES = ["movie_genres", "movie_title"]
 MEANINGLESS_WORDS = ["ừm", "ừ", "ok", "okay", "okie", "yeah", "oki", "ờ", "ùm"]
 
+
 class IntentRecognizer:
     def __init__(self):
         print("====> INIT INTENT RECOGNIZER")
@@ -150,7 +151,6 @@ class IntentRecognizer:
                           }
                 return output
 
-
         # predict
         intent_predicted = self.clf.predict(df_predict["feature"])
         print("Intent general predicted: {}".format(intent_predicted))
@@ -188,12 +188,17 @@ class IntentRecognizer:
             result = self.get_response(intent_predicted[0], entities, sign)
             print(result)
 
-            if result["description"] == "suggest" and user_id is not None:
-                suggest_based_user = SuggestBasedUser().suggest_movies(user_id)
-                result[
-                    "response"] = "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: " + ", ".join(
-                    suggest_based_user)
-                result["description"] = "res_suggest"
+            if user_id is not None:
+                # check if user has rating history
+                history_rating = Ratings().find_all(filter={"user_id": int(user_id)})
+                print(f"===> history rating of user {user_id}:", len(history_rating))
+
+                if result["description"] == "suggest" and len(history_rating) > 0:
+                    suggest_based_user = SuggestBasedUser().suggest_movies(user_id)
+                    result[
+                        "response"] = "Dựa vào các phim bạn đã đánh giá, mình nghĩ đây là những phim phù hợp với bạn: " + ", ".join(
+                        suggest_based_user)
+                    result["description"] = "res_suggest"
 
             output["response"] = result["response"]
             output["condition"] = str(result["condition"])

@@ -34,7 +34,9 @@ export default class AdminLogin extends Component {
 
     if (is_null.length == 0) {
       if (data.admin_login == "admin" && data.admin_password == "admin@123") {
-        alert("Đăng nhập thành công!");
+        alert(
+          "Đăng nhập thành công! Chào mừng bạn đến trang quản lý hệ thống!"
+        );
         ls.setItem("is_admin", true);
         window.location.href = "/admin";
       } else {
