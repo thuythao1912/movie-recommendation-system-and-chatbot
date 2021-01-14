@@ -29,7 +29,7 @@ MISSING_RESPONSE = 'Xin lỗi, hiện mình chưa có thông tin về "{}". Mìn
 POS_RESPONSE = "Hihi, cảm ơn bạn nha ^^"
 NEG_RESPONSE = "Xin lỗi bạn, vì mình còn nhỏ, nên chưa đủ thông tin hữu ích cho bạn :("
 ENTITIES = ["movie_genres", "movie_title"]
-
+MEANINGLESS_WORDS = ["ừm", "ừ", "ok", "okay", "okie", "yeah", "oki", "ờ", "ùm"]
 
 class IntentRecognizer:
     def __init__(self):
@@ -139,6 +139,17 @@ class IntentRecognizer:
         df_predict = pd.DataFrame(data_predict)
 
         print("==> Sentence to recognize: {}".format(sen_recognize))
+
+        # check meaningless
+        split_input = sentence.split(" ")
+        for w in split_input:
+            if w in MEANINGLESS_WORDS:
+                output = {"input": sentence, "intent_name": "meaningless",
+                          "response": "Nếu bạn cần hỗ trợ thì nhắn mình nhé!", "score": 1.0,
+                          "entities": [], "condition": "{}", "description": "", "status": "handled",
+                          }
+                return output
+
 
         # predict
         intent_predicted = self.clf.predict(df_predict["feature"])
