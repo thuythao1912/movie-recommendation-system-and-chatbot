@@ -89,9 +89,9 @@ exports.delete_one_user = (req, res) => {
       rating_model.deleteMany({ user_id: user.user_id }, (err, result) => {
         if (err) {
           console.log(err);
-          res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+          res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại!`);
         } else {
-          res.json({ message: `Tài khoản đã xóa thành công` });
+          res.json({ message: `Tài khoản đã xóa thành công!` });
         }
       });
     }
