@@ -94,7 +94,8 @@ let run = (socket) => {
         .catch((err) => {
           if (err.code == "ECONNREFUSED") {
             socket.emit("greeting", {
-              text: "Hic...hic, kết nối tới chatbot có vấn đề rồi!",
+              text:
+                "Hic...hic, kết nối tới chatbot có vấn đề rồi! Bạn vui lòng thử lại trong giây lát nha!",
               user: { username: "chatbot", color: "blue" },
               send_time: new Date(),
               session: data.session,
