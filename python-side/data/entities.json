@@ -5,15 +5,21 @@
       "values": [
         {
           "org_val": "Thriller",
-          "description": []
+          "description": [
+            "Giật gân"
+          ]
         },
         {
           "org_val": "Musical",
-          "description": null
+          "description": [
+            "Nhạc kịch"
+          ]
         },
         {
           "org_val": "Documentary",
-          "description": null
+          "description": [
+            "Tài liệu"
+          ]
         },
         {
           "org_val": "IMAX",
@@ -21,19 +27,27 @@
         },
         {
           "org_val": "Children",
-          "description": null
+          "description": [
+            "Thiếu nhi"
+          ]
         },
         {
           "org_val": "Mystery",
-          "description": null
+          "description": [
+            "Bí ẩn"
+          ]
         },
         {
           "org_val": "Romance",
-          "description": null
+          "description": [
+            "Tình cảm"
+          ]
         },
         {
           "org_val": "Horror",
-          "description": null
+          "description": [
+            "Kinh dị"
+          ]
         },
         {
           "org_val": "Film-Noir",
@@ -41,48 +55,63 @@
         },
         {
           "org_val": "Action",
-          "description": null
+          "description": [
+            "Hành động"
+          ]
         },
         {
           "org_val": "Adventure",
-          "description": null
+          "description": [
+            "Phiêu lưu"
+          ]
         },
         {
           "org_val": "Drama",
-          "description": null
+          "description": [
+            "Chính kịch"
+          ]
         },
         {
           "org_val": "Western",
-          "description": null
+          "description": [
+            "Viễn Tây"
+          ]
         },
         {
           "org_val": "Comedy",
           "description": [
-            "hài"
+            "Hài"
           ]
         },
         {
           "org_val": "Crime",
-          "description": null
+          "description": [
+            "Tội phạm"
+          ]
         },
         {
           "org_val": "War",
           "description": [
-            "chiến tranh"
+            "Chiến tranh"
           ]
         },
         {
           "org_val": "Fantasy",
-          "description": null
+          "description": [
+            "Kỳ ảo"
+          ]
         },
         {
           "org_val": "Sci-Fi",
-          "description": null
+          "description": [
+            "Khoa học",
+            "Khoa học viễn tưởng"
+          ]
         },
         {
           "org_val": "Animation",
           "description": [
-            "hoạt hình"
+            "Hoạt hình"
           ]
         }
       ]
@@ -95,12 +124,14 @@
           "description": [
             "Câu chuyện đồ chơi",
             "Chuyện đồ chơi",
-            "chuyện đồ chơi toy story"
+            "Chuyện đồ chơi toy story"
           ]
         },
         {
           "org_val": "Jumanji",
-          "description": null
+          "description": [
+            "Trò chơi kỳ ảo"
+          ]
         },
         {
           "org_val": "Grumpier Old Men",
@@ -1293,6 +1324,12 @@
         {
           "org_val": "Quick and the Dead, The",
           "description": null
+        },
+        {
+          "org_val": "Phim Demo",
+          "description": [
+            "Phim demo tên khác"
+          ]
         }
       ]
     }

@@ -7,4 +7,4 @@ root = Path(os.path.abspath(__file__)).parents[2]
 import utils.nlp_utils as nlp
 
 if __name__ == "__main__":
-    nlp.standardize("bn mún j hả")
+    print(nlp.standardize("bạn khỏe k"))

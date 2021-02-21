@@ -147,7 +147,7 @@ export default class MovieModal extends Component {
         </button>
       );
     });
-    let year = 2020;
+    let year = new Date().getFullYear();
     let elMovieYear = [];
     for (let i = year; i >= 1950; i--) {
       elMovieYear.push(<option>{i}</option>);
@@ -211,7 +211,7 @@ export default class MovieModal extends Component {
                 <td>Năm sản xuất</td>
                 <td>
                   <select
-                    className="form-control"
+                    className="form-control form-control-sm"
                     onChange={this.handle_input}
                     name="movie_year"
                     value={this.state.movie_year}

@@ -96,12 +96,13 @@ export default class MovieDetail extends Component {
             <div className="row my-3">
               <div className="col-lg-5 col-md-12 col-sm-12">
                 <img
+                  className="poster"
                   src={`${
-                    data.movie_images == undefined
+                    data.movie_images == undefined || data.movie_images == ""
                       ? "/images/movie_default.jpg"
                       : data.movie_images
                   }`}
-                  width="100%"
+                  // width="100%"
                 />
               </div>
               <div className="col-lg-7 col-md-12 col-sm-12">

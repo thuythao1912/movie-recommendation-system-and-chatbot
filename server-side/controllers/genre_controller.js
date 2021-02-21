@@ -106,14 +106,13 @@ exports.delete_one_genre = (req, res) => {
         items.map((i) => {
           idx = i.movie_genres.indexOf(genre.genre_name);
           i.movie_genres.splice(idx, 1);
-          console.log(i);
           movie_model.findByIdAndUpdate(
             i._id,
             i,
             (err,
             (itemUpdated) => {
               if (err) {
-                console.log({ message: "Cập nhật phim thất bại!" });
+                console.log({ message: "Xóa phim thất bại!" });
               } else {
                 console.log({
                   message: `Thể loại phim ${i.movie_title} xóa thành công!`,

@@ -84,50 +84,52 @@ export default class AddGenre extends Component {
 
   render() {
     return (
-      <div className="p-0 bg-white">
+      <div className="p-0">
         <h3 className="text-dark font-weight-bold">THÊM THỂ LOẠI</h3>
-        <div className="row px-3">
-          <div className="col-lg-12 pr-3 pl-0">
-            <div
-              className={`alert alert-${this.state.message_color}`}
-              role="alert"
-              style={{ display: this.state.display_message }}
-            >
-              {this.state.message}
-            </div>
-          </div>
-        </div>
-
-        <div className="">
+        <div className="p-3 bg-white border">
           <div className="row px-3">
-            <div className="col-lg-3 pr-3 pl-0">
-              <input
-                placeholder="Thể loại (bắt buộc)"
-                className="form-control"
-                required
-                onChange={this.handle_input}
-                name="genre_name"
-                value={this.state.genre_name}
-              />
-            </div>
-            <div className="col-lg-9 row align-items-center">
-              <input
-                placeholder="Mô tả"
-                className="form-control"
-                onChange={this.handle_input}
-                name="genre_description"
-                value={this.state.genre_description}
-              />
+            <div className="col-lg-12 pr-3 pl-0">
+              <div
+                className={`alert alert-${this.state.message_color}`}
+                role="alert"
+                style={{ display: this.state.display_message }}
+              >
+                {this.state.message}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row p-3">
-          <button className="btn btn-success mr-3" onClick={this.send_data}>
-            Thêm
-          </button>
-          <button className="btn btn-danger" onClick={this.reset_data}>
-            Hủy
-          </button>
+
+          <div className="">
+            <div className="row px-3">
+              <div className="col-lg-3 pr-3 pl-0">
+                <input
+                  placeholder="Thể loại (bắt buộc)"
+                  className="form-control"
+                  required
+                  onChange={this.handle_input}
+                  name="genre_name"
+                  value={this.state.genre_name}
+                />
+              </div>
+              <div className="col-lg-9 row align-items-center">
+                <input
+                  placeholder="Mô tả"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="genre_description"
+                  value={this.state.genre_description}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row p-3">
+            <button className="btn btn-success mr-3" onClick={this.send_data}>
+              Thêm
+            </button>
+            <button className="btn btn-danger" onClick={this.reset_data}>
+              Hủy
+            </button>
+          </div>
         </div>
       </div>
     );

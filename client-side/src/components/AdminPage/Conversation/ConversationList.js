@@ -38,6 +38,7 @@ export default class ConversationList extends Component {
           dataField: "status",
           text: "Trạng thái",
           sort: true,
+          formatter: this.convert_status,
         },
         {
           dataField: "created_time",
@@ -89,6 +90,10 @@ export default class ConversationList extends Component {
       string = string.slice(0, end) + " ...";
     }
     return string;
+  };
+  convert_status = (status) => {
+    if (status == "handled") return "Đã xử lý";
+    return "Chưa xử lý";
   };
   delete_message = async (_id) => {
     let ans = window.confirm(`Bạn xác nhận xóa tin nhắn này?`);
@@ -239,12 +244,12 @@ export default class ConversationList extends Component {
                       <Dropdown.Item
                         onSelect={() => this.select_filter_status("handled")}
                       >
-                        Handled
+                        Đã xử lý
                       </Dropdown.Item>
                       <Dropdown.Item
                         onSelect={() => this.select_filter_status("unhandled")}
                       >
-                        Unhandled
+                        Chưa xử lý
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>

@@ -17,18 +17,6 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-"""Format message
-{"input" : "toy story",
- "created_time": "17-11-2020 09:58:00",
- "session":"bntt",
- "user":{
-        "username": "Thao",
-        "user_id": "1",
-        "user_login": "bntt",
-        "color":"blue"
- }            
-}
-"""
 ir = IntentRecognizer()
 suggestor = Suggestor()
 messages = Messages()
@@ -61,6 +49,7 @@ def predict_run():
         output["session"] = session
         output["user"] = user
         output["timestamp"] = timestamp
+        output["input"] = input
 
         print(f"Q: {input}")
         print(f"A: {output}")

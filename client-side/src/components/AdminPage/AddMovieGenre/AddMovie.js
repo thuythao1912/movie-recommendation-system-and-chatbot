@@ -138,139 +138,141 @@ export default class AddMovie extends Component {
         </button>
       );
     });
-    let year = 2020;
+    let year = new Date().getFullYear();
     let elMovieYear = [];
     for (let i = year; i >= 1950; i--) {
       elMovieYear.push(<option>{i}</option>);
     }
     return (
-      <div className="p-0 bg-white">
+      <div className="p-0">
         <h3 className="text-dark font-weight-bold">THÊM PHIM</h3>
-        <div className="row px-3">
-          <div className="col-lg-12 pr-3 pl-0">
-            <div
-              className={`alert alert-${this.state.message_color}`}
-              role="alert"
-              style={{ display: this.state.display_message }}
-            >
-              {this.state.message}
+        <div className="p-3 bg-white border">
+          <div className="row px-3">
+            <div className="col-lg-12 pr-3 pl-0">
+              <div
+                className={`alert alert-${this.state.message_color}`}
+                role="alert"
+                style={{ display: this.state.display_message }}
+              >
+                {this.state.message}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="">
-          {/* <form> */}
-          <div className="row px-3">
-            <div className="col-lg-6 row align-items-center">
-              <input
-                placeholder="Tựa phim (bắt buộc)"
-                className="form-control"
-                required
-                onChange={this.handle_input}
-                name="movie_title"
-                value={this.state.movie_title}
-              />
+          <div className="">
+            {/* <form> */}
+            <div className="row px-3">
+              <div className="col-lg-6 row align-items-center">
+                <input
+                  placeholder="Tựa phim (bắt buộc)"
+                  className="form-control"
+                  required
+                  onChange={this.handle_input}
+                  name="movie_title"
+                  value={this.state.movie_title}
+                />
+              </div>
+              <div className="col-lg-4 pr-0">
+                <input
+                  placeholder="Tên khác"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_description"
+                  value={this.state.movie_description}
+                />
+              </div>
+              <div className="col-lg-2 px-3 pl-0">
+                <select
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_year"
+                  value={this.state.movie_year}
+                >
+                  <option value={-1}>Năm sản xuất</option>
+                  {elMovieYear}
+                </select>
+              </div>
             </div>
-            <div className="col-lg-4 pr-0">
-              <input
-                placeholder="Tên khác"
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_description"
-                value={this.state.movie_description}
-              />
+            <div className="row p-3">
+              <div className="col-lg-3 row">
+                <input
+                  placeholder="Diễn viên"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_actors"
+                  value={this.state.movie_actors}
+                />
+              </div>
+              <div className="col-lg-3 pr-0">
+                <input
+                  placeholder="Đạo diễn"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_producers"
+                  value={this.state.movie_producers}
+                />
+              </div>
+              <div className="col-lg-3 pr-0">
+                <input
+                  placeholder="Trailer"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_trailer"
+                  value={this.state.movie_trailer}
+                />
+              </div>
+              <div className="col-lg-3 px-3 pl-0">
+                <input
+                  placeholder="Poster"
+                  className="form-control"
+                  onChange={this.handle_input}
+                  name="movie_images"
+                  value={this.state.movie_images}
+                />
+              </div>
             </div>
-            <div className="col-lg-2 px-3 pl-0">
-              <select
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_year"
-                value={this.state.movie_year}
-              >
-                <option value={-1}>Năm sản xuất</option>
-                {elMovieYear}
-              </select>
+            <div className="row px-3 pt-3">
+              <div className="col-lg-12 pl-0">
+                <p>Tóm tắt</p>
+              </div>
             </div>
+            <div className="row px-3">
+              <div className="col-lg-12 px-0 pr-5">
+                <textarea
+                  className="form-control"
+                  placeholder="Nhập tóm tắt phim..."
+                  onChange={this.handle_input}
+                  name="movie_overview"
+                  value={this.state.movie_overview}
+                ></textarea>
+              </div>
+            </div>
+            <div className="row px-3 pt-3">
+              <div className="col-lg-12 pl-0">
+                <p>Thể loại</p>
+              </div>
+            </div>
+            <div className="row px-3">
+              <div className="col-lg-3 pr-3 pl-0">
+                <select className="form-control" onChange={this.select_genres}>
+                  <option value="-1">Chọn thể loại</option>
+                  {elGenre}
+                </select>
+              </div>
+              <div className="col-lg-9 row align-items-center">
+                {elMovieGenres}
+              </div>
+            </div>
+            {/* </form> */}
           </div>
           <div className="row p-3">
-            <div className="col-lg-3 row">
-              <input
-                placeholder="Diễn viên"
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_actors"
-                value={this.state.movie_actors}
-              />
-            </div>
-            <div className="col-lg-3 pr-0">
-              <input
-                placeholder="Đạo diễn"
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_producers"
-                value={this.state.movie_producers}
-              />
-            </div>
-            <div className="col-lg-3 pr-0">
-              <input
-                placeholder="Trailer"
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_trailer"
-                value={this.state.movie_trailer}
-              />
-            </div>
-            <div className="col-lg-3 px-3 pl-0">
-              <input
-                placeholder="Poster"
-                className="form-control"
-                onChange={this.handle_input}
-                name="movie_images"
-                value={this.state.movie_images}
-              />
-            </div>
+            <button className="btn btn-success mr-3" onClick={this.send_data}>
+              Thêm
+            </button>
+            <button className="btn btn-danger" onClick={this.reset_data}>
+              Hủy
+            </button>
           </div>
-          <div className="row px-3 pt-3">
-            <div className="col-lg-12 pl-0">
-              <p>Tóm tắt</p>
-            </div>
-          </div>
-          <div className="row px-3">
-            <div className="col-lg-12 px-0 pr-5">
-              <textarea
-                className="form-control"
-                placeholder="Nhập tóm tắt phim..."
-                onChange={this.handle_input}
-                name="movie_overview"
-                value={this.state.movie_overview}
-              ></textarea>
-            </div>
-          </div>
-          <div className="row px-3 pt-3">
-            <div className="col-lg-12 pl-0">
-              <p>Thể loại</p>
-            </div>
-          </div>
-          <div className="row px-3">
-            <div className="col-lg-3 pr-3 pl-0">
-              <select className="form-control" onChange={this.select_genres}>
-                <option value="-1">Chọn thể loại</option>
-                {elGenre}
-              </select>
-            </div>
-            <div className="col-lg-9 row align-items-center">
-              {elMovieGenres}
-            </div>
-          </div>
-          {/* </form> */}
-        </div>
-        <div className="row p-3">
-          <button className="btn btn-success mr-3" onClick={this.send_data}>
-            Thêm
-          </button>
-          <button className="btn btn-danger" onClick={this.reset_data}>
-            Hủy
-          </button>
         </div>
       </div>
     );

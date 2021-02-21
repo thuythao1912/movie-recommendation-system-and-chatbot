@@ -1,4 +1,5 @@
 var movie_model = require("../models/movie_model");
+var rating_model = require("../models/rating_model");
 const axios = require("axios");
 const global_var = require("../global_variables");
 const utils = require("../utils/utils");
@@ -103,7 +104,14 @@ exports.delete_one_movie = (req, res) => {
       res.json({ message: "Phim đã xóa thất bại!" });
     } else {
       axios.put(`${global_var.SERVER_PYTHON}`);
-      res.json({ message: "Phim đã xóa thàng công!" });
+      rating_model.deleteMany({ movie_id: movie.movie_id }, (err, result) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại`);
+        } else {
+          res.json({ message: `Phim đã xóa thành công` });
+        }
+      });
     }
   });
 };

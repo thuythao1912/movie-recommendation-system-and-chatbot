@@ -10,6 +10,7 @@ export default class MovieCard extends Component {
       <div className="p-2">
         <Card style={{ width: "20rem", height: "420px" }}>
           <Card.Img
+            className="poster"
             variant="top"
             src={
               data.movie_images == null || data.movie_images == ""

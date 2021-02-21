@@ -1,4 +1,5 @@
 var user_model = require("../models/user_model");
+var rating_model = require("../models/rating_model");
 const bcrypt = require("bcrypt");
 const salt = bcrypt.genSaltSync();
 const utils = require("../utils/utils");
@@ -30,7 +31,10 @@ exports.check_login_user = (req, res) => {
         );
 
         if (isCorrectPasssword) {
-          res.json({ message: `Đăng nhập thành công`, data: user });
+          res.json({
+            message: `Đăng nhập thành công! Chúc bạn trải nghiệm hệ thống vui vẻ!`,
+            data: user,
+          });
         } else {
           res.json({
             message: `Sai tên đăng nhập hoặc mật khẩu, hoặc bạn không có quyền truy cập trang web này!`,
@@ -78,11 +82,18 @@ exports.add_one_user = async (req, res) => {
 };
 
 exports.delete_one_user = (req, res) => {
-  user_model.findByIdAndDelete(req.params.id, (err, movie) => {
+  user_model.findByIdAndDelete(req.params.id, (err, user) => {
     if (err) {
       res.json({ message: "Tài khoản đã xóa thất bại!" });
     } else {
-      res.json({ message: "Tài khoản đã xóa thàng công!" });
+      rating_model.deleteMany({ user_id: user.user_id }, (err, result) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send(`Đã có lỗi xảy ra. Xóa thất bại!`);
+        } else {
+          res.json({ message: `Tài khoản đã xóa thành công!` });
+        }
+      });
     }
   });
 };
