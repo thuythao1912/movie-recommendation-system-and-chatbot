@@ -22,6 +22,14 @@ suggestor = Suggestor()
 messages = Messages()
 MAX_TIME = 300
 
+"""
+{"input" : "hi",
+ "created_time": "1618545632",
+  "user":{"username": "Thao", "user_id": "1"},
+ "session": "session",
+ "timestamp":"1618545632"
+}
+"""
 
 @app.route('/predict', methods=['POST'])
 def predict_run():
